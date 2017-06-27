@@ -1,0 +1,19 @@
+//
+//  SharedValues.pch
+//  Docta Consumer
+//
+//  Created by RSTI E-Services on 19/06/17.
+//  Copyright © 2017 RSTI E-Services. All rights reserved.
+//
+
+#ifndef SharedValues_pch
+#define SharedValues_pch
+
+#define BASE_URL [NSURL URLWithString:@"https://private-61dbf0-doctaapi.apiary-mock.com/api"]
+
+
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* SharedValues_pch */

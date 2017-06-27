@@ -7,14 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1574F0F19EC426671421B575 /* Pods_Docta_Consumer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC1997B0A55BB874D4594021 /* Pods_Docta_Consumer.framework */; };
+		2F6F93DB1EEFCA4900037532 /* ImagePicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F6F93DA1EEFCA4900037532 /* ImagePicker.framework */; };
+		2F6F93DD1EEFCB7D00037532 /* Lightbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F6F93DC1EEFCB7D00037532 /* Lightbox.framework */; };
+		2F72A25F1EF7B58300CEC047 /* APIHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F72A25E1EF7B58300CEC047 /* APIHandler.m */; };
+		2F72A2641EF93B0A00CEC047 /* DoctaManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F72A2631EF93B0A00CEC047 /* DoctaManager.m */; };
+		2F87E6601EFA679700E6CD70 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F87E65F1EFA679700E6CD70 /* Alamofire.framework */; };
+		2F87E6631EFBD9EE00E6CD70 /* ViewCaseFileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F87E6621EFBD9EE00E6CD70 /* ViewCaseFileViewController.m */; };
 		2FA8EC2A1EE9673900F9AB24 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA8EC291EE9673900F9AB24 /* main.m */; };
 		2FA8EC2D1EE9673900F9AB24 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA8EC2C1EE9673900F9AB24 /* AppDelegate.m */; };
 		2FA8EC301EE9673900F9AB24 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA8EC2F1EE9673900F9AB24 /* ViewController.m */; };
-		2FA8EC331EE9673900F9AB24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FA8EC311EE9673900F9AB24 /* Main.storyboard */; };
+		2FA8EC331EE9673900F9AB24 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FA8EC311EE9673900F9AB24 /* Auth.storyboard */; };
 		2FA8EC351EE9673900F9AB24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FA8EC341EE9673900F9AB24 /* Assets.xcassets */; };
 		2FA8EC381EE9673900F9AB24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FA8EC361EE9673900F9AB24 /* LaunchScreen.storyboard */; };
 		2FA8EC431EE9673A00F9AB24 /* Docta_ConsumerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA8EC421EE9673A00F9AB24 /* Docta_ConsumerTests.m */; };
 		2FA8EC4E1EE9673A00F9AB24 /* Docta_ConsumerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA8EC4D1EE9673A00F9AB24 /* Docta_ConsumerUITests.m */; };
+		2FA8EC5E1EEA702B00F9AB24 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA8EC5D1EEA702B00F9AB24 /* SignUpViewController.m */; };
+		2FA8EC611EEA997B00F9AB24 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA8EC601EEA997B00F9AB24 /* SignInViewController.m */; };
+		2FA8EC641EEAA58500F9AB24 /* SubmitCase.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FA8EC631EEAA58500F9AB24 /* SubmitCase.storyboard */; };
+		2FA8EC6B1EEE788600F9AB24 /* MyCaseFilesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA8EC6A1EEE788600F9AB24 /* MyCaseFilesViewController.m */; };
+		2FA8EC6F1EEEAED600F9AB24 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FA8EC6C1EEEAED600F9AB24 /* AFNetworking.framework */; };
+		2FA8EC701EEEAED600F9AB24 /* DLRadioButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FA8EC6D1EEEAED600F9AB24 /* DLRadioButton.framework */; };
+		2FA8EC711EEEAED600F9AB24 /* DropDown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FA8EC6E1EEEAED600F9AB24 /* DropDown.framework */; };
+		2FA8EC761EEFAA2F00F9AB24 /* CreateCaseFileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA8EC751EEFAA2F00F9AB24 /* CreateCaseFileViewController.swift */; };
+		464EC4EBBAFA3F99DA1F1E65 /* Pods_Docta_ConsumerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13E00AB4928D8D06E6CB887F /* Pods_Docta_ConsumerTests.framework */; };
+		E9DA843E3FBB31D9E4F8C79E /* Pods_Docta_ConsumerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6A67489C2972480C67EF23F /* Pods_Docta_ConsumerUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,13 +52,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0641A67570E38EFAE2234FA3 /* Pods-Docta ConsumerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Docta ConsumerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Docta ConsumerUITests/Pods-Docta ConsumerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		13E00AB4928D8D06E6CB887F /* Pods_Docta_ConsumerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Docta_ConsumerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F6F93DA1EEFCA4900037532 /* ImagePicker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImagePicker.framework; path = "../../../Library/Developer/Xcode/DerivedData/Docta_Consumer-fzeqzrpmkwrzkzexuhyxdnkslmth/Build/Products/Debug-iphonesimulator/ImagePicker/ImagePicker.framework"; sourceTree = "<group>"; };
+		2F6F93DC1EEFCB7D00037532 /* Lightbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Lightbox.framework; path = "../../../Library/Developer/Xcode/DerivedData/Docta_Consumer-fzeqzrpmkwrzkzexuhyxdnkslmth/Build/Products/Debug-iphonesimulator/Lightbox/Lightbox.framework"; sourceTree = "<group>"; };
+		2F72A25D1EF7B58300CEC047 /* APIHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIHandler.h; sourceTree = "<group>"; };
+		2F72A25E1EF7B58300CEC047 /* APIHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIHandler.m; sourceTree = "<group>"; };
+		2F72A2611EF7C3F200CEC047 /* SharedValues.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharedValues.pch; sourceTree = "<group>"; };
+		2F72A2621EF93B0A00CEC047 /* DoctaManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoctaManager.h; sourceTree = "<group>"; };
+		2F72A2631EF93B0A00CEC047 /* DoctaManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoctaManager.m; sourceTree = "<group>"; };
+		2F87E65F1EFA679700E6CD70 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../Library/Developer/Xcode/DerivedData/Docta_Consumer-fzeqzrpmkwrzkzexuhyxdnkslmth/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
+		2F87E6611EFBD9EE00E6CD70 /* ViewCaseFileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewCaseFileViewController.h; sourceTree = "<group>"; };
+		2F87E6621EFBD9EE00E6CD70 /* ViewCaseFileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewCaseFileViewController.m; sourceTree = "<group>"; };
 		2FA8EC251EE9673900F9AB24 /* Docta Consumer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Docta Consumer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FA8EC291EE9673900F9AB24 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2FA8EC2B1EE9673900F9AB24 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2FA8EC2C1EE9673900F9AB24 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		2FA8EC2E1EE9673900F9AB24 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		2FA8EC2F1EE9673900F9AB24 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		2FA8EC321EE9673900F9AB24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2FA8EC321EE9673900F9AB24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Auth.storyboard; sourceTree = "<group>"; };
 		2FA8EC341EE9673900F9AB24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2FA8EC371EE9673900F9AB24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2FA8EC391EE9673900F9AB24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +80,25 @@
 		2FA8EC491EE9673A00F9AB24 /* Docta ConsumerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Docta ConsumerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FA8EC4D1EE9673A00F9AB24 /* Docta_ConsumerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Docta_ConsumerUITests.m; sourceTree = "<group>"; };
 		2FA8EC4F1EE9673A00F9AB24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2FA8EC5C1EEA702B00F9AB24 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		2FA8EC5D1EEA702B00F9AB24 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		2FA8EC5F1EEA997B00F9AB24 /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
+		2FA8EC601EEA997B00F9AB24 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
+		2FA8EC631EEAA58500F9AB24 /* SubmitCase.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SubmitCase.storyboard; sourceTree = "<group>"; };
+		2FA8EC691EEE788600F9AB24 /* MyCaseFilesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCaseFilesViewController.h; sourceTree = "<group>"; };
+		2FA8EC6A1EEE788600F9AB24 /* MyCaseFilesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCaseFilesViewController.m; sourceTree = "<group>"; };
+		2FA8EC6C1EEEAED600F9AB24 /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = "../../../Library/Developer/Xcode/DerivedData/Docta_Consumer-fzeqzrpmkwrzkzexuhyxdnkslmth/Build/Products/Debug-iphonesimulator/AFNetworking/AFNetworking.framework"; sourceTree = "<group>"; };
+		2FA8EC6D1EEEAED600F9AB24 /* DLRadioButton.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DLRadioButton.framework; path = "../../../Library/Developer/Xcode/DerivedData/Docta_Consumer-fzeqzrpmkwrzkzexuhyxdnkslmth/Build/Products/Debug-iphonesimulator/DLRadioButton/DLRadioButton.framework"; sourceTree = "<group>"; };
+		2FA8EC6E1EEEAED600F9AB24 /* DropDown.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DropDown.framework; path = "../../../Library/Developer/Xcode/DerivedData/Docta_Consumer-fzeqzrpmkwrzkzexuhyxdnkslmth/Build/Products/Debug-iphonesimulator/DropDown/DropDown.framework"; sourceTree = "<group>"; };
+		2FA8EC721EEEB10000F9AB24 /* Docta Consumer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Docta Consumer-Bridging-Header.h"; sourceTree = "<group>"; };
+		2FA8EC751EEFAA2F00F9AB24 /* CreateCaseFileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateCaseFileViewController.swift; sourceTree = "<group>"; };
+		5615A93F60B2FCD16DE23E57 /* Pods-Docta Consumer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Docta Consumer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Docta Consumer/Pods-Docta Consumer.debug.xcconfig"; sourceTree = "<group>"; };
+		76357A9699426C76E29534EF /* Pods-Docta ConsumerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Docta ConsumerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Docta ConsumerTests/Pods-Docta ConsumerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		99CF6ADFF21354F0AC1D7AFD /* Pods-Docta ConsumerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Docta ConsumerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Docta ConsumerTests/Pods-Docta ConsumerTests.release.xcconfig"; sourceTree = "<group>"; };
+		AA2BBF5F5644951A9FBE81E4 /* Pods-Docta ConsumerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Docta ConsumerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Docta ConsumerUITests/Pods-Docta ConsumerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BC1997B0A55BB874D4594021 /* Pods_Docta_Consumer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Docta_Consumer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2297AA507AC8C6E1E9A583C /* Pods-Docta Consumer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Docta Consumer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Docta Consumer/Pods-Docta Consumer.release.xcconfig"; sourceTree = "<group>"; };
+		F6A67489C2972480C67EF23F /* Pods_Docta_ConsumerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Docta_ConsumerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +106,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F87E6601EFA679700E6CD70 /* Alamofire.framework in Frameworks */,
+				2F6F93DD1EEFCB7D00037532 /* Lightbox.framework in Frameworks */,
+				2F6F93DB1EEFCA4900037532 /* ImagePicker.framework in Frameworks */,
+				2FA8EC6F1EEEAED600F9AB24 /* AFNetworking.framework in Frameworks */,
+				2FA8EC701EEEAED600F9AB24 /* DLRadioButton.framework in Frameworks */,
+				2FA8EC711EEEAED600F9AB24 /* DropDown.framework in Frameworks */,
+				1574F0F19EC426671421B575 /* Pods_Docta_Consumer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				464EC4EBBAFA3F99DA1F1E65 /* Pods_Docta_ConsumerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +128,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9DA843E3FBB31D9E4F8C79E /* Pods_Docta_ConsumerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F72A2601EF7C36400CEC047 /* CommonFiles */ = {
+			isa = PBXGroup;
+			children = (
+				2FA8EC2B1EE9673900F9AB24 /* AppDelegate.h */,
+				2FA8EC2C1EE9673900F9AB24 /* AppDelegate.m */,
+				2F72A25D1EF7B58300CEC047 /* APIHandler.h */,
+				2F72A25E1EF7B58300CEC047 /* APIHandler.m */,
+				2F72A2621EF93B0A00CEC047 /* DoctaManager.h */,
+				2F72A2631EF93B0A00CEC047 /* DoctaManager.m */,
+				2F72A2611EF7C3F200CEC047 /* SharedValues.pch */,
+			);
+			name = CommonFiles;
+			sourceTree = "<group>";
+		};
 		2FA8EC1C1EE9673900F9AB24 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +156,8 @@
 				2FA8EC411EE9673A00F9AB24 /* Docta ConsumerTests */,
 				2FA8EC4C1EE9673A00F9AB24 /* Docta ConsumerUITests */,
 				2FA8EC261EE9673900F9AB24 /* Products */,
+				8640C96FCF15D1244513DE32 /* Pods */,
+				7133817F263E0A926B465443 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,15 +174,16 @@
 		2FA8EC271EE9673900F9AB24 /* Docta Consumer */ = {
 			isa = PBXGroup;
 			children = (
-				2FA8EC2B1EE9673900F9AB24 /* AppDelegate.h */,
-				2FA8EC2C1EE9673900F9AB24 /* AppDelegate.m */,
+				2F72A2601EF7C36400CEC047 /* CommonFiles */,
+				2FA8EC621EEAA56100F9AB24 /* SubmitCase */,
+				2FA8EC5B1EEA6FEE00F9AB24 /* Authorization */,
 				2FA8EC2E1EE9673900F9AB24 /* ViewController.h */,
 				2FA8EC2F1EE9673900F9AB24 /* ViewController.m */,
-				2FA8EC311EE9673900F9AB24 /* Main.storyboard */,
 				2FA8EC341EE9673900F9AB24 /* Assets.xcassets */,
 				2FA8EC361EE9673900F9AB24 /* LaunchScreen.storyboard */,
 				2FA8EC391EE9673900F9AB24 /* Info.plist */,
 				2FA8EC281EE9673900F9AB24 /* Supporting Files */,
+				2FA8EC721EEEB10000F9AB24 /* Docta Consumer-Bridging-Header.h */,
 			);
 			path = "Docta Consumer";
 			sourceTree = "<group>";
@@ -140,6 +214,61 @@
 			path = "Docta ConsumerUITests";
 			sourceTree = "<group>";
 		};
+		2FA8EC5B1EEA6FEE00F9AB24 /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				2FA8EC311EE9673900F9AB24 /* Auth.storyboard */,
+				2FA8EC5C1EEA702B00F9AB24 /* SignUpViewController.h */,
+				2FA8EC5D1EEA702B00F9AB24 /* SignUpViewController.m */,
+				2FA8EC5F1EEA997B00F9AB24 /* SignInViewController.h */,
+				2FA8EC601EEA997B00F9AB24 /* SignInViewController.m */,
+			);
+			name = Authorization;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		2FA8EC621EEAA56100F9AB24 /* SubmitCase */ = {
+			isa = PBXGroup;
+			children = (
+				2FA8EC631EEAA58500F9AB24 /* SubmitCase.storyboard */,
+				2FA8EC691EEE788600F9AB24 /* MyCaseFilesViewController.h */,
+				2FA8EC6A1EEE788600F9AB24 /* MyCaseFilesViewController.m */,
+				2F87E6611EFBD9EE00E6CD70 /* ViewCaseFileViewController.h */,
+				2F87E6621EFBD9EE00E6CD70 /* ViewCaseFileViewController.m */,
+				2FA8EC751EEFAA2F00F9AB24 /* CreateCaseFileViewController.swift */,
+			);
+			name = SubmitCase;
+			sourceTree = "<group>";
+		};
+		7133817F263E0A926B465443 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2F87E65F1EFA679700E6CD70 /* Alamofire.framework */,
+				2F6F93DC1EEFCB7D00037532 /* Lightbox.framework */,
+				2F6F93DA1EEFCA4900037532 /* ImagePicker.framework */,
+				2FA8EC6C1EEEAED600F9AB24 /* AFNetworking.framework */,
+				2FA8EC6D1EEEAED600F9AB24 /* DLRadioButton.framework */,
+				2FA8EC6E1EEEAED600F9AB24 /* DropDown.framework */,
+				BC1997B0A55BB874D4594021 /* Pods_Docta_Consumer.framework */,
+				13E00AB4928D8D06E6CB887F /* Pods_Docta_ConsumerTests.framework */,
+				F6A67489C2972480C67EF23F /* Pods_Docta_ConsumerUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8640C96FCF15D1244513DE32 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5615A93F60B2FCD16DE23E57 /* Pods-Docta Consumer.debug.xcconfig */,
+				F2297AA507AC8C6E1E9A583C /* Pods-Docta Consumer.release.xcconfig */,
+				76357A9699426C76E29534EF /* Pods-Docta ConsumerTests.debug.xcconfig */,
+				99CF6ADFF21354F0AC1D7AFD /* Pods-Docta ConsumerTests.release.xcconfig */,
+				AA2BBF5F5644951A9FBE81E4 /* Pods-Docta ConsumerUITests.debug.xcconfig */,
+				0641A67570E38EFAE2234FA3 /* Pods-Docta ConsumerUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +276,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2FA8EC521EE9673A00F9AB24 /* Build configuration list for PBXNativeTarget "Docta Consumer" */;
 			buildPhases = (
+				5665856F20983CBFA3B71071 /* [CP] Check Pods Manifest.lock */,
 				2FA8EC211EE9673900F9AB24 /* Sources */,
 				2FA8EC221EE9673900F9AB24 /* Frameworks */,
 				2FA8EC231EE9673900F9AB24 /* Resources */,
+				4F531711BFC5B157FD99EFB2 /* [CP] Embed Pods Frameworks */,
+				6CF1F8DADF79F84FCDA282C9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -164,9 +296,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2FA8EC551EE9673A00F9AB24 /* Build configuration list for PBXNativeTarget "Docta ConsumerTests" */;
 			buildPhases = (
+				17AD83607D129948711C8D33 /* [CP] Check Pods Manifest.lock */,
 				2FA8EC3A1EE9673A00F9AB24 /* Sources */,
 				2FA8EC3B1EE9673A00F9AB24 /* Frameworks */,
 				2FA8EC3C1EE9673A00F9AB24 /* Resources */,
+				6954029C049973F5E44D9A1B /* [CP] Embed Pods Frameworks */,
+				705767E528B1E0C0BB9276B9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -182,9 +317,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2FA8EC581EE9673A00F9AB24 /* Build configuration list for PBXNativeTarget "Docta ConsumerUITests" */;
 			buildPhases = (
+				2F8517086AE70ECD12E55ACB /* [CP] Check Pods Manifest.lock */,
 				2FA8EC451EE9673A00F9AB24 /* Sources */,
 				2FA8EC461EE9673A00F9AB24 /* Frameworks */,
 				2FA8EC471EE9673A00F9AB24 /* Resources */,
+				C9AF349FF775CD9A680C4B65 /* [CP] Embed Pods Frameworks */,
+				DE8B3AD2AF177CD3F2B3581E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -207,7 +345,8 @@
 				TargetAttributes = {
 					2FA8EC241EE9673900F9AB24 = {
 						CreatedOnToolsVersion = 8.3.1;
-						DevelopmentTeam = MXU6HC5F88;
+						DevelopmentTeam = XVB5V247FL;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					2FA8EC3D1EE9673A00F9AB24 = {
@@ -249,9 +388,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FA8EC641EEAA58500F9AB24 /* SubmitCase.storyboard in Resources */,
 				2FA8EC381EE9673900F9AB24 /* LaunchScreen.storyboard in Resources */,
 				2FA8EC351EE9673900F9AB24 /* Assets.xcassets in Resources */,
-				2FA8EC331EE9673900F9AB24 /* Main.storyboard in Resources */,
+				2FA8EC331EE9673900F9AB24 /* Auth.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,14 +411,159 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		17AD83607D129948711C8D33 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2F8517086AE70ECD12E55ACB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4F531711BFC5B157FD99EFB2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Docta Consumer/Pods-Docta Consumer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5665856F20983CBFA3B71071 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6954029C049973F5E44D9A1B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Docta ConsumerTests/Pods-Docta ConsumerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6CF1F8DADF79F84FCDA282C9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Docta Consumer/Pods-Docta Consumer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		705767E528B1E0C0BB9276B9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Docta ConsumerTests/Pods-Docta ConsumerTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C9AF349FF775CD9A680C4B65 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Docta ConsumerUITests/Pods-Docta ConsumerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE8B3AD2AF177CD3F2B3581E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Docta ConsumerUITests/Pods-Docta ConsumerUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2FA8EC211EE9673900F9AB24 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FA8EC611EEA997B00F9AB24 /* SignInViewController.m in Sources */,
+				2F87E6631EFBD9EE00E6CD70 /* ViewCaseFileViewController.m in Sources */,
 				2FA8EC301EE9673900F9AB24 /* ViewController.m in Sources */,
 				2FA8EC2D1EE9673900F9AB24 /* AppDelegate.m in Sources */,
+				2FA8EC5E1EEA702B00F9AB24 /* SignUpViewController.m in Sources */,
+				2FA8EC6B1EEE788600F9AB24 /* MyCaseFilesViewController.m in Sources */,
 				2FA8EC2A1EE9673900F9AB24 /* main.m in Sources */,
+				2F72A2641EF93B0A00CEC047 /* DoctaManager.m in Sources */,
+				2FA8EC761EEFAA2F00F9AB24 /* CreateCaseFileViewController.swift in Sources */,
+				2F72A25F1EF7B58300CEC047 /* APIHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,12 +599,13 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2FA8EC311EE9673900F9AB24 /* Main.storyboard */ = {
+		2FA8EC311EE9673900F9AB24 /* Auth.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				2FA8EC321EE9673900F9AB24 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Auth.storyboard;
+			path = "Docta Consumer";
 			sourceTree = "<group>";
 		};
 		2FA8EC361EE9673900F9AB24 /* LaunchScreen.storyboard */ = {
@@ -374,7 +660,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -417,7 +703,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -427,31 +713,48 @@
 		};
 		2FA8EC531EE9673A00F9AB24 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5615A93F60B2FCD16DE23E57 /* Pods-Docta Consumer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = MXU6HC5F88;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = XVB5V247FL;
+				GCC_PREFIX_HEADER = "/Users/rstintl/Desktop/Xcode/DoctaConsumer/Docta Consumer/SharedValues.pch";
 				INFOPLIST_FILE = "Docta Consumer/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rstintl.docta.Docta-Consumer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Docta Consumer/Docta Consumer-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		2FA8EC541EE9673A00F9AB24 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2297AA507AC8C6E1E9A583C /* Pods-Docta Consumer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = MXU6HC5F88;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = XVB5V247FL;
+				GCC_PREFIX_HEADER = "/Users/rstintl/Desktop/Xcode/DoctaConsumer/Docta Consumer/SharedValues.pch";
 				INFOPLIST_FILE = "Docta Consumer/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rstintl.docta.Docta-Consumer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Docta Consumer/Docta Consumer-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		2FA8EC561EE9673A00F9AB24 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76357A9699426C76E29534EF /* Pods-Docta ConsumerTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = MXU6HC5F88;
 				INFOPLIST_FILE = "Docta ConsumerTests/Info.plist";
@@ -464,7 +767,9 @@
 		};
 		2FA8EC571EE9673A00F9AB24 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99CF6ADFF21354F0AC1D7AFD /* Pods-Docta ConsumerTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = MXU6HC5F88;
 				INFOPLIST_FILE = "Docta ConsumerTests/Info.plist";
@@ -477,7 +782,9 @@
 		};
 		2FA8EC591EE9673A00F9AB24 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA2BBF5F5644951A9FBE81E4 /* Pods-Docta ConsumerUITests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = MXU6HC5F88;
 				INFOPLIST_FILE = "Docta ConsumerUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -489,7 +796,9 @@
 		};
 		2FA8EC5A1EE9673A00F9AB24 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0641A67570E38EFAE2234FA3 /* Pods-Docta ConsumerUITests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = MXU6HC5F88;
 				INFOPLIST_FILE = "Docta ConsumerUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -518,6 +827,7 @@
 				2FA8EC541EE9673A00F9AB24 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2FA8EC551EE9673A00F9AB24 /* Build configuration list for PBXNativeTarget "Docta ConsumerTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +836,7 @@
 				2FA8EC571EE9673A00F9AB24 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2FA8EC581EE9673A00F9AB24 /* Build configuration list for PBXNativeTarget "Docta ConsumerUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +845,7 @@
 				2FA8EC5A1EE9673A00F9AB24 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
