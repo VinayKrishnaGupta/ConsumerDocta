@@ -32,12 +32,12 @@
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:YES];
-    [[APIHandler sharedInstance]GetDatafromAPI:@"GET" :@"casefile/list" :nil  completionBlock:^(id dict, NSError *error)
+    [[APIHandler sharedInstance]GetDatafromAPI:@"POST" :@"casefile/list" :nil  completionBlock:^(id dict, NSError *error)
      
      {
 
         NSLog(@"Response in my list is %@ and Error is %@", dict, error);
-         MyCaseList = dict;
+         MyCaseList = [dict valueForKey:@"data"];
          [_tableView reloadData];
          
         

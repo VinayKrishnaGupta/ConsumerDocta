@@ -25,13 +25,26 @@ NSDictionary *Dict;
 
 -(void)GetDatafromAPI:(NSString *)methodName :(NSString *)APIpath  :(NSDictionary *)WithParameters completionBlock:(void (^) (id data, NSError *error)) completionBlock
 {
+    
+    
     AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
     
-    
+    NSString *token = [[NSUserDefaults standardUserDefaults]objectForKey:@"AccessToken"];
+    NSString *BearerToken = [NSString stringWithFormat:@"Bearer %@",token];
     NSString *url = [NSString stringWithFormat:@"%@/%@",BASE_URL, APIpath];
-    NSMutableURLRequest *req = [[AFHTTPRequestSerializer serializer] requestWithMethod:methodName URLString:url parameters:WithParameters error:nil];
+    NSMutableURLRequest *req = [[AFJSONRequestSerializer serializer] requestWithMethod:methodName URLString:url parameters:WithParameters error:nil];
     
     [req setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [req setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    if (token != nil) {
+        [req setValue:BearerToken forHTTPHeaderField:@"Authorization"];
+        
+    }
+    else {
+        NSLog(@"Token is nil");
+        
+    }
+    
     
     
     

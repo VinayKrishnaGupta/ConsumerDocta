@@ -8,10 +8,14 @@
 
 #import "SignUpViewController.h"
 #import "APIHandler.h"
-
+#import "MyCaseFilesViewController.h"
 @interface SignUpViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *proceedButton;
 @property (weak, nonatomic) IBOutlet UIButton *SignINButton;
+@property (weak, nonatomic) IBOutlet UITextField *firstName;
+@property (weak, nonatomic) IBOutlet UITextField *LastName;
+@property (weak, nonatomic) IBOutlet UITextField *emailtextfield;
+@property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 
 @end
 
@@ -20,6 +24,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
    
+    
+    
 
   //  [[APIHandler sharedInstance] GetDatafromAPI:@"POST" :loginCredentials];
  //   NSLog(@"Response is %@",  [[APIHandler sharedInstance] GetDatafromAPI:@"POST" :loginCredentials]);
@@ -44,8 +50,64 @@
 
 -(void)ProceedButton {
     
+    NSDictionary *parameters = @{@"email":_emailtextfield.text, @"password":_passwordTextField.text,@"first_name":_firstName.text, @"last_name":_LastName.text};
+    
+    [[APIHandler sharedInstance]GetDatafromAPI:@"POST" :@"register" :parameters  completionBlock:^(id dict, NSError *error)
+     
+     {
+         
+         NSLog(@"Response Dict in signin is %@  and Error is %@",dict,error );
+         if ([dict isKindOfClass:[NSDictionary class]]) {
+             [self LogininBackground];
+         }
+         else {
+             NSLog(@"Error is signup");
+             
+         }
+         
+     }];
+
+    
+    
     
 }
+
+- (void)LogininBackground {
+    NSDictionary *logincredentials = @{@"email": _emailtextfield.text,@"password":_passwordTextField.text};
+    
+    
+    
+    
+    [[APIHandler sharedInstance]GetDatafromAPI:@"POST" :@"login" :logincredentials  completionBlock:^(id dict, NSError *error)
+     
+     {
+         
+         NSLog(@"Response Dict in signin is %@  and Error is %@",dict,error );
+         if ([dict isKindOfClass:[NSDictionary class]]) {
+             NSString *token = [dict valueForKeyPath:@"data.token"];
+             NSLog(@"You token is %@",token);
+             [[NSUserDefaults standardUserDefaults] setObject:token forKey:@"AccessToken"];
+             [[NSUserDefaults standardUserDefaults]synchronize];
+             
+             UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"SubmitCase" bundle:nil];
+             MyCaseFilesViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"MyCaseFiles"];
+             [[self navigationController] pushViewController:vc animated:YES];
+             // [self presentViewController:vc animated:YES completion:nil];
+         }
+         else {
+             NSLog(@"Error is Login");
+             
+         }
+         
+     }];
+    
+    
+
+    
+    
+    
+}
+
 
 - (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     [[self view] endEditing:YES];

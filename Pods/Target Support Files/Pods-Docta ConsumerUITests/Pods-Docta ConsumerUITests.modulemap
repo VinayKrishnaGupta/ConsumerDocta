@@ -1,0 +1,6 @@
+framework module Pods_Docta_ConsumerUITests {
+  umbrella header "Pods-Docta ConsumerUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

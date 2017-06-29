@@ -35,14 +35,23 @@
 
 - (void)ProceedButtontoMainView {
     
-    NSDictionary *loginCredentials = [NSDictionary dictionaryWithObjectsAndKeys:_emailTextField.text, @"email", _passwordTextField.text, @"password",  nil];
+  //  NSDictionary *loginCredentials = [NSDictionary dictionaryWithObjectsAndKeys:_emailTextField.text, @"email", _passwordTextField.text, @"password",  nil];
+    NSDictionary *logincredentials = @{@"email": _emailTextField.text,@"password":_passwordTextField.text};
     
-    [[APIHandler sharedInstance]GetDatafromAPI:@"POST" :@"user/login" :loginCredentials  completionBlock:^(id dict, NSError *error)
+    
+    
+    
+    [[APIHandler sharedInstance]GetDatafromAPI:@"POST" :@"login" :logincredentials  completionBlock:^(id dict, NSError *error)
   
      {
          
-         NSLog(@"Response Dict in signup is %@  and Error is %@",dict,error );
+         NSLog(@"Response Dict in signin is %@  and Error is %@",dict,error );
          if ([dict isKindOfClass:[NSDictionary class]]) {
+             NSString *token = [dict valueForKeyPath:@"data.token"];
+             NSLog(@"You token is %@",token);
+             [[NSUserDefaults standardUserDefaults] setObject:token forKey:@"AccessToken"];
+             [[NSUserDefaults standardUserDefaults]synchronize];
+             
              UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"SubmitCase" bundle:nil];
              MyCaseFilesViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"MyCaseFiles"];
              [[self navigationController] pushViewController:vc animated:YES];
