@@ -22,6 +22,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [_ProceedButton addTarget:self action:@selector(ProceedButtontoMainView) forControlEvents:UIControlEventTouchUpInside];
+    UIImage *image = [UIImage imageNamed: @"DoctaLogo"];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+    imageView.frame = CGRectMake(10, 2, 100, 30);
+    [self.navigationController.navigationBar addSubview:imageView];
     
     
     // Do any additional setup after loading the view.

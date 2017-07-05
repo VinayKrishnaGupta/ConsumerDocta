@@ -17,6 +17,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+//    UIImage *image = [UIImage imageNamed: @"DoctaLogo"];
+//    UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+//    imageView.frame = CGRectMake(10, 2, 100, 30);
+//    [[UINavigationBar appearance]addSubview:imageView];
+   // [self.navigationController.navigationBar addSubview:imageView];
     return YES;
 }
 

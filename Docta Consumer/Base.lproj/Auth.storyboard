@@ -108,7 +108,7 @@
             </objects>
             <point key="canvasLocation" x="2660" y="8.5457271364317844"/>
         </scene>
-        <!--Docta-->
+        <!--Sign In-->
         <scene sceneID="DHh-jx-pxY">
             <objects>
                 <viewController id="Gg9-Et-SGY" customClass="SignInViewController" sceneMemberID="viewController">
@@ -179,7 +179,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Docta" id="WWw-Tp-uXZ"/>
+                    <navigationItem key="navigationItem" title="Sign In" id="WWw-Tp-uXZ"/>
                     <connections>
                         <outlet property="ProceedButton" destination="mak-q7-wEf" id="bos-ha-HnO"/>
                         <outlet property="emailTextField" destination="glh-xu-acD" id="aCN-UT-nti"/>
@@ -196,11 +196,11 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pKp-2o-08g" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="249-S8-HIP">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="249-S8-HIP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="barTintColor" red="0.24982506036758423" green="0.64008438587188721" blue="0.88857698440551758" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.046217121183872223" green="0.43028509616851807" blue="0.90039700269699097" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </textAttributes>
@@ -212,7 +212,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="59L-Ns-YX9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32.799999999999997" y="37.331334332833585"/>
+            <point key="canvasLocation" x="-182" y="9"/>
         </scene>
     </scenes>
 </document>
