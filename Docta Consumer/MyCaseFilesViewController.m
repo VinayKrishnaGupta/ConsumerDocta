@@ -37,6 +37,8 @@
      {
 
         NSLog(@"Response in my list is %@ and Error is %@", dict, error);
+        
+         
          MyCaseList = [dict valueForKey:@"data"];
          [_tableView reloadData];
          

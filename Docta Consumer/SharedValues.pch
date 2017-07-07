@@ -10,7 +10,7 @@
 #define SharedValues_pch
 
 #define BASE_URL [NSURL URLWithString:@"https://docta-api.herokuapp.com/api"]
-#define BASE_URL2 [NSURL URLWithString:@"https://private-61dbf0-doctaapi.apiary-mock.com/api"]
+//#define BASE_URL [NSURL URLWithString:@"https://private-61dbf0-doctaapi.apiary-mock.com/api"]
 
 
 

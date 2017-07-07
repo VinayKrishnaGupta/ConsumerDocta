@@ -9,6 +9,7 @@
 #import "SignInViewController.h"
 #import "MyCaseFilesViewController.h"
 #import "APIHandler.h"
+#import "Step1YourcaseViewController.h"
 
 @interface SignInViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *ProceedButton;
@@ -56,12 +57,26 @@
              [[NSUserDefaults standardUserDefaults] setObject:token forKey:@"AccessToken"];
              [[NSUserDefaults standardUserDefaults]synchronize];
              
-             UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"SubmitCase" bundle:nil];
-             MyCaseFilesViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"MyCaseFiles"];
+//             UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"SubmitCase" bundle:nil];
+//             MyCaseFilesViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"MyCaseFiles"];
+//             [[self navigationController] pushViewController:vc animated:YES];
+             
+             
+             UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"CreateNewCase" bundle:nil];
+             Step1YourcaseViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"step1yourcase"];
              [[self navigationController] pushViewController:vc animated:YES];
+
+             
+             
+            
              // [self presentViewController:vc animated:YES completion:nil];
          }
          else {
+             UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"CreateNewCase" bundle:nil];
+             Step1YourcaseViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"step1yourcase"];
+             [[self navigationController] pushViewController:vc animated:YES];
+             
+             
              NSLog(@"Error is Login");
              
          }

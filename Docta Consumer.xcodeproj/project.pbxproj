@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1574F0F19EC426671421B575 /* Pods_Docta_Consumer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC1997B0A55BB874D4594021 /* Pods_Docta_Consumer.framework */; };
+		2F6385AD1F0F4B4300603FB1 /* Step1YourcaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F6385AC1F0F4B4300603FB1 /* Step1YourcaseViewController.m */; };
+		2F6385AF1F0F4B6400603FB1 /* CreateNewCase.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F6385AE1F0F4B6400603FB1 /* CreateNewCase.storyboard */; };
 		2F6F93DB1EEFCA4900037532 /* ImagePicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F6F93DA1EEFCA4900037532 /* ImagePicker.framework */; };
 		2F6F93DD1EEFCB7D00037532 /* Lightbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F6F93DC1EEFCB7D00037532 /* Lightbox.framework */; };
 		2F72A25F1EF7B58300CEC047 /* APIHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F72A25E1EF7B58300CEC047 /* APIHandler.m */; };
@@ -54,6 +56,9 @@
 /* Begin PBXFileReference section */
 		0641A67570E38EFAE2234FA3 /* Pods-Docta ConsumerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Docta ConsumerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Docta ConsumerUITests/Pods-Docta ConsumerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		13E00AB4928D8D06E6CB887F /* Pods_Docta_ConsumerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Docta_ConsumerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F6385AB1F0F4B4300603FB1 /* Step1YourcaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Step1YourcaseViewController.h; sourceTree = "<group>"; };
+		2F6385AC1F0F4B4300603FB1 /* Step1YourcaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Step1YourcaseViewController.m; sourceTree = "<group>"; };
+		2F6385AE1F0F4B6400603FB1 /* CreateNewCase.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CreateNewCase.storyboard; sourceTree = "<group>"; };
 		2F6F93DA1EEFCA4900037532 /* ImagePicker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImagePicker.framework; path = "../../../Library/Developer/Xcode/DerivedData/Docta_Consumer-fzeqzrpmkwrzkzexuhyxdnkslmth/Build/Products/Debug-iphonesimulator/ImagePicker/ImagePicker.framework"; sourceTree = "<group>"; };
 		2F6F93DC1EEFCB7D00037532 /* Lightbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Lightbox.framework; path = "../../../Library/Developer/Xcode/DerivedData/Docta_Consumer-fzeqzrpmkwrzkzexuhyxdnkslmth/Build/Products/Debug-iphonesimulator/Lightbox/Lightbox.framework"; sourceTree = "<group>"; };
 		2F72A25D1EF7B58300CEC047 /* APIHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIHandler.h; sourceTree = "<group>"; };
@@ -135,6 +140,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F6385AA1F0F4A3F00603FB1 /* CreateNewCase */ = {
+			isa = PBXGroup;
+			children = (
+				2F6385AB1F0F4B4300603FB1 /* Step1YourcaseViewController.h */,
+				2F6385AC1F0F4B4300603FB1 /* Step1YourcaseViewController.m */,
+				2F6385AE1F0F4B6400603FB1 /* CreateNewCase.storyboard */,
+			);
+			name = CreateNewCase;
+			sourceTree = "<group>";
+		};
 		2F72A2601EF7C36400CEC047 /* CommonFiles */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +189,7 @@
 		2FA8EC271EE9673900F9AB24 /* Docta Consumer */ = {
 			isa = PBXGroup;
 			children = (
+				2F6385AA1F0F4A3F00603FB1 /* CreateNewCase */,
 				2F72A2601EF7C36400CEC047 /* CommonFiles */,
 				2FA8EC621EEAA56100F9AB24 /* SubmitCase */,
 				2FA8EC5B1EEA6FEE00F9AB24 /* Authorization */,
@@ -388,6 +404,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F6385AF1F0F4B6400603FB1 /* CreateNewCase.storyboard in Resources */,
 				2FA8EC641EEAA58500F9AB24 /* SubmitCase.storyboard in Resources */,
 				2FA8EC381EE9673900F9AB24 /* LaunchScreen.storyboard in Resources */,
 				2FA8EC351EE9673900F9AB24 /* Assets.xcassets in Resources */,
@@ -555,6 +572,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FA8EC611EEA997B00F9AB24 /* SignInViewController.m in Sources */,
+				2F6385AD1F0F4B4300603FB1 /* Step1YourcaseViewController.m in Sources */,
 				2F87E6631EFBD9EE00E6CD70 /* ViewCaseFileViewController.m in Sources */,
 				2FA8EC301EE9673900F9AB24 /* ViewController.m in Sources */,
 				2FA8EC2D1EE9673900F9AB24 /* AppDelegate.m in Sources */,

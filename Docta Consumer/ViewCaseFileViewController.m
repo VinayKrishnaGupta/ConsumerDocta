@@ -22,8 +22,6 @@
     _tableView.delegate = self;
     DoctorsList = @[@"Dr. Sanjay", @"Dr. Rockford", @"Dr. Singh"];
     
-    
-    
     // Do any additional setup after loading the view.
 }
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
