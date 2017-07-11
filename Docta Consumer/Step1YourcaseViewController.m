@@ -11,6 +11,7 @@
 
 @interface Step1YourcaseViewController ()
 @property (weak, nonatomic) IBOutlet DLRadioButton *howlongradiobutton;
+- (IBAction)nextButton:(UIButton *)sender;
 
 @end
 
@@ -62,4 +63,10 @@
 }
 */
 
+- (IBAction)nextButton:(UIButton *)sender {
+    [self performSegueWithIdentifier:@"step2symptoms" sender:nil];
+    
+    
+    
+}
 @end
