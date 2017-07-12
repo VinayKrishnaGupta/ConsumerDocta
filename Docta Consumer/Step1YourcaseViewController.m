@@ -10,8 +10,11 @@
 #import <DLRadioButton/DLRadioButton.h>
 
 @interface Step1YourcaseViewController ()
-@property (weak, nonatomic) IBOutlet DLRadioButton *howlongradiobutton;
 - (IBAction)nextButton:(UIButton *)sender;
+@property (weak, nonatomic) IBOutlet DLRadioButton *howlongradiobutton;
+
+
+
 
 @end
 
@@ -30,28 +33,29 @@
 
 
 
-- (IBAction)logSelectedButton:(DLRadioButton *)radioButton {
-    if (radioButton.isMultipleSelectionEnabled) {
-        for (DLRadioButton *button in radioButton.selectedButtons) {
-            NSLog(@"%@ is selected.\n", button.titleLabel.text);
-        }
-    } else {
-        NSLog(@"%@ is selected.\n", radioButton.selectedButton.titleLabel.text);
-    }
-}
+//- (IBAction)logSelectedButton:(DLRadioButton *)radioButton {
+//    if (radioButton.isMultipleSelectionEnabled) {
+//        for (DLRadioButton *button in radioButton.selectedButtons) {
+//            NSLog(@"%@ is selected.\n", button.titleLabel.text);
+//        }
+//    } else {
+//        NSLog(@"%@ is selected.\n", radioButton.selectedButton.titleLabel.text);
+//    }
+//}
 
 
 -(void)howlongradioButton {
-    if (_howlongradiobutton.isMultipleSelectionEnabled) {
-        for (DLRadioButton *button in _howlongradiobutton.selectedButtons) {
-            NSLog(@"%@ is selected.\n", button.titleLabel.text);
+    for (DLRadioButton *button in _howlongradiobutton) {
+        
+        NSLog(@"%@ is selected.\n", button.titleLabel.text);
+        if (button.isSelected) {
+            [button setBackgroundColor:[UIColor orangeColor]];
         }
-    } else {
-        NSLog(@"%@ is selected.\n", _howlongradiobutton.selectedButton.titleLabel.text);
-    }
+        else {
+            [button setBackgroundColor:[UIColor blackColor]];
+        }
     
-    
-    
+}
 }
 /*
 #pragma mark - Navigation
@@ -69,4 +73,24 @@
     
     
 }
+//
+//- (IBAction)howLongButton:(DLRadioButton *)sender {
+//    
+//    for (DLRadioButton *button in sender.selectedButtons) {
+//        
+//        NSLog(@"%@ is selected.\n", button.titleLabel.text);
+//        if (button.isSelected) {
+//            [button setBackgroundColor:[UIColor orangeColor]];
+//        }
+//        else {
+//            [button setBackgroundColor:[UIColor blackColor]];
+//        }
+//        
+//        
+//    }
+
+    
+    
+    
+//}
 @end

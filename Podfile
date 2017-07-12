@@ -9,7 +9,8 @@ pod 'DLRadioButton', '~> 1.4'
 pod 'ImagePicker'
 pod 'Lightbox'
 pod 'Alamofire', '~> 4.4'
-
+source 'https://github.com/CocoaPods/Specs.git'
+pod 'FileBrowser', '~> 0.2'
 use_frameworks!
 
   # Pods for Docta Consumer

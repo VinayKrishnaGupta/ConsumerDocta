@@ -9,14 +9,17 @@
 import UIKit
 import ImagePicker
 import Lightbox
-class Step2SymptomsViewController: UIViewController, ImagePickerDelegate {
+class Step2SymptomsViewController: UIViewController, ImagePickerDelegate, UICollectionViewDataSource, UICollectionViewDelegate {
     @IBOutlet weak var uploadimagesbutton: UIButton!
     let imagepicker = ImagePickerController()
     var imagearray  = [UIImage]()
     
+    @IBOutlet weak var collectionViewImages: UICollectionView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        collectionViewImages.dataSource = self
+        collectionViewImages.delegate = self
         imagepicker.delegate = self
         uploadimagesbutton.addTarget(self, action: #selector(selectImagefromGalleryandCamera), for: UIControlEvents.touchUpInside)
 
@@ -64,9 +67,48 @@ class Step2SymptomsViewController: UIViewController, ImagePickerDelegate {
     
     func doneButtonDidPress(_ imagePicker: ImagePickerController, images: [UIImage]) {
         imagearray = images
-        
+        collectionViewImages.reloadData()
         imagePicker.dismiss(animated: true, completion: nil)
     }
+    
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return imagearray.count+1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell   = collectionViewImages.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! BodyPartImagesCollectionViewCell
+        
+        if indexPath.row == 0 {
+            cell.cellImageView.image = UIImage.init(named: "plus")
+        }
+        else {
+            cell.cellImageView.image = imagearray[indexPath.row-1]
+            
+        }
+        
+        
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if indexPath.row == 0 {
+            self.selectImagefromGalleryandCamera()
+        }
+        
+        
+        
+        
+    }
+    
+    
+    
+    
     
 
     
@@ -75,6 +117,10 @@ class Step2SymptomsViewController: UIViewController, ImagePickerDelegate {
     
     
     
+    @IBAction func nextButton(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "step3treatmenthistory", sender: self)
+        
+    }
 
     /*
     // MARK: - Navigation

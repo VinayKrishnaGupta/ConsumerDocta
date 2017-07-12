@@ -33,6 +33,9 @@
 		2FA8EC711EEEAED600F9AB24 /* DropDown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FA8EC6E1EEEAED600F9AB24 /* DropDown.framework */; };
 		2FA8EC761EEFAA2F00F9AB24 /* CreateCaseFileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA8EC751EEFAA2F00F9AB24 /* CreateCaseFileViewController.swift */; };
 		2FAE81101F1492E3007E937A /* Step2SymptomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE810F1F1492E3007E937A /* Step2SymptomsViewController.swift */; };
+		2FAE81121F14A772007E937A /* BodyPartImagesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE81111F14A772007E937A /* BodyPartImagesCollectionViewCell.swift */; };
+		2FAE81141F14DCE1007E937A /* Step3TreatmentHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE81131F14DCE1007E937A /* Step3TreatmentHistoryViewController.swift */; };
+		2FAE81161F14DEC1007E937A /* FileBrowser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FAE81151F14DEC1007E937A /* FileBrowser.framework */; };
 		464EC4EBBAFA3F99DA1F1E65 /* Pods_Docta_ConsumerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13E00AB4928D8D06E6CB887F /* Pods_Docta_ConsumerTests.framework */; };
 		E9DA843E3FBB31D9E4F8C79E /* Pods_Docta_ConsumerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6A67489C2972480C67EF23F /* Pods_Docta_ConsumerUITests.framework */; };
 /* End PBXBuildFile section */
@@ -99,6 +102,9 @@
 		2FA8EC721EEEB10000F9AB24 /* Docta Consumer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Docta Consumer-Bridging-Header.h"; sourceTree = "<group>"; };
 		2FA8EC751EEFAA2F00F9AB24 /* CreateCaseFileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateCaseFileViewController.swift; sourceTree = "<group>"; };
 		2FAE810F1F1492E3007E937A /* Step2SymptomsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Step2SymptomsViewController.swift; sourceTree = "<group>"; };
+		2FAE81111F14A772007E937A /* BodyPartImagesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BodyPartImagesCollectionViewCell.swift; sourceTree = "<group>"; };
+		2FAE81131F14DCE1007E937A /* Step3TreatmentHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Step3TreatmentHistoryViewController.swift; sourceTree = "<group>"; };
+		2FAE81151F14DEC1007E937A /* FileBrowser.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FileBrowser.framework; path = "../../../Library/Developer/Xcode/DerivedData/Docta_Consumer-fzeqzrpmkwrzkzexuhyxdnkslmth/Build/Products/Debug-iphonesimulator/FileBrowser/FileBrowser.framework"; sourceTree = "<group>"; };
 		5615A93F60B2FCD16DE23E57 /* Pods-Docta Consumer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Docta Consumer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Docta Consumer/Pods-Docta Consumer.debug.xcconfig"; sourceTree = "<group>"; };
 		76357A9699426C76E29534EF /* Pods-Docta ConsumerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Docta ConsumerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Docta ConsumerTests/Pods-Docta ConsumerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		99CF6ADFF21354F0AC1D7AFD /* Pods-Docta ConsumerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Docta ConsumerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Docta ConsumerTests/Pods-Docta ConsumerTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -113,6 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FAE81161F14DEC1007E937A /* FileBrowser.framework in Frameworks */,
 				2F87E6601EFA679700E6CD70 /* Alamofire.framework in Frameworks */,
 				2F6F93DD1EEFCB7D00037532 /* Lightbox.framework in Frameworks */,
 				2F6F93DB1EEFCA4900037532 /* ImagePicker.framework in Frameworks */,
@@ -149,6 +156,8 @@
 				2F6385AC1F0F4B4300603FB1 /* Step1YourcaseViewController.m */,
 				2F6385AE1F0F4B6400603FB1 /* CreateNewCase.storyboard */,
 				2FAE810F1F1492E3007E937A /* Step2SymptomsViewController.swift */,
+				2FAE81111F14A772007E937A /* BodyPartImagesCollectionViewCell.swift */,
+				2FAE81131F14DCE1007E937A /* Step3TreatmentHistoryViewController.swift */,
 			);
 			name = CreateNewCase;
 			sourceTree = "<group>";
@@ -262,6 +271,7 @@
 		7133817F263E0A926B465443 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2FAE81151F14DEC1007E937A /* FileBrowser.framework */,
 				2F87E65F1EFA679700E6CD70 /* Alamofire.framework */,
 				2F6F93DC1EEFCB7D00037532 /* Lightbox.framework */,
 				2F6F93DA1EEFCA4900037532 /* ImagePicker.framework */,
@@ -574,6 +584,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FAE81121F14A772007E937A /* BodyPartImagesCollectionViewCell.swift in Sources */,
 				2FA8EC611EEA997B00F9AB24 /* SignInViewController.m in Sources */,
 				2F6385AD1F0F4B4300603FB1 /* Step1YourcaseViewController.m in Sources */,
 				2F87E6631EFBD9EE00E6CD70 /* ViewCaseFileViewController.m in Sources */,
@@ -583,6 +594,7 @@
 				2FA8EC6B1EEE788600F9AB24 /* MyCaseFilesViewController.m in Sources */,
 				2FA8EC2A1EE9673900F9AB24 /* main.m in Sources */,
 				2F72A2641EF93B0A00CEC047 /* DoctaManager.m in Sources */,
+				2FAE81141F14DCE1007E937A /* Step3TreatmentHistoryViewController.swift in Sources */,
 				2FA8EC761EEFAA2F00F9AB24 /* CreateCaseFileViewController.swift in Sources */,
 				2F72A25F1EF7B58300CEC047 /* APIHandler.m in Sources */,
 				2FAE81101F1492E3007E937A /* Step2SymptomsViewController.swift in Sources */,

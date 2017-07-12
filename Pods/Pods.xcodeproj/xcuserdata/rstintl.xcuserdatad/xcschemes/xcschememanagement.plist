@@ -24,6 +24,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>FileBrowser.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Hue.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -77,11 +82,6 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3F241804B35835C258EF167684FDCB15</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>5168099F2EBFC99A707C03C9EADE01A5</key>
 		<dict>
 			<key>primary</key>
@@ -93,6 +93,16 @@
 			<true/>
 		</dict>
 		<key>6538EBE48B7376C62D9ED8D867882E8B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>77964A066BD5B0011579D204310CEE30</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7DD5D347AE86A299B5463E1B6CCA27C5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
