@@ -10,7 +10,7 @@ import UIKit
 import ImagePicker
 import Lightbox
 class Step2SymptomsViewController: UIViewController, ImagePickerDelegate, UICollectionViewDataSource, UICollectionViewDelegate {
-    @IBOutlet weak var uploadimagesbutton: UIButton!
+   // @IBOutlet weak var uploadimagesbutton: UIButton!
     let imagepicker = ImagePickerController()
     var imagearray  = [UIImage]()
     
@@ -21,7 +21,7 @@ class Step2SymptomsViewController: UIViewController, ImagePickerDelegate, UIColl
         collectionViewImages.dataSource = self
         collectionViewImages.delegate = self
         imagepicker.delegate = self
-        uploadimagesbutton.addTarget(self, action: #selector(selectImagefromGalleryandCamera), for: UIControlEvents.touchUpInside)
+    //    uploadimagesbutton.addTarget(self, action: #selector(selectImagefromGalleryandCamera), for: UIControlEvents.touchUpInside)
 
         // Do any additional setup after loading the view.
     }

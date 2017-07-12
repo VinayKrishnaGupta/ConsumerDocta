@@ -29,6 +29,10 @@ class Step3TreatmentHistoryViewController: UIViewController {
         present(fileBrowser, animated: true, completion: nil)
     }
     
+    @IBAction func nextButton(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "step4Location", sender: sender)
+        
+    }
 
     /*
     // MARK: - Navigation
