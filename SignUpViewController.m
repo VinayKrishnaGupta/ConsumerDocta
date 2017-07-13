@@ -39,6 +39,7 @@
     
     
     [_proceedButton addTarget:self action:@selector(ProceedButton) forControlEvents:UIControlEventTouchUpInside];
+    [_SignINButton addTarget:self action:@selector(SigninButton) forControlEvents:UIControlEventTouchUpInside];
    
     
     // Do any additional setup after loading the view.
@@ -111,6 +112,11 @@
 
 - (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     [[self view] endEditing:YES];
+}
+
+
+-(void)SigninButton {
+    [self performSegueWithIdentifier:@"signInVC" sender:nil];
 }
 
 

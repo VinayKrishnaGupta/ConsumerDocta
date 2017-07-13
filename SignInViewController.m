@@ -88,7 +88,7 @@
 }
 
 - (IBAction)SignupButton:(UIButton *)sender {
-    [self performSegueWithIdentifier:@"signupVC" sender:self];
+    [self dismissViewControllerAnimated:YES completion:nil];
     
     
     
