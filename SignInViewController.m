@@ -10,6 +10,7 @@
 #import "MyCaseFilesViewController.h"
 #import "APIHandler.h"
 #import "Step1YourcaseViewController.h"
+#import <SVProgressHUD/SVProgressHUD.h>
 
 @interface SignInViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *ProceedButton;
@@ -39,6 +40,7 @@
 
 
 - (void)ProceedButtontoMainView {
+    [SVProgressHUD show];
     
   //  NSDictionary *loginCredentials = [NSDictionary dictionaryWithObjectsAndKeys:_emailTextField.text, @"email", _passwordTextField.text, @"password",  nil];
     NSDictionary *logincredentials = @{@"email": _emailTextField.text,@"password":_passwordTextField.text};
@@ -61,10 +63,17 @@
 //             MyCaseFilesViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"MyCaseFiles"];
 //             [[self navigationController] pushViewController:vc animated:YES];
              
+             [SVProgressHUD showSuccessWithStatus:@"Logged In Successfully"];
+             [SVProgressHUD dismissWithDelay:1];
+             [self dismissViewControllerAnimated:YES completion:nil];
              
-             UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"CreateNewCase" bundle:nil];
-             Step1YourcaseViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"step1yourcase"];
-             [[self navigationController] pushViewController:vc animated:YES];
+             
+             
+             
+             
+//             UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"CreateNewCase" bundle:nil];
+//             Step1YourcaseViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"step1yourcase"];
+//             [[self navigationController] pushViewController:vc animated:YES];
 
              
              
@@ -72,9 +81,13 @@
              // [self presentViewController:vc animated:YES completion:nil];
          }
          else {
-             UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"CreateNewCase" bundle:nil];
-             Step1YourcaseViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"step1yourcase"];
-             [[self navigationController] pushViewController:vc animated:YES];
+             [SVProgressHUD showSuccessWithStatus:@"Logged In Successfully"];
+             [SVProgressHUD dismissWithDelay:1];
+             [self dismissViewControllerAnimated:YES completion:nil];
+             
+//             UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Auth" bundle:nil];
+//             Step1YourcaseViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"SignupVC"];
+//             [[self navigationController] pushViewController:vc animated:YES];
              
              
              NSLog(@"Error is Login");

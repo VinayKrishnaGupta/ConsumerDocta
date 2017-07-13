@@ -16,6 +16,7 @@ class Step4LocationViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var button3: UIButton!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var locationTextField: UITextField!
+
     
     let locationDropdown = DropDown()
     let locationsnames = ["North","West","South","East","Centre"]
@@ -102,6 +103,21 @@ class Step4LocationViewController: UIViewController, UITextFieldDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         self.setupDropdown()
+    }
+    @IBAction func nextButton(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Auth", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "SignupVC")
+        self.navigationController?.pushViewController(controller, animated: true)
+        
+     //   self.present(controller, animated: true, completion: nil)
+        
+        
+        
+        
+        //             UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Auth" bundle:nil];
+        //             Step1YourcaseViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"SignupVC"];
+        //             [[self navigationController] pushViewController:vc animated:YES];
+        
     }
     
 

@@ -22,6 +22,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    UIImage *image = [UIImage imageNamed: @"DoctaLogo"];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+    imageView.frame = CGRectMake(10, 2, 100, 30);
+    [self.navigationController.navigationBar addSubview:imageView];
+    
+    
     [_howlongradiobutton addTarget:self action:@selector(howlongradiobutton) forControlEvents:UIControlEventTouchUpInside];
     // Do any additional setup after loading the view.
 }

@@ -84,7 +84,7 @@ class Step2SymptomsViewController: UIViewController, ImagePickerDelegate, UIColl
         let cell   = collectionViewImages.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! BodyPartImagesCollectionViewCell
         
         if indexPath.row == 0 {
-            cell.cellImageView.image = UIImage.init(named: "plus")
+            cell.cellImageView.image = UIImage.init(named: "folderplus")
         }
         else {
             cell.cellImageView.image = imagearray[indexPath.row-1]
