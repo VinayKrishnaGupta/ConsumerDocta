@@ -38,6 +38,8 @@
 		2FAE81161F14DEC1007E937A /* FileBrowser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FAE81151F14DEC1007E937A /* FileBrowser.framework */; };
 		2FFEFF941F15FA54003C3643 /* Step4LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFEFF931F15FA54003C3643 /* Step4LocationViewController.swift */; };
 		2FFEFF961F175808003C3643 /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FFEFF951F175808003C3643 /* SVProgressHUD.framework */; };
+		2FFEFF981F188B9E003C3643 /* plusgif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2FFEFF971F188B9E003C3643 /* plusgif.gif */; };
+		2FFEFF9A1F188C97003C3643 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FFEFF991F188C97003C3643 /* SDWebImage.framework */; };
 		464EC4EBBAFA3F99DA1F1E65 /* Pods_Docta_ConsumerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13E00AB4928D8D06E6CB887F /* Pods_Docta_ConsumerTests.framework */; };
 		E9DA843E3FBB31D9E4F8C79E /* Pods_Docta_ConsumerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6A67489C2972480C67EF23F /* Pods_Docta_ConsumerUITests.framework */; };
 /* End PBXBuildFile section */
@@ -109,6 +111,8 @@
 		2FAE81151F14DEC1007E937A /* FileBrowser.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FileBrowser.framework; path = "../../../Library/Developer/Xcode/DerivedData/Docta_Consumer-fzeqzrpmkwrzkzexuhyxdnkslmth/Build/Products/Debug-iphonesimulator/FileBrowser/FileBrowser.framework"; sourceTree = "<group>"; };
 		2FFEFF931F15FA54003C3643 /* Step4LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Step4LocationViewController.swift; sourceTree = "<group>"; };
 		2FFEFF951F175808003C3643 /* SVProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SVProgressHUD.framework; path = "Pods/../build/Debug-iphoneos/SVProgressHUD/SVProgressHUD.framework"; sourceTree = "<group>"; };
+		2FFEFF971F188B9E003C3643 /* plusgif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = plusgif.gif; sourceTree = "<group>"; };
+		2FFEFF991F188C97003C3643 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = "Pods/../build/Debug-iphoneos/SDWebImage/SDWebImage.framework"; sourceTree = "<group>"; };
 		5615A93F60B2FCD16DE23E57 /* Pods-Docta Consumer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Docta Consumer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Docta Consumer/Pods-Docta Consumer.debug.xcconfig"; sourceTree = "<group>"; };
 		76357A9699426C76E29534EF /* Pods-Docta ConsumerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Docta ConsumerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Docta ConsumerTests/Pods-Docta ConsumerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		99CF6ADFF21354F0AC1D7AFD /* Pods-Docta ConsumerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Docta ConsumerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Docta ConsumerTests/Pods-Docta ConsumerTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -123,6 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FFEFF9A1F188C97003C3643 /* SDWebImage.framework in Frameworks */,
 				2FFEFF961F175808003C3643 /* SVProgressHUD.framework in Frameworks */,
 				2FAE81161F14DEC1007E937A /* FileBrowser.framework in Frameworks */,
 				2F87E6601EFA679700E6CD70 /* Alamofire.framework in Frameworks */,
@@ -225,6 +230,7 @@
 		2FA8EC281EE9673900F9AB24 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2FFEFF971F188B9E003C3643 /* plusgif.gif */,
 				2FA8EC291EE9673900F9AB24 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -277,6 +283,7 @@
 		7133817F263E0A926B465443 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2FFEFF991F188C97003C3643 /* SDWebImage.framework */,
 				2FFEFF951F175808003C3643 /* SVProgressHUD.framework */,
 				2FAE81151F14DEC1007E937A /* FileBrowser.framework */,
 				2F87E65F1EFA679700E6CD70 /* Alamofire.framework */,
@@ -425,6 +432,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F6385AF1F0F4B6400603FB1 /* CreateNewCase.storyboard in Resources */,
+				2FFEFF981F188B9E003C3643 /* plusgif.gif in Resources */,
 				2FA8EC641EEAA58500F9AB24 /* SubmitCase.storyboard in Resources */,
 				2FA8EC381EE9673900F9AB24 /* LaunchScreen.storyboard in Resources */,
 				2FA8EC351EE9673900F9AB24 /* Assets.xcassets in Resources */,
@@ -765,6 +773,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/SVProgressHUD",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/SDWebImage",
 				);
 				GCC_PREFIX_HEADER = "/Users/rstintl/Desktop/Xcode/DoctaConsumer/Docta Consumer/SharedValues.pch";
 				INFOPLIST_FILE = "Docta Consumer/Info.plist";
@@ -789,6 +798,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/SVProgressHUD",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/SDWebImage",
 				);
 				GCC_PREFIX_HEADER = "/Users/rstintl/Desktop/Xcode/DoctaConsumer/Docta Consumer/SharedValues.pch";
 				INFOPLIST_FILE = "Docta Consumer/Info.plist";

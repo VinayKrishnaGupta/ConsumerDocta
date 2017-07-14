@@ -22,6 +22,9 @@ PODS:
   - ImagePicker (2.1.1)
   - Lightbox (1.0.0):
     - Hue
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
   - SVProgressHUD (2.1.2)
 
 DEPENDENCIES:
@@ -32,6 +35,7 @@ DEPENDENCIES:
   - FileBrowser (~> 0.2)
   - ImagePicker
   - Lightbox
+  - SDWebImage (~> 3.8)
   - SVProgressHUD
 
 SPEC CHECKSUMS:
@@ -43,8 +47,9 @@ SPEC CHECKSUMS:
   Hue: 354caec055fdc9d38b5ef33ca2e7224721843baf
   ImagePicker: fe4c699abb56ff03994fa98d8b02e3883ee118be
   Lightbox: 13f55a0a840f7945dc5ac87931564e7fe569fca9
+  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
 
-PODFILE CHECKSUM: c60b5170e44e2c80dff10e712e856c08a23a852c
+PODFILE CHECKSUM: e25f890a966d6eb4e6f7ea23ad69283b4f5c9d9b
 
 COCOAPODS: 1.2.1

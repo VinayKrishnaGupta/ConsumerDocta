@@ -10,6 +10,9 @@ pod 'ImagePicker'
 pod 'Lightbox'
 pod 'Alamofire', '~> 4.4'
 pod 'SVProgressHUD'
+pod 'SDWebImage', '~>3.8'
+
+
 
 source 'https://github.com/CocoaPods/Specs.git'
 pod 'FileBrowser', '~> 0.2'

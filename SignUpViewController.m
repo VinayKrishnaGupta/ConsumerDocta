@@ -16,6 +16,9 @@
 @property (weak, nonatomic) IBOutlet UITextField *LastName;
 @property (weak, nonatomic) IBOutlet UITextField *emailtextfield;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
+@property (weak, nonatomic) IBOutlet UIButton *refererbutton;
+@property (weak, nonatomic) IBOutlet UIButton *carerButton;
+@property (weak, nonatomic) IBOutlet UIButton *patientButton;
 
 @end
 
@@ -23,6 +26,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [_refererbutton addTarget:self action:@selector(changeButtonStates) forControlEvents:UIControlEventTouchUpInside];
+    [_carerButton addTarget:self action:@selector(changeButtonStates) forControlEvents:UIControlEventTouchUpInside];
+    [_patientButton addTarget:self action:@selector(changeButtonStates) forControlEvents:UIControlEventTouchUpInside];
+    
+    
    
     
     
@@ -50,25 +58,25 @@
 
 
 -(void)ProceedButton {
-    
-    NSDictionary *parameters = @{@"email":_emailtextfield.text, @"password":_passwordTextField.text,@"first_name":_firstName.text, @"last_name":_LastName.text};
-    
-    [[APIHandler sharedInstance]GetDatafromAPI:@"POST" :@"register" :parameters  completionBlock:^(id dict, NSError *error)
-     
-     {
-         
-         NSLog(@"Response Dict in signin is %@  and Error is %@",dict,error );
-         if ([dict isKindOfClass:[NSDictionary class]]) {
-             [self LogininBackground];
-         }
-         else {
-             NSLog(@"Error is signup");
-             
-         }
-         
-     }];
-
-    
+//    
+//    NSDictionary *parameters = @{@"email":_emailtextfield.text, @"password":_passwordTextField.text,@"first_name":_firstName.text, @"last_name":_LastName.text};
+//    
+//    [[APIHandler sharedInstance]GetDatafromAPI:@"POST" :@"register" :parameters  completionBlock:^(id dict, NSError *error)
+//     
+//     {
+//         
+//         NSLog(@"Response Dict in signin is %@  and Error is %@",dict,error );
+//         if ([dict isKindOfClass:[NSDictionary class]]) {
+//             [self LogininBackground];
+//         }
+//         else {
+//             NSLog(@"Error is signup");
+//             
+//         }
+//         
+//     }];
+//
+//    
     
     
 }
@@ -118,6 +126,43 @@
 -(void)SigninButton {
     [self performSegueWithIdentifier:@"signInVC" sender:nil];
 }
+
+
+-(void)changeButtonStates {
+    if (_refererbutton.touchInside) {
+        _refererbutton.backgroundColor = [UIColor colorWithRed:255.0f/255.0f green:206.0f/255.0f blue:74.0f/255.0f alpha:1];
+        [_refererbutton setTitleColor:[UIColor colorWithRed:255.0f/255.0f green:98.0f/255.0f blue:2.0f/255.0f alpha:1] forState:UIControlStateNormal];
+        _carerButton.backgroundColor = [UIColor groupTableViewBackgroundColor];
+        [_carerButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+        _patientButton.backgroundColor = [UIColor groupTableViewBackgroundColor];
+        [_patientButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+        
+    }
+    else if (_carerButton.touchInside) {
+        _carerButton.backgroundColor = [UIColor colorWithRed:255.0f/255.0f green:206.0f/255.0f blue:74.0f/255.0f alpha:1];
+        [_carerButton setTitleColor:[UIColor colorWithRed:255.0f/255.0f green:98.0f/255.0f blue:2.0f/255.0f alpha:1] forState:UIControlStateNormal];
+        _refererbutton.backgroundColor = [UIColor groupTableViewBackgroundColor];
+        [_refererbutton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+        _patientButton.backgroundColor = [UIColor groupTableViewBackgroundColor];
+        [_patientButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+        
+    }
+    else if (_patientButton.touchInside) {
+        _patientButton.backgroundColor = [UIColor colorWithRed:255.0f/255.0f green:206.0f/255.0f blue:74.0f/255.0f alpha:1];
+        [_patientButton setTitleColor:[UIColor colorWithRed:255.0f/255.0f green:98.0f/255.0f blue:2.0f/255.0f alpha:1] forState:UIControlStateNormal];
+        _carerButton.backgroundColor = [UIColor groupTableViewBackgroundColor];
+        [_carerButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+        _refererbutton.backgroundColor = [UIColor groupTableViewBackgroundColor];
+        [_refererbutton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+        
+    }
+    
+    
+    
+    
+    
+}
+
 
 
 /*

@@ -134,7 +134,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Docta Consumer/MyCaseFilesViewController.m"
@@ -218,12 +218,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Docta Consumer/Step1YourcaseViewController.m"
-            timestampString = "521637095.155617"
+            timestampString = "521720301.303969"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "-howlongradioButton"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "-howlongradiobutton"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -234,11 +234,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Docta Consumer/Step1YourcaseViewController.m"
-            timestampString = "521637095.155617"
+            timestampString = "521720301.303969"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
             landmarkName = "@implementation Step1YourcaseViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -250,11 +250,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Docta Consumer/Step1YourcaseViewController.m"
-            timestampString = "521637095.155617"
+            timestampString = "521720301.303969"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
+            startingLineNumber = "142"
+            endingLineNumber = "142"
             landmarkName = "@implementation Step1YourcaseViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -266,11 +266,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Docta Consumer/Step1YourcaseViewController.m"
-            timestampString = "521637095.155617"
+            timestampString = "521720301.303969"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
+            startingLineNumber = "145"
+            endingLineNumber = "145"
             landmarkName = "@implementation Step1YourcaseViewController"
             landmarkType = "3">
          </BreakpointContent>

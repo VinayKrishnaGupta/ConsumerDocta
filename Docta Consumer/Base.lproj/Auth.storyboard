@@ -218,10 +218,13 @@
                     <connections>
                         <outlet property="LastName" destination="a94-qL-cg6" id="XPv-Wx-CDd"/>
                         <outlet property="SignINButton" destination="pxZ-OO-e9m" id="Cwg-IN-Xsi"/>
+                        <outlet property="carerButton" destination="M59-82-tvF" id="hed-4X-kCX"/>
                         <outlet property="emailtextfield" destination="Ctw-ms-VRq" id="gFp-Ey-USh"/>
                         <outlet property="firstName" destination="aHy-XA-pvz" id="Clt-QG-5xX"/>
                         <outlet property="passwordTextField" destination="f7a-DT-MHv" id="iIM-t5-9Uw"/>
+                        <outlet property="patientButton" destination="LYS-q7-VRn" id="uRu-wg-vm2"/>
                         <outlet property="proceedButton" destination="CAA-Hb-bgw" id="bGx-PZ-fzz"/>
+                        <outlet property="refererbutton" destination="439-RD-srq" id="Dih-p0-llP"/>
                         <segue destination="Gg9-Et-SGY" kind="show" identifier="signInVC" id="6JD-QX-O0i"/>
                     </connections>
                 </viewController>

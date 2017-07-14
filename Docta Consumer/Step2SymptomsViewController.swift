@@ -9,6 +9,9 @@
 import UIKit
 import ImagePicker
 import Lightbox
+import SDWebImage
+
+
 class Step2SymptomsViewController: UIViewController, ImagePickerDelegate, UICollectionViewDataSource, UICollectionViewDelegate {
    // @IBOutlet weak var uploadimagesbutton: UIButton!
     let imagepicker = ImagePickerController()
@@ -84,7 +87,8 @@ class Step2SymptomsViewController: UIViewController, ImagePickerDelegate, UIColl
         let cell   = collectionViewImages.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! BodyPartImagesCollectionViewCell
         
         if indexPath.row == 0 {
-            cell.cellImageView.image = UIImage.init(named: "folderplus")
+           // cell.cellImageView.image = UIImage.init(named: "folderplus")
+        cell.cellImageView.image = UIImage.sd_animatedGIFNamed("plusgif")
         }
         else {
             cell.cellImageView.image = imagearray[indexPath.row-1]

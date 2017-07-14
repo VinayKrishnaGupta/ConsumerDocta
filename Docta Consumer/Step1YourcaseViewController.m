@@ -11,7 +11,11 @@
 
 @interface Step1YourcaseViewController ()
 - (IBAction)nextButton:(UIButton *)sender;
-@property (weak, nonatomic) IBOutlet DLRadioButton *howlongradiobutton;
+@property (weak, nonatomic) IBOutlet UIButton *button1;
+@property (weak, nonatomic) IBOutlet UIButton *button2;
+@property (weak, nonatomic) IBOutlet UIButton *button3;
+@property (weak, nonatomic) IBOutlet UIButton *button4;
+
 
 
 
@@ -28,7 +32,14 @@
     [self.navigationController.navigationBar addSubview:imageView];
     
     
-    [_howlongradiobutton addTarget:self action:@selector(howlongradiobutton) forControlEvents:UIControlEventTouchUpInside];
+    
+    
+    
+    [_button1 addTarget:self action:@selector(howlongradiobutton) forControlEvents:UIControlEventTouchUpInside];
+    [_button2 addTarget:self action:@selector(howlongradiobutton) forControlEvents:UIControlEventTouchUpInside];
+    [_button3 addTarget:self action:@selector(howlongradiobutton) forControlEvents:UIControlEventTouchUpInside];
+    [_button4 addTarget:self action:@selector(howlongradiobutton) forControlEvents:UIControlEventTouchUpInside];
+    
     // Do any additional setup after loading the view.
 }
 
@@ -50,18 +61,60 @@
 //}
 
 
--(void)howlongradioButton {
-    for (DLRadioButton *button in _howlongradiobutton) {
+-(void)howlongradiobutton {
+    if (_button1.touchInside) {
+        _button1.backgroundColor = [UIColor colorWithRed:255.0f/255.0f green:206.0f/255.0f blue:74.0f/255.0f alpha:1];
+        [_button1 setTitleColor:[UIColor colorWithRed:255.0f/255.0f green:98.0f/255.0f blue:2.0f/255.0f alpha:1] forState:UIControlStateNormal];
+        _button2.backgroundColor = [UIColor groupTableViewBackgroundColor];
+        [_button2 setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+        _button3.backgroundColor = [UIColor groupTableViewBackgroundColor];
+        [_button3 setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+        _button4.backgroundColor = [UIColor groupTableViewBackgroundColor];
+        [_button4 setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
         
-        NSLog(@"%@ is selected.\n", button.titleLabel.text);
-        if (button.isSelected) {
-            [button setBackgroundColor:[UIColor orangeColor]];
-        }
-        else {
-            [button setBackgroundColor:[UIColor blackColor]];
-        }
+        
+    }
+    else if (_button2.touchInside) {
+        _button2.backgroundColor = [UIColor colorWithRed:255.0f/255.0f green:206.0f/255.0f blue:74.0f/255.0f alpha:1];
+        [_button2 setTitleColor:[UIColor colorWithRed:255.0f/255.0f green:98.0f/255.0f blue:2.0f/255.0f alpha:1] forState:UIControlStateNormal];
+        _button1.backgroundColor = [UIColor groupTableViewBackgroundColor];
+        [_button1 setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+        _button3.backgroundColor = [UIColor groupTableViewBackgroundColor];
+        [_button3 setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+        _button4.backgroundColor = [UIColor groupTableViewBackgroundColor];
+        [_button4 setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+        
+        
+    }
+    else if (_button3.touchInside) {
+        _button3.backgroundColor = [UIColor colorWithRed:255.0f/255.0f green:206.0f/255.0f blue:74.0f/255.0f alpha:1];
+        [_button3 setTitleColor:[UIColor colorWithRed:255.0f/255.0f green:98.0f/255.0f blue:2.0f/255.0f alpha:1] forState:UIControlStateNormal];
+        _button2.backgroundColor = [UIColor groupTableViewBackgroundColor];
+        [_button2 setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+        _button1.backgroundColor = [UIColor groupTableViewBackgroundColor];
+        [_button1 setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+        _button4.backgroundColor = [UIColor groupTableViewBackgroundColor];
+        [_button4 setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+        
+        
+    }
+    else if (_button4.touchInside) {
+        _button4.backgroundColor = [UIColor colorWithRed:255.0f/255.0f green:206.0f/255.0f blue:74.0f/255.0f alpha:1];
+        [_button4 setTitleColor:[UIColor colorWithRed:255.0f/255.0f green:98.0f/255.0f blue:2.0f/255.0f alpha:1] forState:UIControlStateNormal];
+        _button2.backgroundColor = [UIColor groupTableViewBackgroundColor];
+        [_button2 setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+        _button3.backgroundColor = [UIColor groupTableViewBackgroundColor];
+        [_button3 setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+        _button1.backgroundColor = [UIColor groupTableViewBackgroundColor];
+        [_button1 setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+        
+        
+    }
     
-}
+    
+    
+    
+
 }
 /*
 #pragma mark - Navigation
