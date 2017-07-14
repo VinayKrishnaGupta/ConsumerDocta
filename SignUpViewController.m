@@ -20,6 +20,13 @@
 @property (weak, nonatomic) IBOutlet UIButton *carerButton;
 @property (weak, nonatomic) IBOutlet UIButton *patientButton;
 
+@property (weak, nonatomic) IBOutlet UIButton *maleButton;
+@property (weak, nonatomic) IBOutlet UIButton *femaleButton;
+@property (weak, nonatomic) IBOutlet UIButton *otherButton;
+
+
+
+
 @end
 
 @implementation SignUpViewController
@@ -31,6 +38,9 @@
     [_patientButton addTarget:self action:@selector(changeButtonStates) forControlEvents:UIControlEventTouchUpInside];
     
     
+    [_maleButton addTarget:self action:@selector(SelectGenderButton) forControlEvents:UIControlEventTouchUpInside];
+    [_femaleButton addTarget:self action:@selector(SelectGenderButton) forControlEvents:UIControlEventTouchUpInside];
+    [_otherButton addTarget:self action:@selector(SelectGenderButton) forControlEvents:UIControlEventTouchUpInside];
    
     
     
@@ -156,6 +166,42 @@
         [_refererbutton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
         
     }
+    
+    
+    
+    
+    
+}
+
+
+-(void)SelectGenderButton {
+    if (_maleButton.touchInside) {
+        _maleButton.backgroundColor = [UIColor colorWithRed:255.0f/255.0f green:206.0f/255.0f blue:74.0f/255.0f alpha:1];
+        [_maleButton setTitleColor:[UIColor colorWithRed:255.0f/255.0f green:98.0f/255.0f blue:2.0f/255.0f alpha:1] forState:UIControlStateNormal];
+        _femaleButton.backgroundColor = [UIColor groupTableViewBackgroundColor];
+        [_femaleButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+        _otherButton.backgroundColor = [UIColor groupTableViewBackgroundColor];
+        [_otherButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+        
+    }
+    else if (_femaleButton.touchInside) {
+        _femaleButton.backgroundColor = [UIColor colorWithRed:255.0f/255.0f green:206.0f/255.0f blue:74.0f/255.0f alpha:1];
+        [_femaleButton setTitleColor:[UIColor colorWithRed:255.0f/255.0f green:98.0f/255.0f blue:2.0f/255.0f alpha:1] forState:UIControlStateNormal];
+        _maleButton.backgroundColor = [UIColor groupTableViewBackgroundColor];
+        [_maleButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+        _otherButton.backgroundColor = [UIColor groupTableViewBackgroundColor];
+        [_otherButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+        
+    }
+    else if (_otherButton.touchInside) {
+        _otherButton.backgroundColor = [UIColor colorWithRed:255.0f/255.0f green:206.0f/255.0f blue:74.0f/255.0f alpha:1];
+        [_otherButton setTitleColor:[UIColor colorWithRed:255.0f/255.0f green:98.0f/255.0f blue:2.0f/255.0f alpha:1] forState:UIControlStateNormal];
+        _femaleButton.backgroundColor = [UIColor groupTableViewBackgroundColor];
+        [_femaleButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+        _maleButton.backgroundColor = [UIColor groupTableViewBackgroundColor];
+        [_maleButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+    }
+    
     
     
     

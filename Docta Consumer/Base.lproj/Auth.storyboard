@@ -220,7 +220,10 @@
                         <outlet property="SignINButton" destination="pxZ-OO-e9m" id="Cwg-IN-Xsi"/>
                         <outlet property="carerButton" destination="M59-82-tvF" id="hed-4X-kCX"/>
                         <outlet property="emailtextfield" destination="Ctw-ms-VRq" id="gFp-Ey-USh"/>
+                        <outlet property="femaleButton" destination="dpb-e9-XWx" id="4SQ-5h-pYr"/>
                         <outlet property="firstName" destination="aHy-XA-pvz" id="Clt-QG-5xX"/>
+                        <outlet property="maleButton" destination="KGo-Sf-8jh" id="7qs-75-Cw3"/>
+                        <outlet property="otherButton" destination="Zos-qQ-ZWB" id="yR1-fs-DpO"/>
                         <outlet property="passwordTextField" destination="f7a-DT-MHv" id="iIM-t5-9Uw"/>
                         <outlet property="patientButton" destination="LYS-q7-VRn" id="uRu-wg-vm2"/>
                         <outlet property="proceedButton" destination="CAA-Hb-bgw" id="bGx-PZ-fzz"/>
