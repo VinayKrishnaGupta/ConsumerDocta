@@ -24,6 +24,9 @@ class Step2SymptomsViewController: UIViewController, ImagePickerDelegate, UIColl
         collectionViewImages.dataSource = self
         collectionViewImages.delegate = self
         imagepicker.delegate = self
+        self.navigationItem.hidesBackButton = true
+       
+        
     //    uploadimagesbutton.addTarget(self, action: #selector(selectImagefromGalleryandCamera), for: UIControlEvents.touchUpInside)
 
         // Do any additional setup after loading the view.
@@ -88,7 +91,7 @@ class Step2SymptomsViewController: UIViewController, ImagePickerDelegate, UIColl
         
         if indexPath.row == 0 {
            // cell.cellImageView.image = UIImage.init(named: "folderplus")
-        cell.cellImageView.image = UIImage.sd_animatedGIFNamed("plusgif")
+        cell.cellImageView.image = UIImage.sd_animatedGIFNamed("addimagegif")
         }
         else {
             cell.cellImageView.image = imagearray[indexPath.row-1]
@@ -125,6 +128,19 @@ class Step2SymptomsViewController: UIViewController, ImagePickerDelegate, UIColl
         self.performSegue(withIdentifier: "step3treatmenthistory", sender: self)
         
     }
+   
+    @IBAction func backButton(_ sender: UIButton) {
+      self.navigationController?.popViewController(animated: true)
+        
+        
+    }
+    
+    @IBAction func introButton(_ sender: UIButton) {
+        
+        let introVC = Step2IntroViewController(nibName: "Step2IntroViewController", bundle: nil)
+        self.present(introVC, animated: true, completion: nil)
+    }
+    
 
     /*
     // MARK: - Navigation

@@ -101,7 +101,7 @@
 }
 
 - (IBAction)SignupButton:(UIButton *)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController popViewControllerAnimated:YES];
     
     
     

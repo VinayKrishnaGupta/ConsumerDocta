@@ -8,13 +8,17 @@
 
 #import "Step1YourcaseViewController.h"
 #import <DLRadioButton/DLRadioButton.h>
+#import "Step1IntroductionViewController.h"
+
 
 @interface Step1YourcaseViewController ()
+- (IBAction)introductionButton:(UIButton *)sender;
 - (IBAction)nextButton:(UIButton *)sender;
 @property (weak, nonatomic) IBOutlet UIButton *button1;
 @property (weak, nonatomic) IBOutlet UIButton *button2;
 @property (weak, nonatomic) IBOutlet UIButton *button3;
 @property (weak, nonatomic) IBOutlet UIButton *button4;
+@property (weak, nonatomic) IBOutlet UITextView *problemDetailTextview;
 
 
 
@@ -30,6 +34,35 @@
     UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
     imageView.frame = CGRectMake(10, 2, 100, 30);
     [self.navigationController.navigationBar addSubview:imageView];
+    
+//    UIBarButtonItem *signupButton = [[UIBarButtonItem alloc] initWithTitle:@"Sign up" style:UIBarButtonItemStylePlain target:self action:@selector(SignupButton)];
+//    
+//    self.navigationItem.rightBarButtonItem = signupButton;
+    
+    UIButton *useButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    useButton.frame = CGRectMake(0, 0, 60, 30);
+    [useButton setTitle:@"Sign Up" forState:UIControlStateNormal];
+    useButton.backgroundColor = [UIColor colorWithRed:0.0f green:161/255.0f blue:255/255.0f alpha:1];
+    useButton.titleLabel.textColor = [UIColor whiteColor];
+    useButton.layer.masksToBounds = NO;
+    useButton.layer.cornerRadius = 5;
+//    useButton.layer.shadowOffset = CGSizeMake(0, 1.5);
+//    useButton.layer.shadowRadius = 5;
+//    useButton.layer.shadowOpacity = 1.0;
+    useButton.titleLabel.font = [UIFont systemFontOfSize:13];
+    //    useButton.layer.shadowColor = [UIColor blackColor].CGColor;
+    useButton.layer.borderColor = [UIColor whiteColor].CGColor;
+    [self.view addSubview:useButton];
+    
+    UIBarButtonItem *useItem = [[UIBarButtonItem alloc] initWithCustomView:useButton];
+    [self.navigationItem setRightBarButtonItems:@[useItem]];
+    
+    [[self.problemDetailTextview layer] setBorderColor:[[UIColor grayColor] CGColor]];
+    [[self.problemDetailTextview layer] setBorderWidth:1];
+    [[self.problemDetailTextview layer] setCornerRadius:10];
+    
+    
+    
     
     
     
@@ -125,6 +158,13 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (IBAction)introductionButton:(UIButton *)sender {
+    Step1IntroductionViewController *introVC = [[Step1IntroductionViewController alloc] initWithNibName:@"Step1IntroductionViewController" bundle:nil];
+    [self presentViewController:introVC animated:YES completion:nil];
+    
+    
+}
 
 - (IBAction)nextButton:(UIButton *)sender {
     [self performSegueWithIdentifier:@"step2symptoms" sender:nil];

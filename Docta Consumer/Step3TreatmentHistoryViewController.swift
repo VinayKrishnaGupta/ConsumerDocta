@@ -14,8 +14,11 @@ class Step3TreatmentHistoryViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        let documentsURL = paths[0] as NSURL
+        self.navigationItem.hidesBackButton = true
+        
+        
+//        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+//        let documentsURL = paths[0] as NSURL
 
         // Do any additional setup after loading the view.
     }
@@ -43,5 +46,11 @@ class Step3TreatmentHistoryViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    @IBAction func backButton(_ sender: UIButton) {
+     self.navigationController?.popViewController(animated: true)
+        
+        
+        
+    }
 
 }

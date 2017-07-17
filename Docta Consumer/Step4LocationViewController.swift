@@ -27,6 +27,7 @@ class Step4LocationViewController: UIViewController, UITextFieldDelegate {
         button1.addTarget(self, action: #selector(changebuttonstates), for: UIControlEvents.touchUpInside)
         button2.addTarget(self, action: #selector(changebuttonstates), for: UIControlEvents.touchUpInside)
         button3.addTarget(self, action: #selector(changebuttonstates), for: UIControlEvents.touchUpInside)
+        self.navigationItem.hidesBackButton = true
         
         
 
@@ -74,6 +75,9 @@ class Step4LocationViewController: UIViewController, UITextFieldDelegate {
             button1.backgroundColor = #colorLiteral(red: 0, green: 0.5898008943, blue: 1, alpha: 1)
             button2.backgroundColor = UIColor.groupTableViewBackground
             button3.backgroundColor = UIColor.groupTableViewBackground
+            button1.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
+            button2.setTitleColor(#colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1), for: .normal)
+            button3.setTitleColor(#colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1), for: .normal)
             print("button 1 is selected")
             locationLabel.text = button1.titleLabel?.text
             
@@ -83,6 +87,9 @@ class Step4LocationViewController: UIViewController, UITextFieldDelegate {
             button1.backgroundColor = UIColor.groupTableViewBackground
             button3.backgroundColor = UIColor.groupTableViewBackground
             locationLabel.text = button2.titleLabel?.text
+            button2.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
+            button1.setTitleColor(#colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1), for: .normal)
+            button3.setTitleColor(#colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1), for: .normal)
             print("button 2 is selected")
         }
         if button3.isTouchInside {
@@ -90,6 +97,9 @@ class Step4LocationViewController: UIViewController, UITextFieldDelegate {
             button1.backgroundColor = UIColor.groupTableViewBackground
             button2.backgroundColor = UIColor.groupTableViewBackground
             locationLabel.text = button3.titleLabel?.text
+            button3.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
+            button2.setTitleColor(#colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1), for: .normal)
+            button1.setTitleColor(#colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1), for: .normal)
             print("button 3 is selected")
         }
         
@@ -130,5 +140,11 @@ class Step4LocationViewController: UIViewController, UITextFieldDelegate {
         // Pass the selected object to the new view controller.
     }
     */
+    @IBAction func backButton(_ sender: UIButton) {
+    self.navigationController?.popViewController(animated: true)
+        
+        
+        
+    }
 
 }
