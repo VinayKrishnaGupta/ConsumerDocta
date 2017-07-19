@@ -12,11 +12,12 @@ import Lightbox
 import SDWebImage
 
 
-class Step2SymptomsViewController: UIViewController, ImagePickerDelegate, UICollectionViewDataSource, UICollectionViewDelegate {
+class Step2SymptomsViewController: UIViewController, ImagePickerDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UITextFieldDelegate {
    // @IBOutlet weak var uploadimagesbutton: UIButton!
     let imagepicker = ImagePickerController()
     var imagearray  = [UIImage]()
     
+    @IBOutlet weak var symptomstextfield: UITextField!
     @IBOutlet weak var collectionViewImages: UICollectionView!
 
     override func viewDidLoad() {
@@ -25,6 +26,11 @@ class Step2SymptomsViewController: UIViewController, ImagePickerDelegate, UIColl
         collectionViewImages.delegate = self
         imagepicker.delegate = self
         self.navigationItem.hidesBackButton = true
+        symptomstextfield.delegate = self
+        
+//        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(Step2SymptomsViewController.dismissKeyboard))
+//        
+//        view.addGestureRecognizer(tap)
        
         
     //    uploadimagesbutton.addTarget(self, action: #selector(selectImagefromGalleryandCamera), for: UIControlEvents.touchUpInside)
@@ -53,6 +59,11 @@ class Step2SymptomsViewController: UIViewController, ImagePickerDelegate, UIColl
         
         
         
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.symptomstextfield.resignFirstResponder()
+        return true
     }
     
     
@@ -108,6 +119,11 @@ class Step2SymptomsViewController: UIViewController, ImagePickerDelegate, UIColl
             self.selectImagefromGalleryandCamera()
         }
         
+        else {
+            
+            
+        }
+        
         
         
         
@@ -139,6 +155,12 @@ class Step2SymptomsViewController: UIViewController, ImagePickerDelegate, UIColl
         
         let introVC = Step2IntroViewController(nibName: "Step2IntroViewController", bundle: nil)
         self.present(introVC, animated: true, completion: nil)
+    }
+    
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+        
     }
     
 

@@ -29,9 +29,17 @@
     imageView.frame = CGRectMake(10, 2, 100, 30);
     [self.navigationController.navigationBar addSubview:imageView];
     
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
     
-    // Do any additional setup after loading the view.
+    [self.view addGestureRecognizer:tap];
+    // Do any additional setup after loading the view from its nib.
 }
+
+-(void)dismissKeyboard
+{
+    [self.view endEditing:YES];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

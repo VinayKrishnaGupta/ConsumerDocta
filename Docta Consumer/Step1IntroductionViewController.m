@@ -18,7 +18,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
+    
+    [self.view addGestureRecognizer:tap];
     // Do any additional setup after loading the view from its nib.
+}
+
+-(void)dismissKeyboard
+{
+    [self.view endEditing:YES];
 }
 
 - (void)didReceiveMemoryWarning {

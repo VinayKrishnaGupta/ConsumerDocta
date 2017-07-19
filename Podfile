@@ -11,7 +11,10 @@ pod 'Lightbox'
 pod 'Alamofire', '~> 4.4'
 pod 'SVProgressHUD'
 pod 'SDWebImage', '~>3.8'
-
+pod 'Firebase/Storage'
+pod 'Firebase/Auth'
+pod 'Firebase/Database'
+pod 'JSQMessagesViewController'
 
 
 source 'https://github.com/CocoaPods/Specs.git'

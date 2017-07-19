@@ -10,13 +10,19 @@ import UIKit
 import FileBrowser
 
 class Step3TreatmentHistoryViewController: UIViewController {
+    @IBOutlet weak var treatmenttextView: UITextView!
     let fileBrowser = FileBrowser()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.hidesBackButton = true
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
         
-        
+        view.addGestureRecognizer(tap)
+        let myColor = UIColor.darkText
+        treatmenttextView.layer.borderWidth = 1
+        treatmenttextView.layer.cornerRadius = 10
+        treatmenttextView.layer.borderColor = myColor.cgColor
 //        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
 //        let documentsURL = paths[0] as NSURL
 
@@ -35,6 +41,11 @@ class Step3TreatmentHistoryViewController: UIViewController {
     @IBAction func nextButton(_ sender: UIButton) {
         self.performSegue(withIdentifier: "step4Location", sender: sender)
         
+    }
+    
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
     }
 
     /*

@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+@import Firebase;
 
 @interface AppDelegate ()
 
@@ -23,6 +24,8 @@
 //    imageView.frame = CGRectMake(10, 2, 100, 30);
 //    [[UINavigationBar appearance]addSubview:imageView];
    // [self.navigationController.navigationBar addSubview:imageView];
+    
+    [FIRApp configure];
     return YES;
 }
 
