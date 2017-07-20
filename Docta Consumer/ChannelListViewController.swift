@@ -32,13 +32,13 @@ enum Section: Int {
 class ChannelListViewController: UITableViewController {
 
   // MARK: Properties
-  var senderDisplayName: String = ""
+  var senderDisplayName: String = "Vinay"
   var newChannelTextField: UITextField?
   
   private var channelRefHandle: DatabaseHandle?
   private var channels: [Channel] = []
   
-  private lazy var channelRef: DatabaseReference = Database.database().reference().child("WahAmritsar_Chat")
+  private lazy var channelRef: DatabaseReference = Database.database().reference().child("doctaconsumer")
   
   // MARK: View Lifecycle
   
@@ -53,15 +53,15 @@ class ChannelListViewController: UITableViewController {
     
   override func viewDidLoad() {
     super.viewDidLoad()
-    SVProgressHUD.show()
-    if (UserDefaults.standard.dictionary(forKey: "LoggedInUser")) != nil {
-        let userDict : NSDictionary = UserDefaults.standard.dictionary(forKey: "LoggedInUser")! as NSDictionary
-        senderDisplayName = userDict.value(forKey: "enduser_name") as! String
-    }
-    else {
-        senderDisplayName = "Guest"
-        
-    }
+   // SVProgressHUD.show()
+//    if (UserDefaults.standard.dictionary(forKey: "LoggedInUser")) != nil {
+//        let userDict : NSDictionary = UserDefaults.standard.dictionary(forKey: "LoggedInUser")! as NSDictionary
+//        senderDisplayName = userDict.value(forKey: "enduser_name") as! String
+//    }
+//    else {
+//        senderDisplayName = "Guest"
+//        
+//    }
     
     
     let backButton1 = UIBarButtonItem.init(image: UIImage.init(named: "BackButton"), style: UIBarButtonItemStyle.plain, target: self, action: #selector(backAction(_:)))

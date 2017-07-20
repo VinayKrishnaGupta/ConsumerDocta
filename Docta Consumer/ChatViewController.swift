@@ -28,12 +28,12 @@ import JSQMessagesViewController
 final class ChatViewController: JSQMessagesViewController {
   
   // MARK: Properties
-  private let imageURLNotSetKey = "NOTSET"
+  private let imageURLNotSetKey = "https://doctaconsumer.firebaseio.com/"
   
   var channelRef: DatabaseReference?
 
   private lazy var messageRef: DatabaseReference = self.channelRef!.child("messages")
-  fileprivate lazy var storageRef: StorageReference = Storage.storage().reference(forURL: "gs://chatchat-rw-cf107.appspot.com")
+  fileprivate lazy var storageRef: StorageReference = Storage.storage().reference(forURL: "gs://doctaconsumer.appspot.com")
   private lazy var userIsTypingRef: DatabaseReference = self.channelRef!.child("typingIndicator").child(self.senderId)
   private lazy var usersTypingQuery: DatabaseQuery = self.channelRef!.child("typingIndicator").queryOrderedByValue().queryEqual(toValue: true)
 
@@ -157,12 +157,13 @@ final class ChatViewController: JSQMessagesViewController {
 
       if let id = messageData["senderId"] as String!, let name = messageData["senderName"] as String!, let text = messageData["text"] as String!, text.characters.count > 0 {
         self.addMessage(withId: id, name: name, text: text)
+        self.addMessage(withId: "foo", name: "Dr Docta", text: "Yo Vinay")
         self.finishReceivingMessage()
       } else if let id = messageData["senderId"] as String!, let photoURL = messageData["photoURL"] as String! {
         if let mediaItem = JSQPhotoMediaItem(maskAsOutgoing: id == self.senderId) {
           self.addPhotoMessage(withId: id, key: snapshot.key, mediaItem: mediaItem)
           
-          if photoURL.hasPrefix("gs://") {
+          if photoURL.hasPrefix("gs://doctaconsumer.appspot.com") {
             self.fetchImageDataAtURL(photoURL, forMediaItem: mediaItem, clearsPhotoMessageMapOnSuccessForKey: nil)
           }
         }
@@ -286,7 +287,7 @@ final class ChatViewController: JSQMessagesViewController {
   
   private func setupOutgoingBubble() -> JSQMessagesBubbleImage {
     let bubbleImageFactory = JSQMessagesBubbleImageFactory()
-    return bubbleImageFactory!.outgoingMessagesBubbleImage(with: UIColor.jsq_messageBubbleBlue())
+    return bubbleImageFactory!.outgoingMessagesBubbleImage(with: UIColor.jsq_messageBubbleGreen())
   }
 
   private func setupIncomingBubble() -> JSQMessagesBubbleImage {
@@ -298,7 +299,7 @@ final class ChatViewController: JSQMessagesViewController {
     let picker = UIImagePickerController()
     picker.delegate = self
     if (UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera)) {
-      picker.sourceType = UIImagePickerControllerSourceType.camera
+      picker.sourceType = UIImagePickerControllerSourceType.photoLibrary
     } else {
       picker.sourceType = UIImagePickerControllerSourceType.photoLibrary
     }
@@ -355,7 +356,7 @@ extension ChatViewController: UIImagePickerControllerDelegate, UINavigationContr
           let imageFileURL = contentEditingInput?.fullSizeImageURL
 
           // 5
-          let path = "\(Auth.auth().currentUser?.uid)/\(Int(Date.timeIntervalSinceReferenceDate * 1000))/\(photoReferenceUrl.lastPathComponent)"
+            let path : String = "\(String(describing: Auth.auth().currentUser?.uid))/\(Int(Date.timeIntervalSinceReferenceDate * 1000))/\(photoReferenceUrl.lastPathComponent)" 
 
           // 6
           self.storageRef.child(path).putFile(from: imageFileURL!, metadata: nil) { (metadata, error) in

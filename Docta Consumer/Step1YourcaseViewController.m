@@ -11,6 +11,7 @@
 #import "Step1IntroductionViewController.h"
 
 
+
 @interface Step1YourcaseViewController ()
 - (IBAction)introductionButton:(UIButton *)sender;
 - (IBAction)nextButton:(UIButton *)sender;
@@ -40,18 +41,20 @@
 //    self.navigationItem.rightBarButtonItem = signupButton;
     
     UIButton *useButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    useButton.frame = CGRectMake(0, 0, 60, 30);
-    [useButton setTitle:@"Sign Up" forState:UIControlStateNormal];
+    useButton.frame = CGRectMake(0, 0, 100, 35);
+    [useButton setTitle:@"Chat With Us" forState:UIControlStateNormal];
     useButton.backgroundColor = [UIColor colorWithRed:0.0f green:161/255.0f blue:255/255.0f alpha:1];
     useButton.titleLabel.textColor = [UIColor whiteColor];
     useButton.layer.masksToBounds = NO;
-    useButton.layer.cornerRadius = 5;
+    useButton.layer.cornerRadius = 10;
 //    useButton.layer.shadowOffset = CGSizeMake(0, 1.5);
 //    useButton.layer.shadowRadius = 5;
 //    useButton.layer.shadowOpacity = 1.0;
     useButton.titleLabel.font = [UIFont systemFontOfSize:13];
     //    useButton.layer.shadowColor = [UIColor blackColor].CGColor;
     useButton.layer.borderColor = [UIColor whiteColor].CGColor;
+    [useButton addTarget:self action:@selector(ChatStoryboardButton) forControlEvents:UIControlEventTouchUpInside];
+    
     [self.view addSubview:useButton];
     
     UIBarButtonItem *useItem = [[UIBarButtonItem alloc] initWithCustomView:useButton];
@@ -90,6 +93,21 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+- (void)ChatStoryboardButton {
+    
+    //ChatChannelNavigation
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"ChatMain" bundle:nil];
+    UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"ChatMain"];
+    [self.navigationController pushViewController:vc animated:YES];
+    
+    
+    
+    
+    NSLog(@"Signup button");
+    
 }
 
 

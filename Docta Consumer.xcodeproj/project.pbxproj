@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1574F0F19EC426671421B575 /* Pods_Docta_Consumer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC1997B0A55BB874D4594021 /* Pods_Docta_Consumer.framework */; };
+		2F5B55721F208D6E000E28A0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2F5B55711F208D6E000E28A0 /* GoogleService-Info.plist */; };
 		2F6385AD1F0F4B4300603FB1 /* Step1YourcaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F6385AC1F0F4B4300603FB1 /* Step1YourcaseViewController.m */; };
 		2F6385AF1F0F4B6400603FB1 /* CreateNewCase.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F6385AE1F0F4B6400603FB1 /* CreateNewCase.storyboard */; };
 		2F6F93DB1EEFCA4900037532 /* ImagePicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F6F93DA1EEFCA4900037532 /* ImagePicker.framework */; };
@@ -43,7 +44,6 @@
 		2FFE00251F1F840C003C3643 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFE001D1F1F840C003C3643 /* ChatViewController.swift */; };
 		2FFE00261F1F840C003C3643 /* ChatMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FFE001E1F1F840C003C3643 /* ChatMain.storyboard */; };
 		2FFE00271F1F840C003C3643 /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFE00201F1F840C003C3643 /* UIImage+Gif.swift */; };
-		2FFE00291F1F86F5003C3643 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2FFE00281F1F86F5003C3643 /* GoogleService-Info.plist */; };
 		2FFEFF941F15FA54003C3643 /* Step4LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFEFF931F15FA54003C3643 /* Step4LocationViewController.swift */; };
 		2FFEFF961F175808003C3643 /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FFEFF951F175808003C3643 /* SVProgressHUD.framework */; };
 		2FFEFF981F188B9E003C3643 /* plusgif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2FFEFF971F188B9E003C3643 /* plusgif.gif */; };
@@ -77,6 +77,7 @@
 /* Begin PBXFileReference section */
 		0641A67570E38EFAE2234FA3 /* Pods-Docta ConsumerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Docta ConsumerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Docta ConsumerUITests/Pods-Docta ConsumerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		13E00AB4928D8D06E6CB887F /* Pods_Docta_ConsumerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Docta_ConsumerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F5B55711F208D6E000E28A0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2F6385AB1F0F4B4300603FB1 /* Step1YourcaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Step1YourcaseViewController.h; sourceTree = "<group>"; };
 		2F6385AC1F0F4B4300603FB1 /* Step1YourcaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Step1YourcaseViewController.m; sourceTree = "<group>"; };
 		2F6385AE1F0F4B6400603FB1 /* CreateNewCase.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CreateNewCase.storyboard; sourceTree = "<group>"; };
@@ -130,7 +131,6 @@
 		2FFE001E1F1F840C003C3643 /* ChatMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ChatMain.storyboard; sourceTree = "<group>"; };
 		2FFE001F1F1F840C003C3643 /* ChatChat-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ChatChat-Bridging-Header.h"; sourceTree = "<group>"; };
 		2FFE00201F1F840C003C3643 /* UIImage+Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
-		2FFE00281F1F86F5003C3643 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2FFEFF931F15FA54003C3643 /* Step4LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Step4LocationViewController.swift; sourceTree = "<group>"; };
 		2FFEFF951F175808003C3643 /* SVProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SVProgressHUD.framework; path = "Pods/../build/Debug-iphoneos/SVProgressHUD/SVProgressHUD.framework"; sourceTree = "<group>"; };
 		2FFEFF971F188B9E003C3643 /* plusgif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = plusgif.gif; sourceTree = "<group>"; };
@@ -254,6 +254,15 @@
 				2FA8EC341EE9673900F9AB24 /* Assets.xcassets */,
 				2FA8EC361EE9673900F9AB24 /* LaunchScreen.storyboard */,
 				2FA8EC391EE9673900F9AB24 /* Info.plist */,
+				2FFE00191F1F840C003C3643 /* CreateChannelCell.swift */,
+				2FFE001A1F1F840C003C3643 /* Channel.swift */,
+				2FFE001B1F1F840C003C3643 /* LoginViewController.swift */,
+				2FFE001C1F1F840C003C3643 /* ChannelListViewController.swift */,
+				2FFE001D1F1F840C003C3643 /* ChatViewController.swift */,
+				2FFE001E1F1F840C003C3643 /* ChatMain.storyboard */,
+				2FFE001F1F1F840C003C3643 /* ChatChat-Bridging-Header.h */,
+				2FFE00201F1F840C003C3643 /* UIImage+Gif.swift */,
+				2F5B55711F208D6E000E28A0 /* GoogleService-Info.plist */,
 				2FFE00181F1F83F1003C3643 /* Chat */,
 				2FA8EC281EE9673900F9AB24 /* Supporting Files */,
 				2FA8EC721EEEB10000F9AB24 /* Docta Consumer-Bridging-Header.h */,
@@ -318,15 +327,6 @@
 		2FFE00181F1F83F1003C3643 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
-				2FFE00191F1F840C003C3643 /* CreateChannelCell.swift */,
-				2FFE001A1F1F840C003C3643 /* Channel.swift */,
-				2FFE001B1F1F840C003C3643 /* LoginViewController.swift */,
-				2FFE001C1F1F840C003C3643 /* ChannelListViewController.swift */,
-				2FFE001D1F1F840C003C3643 /* ChatViewController.swift */,
-				2FFE001E1F1F840C003C3643 /* ChatMain.storyboard */,
-				2FFE001F1F1F840C003C3643 /* ChatChat-Bridging-Header.h */,
-				2FFE00201F1F840C003C3643 /* UIImage+Gif.swift */,
-				2FFE00281F1F86F5003C3643 /* GoogleService-Info.plist */,
 			);
 			name = Chat;
 			sourceTree = "<group>";
@@ -487,11 +487,11 @@
 				2FFEFF9C1F1A02DE003C3643 /* addimagegif.gif in Resources */,
 				2FFEFFA91F1A2981003C3643 /* Step2IntroViewController.xib in Resources */,
 				2FFEFFA51F1A1BAE003C3643 /* Step1IntroductionViewController.xib in Resources */,
+				2F5B55721F208D6E000E28A0 /* GoogleService-Info.plist in Resources */,
 				2FFEFF981F188B9E003C3643 /* plusgif.gif in Resources */,
 				2FA8EC641EEAA58500F9AB24 /* SubmitCase.storyboard in Resources */,
 				2FA8EC381EE9673900F9AB24 /* LaunchScreen.storyboard in Resources */,
 				2FA8EC351EE9673900F9AB24 /* Assets.xcassets in Resources */,
-				2FFE00291F1F86F5003C3643 /* GoogleService-Info.plist in Resources */,
 				2FA8EC331EE9673900F9AB24 /* Auth.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

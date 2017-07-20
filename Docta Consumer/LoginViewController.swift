@@ -52,11 +52,11 @@ class LoginViewController: UIViewController {
   @IBAction func loginDidTouch(_ sender: AnyObject) {
     if nameField?.text != "" {
     
-        Auth.auth().signIn(withEmail: "vinaygupta.iitkgp@gmail.com", password: "12345678") {(user, error) in
-            print("Login details are \(user)) and \(error))")
-            
-        
-        }
+//        Auth.auth().signIn(withEmail: "vinaygupta.iitkgp@gmail.com", password: "12345678") {(user, error) in
+//            print("Login details are \(user)) and \(error))")
+//            
+//        
+//        }
         
 //        Auth.auth().currentUser!.sendEmailVerification(completion: { (error) in
 //           print(error)
@@ -78,8 +78,8 @@ class LoginViewController: UIViewController {
 
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     super.prepare(for: segue, sender: sender)
-    let navVc = segue.destination as! UINavigationController
-    let channelVc = navVc.viewControllers.first as! ChannelListViewController
+   // let navVc = segue.destination as! UINavigationController
+    let channelVc = segue.destination as! ChannelListViewController
     
     channelVc.senderDisplayName = (nameField?.text)!
   }
