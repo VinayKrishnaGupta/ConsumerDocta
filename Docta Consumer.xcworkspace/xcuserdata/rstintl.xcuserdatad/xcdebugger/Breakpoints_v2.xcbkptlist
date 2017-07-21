@@ -342,47 +342,63 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Docta Consumer/ChatViewController.swift"
+            timestampString = "522310377.299593"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
+            landmarkName = "collectionView(_:messageDataForItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Docta Consumer/ChatViewController.swift"
-            timestampString = "522231014.732814"
+            timestampString = "522327981.38858"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "369"
-            endingLineNumber = "369"
-            landmarkName = "imagePickerController(_:didFinishPickingMediaWithInfo:)"
+            startingLineNumber = "163"
+            endingLineNumber = "163"
+            landmarkName = "observeMessages()"
             landmarkType = "7">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Docta_Consumer.ChatViewController.(imagePickerController (__ObjC.UIImagePickerController, didFinishPickingMediaWithInfo : Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; ()).(closure #1)"
+                  symbolName = "Docta_Consumer.ChatViewController.((observeMessages in _AF9E1FFF01EAE183D228581489607486) () -&gt; ()).(closure #1)"
                   moduleName = "Docta Consumer"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/rstintl/Desktop/Xcode/DoctaConsumer/Docta%20Consumer/ChatViewController.swift"
-                  timestampString = "522236524.325701"
+                  timestampString = "522327981.618351"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "369"
-                  endingLineNumber = "369"
-                  offsetFromSymbolStart = "1536">
+                  startingLineNumber = "165"
+                  endingLineNumber = "165"
+                  offsetFromSymbolStart = "411">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Docta_Consumer.ChatViewController.(imagePickerController (__ObjC.UIImagePickerController, didFinishPickingMediaWithInfo : Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; ()).(closure #1).(closure #1)"
+                  symbolName = "Docta_Consumer.ChatViewController.((observeMessages in _AF9E1FFF01EAE183D228581489607486) () -&gt; ()).(closure #1)"
                   moduleName = "Docta Consumer"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/rstintl/Desktop/Xcode/DoctaConsumer/Docta%20Consumer/ChatViewController.swift"
-                  timestampString = "522236524.327476"
+                  timestampString = "522327981.621994"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "369"
-                  endingLineNumber = "369"
-                  offsetFromSymbolStart = "1232">
+                  startingLineNumber = "165"
+                  endingLineNumber = "165"
+                  offsetFromSymbolStart = "631">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -394,61 +410,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Docta Consumer/ChatViewController.swift"
-            timestampString = "522231016.445781"
+            timestampString = "522327981.38858"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "373"
-            endingLineNumber = "373"
-            landmarkName = "imagePickerController(_:didFinishPickingMediaWithInfo:)"
+            startingLineNumber = "167"
+            endingLineNumber = "167"
+            landmarkName = "observeMessages()"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Docta Consumer/ChatViewController.swift"
-            timestampString = "522231019.100979"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "360"
-            endingLineNumber = "360"
-            landmarkName = "imagePickerController(_:didFinishPickingMediaWithInfo:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Docta_Consumer.ChatViewController.(imagePickerController (__ObjC.UIImagePickerController, didFinishPickingMediaWithInfo : Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; ()).(closure #1)"
-                  moduleName = "Docta Consumer"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/rstintl/Desktop/Xcode/DoctaConsumer/Docta%20Consumer/ChatViewController.swift"
-                  timestampString = "522236524.335252"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "362"
-                  endingLineNumber = "362"
-                  offsetFromSymbolStart = "1104">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Docta_Consumer.ChatViewController.(imagePickerController (__ObjC.UIImagePickerController, didFinishPickingMediaWithInfo : Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; ()).(closure #1).(closure #1)"
-                  moduleName = "Docta Consumer"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/rstintl/Desktop/Xcode/DoctaConsumer/Docta%20Consumer/ChatViewController.swift"
-                  timestampString = "522236524.336984"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "363"
-                  endingLineNumber = "363"
-                  offsetFromSymbolStart = "40">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

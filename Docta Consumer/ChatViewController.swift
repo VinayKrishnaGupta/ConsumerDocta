@@ -28,7 +28,7 @@ import JSQMessagesViewController
 final class ChatViewController: JSQMessagesViewController {
   
   // MARK: Properties
-  private let imageURLNotSetKey = "https://doctaconsumer.firebaseio.com/"
+  private let imageURLNotSetKey = "gs://doctaconsumer.appspot.com"
   
   var channelRef: DatabaseReference?
 
@@ -116,7 +116,7 @@ final class ChatViewController: JSQMessagesViewController {
     if message.senderId == senderId { // 1
       cell.textView?.textColor = UIColor.white // 2
     } else {
-      cell.textView?.textColor = UIColor.black // 3
+      cell.textView?.textColor = UIColor.white // 3
     }
     
     return cell
@@ -149,15 +149,44 @@ final class ChatViewController: JSQMessagesViewController {
   private func observeMessages() {
     messageRef = channelRef!.child("messages")
     let messageQuery = messageRef.queryLimited(toLast:25)
+    if self.messages.count == 0 {
+        self.addMessage(withId: "foo", name: "Dr Docta", text: "Hello, I am Dr. Docta, How may I assist you? ")
+        
+    }
     
     // We can use the observe method to listen for new
     // messages being written to the Firebase DB
     newMessageRefHandle = messageQuery.observe(.childAdded, with: { (snapshot) -> Void in
       let messageData = snapshot.value as! Dictionary<String, String>
+        
+        
+        
 
       if let id = messageData["senderId"] as String!, let name = messageData["senderName"] as String!, let text = messageData["text"] as String!, text.characters.count > 0 {
         self.addMessage(withId: id, name: name, text: text)
-        self.addMessage(withId: "foo", name: "Dr Docta", text: "Yo Vinay")
+        print("Total Number of messages are \(self.messages.count)")
+        switch (self.messages.count) {
+            
+            
+        case 2:
+            self.addMessage(withId: "foo", name: "Dr Docta", text: "Ok, Tell me patient first name")
+            break
+        case 4:
+            self.addMessage(withId: "foo", name: "Dr Docta", text: "What is your problem? Please Explain ")
+            break
+        case 6:
+            self.addMessage(withId: "foo", name: "Dr Docta", text: "Thanks for reporting, Your case file is generated and same will be forwarded to doctors ")
+            break
+        default:
+            self.addMessage(withId: "foo", name: "Dr Docta", text: "Hi \(name), Please pay the 99$ fee soon to continue treatment")
+            break
+            
+            
+        }
+        
+        
+        
+        
         self.finishReceivingMessage()
       } else if let id = messageData["senderId"] as String!, let photoURL = messageData["photoURL"] as String! {
         if let mediaItem = JSQPhotoMediaItem(maskAsOutgoing: id == self.senderId) {
@@ -292,7 +321,7 @@ final class ChatViewController: JSQMessagesViewController {
 
   private func setupIncomingBubble() -> JSQMessagesBubbleImage {
     let bubbleImageFactory = JSQMessagesBubbleImageFactory()
-    return bubbleImageFactory!.incomingMessagesBubbleImage(with: UIColor.jsq_messageBubbleLightGray())
+    return bubbleImageFactory!.incomingMessagesBubbleImage(with: UIColor.jsq_messageBubbleBlue())
   }
 
   override func didPressAccessoryButton(_ sender: UIButton) {
