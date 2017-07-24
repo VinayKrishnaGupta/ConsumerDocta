@@ -170,6 +170,9 @@ final class ChatViewController: JSQMessagesViewController {
             
         case 2:
             self.addMessage(withId: "foo", name: "Dr Docta", text: "Ok, Tell me patient first name")
+            
+            
+            
             break
         case 4:
             self.addMessage(withId: "foo", name: "Dr Docta", text: "What is your problem? Please Explain ")
@@ -178,7 +181,18 @@ final class ChatViewController: JSQMessagesViewController {
             self.addMessage(withId: "foo", name: "Dr Docta", text: "Thanks for reporting, Your case file is generated and same will be forwarded to doctors ")
             break
         default:
-            self.addMessage(withId: "foo", name: "Dr Docta", text: "Hi \(name), Please pay the 99$ fee soon to continue treatment")
+          //  self.addMessage(withId: "foo", name: "Dr Docta", text: "Hi \(name), Please pay the 99$ fee soon to continue treatment")
+            let alert = UIAlertController(title: "Payment Pending", message: "Please pay the 99$ fee soon to continue treatment", preferredStyle: UIAlertControllerStyle.alert)
+            
+            // add an action (button)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            alert.addAction(UIAlertAction(title: "Proceed to Payment", style: UIAlertActionStyle.default, handler: nil))
+            
+            // show the alert
+            self.present(alert, animated: true, completion: nil)
+            
+            
+            
             break
             
             
@@ -323,6 +337,9 @@ final class ChatViewController: JSQMessagesViewController {
     let bubbleImageFactory = JSQMessagesBubbleImageFactory()
     return bubbleImageFactory!.incomingMessagesBubbleImage(with: UIColor.jsq_messageBubbleBlue())
   }
+    
+    
+    
 
   override func didPressAccessoryButton(_ sender: UIButton) {
     let picker = UIImagePickerController()
@@ -393,6 +410,7 @@ extension ChatViewController: UIImagePickerControllerDelegate, UINavigationContr
               print("Error uploading photo: \(error.localizedDescription)")
               return
             }
+            
             // 7
             self.setImageURL(self.storageRef.child((metadata?.path)!).description, forPhotoMessageWithKey: key)
           }
