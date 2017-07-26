@@ -34,25 +34,34 @@ class ChannelListViewController: UITableViewController {
   // MARK: Properties
   var senderDisplayName: String = "Vinay"
   var newChannelTextField: UITextField?
+    
   
   private var channelRefHandle: DatabaseHandle?
   private var channels: [Channel] = []
+ // private var channelCreated = Channel()
   
   private lazy var channelRef: DatabaseReference = Database.database().reference().child("doctaconsumer")
   
   // MARK: View Lifecycle
   
-    @IBAction func backAction(_ sender: UIButton) {
-        
-        let presentingViewController = self.presentingViewController
-        self.dismiss(animated: false, completion: {
-            presentingViewController!.dismiss(animated: false, completion: {})
-        })
-        
-    }
+//    @IBAction func backAction(_ sender: UIButton) {
+//        
+//        let presentingViewController = self.presentingViewController
+//        self.dismiss(animated: false, completion: {
+//            presentingViewController!.dismiss(animated: false, completion: {})
+//        })
+//        
+//        
+//    }
     
   override func viewDidLoad() {
     super.viewDidLoad()
+    SVProgressHUD.show(withStatus: "Connecting with Dr. Docta")
+    self.perform(#selector(CreateNewChannelMethod), with: self, afterDelay: 1)
+    self.navigationItem.hidesBackButton = true
+    
+    
+    
    // SVProgressHUD.show()
 //    if (UserDefaults.standard.dictionary(forKey: "LoggedInUser")) != nil {
 //        let userDict : NSDictionary = UserDefaults.standard.dictionary(forKey: "LoggedInUser")! as NSDictionary
@@ -64,12 +73,12 @@ class ChannelListViewController: UITableViewController {
 //    }
     
     
-    let backButton1 = UIBarButtonItem.init(image: UIImage.init(named: "BackButton"), style: UIBarButtonItemStyle.plain, target: self, action: #selector(backAction(_:)))
-    
-    
-    
-    self.navigationItem.leftBarButtonItem = backButton1
-    title = " Support"
+//    let backButton1 = UIBarButtonItem.init(image: UIImage.init(named: "BackButton"), style: UIBarButtonItemStyle.plain, target: self, action: #selector(backAction(_:)))
+//    
+//    
+//    
+//    self.navigationItem.leftBarButtonItem = backButton1
+//    title = " Support"
     observeChannels()
   }
   
@@ -82,7 +91,12 @@ class ChannelListViewController: UITableViewController {
   // MARK :Actions
   
   @IBAction func createChannel(_ sender: AnyObject) {
-    if let name = newChannelTextField?.text {
+    
+//    let channelName : String = "ABCDE"
+//    if let name = newChannelTextField?.text {
+    
+        
+      let name = "Docta Customer"
       let newChannelRef = channelRef.childByAutoId()
       let channelItem = [
         "name": name,
@@ -90,7 +104,8 @@ class ChannelListViewController: UITableViewController {
         "assigned": "0"
       ] as [String : String]
       newChannelRef.setValue(channelItem)
-    }    
+    
+   // }
   }
   
   // MARK: Firebase related methods
@@ -104,10 +119,10 @@ class ChannelListViewController: UITableViewController {
       if let name = channelData?["name"] as! String!, name.characters.count > 0 {
         self.channels.append(Channel(id: id, name: name, assignedTo: (channelData?["assignedTo"])! as! String, assigned: ((channelData?["assigned"])! as! String)))
         self.tableView.reloadData()
-        SVProgressHUD.dismiss()
+        
       } else {
         print("Error! Could not decode channel data")
-        SVProgressHUD.dismiss()
+        
       }
     })
   }
@@ -138,9 +153,9 @@ class ChannelListViewController: UITableViewController {
     if let currentSection: Section = Section(rawValue: section) {
       switch currentSection {
       case .createNewChannelSection:
-        return 1
+        return 0
       case .currentChannelsSection:
-        return channels.count
+        return 0
       }
     } else {
       return 0
@@ -175,4 +190,29 @@ class ChannelListViewController: UITableViewController {
         SVProgressHUD.dismiss()
     }
   
+    func proceedtoChatVC () {
+        
+        let channel = channels.last
+        self.performSegue(withIdentifier: "ShowChannel", sender: channel)    }
+    
+    func CreateNewChannelMethod(){
+        
+        let name = "Docta Customer"
+        let newChannelRef = channelRef.childByAutoId()
+        let channelItem = [
+            "name": name,
+            "assignedTo": "None",
+            "assigned": "0"
+            ] as [String : String]
+        newChannelRef.setValue(channelItem)
+        
+        
+        self.perform(#selector(proceedtoChatVC), with: self, afterDelay: 2)
+        
+    }
+    
+    
+    
+    
+    
 }

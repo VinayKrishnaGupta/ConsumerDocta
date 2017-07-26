@@ -100,7 +100,7 @@
     
     //ChatChannelNavigation
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"ChatMain" bundle:nil];
-    UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"ChatMain"];
+    UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"ChannelListVC"];
     [self.navigationController pushViewController:vc animated:YES];
     
     

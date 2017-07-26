@@ -28,12 +28,12 @@ import JSQMessagesViewController
 final class ChatViewController: JSQMessagesViewController {
   
   // MARK: Properties
-  private let imageURLNotSetKey = "gs://doctaconsumer.appspot.com"
+  private let imageURLNotSetKey = "uploads/docta.jpg"
   
   var channelRef: DatabaseReference?
 
   private lazy var messageRef: DatabaseReference = self.channelRef!.child("messages")
-  fileprivate lazy var storageRef: StorageReference = Storage.storage().reference(forURL: "gs://doctaconsumer.appspot.com")
+  fileprivate lazy var storageRef: StorageReference = Storage.storage().reference(forURL: "gs://doctaconsumer.appspot.com/")
   private lazy var userIsTypingRef: DatabaseReference = self.channelRef!.child("typingIndicator").child(self.senderId)
   private lazy var usersTypingQuery: DatabaseQuery = self.channelRef!.child("typingIndicator").queryOrderedByValue().queryEqual(toValue: true)
 
@@ -46,7 +46,7 @@ final class ChatViewController: JSQMessagesViewController {
   private var localTyping = false
   var channel: Channel? {
     didSet {
-      title = channel?.name
+    //  title = channel?.name
     }
   }
 
@@ -65,8 +65,26 @@ final class ChatViewController: JSQMessagesViewController {
   
   // MARK: View Lifecycle
   
+    @IBAction func backAction(_ sender: UIButton) {
+    
+    self.navigationController?.popToRootViewController(animated: true)
+    
+    }
+    
   override func viewDidLoad() {
+    
+    
     super.viewDidLoad()
+   // let backButton1 = UIBarButtonItem.init(image: UIImage.init(named: "BackButton"), style: UIBarButtonItemStyle.plain, target: self, action: #selector(backAction(_:)))
+    let backButton = UIBarButtonItem.init(title: "Close Chat", style: UIBarButtonItemStyle.plain, target: self, action: #selector(backAction(_:)))
+    
+    
+    self.navigationItem.hidesBackButton = true
+    self.navigationItem.rightBarButtonItem = backButton
+    
+    
+    
+    
     self.senderId = Auth.auth().currentUser?.uid
     observeMessages()
     
@@ -178,11 +196,15 @@ final class ChatViewController: JSQMessagesViewController {
             self.addMessage(withId: "foo", name: "Dr Docta", text: "What is your problem? Please Explain ")
             break
         case 6:
-            self.addMessage(withId: "foo", name: "Dr Docta", text: "Thanks for reporting, Your case file is generated and same will be forwarded to doctors ")
+            self.addMessage(withId: "foo", name: "Dr Docta", text: "Thanks for reporting, Your case file 219943 is generated and Doctors will respond back to you ")
+            break
+            
+        case 8:
+            self.addMessage(withId: "foo", name: "Dr Docta", text: "Please upload pictures related to case")
             break
         default:
           //  self.addMessage(withId: "foo", name: "Dr Docta", text: "Hi \(name), Please pay the 99$ fee soon to continue treatment")
-            let alert = UIAlertController(title: "Payment Pending", message: "Please pay the 99$ fee soon to continue treatment", preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: "Payment Pending", message: "Please pay the 10$ fee soon to continue treatment", preferredStyle: UIAlertControllerStyle.alert)
             
             // add an action (button)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
@@ -199,7 +221,7 @@ final class ChatViewController: JSQMessagesViewController {
         }
         
         
-        
+        print("Total Number of messages at end are \(self.messages.count)")
         
         self.finishReceivingMessage()
       } else if let id = messageData["senderId"] as String!, let photoURL = messageData["photoURL"] as String! {
@@ -345,13 +367,19 @@ final class ChatViewController: JSQMessagesViewController {
     let picker = UIImagePickerController()
     picker.delegate = self
     if (UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera)) {
-      picker.sourceType = UIImagePickerControllerSourceType.photoLibrary
+      picker.sourceType = UIImagePickerControllerSourceType.camera
+        
+        
     } else {
       picker.sourceType = UIImagePickerControllerSourceType.photoLibrary
     }
     
     present(picker, animated: true, completion:nil)
+    
   }
+    
+    
+    
   
   private func addMessage(withId id: String, name: String, text: String) {
     if let message = JSQMessage(senderId: id, displayName: name, text: text) {
@@ -417,11 +445,65 @@ extension ChatViewController: UIImagePickerControllerDelegate, UINavigationContr
         })
       }
     } else {
+        print("Camera Button pressed")
+        let chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage //2
+        
+        dismiss(animated:true, completion: nil)
+        
+        if let photoReference: UIImage = info[UIImagePickerControllerOriginalImage] as! UIImage{
+            // Handle picking a Photo from the Photo Library
+            // 2
+            let assets = PHAsset.fetchAssets(with: PHAssetMediaType.image, options: nil)
+            let asset = assets.firstObject
+            
+            // 3
+            if let key = sendPhotoMessage() {
+                // 4
+                asset?.requestContentEditingInput(with: nil, completionHandler: { (contentEditingInput, info) in
+                    let imageFileURL = contentEditingInput?.fullSizeImageURL
+                    
+                    // 5
+                    let path : String = "\(String(describing: Auth.auth().currentUser?.uid))/\(Int(Date.timeIntervalSinceReferenceDate * 1000))/\(photoReference)"
+                    
+                    // 6
+                    
+                    let imageData = UIImageJPEGRepresentation(photoReference, 0.1)
+                    let uploadTask = self.storageRef.child(path).putData(imageData!, metadata: nil, completion: { (metadata, error) in
+                        // Your code here
+                        if let error = error {
+                            print("Error uploading photo: \(error.localizedDescription)")
+                            return
+                        }
+                        
+                        // 7
+                        self.setImageURL(self.storageRef.child((metadata?.path)!).description, forPhotoMessageWithKey: key)
+                    })
+                   // }
+
+                 //   }
+                    
+//                    self.storageRef.child(path).putFile(from: imageFileURL!, metadata: nil) { (metadata, error) in
+//                        if let error = error {
+//                            print("Error uploading photo: \(error.localizedDescription)")
+//                            return
+//                        }
+//                        
+//                        // 7
+//                        self.setImageURL(self.storageRef.child((metadata?.path)!).description, forPhotoMessageWithKey: key)
+//                    }
+                })
+            }
+
+        
+        
+        
+        
       // Handle picking a Photo from the Camera - TODO
-    }
+ }
   }
 
   func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
     picker.dismiss(animated: true, completion:nil)
   }
+}
 }

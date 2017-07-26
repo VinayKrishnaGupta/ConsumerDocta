@@ -346,11 +346,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Docta Consumer/ChatViewController.swift"
-            timestampString = "522310377.299593"
+            timestampString = "522586376.065637"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
             landmarkName = "collectionView(_:messageDataForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -358,64 +358,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Docta Consumer/ChatViewController.swift"
-            timestampString = "522327981.38858"
+            filePath = "Docta Consumer/ChannelListViewController.swift"
+            timestampString = "522585188.596679"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "163"
-            endingLineNumber = "163"
-            landmarkName = "observeMessages()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Docta_Consumer.ChatViewController.((observeMessages in _AF9E1FFF01EAE183D228581489607486) () -&gt; ()).(closure #1)"
-                  moduleName = "Docta Consumer"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/rstintl/Desktop/Xcode/DoctaConsumer/Docta%20Consumer/ChatViewController.swift"
-                  timestampString = "522327981.618351"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "165"
-                  endingLineNumber = "165"
-                  offsetFromSymbolStart = "411">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Docta_Consumer.ChatViewController.((observeMessages in _AF9E1FFF01EAE183D228581489607486) () -&gt; ()).(closure #1)"
-                  moduleName = "Docta Consumer"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/rstintl/Desktop/Xcode/DoctaConsumer/Docta%20Consumer/ChatViewController.swift"
-                  timestampString = "522327981.621994"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "165"
-                  endingLineNumber = "165"
-                  offsetFromSymbolStart = "631">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Docta Consumer/ChatViewController.swift"
-            timestampString = "522327981.38858"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "167"
-            endingLineNumber = "167"
-            landmarkName = "observeMessages()"
+            startingLineNumber = "199"
+            endingLineNumber = "199"
+            landmarkName = "CreateNewChannelMethod()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
