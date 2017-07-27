@@ -81,7 +81,7 @@ final class ChatViewController: JSQMessagesViewController {
     
     self.navigationItem.hidesBackButton = true
     self.navigationItem.rightBarButtonItem = backButton
-    
+    self.collectionView!.register(CustomChatCollectionViewCell.self, forCellWithReuseIdentifier: "ButtonCell")
     
     
     
@@ -89,7 +89,7 @@ final class ChatViewController: JSQMessagesViewController {
     observeMessages()
     
     // No avatars
-    collectionView!.collectionViewLayout.incomingAvatarViewSize = CGSize.zero
+    collectionView!.collectionViewLayout.incomingAvatarViewSize = CGSize.init(width: 30, height: 30)
     collectionView!.collectionViewLayout.outgoingAvatarViewSize = CGSize.zero
   }
   
@@ -120,28 +120,41 @@ final class ChatViewController: JSQMessagesViewController {
   override func collectionView(_ collectionView: JSQMessagesCollectionView!, messageBubbleImageDataForItemAt indexPath: IndexPath!) -> JSQMessageBubbleImageDataSource! {
     let message = messages[indexPath.item] // 1
     if message.senderId == senderId { // 2
+     // return nil
       return outgoingBubbleImageView
     } else { // 3
-      return incomingBubbleImageView
+      
+    return incomingBubbleImageView
     }
   }
   
   override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = super.collectionView(collectionView, cellForItemAt: indexPath) as! JSQMessagesCollectionViewCell
-    
+    let cell2 = collectionView.dequeueReusableCell(withReuseIdentifier: "ButtonCell", for: indexPath) as! CustomChatCollectionViewCell
+    cell2.delegate = collectionView as! JSQMessagesCollectionViewCellDelegate
     let message = messages[indexPath.item]
     
     if message.senderId == senderId { // 1
+        
       cell.textView?.textColor = UIColor.white // 2
+    return cell
     } else {
-      cell.textView?.textColor = UIColor.white // 3
+    
+     // cell.textView?.textColor = UIColor.white // 3
+    return cell2
     }
     
-    return cell
+    
   }
   
   override func collectionView(_ collectionView: JSQMessagesCollectionView!, avatarImageDataForItemAt indexPath: IndexPath!) -> JSQMessageAvatarImageDataSource! {
-    return nil
+    let message = messages[indexPath.item] // 1
+    if message.senderId != senderId { // 2
+    return JSQMessagesAvatarImageFactory.avatarImage(with: UIImage.init(named: "DoctaChatAvatar"), diameter: 30)
+    }
+    else {
+        return nil
+    }
   }
   
   override func collectionView(_ collectionView: JSQMessagesCollectionView!, layout collectionViewLayout: JSQMessagesCollectionViewFlowLayout!, heightForMessageBubbleTopLabelAt indexPath: IndexPath!) -> CGFloat {

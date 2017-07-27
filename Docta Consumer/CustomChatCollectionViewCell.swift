@@ -19,7 +19,10 @@ class CustomChatCollectionViewCell: JSQMessagesCollectionViewCell {
         // Initialization code
     }
     
-    
+//    required init?(coder aDecoder: NSCoder) {
+//        super.init(coder: aDecoder)
+//    }
+
     
 
 }
