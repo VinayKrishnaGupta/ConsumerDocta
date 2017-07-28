@@ -140,8 +140,8 @@ final class ChatViewController: JSQMessagesViewController {
     return cell
     } else {
     
-     // cell.textView?.textColor = UIColor.white // 3
-    return cell2
+      cell.textView?.textColor = UIColor.white // 3
+    return cell
     }
     
     

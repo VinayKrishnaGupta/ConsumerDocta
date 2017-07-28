@@ -11,16 +11,17 @@
         <!--Chat Tab Bar2 View Controller-->
         <scene sceneID="DLk-D2-Cua">
             <objects>
-                <viewController id="eKw-Uv-rBS" customClass="ChatTabBar2ViewController" customModule="Docta_Consumer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="eKw-Uv-rBS" customClass="ChatTabBar2ViewController" customModule="Docta_Consumer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="haw-P1-1EB"/>
                         <viewControllerLayoutGuide type="bottom" id="Wxi-6u-UfA"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="eyS-za-WkX">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <navigationItem key="navigationItem" id="jdk-lk-4jz"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1gS-lP-s2t" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -101,7 +102,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="a7i-wj-i4e" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" id="Twb-Rz-P4s"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="fle-hQ-Njc">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="fle-hQ-Njc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -125,7 +126,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zTE-dO-MNr" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Chat" id="6Tz-sZ-GZF"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="h13-WV-fBf">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="h13-WV-fBf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

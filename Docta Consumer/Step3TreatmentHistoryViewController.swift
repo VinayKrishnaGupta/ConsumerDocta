@@ -33,6 +33,7 @@ class Step3TreatmentHistoryViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     @IBAction func uploadFileButton(_ sender: UIButton) {
         
         present(fileBrowser, animated: true, completion: nil)
@@ -47,7 +48,7 @@ class Step3TreatmentHistoryViewController: UIViewController {
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
         view.endEditing(true)
     }
-
+    
     /*
     // MARK: - Navigation
 
