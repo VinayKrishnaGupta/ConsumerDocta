@@ -16,7 +16,7 @@
                         <viewControllerLayoutGuide type="top" id="haw-P1-1EB"/>
                         <viewControllerLayoutGuide type="bottom" id="Wxi-6u-UfA"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="eyS-za-WkX">
+                    <view key="view" contentMode="scaleToFill" misplaced="YES" id="eyS-za-WkX">
                         <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -26,7 +26,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1gS-lP-s2t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1511.2" y="404.34782608695656"/>
+            <point key="canvasLocation" x="2191" y="1381"/>
         </scene>
         <!--Home Tab1 View Controller-->
         <scene sceneID="RhL-6Y-adS">
@@ -87,9 +87,9 @@
                     </tabBar>
                     <connections>
                         <segue destination="a7i-wj-i4e" kind="relationship" relationship="viewControllers" id="uyW-Iy-qfU"/>
-                        <segue destination="zTE-dO-MNr" kind="relationship" relationship="viewControllers" id="s98-xv-gRN"/>
-                        <segue destination="SU9-ti-I7v" kind="relationship" relationship="viewControllers" id="nfv-mB-f6M"/>
-                        <segue destination="Vub-uE-JHY" kind="relationship" relationship="viewControllers" id="P9U-5j-DKM"/>
+                        <segue destination="Vub-uE-JHY" kind="relationship" relationship="viewControllers" id="Dro-4U-itO"/>
+                        <segue destination="zTE-dO-MNr" kind="relationship" relationship="viewControllers" id="uL3-sf-Nb1"/>
+                        <segue destination="SU9-ti-I7v" kind="relationship" relationship="viewControllers" id="ckZ-VM-wjq"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6RQ-A4-f7p" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -142,7 +142,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="byo-Ym-wM0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="572" y="404.34782608695656"/>
+            <point key="canvasLocation" x="1130" y="1380"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="zld-fK-Ixx">
@@ -155,13 +155,24 @@
                     <view key="view" contentMode="scaleToFill" id="V92-Yt-2qM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e6g-Eh-Ege">
+                                <rect key="frame" x="0.0" y="72" width="375" height="49"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <tabBarItem title="Open Case" id="0Fj-z3-p78"/>
+                                    <tabBarItem title="Completed Cases" id="gJW-bu-D1q"/>
+                                </items>
+                            </tabBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="VDD-Op-chW"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U4S-N0-nhq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-543" y="1120"/>
+            <point key="canvasLocation" x="1663" y="476"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="pFe-qs-Wdx">
@@ -180,7 +191,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eIg-tP-GFm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1558" y="1149"/>
+            <point key="canvasLocation" x="-90" y="1469"/>
         </scene>
         <!--Item-->
         <scene sceneID="4TS-wy-9rd">
@@ -199,7 +210,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P48-3J-oz2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="572" y="1150"/>
+            <point key="canvasLocation" x="-937" y="1469"/>
         </scene>
         <!--Item-->
         <scene sceneID="RZo-Yf-LdF">
@@ -218,7 +229,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f8c-qz-Mm6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1386" y="1120"/>
+            <point key="canvasLocation" x="820" y="476"/>
         </scene>
     </scenes>
 </document>
