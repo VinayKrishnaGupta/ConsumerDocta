@@ -13,9 +13,7 @@ class ChatTabBar2ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let storyboard = UIStoryboard(name: "ChatMain", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "ChannelListVC")
-        self.navigationController?.pushViewController(controller, animated: true)
+       
         
         
         
@@ -28,6 +26,13 @@ class ChatTabBar2ViewController: UIViewController {
     }
     
 
+    @IBAction func StartChatButton(_ sender: Any) {
+        
+        let storyboard = UIStoryboard(name: "ChatMain", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "ChannelListVC")
+        self.navigationController?.pushViewController(controller, animated: true)
+        
+    }
     /*
     // MARK: - Navigation
 

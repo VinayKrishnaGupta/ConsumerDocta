@@ -61,7 +61,7 @@
         <!--Channel List View Controller-->
         <scene sceneID="bg1-OT-nd2">
             <objects>
-                <tableViewController storyboardIdentifier="ChannelListVC" id="x2j-kb-5mV" customClass="ChannelListViewController" customModule="Docta_Consumer" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ChannelListVC" hidesBottomBarWhenPushed="YES" id="x2j-kb-5mV" customClass="ChannelListViewController" customModule="Docta_Consumer" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" id="JJM-X8-sVb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

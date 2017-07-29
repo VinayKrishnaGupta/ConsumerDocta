@@ -178,10 +178,22 @@ final class ChatViewController: JSQMessagesViewController {
   // MARK: Firebase related methods
   
   private func observeMessages() {
+    self.showTypingIndicator = true
     messageRef = channelRef!.child("messages")
     let messageQuery = messageRef.queryLimited(toLast:25)
     if self.messages.count == 0 {
-        self.addMessage(withId: "foo", name: "Dr Docta", text: "Hello, I am Dr. Docta, How may I assist you? ")
+        
+        
+        let when = DispatchTime.now() + 1 // change 2 to desired number of seconds
+        DispatchQueue.main.asyncAfter(deadline: when) {
+           self.showTypingIndicator = false
+          self.addMessage(withId: "foo", name: "Dr Docta", text: "Hello, I am Dr. Docta, How may I assist you? ")
+        self.collectionView.reloadData()
+        }
+    
+        
+        
+        
         
     }
     

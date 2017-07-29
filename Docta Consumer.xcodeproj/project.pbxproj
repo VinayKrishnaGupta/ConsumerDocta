@@ -12,6 +12,7 @@
 		2F0311441F29F2E40044B401 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0311431F29F2E30044B401 /* MainTabBarViewController.swift */; };
 		2F0311471F29F82D0044B401 /* HomeTab1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0311461F29F82D0044B401 /* HomeTab1ViewController.swift */; };
 		2F0311491F2A0E220044B401 /* ChatTabBar2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0311481F2A0E220044B401 /* ChatTabBar2ViewController.swift */; };
+		2F03114B1F2C65DC0044B401 /* CasesTabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F03114A1F2C65DC0044B401 /* CasesTabbarViewController.m */; };
 		2F5B55721F208D6E000E28A0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2F5B55711F208D6E000E28A0 /* GoogleService-Info.plist */; };
 		2F5B55751F25CE8C000E28A0 /* CustomChatCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5B55731F25CE8C000E28A0 /* CustomChatCollectionViewCell.swift */; };
 		2F5B55761F25CE8C000E28A0 /* CustomChatCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F5B55741F25CE8C000E28A0 /* CustomChatCollectionViewCell.xib */; };
@@ -87,6 +88,8 @@
 		2F0311431F29F2E30044B401 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		2F0311461F29F82D0044B401 /* HomeTab1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTab1ViewController.swift; sourceTree = "<group>"; };
 		2F0311481F2A0E220044B401 /* ChatTabBar2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatTabBar2ViewController.swift; sourceTree = "<group>"; };
+		2F03114A1F2C65DC0044B401 /* CasesTabbarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CasesTabbarViewController.m; sourceTree = "<group>"; };
+		2F03114C1F2C66270044B401 /* CasesTabbarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CasesTabbarViewController.h; sourceTree = "<group>"; };
 		2F5B55711F208D6E000E28A0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2F5B55731F25CE8C000E28A0 /* CustomChatCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomChatCollectionViewCell.swift; sourceTree = "<group>"; };
 		2F5B55741F25CE8C000E28A0 /* CustomChatCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomChatCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -206,6 +209,8 @@
 				2F0311431F29F2E30044B401 /* MainTabBarViewController.swift */,
 				2F0311461F29F82D0044B401 /* HomeTab1ViewController.swift */,
 				2F0311481F2A0E220044B401 /* ChatTabBar2ViewController.swift */,
+				2F03114C1F2C66270044B401 /* CasesTabbarViewController.h */,
+				2F03114A1F2C65DC0044B401 /* CasesTabbarViewController.m */,
 			);
 			name = MainTabBars;
 			sourceTree = "<group>";
@@ -239,6 +244,9 @@
 				2F72A2621EF93B0A00CEC047 /* DoctaManager.h */,
 				2F72A2631EF93B0A00CEC047 /* DoctaManager.m */,
 				2F72A2611EF7C3F200CEC047 /* SharedValues.pch */,
+				2FA8EC341EE9673900F9AB24 /* Assets.xcassets */,
+				2FA8EC361EE9673900F9AB24 /* LaunchScreen.storyboard */,
+				2FA8EC391EE9673900F9AB24 /* Info.plist */,
 			);
 			name = CommonFiles;
 			sourceTree = "<group>";
@@ -275,20 +283,6 @@
 				2FA8EC5B1EEA6FEE00F9AB24 /* Authorization */,
 				2FA8EC2E1EE9673900F9AB24 /* ViewController.h */,
 				2FA8EC2F1EE9673900F9AB24 /* ViewController.m */,
-				2FA8EC341EE9673900F9AB24 /* Assets.xcassets */,
-				2FA8EC361EE9673900F9AB24 /* LaunchScreen.storyboard */,
-				2FA8EC391EE9673900F9AB24 /* Info.plist */,
-				2FFE00191F1F840C003C3643 /* CreateChannelCell.swift */,
-				2FFE001A1F1F840C003C3643 /* Channel.swift */,
-				2FFE001B1F1F840C003C3643 /* LoginViewController.swift */,
-				2FFE001C1F1F840C003C3643 /* ChannelListViewController.swift */,
-				2FFE001D1F1F840C003C3643 /* ChatViewController.swift */,
-				2F5B55731F25CE8C000E28A0 /* CustomChatCollectionViewCell.swift */,
-				2F5B55741F25CE8C000E28A0 /* CustomChatCollectionViewCell.xib */,
-				2FFE001E1F1F840C003C3643 /* ChatMain.storyboard */,
-				2FFE001F1F1F840C003C3643 /* ChatChat-Bridging-Header.h */,
-				2FFE00201F1F840C003C3643 /* UIImage+Gif.swift */,
-				2F5B55711F208D6E000E28A0 /* GoogleService-Info.plist */,
 				2FFE00181F1F83F1003C3643 /* Chat */,
 				2FA8EC281EE9673900F9AB24 /* Supporting Files */,
 				2FA8EC721EEEB10000F9AB24 /* Docta Consumer-Bridging-Header.h */,
@@ -353,6 +347,17 @@
 		2FFE00181F1F83F1003C3643 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				2FFE00191F1F840C003C3643 /* CreateChannelCell.swift */,
+				2FFE001A1F1F840C003C3643 /* Channel.swift */,
+				2FFE001B1F1F840C003C3643 /* LoginViewController.swift */,
+				2FFE001C1F1F840C003C3643 /* ChannelListViewController.swift */,
+				2FFE001D1F1F840C003C3643 /* ChatViewController.swift */,
+				2F5B55731F25CE8C000E28A0 /* CustomChatCollectionViewCell.swift */,
+				2F5B55741F25CE8C000E28A0 /* CustomChatCollectionViewCell.xib */,
+				2FFE001E1F1F840C003C3643 /* ChatMain.storyboard */,
+				2FFE001F1F1F840C003C3643 /* ChatChat-Bridging-Header.h */,
+				2FFE00201F1F840C003C3643 /* UIImage+Gif.swift */,
+				2F5B55711F208D6E000E28A0 /* GoogleService-Info.plist */,
 			);
 			name = Chat;
 			sourceTree = "<group>";
@@ -703,6 +708,7 @@
 				2FA8EC2A1EE9673900F9AB24 /* main.m in Sources */,
 				2F0311471F29F82D0044B401 /* HomeTab1ViewController.swift in Sources */,
 				2F72A2641EF93B0A00CEC047 /* DoctaManager.m in Sources */,
+				2F03114B1F2C65DC0044B401 /* CasesTabbarViewController.m in Sources */,
 				2FFE00211F1F840C003C3643 /* CreateChannelCell.swift in Sources */,
 				2FAE81141F14DCE1007E937A /* Step3TreatmentHistoryViewController.swift in Sources */,
 				2FA8EC761EEFAA2F00F9AB24 /* CreateCaseFileViewController.swift in Sources */,

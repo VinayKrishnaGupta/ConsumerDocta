@@ -11,14 +11,24 @@
         <!--Chat Tab Bar2 View Controller-->
         <scene sceneID="DLk-D2-Cua">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="eKw-Uv-rBS" customClass="ChatTabBar2ViewController" customModule="Docta_Consumer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="eKw-Uv-rBS" customClass="ChatTabBar2ViewController" customModule="Docta_Consumer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="haw-P1-1EB"/>
                         <viewControllerLayoutGuide type="bottom" id="Wxi-6u-UfA"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" misplaced="YES" id="eyS-za-WkX">
+                    <view key="view" contentMode="scaleToFill" id="eyS-za-WkX">
                         <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VwJ-zc-UWc">
+                                <rect key="frame" x="62" y="436" width="251" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Start Chat"/>
+                                <connections>
+                                    <action selector="StartChatButton:" destination="eKw-Uv-rBS" eventType="touchUpInside" id="xKc-v1-Tdb"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
@@ -26,7 +36,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1gS-lP-s2t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2191" y="1381"/>
+            <point key="canvasLocation" x="2189.5999999999999" y="1380.3598200899551"/>
         </scene>
         <!--Home Tab1 View Controller-->
         <scene sceneID="RhL-6Y-adS">
@@ -37,7 +47,7 @@
                         <viewControllerLayoutGuide type="bottom" id="ghq-7h-lVc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="sn0-dx-cXT">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Let's find the right Specialist Doctor for your treatment today." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ccr-Mq-AWt">
@@ -80,10 +90,12 @@
         <scene sceneID="7uP-2D-Ubd">
             <objects>
                 <tabBarController id="IKB-5Q-Z9c" customClass="MainTabBarViewController" customModule="Docta_Consumer" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="iBB-eG-rLj">
+                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="iBB-eG-rLj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.022303780540823936" green="0.110291488468647" blue="0.21200999617576599" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
                         <segue destination="a7i-wj-i4e" kind="relationship" relationship="viewControllers" id="uyW-Iy-qfU"/>
@@ -96,11 +108,13 @@
             </objects>
             <point key="canvasLocation" x="-380" y="78"/>
         </scene>
-        <!--Home-->
+        <!--Navigation Controller-->
         <scene sceneID="Lgv-QG-gR4">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="a7i-wj-i4e" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" id="Twb-Rz-P4s"/>
+                    <tabBarItem key="tabBarItem" title="" image="homeicon" id="Twb-Rz-P4s">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="fle-hQ-Njc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -120,11 +134,11 @@
             </objects>
             <point key="canvasLocation" x="572" y="-250.52473763118442"/>
         </scene>
-        <!--Chat-->
+        <!--Navigation Controller-->
         <scene sceneID="d1j-HV-rD4">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zTE-dO-MNr" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Chat" id="6Tz-sZ-GZF"/>
+                    <tabBarItem key="tabBarItem" title="" image="ChatHomeIcon" id="6Tz-sZ-GZF"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="h13-WV-fBf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -144,7 +158,7 @@
             </objects>
             <point key="canvasLocation" x="1130" y="1380"/>
         </scene>
-        <!--View Controller-->
+        <!--Open Cases-->
         <scene sceneID="zld-fK-Ixx">
             <objects>
                 <viewController id="Ojh-35-413" sceneMemberID="viewController">
@@ -156,23 +170,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e6g-Eh-Ege">
-                                <rect key="frame" x="0.0" y="72" width="375" height="49"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <items>
-                                    <tabBarItem title="Open Case" id="0Fj-z3-p78"/>
-                                    <tabBarItem title="Completed Cases" id="gJW-bu-D1q"/>
-                                </items>
-                            </tabBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Page 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H3a-v2-ZFR">
+                                <rect key="frame" x="166" y="323" width="130" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Open Cases" id="XyA-Xs-FjD"/>
                     <navigationItem key="navigationItem" id="VDD-Op-chW"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U4S-N0-nhq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1663" y="476"/>
+            <point key="canvasLocation" x="2876" y="5.8470764617691158"/>
+        </scene>
+        <!--Completed Cases-->
+        <scene sceneID="pug-UW-u6D">
+            <objects>
+                <viewController id="PGA-Dk-qvn" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="f5d-HQ-WRL"/>
+                        <viewControllerLayoutGuide type="bottom" id="uRa-TJ-Tqc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="n2r-Aj-saV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Page 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6UP-dT-bSL">
+                                <rect key="frame" x="166" y="323" width="150" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Completed Cases" id="CKA-ng-QsP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v1E-xr-k57" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2876" y="696.7016491754124"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="pFe-qs-Wdx">
@@ -183,21 +224,30 @@
                         <viewControllerLayoutGuide type="bottom" id="PN9-d1-JTx"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Jd3-ha-ubB">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Comming Soon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WN2-rO-D14">
+                                <rect key="frame" x="16" y="323" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="wlW-zF-AF9"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eIg-tP-GFm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-90" y="1469"/>
+            <point key="canvasLocation" x="-90.400000000000006" y="1468.5157421289357"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="4TS-wy-9rd">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SU9-ti-I7v" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="edL-Oz-9GR"/>
+                    <tabBarItem key="tabBarItem" title="" image="SettingIconHome" id="edL-Oz-9GR"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ct6-Wp-mor">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -212,11 +262,11 @@
             </objects>
             <point key="canvasLocation" x="-937" y="1469"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="RZo-Yf-LdF">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Vub-uE-JHY" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="XZc-lK-Zaa"/>
+                    <tabBarItem key="tabBarItem" title="" image="casefileIcon" id="XZc-lK-Zaa"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Rgk-GN-T4C">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -224,12 +274,38 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Ojh-35-413" kind="relationship" relationship="rootViewController" id="b5W-az-g2U"/>
+                        <segue destination="lFV-em-c64" kind="relationship" relationship="rootViewController" id="b5W-az-g2U"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f8c-qz-Mm6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="820" y="476"/>
         </scene>
+        <!--Cases Tabbar View Controller-->
+        <scene sceneID="sIo-Ed-lgn">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="lFV-em-c64" customClass="CasesTabbarViewController" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="5U7-LP-SMI"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="oUF-hR-qhQ">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Ojh-35-413" kind="relationship" relationship="viewControllers" id="58A-J3-chj"/>
+                        <segue destination="PGA-Dk-qvn" kind="relationship" relationship="viewControllers" id="vA6-Zj-5yh"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lQn-DH-zBi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1661.5999999999999" y="475.41229385307349"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="ChatHomeIcon" width="77" height="69"/>
+        <image name="SettingIconHome" width="79" height="72"/>
+        <image name="casefileIcon" width="81" height="72"/>
+        <image name="homeicon" width="75" height="67"/>
+    </resources>
 </document>
