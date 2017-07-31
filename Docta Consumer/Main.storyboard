@@ -90,10 +90,11 @@
         <scene sceneID="7uP-2D-Ubd">
             <objects>
                 <tabBarController id="IKB-5Q-Z9c" customClass="MainTabBarViewController" customModule="Docta_Consumer" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="iBB-eG-rLj">
+                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" itemPositioning="centered" id="iBB-eG-rLj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="0.022303780540823936" green="0.110291488468647" blue="0.21200999617576599" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </tabBar>
@@ -161,7 +162,7 @@
         <!--Open Cases-->
         <scene sceneID="zld-fK-Ixx">
             <objects>
-                <viewController id="Ojh-35-413" sceneMemberID="viewController">
+                <viewController id="Ojh-35-413" customClass="OpenCaseViewController" customModule="Docta_Consumer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aAz-1m-bj9"/>
                         <viewControllerLayoutGuide type="bottom" id="rbm-x0-6HS"/>
@@ -170,18 +171,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Page 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H3a-v2-ZFR">
-                                <rect key="frame" x="166" y="323" width="130" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XnT-hp-oiB">
+                                <rect key="frame" x="16" y="165" width="343" height="398"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="VX2-K9-l55">
+                                    <size key="itemSize" width="289" height="379"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" id="hLJ-J3-CT1">
+                                        <rect key="frame" x="0.0" y="-47" width="289" height="379"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="289" height="379"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Open Cases" id="XyA-Xs-FjD"/>
                     <navigationItem key="navigationItem" id="VDD-Op-chW"/>
+                    <connections>
+                        <outlet property="collectionView" destination="XnT-hp-oiB" id="bwa-ND-wAD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U4S-N0-nhq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -213,7 +231,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v1E-xr-k57" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2876" y="696.7016491754124"/>
+            <point key="canvasLocation" x="2889" y="841"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="pFe-qs-Wdx">
@@ -303,9 +321,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ChatHomeIcon" width="77" height="69"/>
-        <image name="SettingIconHome" width="79" height="72"/>
-        <image name="casefileIcon" width="81" height="72"/>
-        <image name="homeicon" width="75" height="67"/>
+        <image name="ChatHomeIcon" width="38" height="34"/>
+        <image name="SettingIconHome" width="39" height="36"/>
+        <image name="casefileIcon" width="40" height="36"/>
+        <image name="homeicon" width="35" height="35"/>
     </resources>
 </document>
