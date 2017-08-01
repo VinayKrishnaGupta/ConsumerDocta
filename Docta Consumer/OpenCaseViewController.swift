@@ -14,13 +14,14 @@ class OpenCaseViewController: UIViewController, UICollectionViewDataSource, UICo
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.dataSource = self
-        collectionView.delegate = self
-      
+    collectionView.delegate = self
+    collectionView.dataSource = self
+    
+  //   collectionView.register(OpenCasesCollectionViewCell.self, forCellWithReuseIdentifier: "OpenCasesCollectionViewCell")
         
         //self.collectionView.register("OpenCasesCollectionViewCell", forCellWithReuseIdentifier: "Cell")
        // collectionView.register(OpenCasesCollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
-        collectionView.register(OpenCasesCollectionViewCell.self, forCellWithReuseIdentifier: "OpenCasesCell")
+        
   
         // Do any additional setup after loading the view.
     }
@@ -30,19 +31,21 @@ class OpenCaseViewController: UIViewController, UICollectionViewDataSource, UICo
         // Dispose of any resources that can be recreated.
     }
     
+    
+    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 8
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return 4
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     
-            let cell : UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "OpenCasesCell", for: indexPath) as! OpenCasesCollectionViewCell
-            
-            
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OpenCell", for: indexPath) as! OpenCasesCell
+            cell.backgroundColor = UIColor.white
+        
             return cell
      
         

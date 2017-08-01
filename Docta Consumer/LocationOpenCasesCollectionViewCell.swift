@@ -10,4 +10,12 @@ import UIKit
 
 class LocationOpenCasesCollectionViewCell: UICollectionViewCell {
     
+   override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+    
+    
+    
+    
+    
 }

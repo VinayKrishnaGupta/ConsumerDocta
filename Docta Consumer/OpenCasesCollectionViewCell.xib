@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="OpenCasesCell" id="PPA-O4-xag" customClass="OpenCasesCollectionViewCell" customModule="Docta_Consumer" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="OpenCasesCollectionViewCell" id="PPA-O4-xag" customClass="OpenCasesCollectionViewCell" customModule="Docta_Consumer" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="289" height="379"/>
             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -70,9 +70,11 @@
                     </label>
                 </subviews>
             </view>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
             <connections>
+                <outlet property="detailLabel" destination="4Hc-Jw-Uqw" id="Zft-1Q-Qse"/>
                 <outlet property="locationCollectionView" destination="NsL-pq-3UW" id="4j4-jY-HH7"/>
+                <outlet property="titleButton" destination="Aqu-Oy-iEx" id="fTH-kD-kji"/>
             </connections>
         </collectionViewCell>
     </objects>

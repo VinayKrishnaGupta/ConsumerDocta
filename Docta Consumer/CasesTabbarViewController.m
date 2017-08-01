@@ -21,13 +21,13 @@
     self.navigationItem.hidesBackButton = YES;
     self.delegate = self;
     [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
-                                                       [UIColor grayColor], NSForegroundColorAttributeName,
-                                                       [UIFont fontWithName:@"Helvetica" size:18],
+                                                       [UIColor lightGrayColor], NSForegroundColorAttributeName,
+                                                       [UIFont fontWithName:@"Helvetica" size:16],
                                                        NSFontAttributeName,
                                                        nil] forState:UIControlStateNormal];
     [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
-                                            [UIColor blueColor], NSForegroundColorAttributeName,
-                                            [UIFont fontWithName:@"Helvetica" size:20], NSFontAttributeName,
+                                            [UIColor whiteColor], NSForegroundColorAttributeName,
+                                            [UIFont fontWithName:@"Helvetica" size:18], NSFontAttributeName,
                                             nil] forState:UIControlStateSelected];
     
     
@@ -62,8 +62,8 @@
     // new frame will be completely transparent if we rotate
     // from a landscape orientation to a portrait orientation.
     
-    self.tabBar.translucent = NO;
-    self.tabBar.translucent = YES;
+//    self.tabBar.translucent = NO;
+//    self.tabBar.translucent = YES;
 }
 
 /*

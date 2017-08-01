@@ -159,7 +159,7 @@
             </objects>
             <point key="canvasLocation" x="1130" y="1380"/>
         </scene>
-        <!--Open Cases-->
+        <!--Open Case View Controller-->
         <scene sceneID="zld-fK-Ixx">
             <objects>
                 <viewController id="Ojh-35-413" customClass="OpenCaseViewController" customModule="Docta_Consumer" customModuleProvider="target" sceneMemberID="viewController">
@@ -168,13 +168,13 @@
                         <viewControllerLayoutGuide type="bottom" id="rbm-x0-6HS"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="V92-Yt-2qM">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XnT-hp-oiB">
-                                <rect key="frame" x="16" y="165" width="343" height="398"/>
+                                <rect key="frame" x="16" y="153" width="343" height="369"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="VX2-K9-l55">
                                     <size key="itemSize" width="289" height="379"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -182,20 +182,58 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" id="hLJ-J3-CT1">
-                                        <rect key="frame" x="0.0" y="-47" width="289" height="379"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="OpenCell" id="GZJ-9k-AnQ" customClass="OpenCasesCell" customModule="Docta_Consumer" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="-37" width="289" height="379"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="289" height="379"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bluebackground" translatesAutoresizingMaskIntoConstraints="NO" id="8r0-iO-2Og">
+                                                    <rect key="frame" x="0.0" y="0.0" width="289" height="194"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Back Pain" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z4C-vH-l6Z">
+                                                    <rect key="frame" x="0.0" y="102" width="289" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Orthopaedics" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eoq-gn-1en">
+                                                    <rect key="frame" x="0.0" y="129" width="289" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="headache" translatesAutoresizingMaskIntoConstraints="NO" id="7te-pr-a4f">
+                                                    <rect key="frame" x="104" y="10" width="80" height="80"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location Preference" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fm7-Sp-9FW">
+                                                    <rect key="frame" x="4" y="203" width="280" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Specialist Matches" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ntd-Ot-0OK">
+                                                    <rect key="frame" x="6" y="283" width="277" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Open Cases" id="XyA-Xs-FjD"/>
                     <navigationItem key="navigationItem" id="VDD-Op-chW"/>
                     <connections>
                         <outlet property="collectionView" destination="XnT-hp-oiB" id="bwa-ND-wAD"/>
@@ -203,7 +241,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U4S-N0-nhq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2876" y="5.8470764617691158"/>
+            <point key="canvasLocation" x="3815.1999999999998" y="5.8470764617691158"/>
         </scene>
         <!--Completed Cases-->
         <scene sceneID="pug-UW-u6D">
@@ -214,7 +252,7 @@
                         <viewControllerLayoutGuide type="bottom" id="uRa-TJ-Tqc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="n2r-Aj-saV">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Page 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6UP-dT-bSL">
@@ -289,6 +327,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Rgk-GN-T4C">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -305,13 +346,16 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="lFV-em-c64" customClass="CasesTabbarViewController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="5U7-LP-SMI"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="oUF-hR-qhQ">
+                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="oUF-hR-qhQ">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Ojh-35-413" kind="relationship" relationship="viewControllers" id="58A-J3-chj"/>
+                        <segue destination="IoB-Kt-xLd" kind="relationship" relationship="viewControllers" id="58A-J3-chj"/>
                         <segue destination="PGA-Dk-qvn" kind="relationship" relationship="viewControllers" id="vA6-Zj-5yh"/>
                     </connections>
                 </tabBarController>
@@ -319,11 +363,35 @@
             </objects>
             <point key="canvasLocation" x="1661.5999999999999" y="475.41229385307349"/>
         </scene>
+        <!--Open Cases-->
+        <scene sceneID="S71-fk-vKp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IoB-Kt-xLd" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Open Cases" id="XyA-Xs-FjD"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="dff-cS-Ngb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Ojh-35-413" kind="relationship" relationship="rootViewController" id="lqd-KM-mFn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eh1-oV-eJj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2876" y="5.8470764617691158"/>
+        </scene>
     </scenes>
     <resources>
         <image name="ChatHomeIcon" width="38" height="34"/>
         <image name="SettingIconHome" width="39" height="36"/>
+        <image name="bluebackground" width="1773" height="1207"/>
         <image name="casefileIcon" width="40" height="36"/>
+        <image name="headache" width="128" height="128"/>
         <image name="homeicon" width="35" height="35"/>
     </resources>
 </document>

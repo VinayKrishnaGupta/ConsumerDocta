@@ -49,6 +49,9 @@
 		2FF438BC1F2F2C78004451FB /* OpenCasesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF438BA1F2F2C78004451FB /* OpenCasesCollectionViewCell.swift */; };
 		2FF438BD1F2F2C78004451FB /* OpenCasesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FF438BB1F2F2C78004451FB /* OpenCasesCollectionViewCell.xib */; };
 		2FF438BF1F2F34A1004451FB /* LocationOpenCasesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF438BE1F2F34A1004451FB /* LocationOpenCasesCollectionViewCell.swift */; };
+		2FF438C21F30490F004451FB /* LocationOpenCasesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF438C01F30490F004451FB /* LocationOpenCasesCell.swift */; };
+		2FF438C31F30490F004451FB /* LocationOpenCasesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FF438C11F30490F004451FB /* LocationOpenCasesCell.xib */; };
+		2FF438C51F305355004451FB /* OpenCasesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF438C41F305355004451FB /* OpenCasesCell.swift */; };
 		2FFE00211F1F840C003C3643 /* CreateChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFE00191F1F840C003C3643 /* CreateChannelCell.swift */; };
 		2FFE00221F1F840C003C3643 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFE001A1F1F840C003C3643 /* Channel.swift */; };
 		2FFE00231F1F840C003C3643 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFE001B1F1F840C003C3643 /* LoginViewController.swift */; };
@@ -147,6 +150,9 @@
 		2FF438BA1F2F2C78004451FB /* OpenCasesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenCasesCollectionViewCell.swift; sourceTree = "<group>"; };
 		2FF438BB1F2F2C78004451FB /* OpenCasesCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OpenCasesCollectionViewCell.xib; sourceTree = "<group>"; };
 		2FF438BE1F2F34A1004451FB /* LocationOpenCasesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationOpenCasesCollectionViewCell.swift; sourceTree = "<group>"; };
+		2FF438C01F30490F004451FB /* LocationOpenCasesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationOpenCasesCell.swift; sourceTree = "<group>"; };
+		2FF438C11F30490F004451FB /* LocationOpenCasesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationOpenCasesCell.xib; sourceTree = "<group>"; };
+		2FF438C41F305355004451FB /* OpenCasesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenCasesCell.swift; sourceTree = "<group>"; };
 		2FFE00191F1F840C003C3643 /* CreateChannelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateChannelCell.swift; sourceTree = "<group>"; };
 		2FFE001A1F1F840C003C3643 /* Channel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 		2FFE001B1F1F840C003C3643 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -357,9 +363,12 @@
 			isa = PBXGroup;
 			children = (
 				2FF438B41F2F03D5004451FB /* OpenCaseViewController.swift */,
+				2FF438C41F305355004451FB /* OpenCasesCell.swift */,
 				2FF438BA1F2F2C78004451FB /* OpenCasesCollectionViewCell.swift */,
 				2FF438BB1F2F2C78004451FB /* OpenCasesCollectionViewCell.xib */,
 				2FF438BE1F2F34A1004451FB /* LocationOpenCasesCollectionViewCell.swift */,
+				2FF438C01F30490F004451FB /* LocationOpenCasesCell.swift */,
+				2FF438C11F30490F004451FB /* LocationOpenCasesCell.xib */,
 			);
 			name = CasesHistory;
 			sourceTree = "<group>";
@@ -537,6 +546,7 @@
 				2F6385AF1F0F4B6400603FB1 /* CreateNewCase.storyboard in Resources */,
 				2FFE00261F1F840C003C3643 /* ChatMain.storyboard in Resources */,
 				2F5B55761F25CE8C000E28A0 /* CustomChatCollectionViewCell.xib in Resources */,
+				2FF438C31F30490F004451FB /* LocationOpenCasesCell.xib in Resources */,
 				2FFEFF9C1F1A02DE003C3643 /* addimagegif.gif in Resources */,
 				2FFEFFA91F1A2981003C3643 /* Step2IntroViewController.xib in Resources */,
 				2FFEFFA51F1A1BAE003C3643 /* Step1IntroductionViewController.xib in Resources */,
@@ -725,6 +735,7 @@
 				2FFE00241F1F840C003C3643 /* ChannelListViewController.swift in Sources */,
 				2F0311491F2A0E220044B401 /* ChatTabBar2ViewController.swift in Sources */,
 				2FA8EC5E1EEA702B00F9AB24 /* SignUpViewController.m in Sources */,
+				2FF438C21F30490F004451FB /* LocationOpenCasesCell.swift in Sources */,
 				2FF438BF1F2F34A1004451FB /* LocationOpenCasesCollectionViewCell.swift in Sources */,
 				2FA8EC6B1EEE788600F9AB24 /* MyCaseFilesViewController.m in Sources */,
 				2FA8EC2A1EE9673900F9AB24 /* main.m in Sources */,
@@ -732,6 +743,7 @@
 				2F72A2641EF93B0A00CEC047 /* DoctaManager.m in Sources */,
 				2F03114B1F2C65DC0044B401 /* CasesTabbarViewController.m in Sources */,
 				2FFE00211F1F840C003C3643 /* CreateChannelCell.swift in Sources */,
+				2FF438C51F305355004451FB /* OpenCasesCell.swift in Sources */,
 				2FAE81141F14DCE1007E937A /* Step3TreatmentHistoryViewController.swift in Sources */,
 				2FA8EC761EEFAA2F00F9AB24 /* CreateCaseFileViewController.swift in Sources */,
 				2F72A25F1EF7B58300CEC047 /* APIHandler.m in Sources */,
