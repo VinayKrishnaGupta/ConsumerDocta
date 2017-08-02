@@ -25,6 +25,11 @@
 //    [[UINavigationBar appearance]addSubview:imageView];
    // [self.navigationController.navigationBar addSubview:imageView];
     
+    [[UINavigationBar appearance] setBackgroundImage:[[UIImage alloc] init]
+                                      forBarPosition:UIBarPositionAny
+                                          barMetrics:UIBarMetricsDefault];
+    
+    [[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];
     [FIRApp configure];
     return YES;
 }

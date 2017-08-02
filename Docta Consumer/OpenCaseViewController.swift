@@ -16,6 +16,16 @@ class OpenCaseViewController: UIViewController, UICollectionViewDataSource, UICo
         super.viewDidLoad()
     collectionView.delegate = self
     collectionView.dataSource = self
+        
+        
+    let image : UIImage = UIImage.init(named: "DoctaLogo")!
+    let imageview : UIImageView = UIImageView.init(image: image)
+    imageview.frame = CGRect(x: 10, y: 2, width: 100, height: 30)
+    self.navigationController?.navigationBar.addSubview(imageview)
+    
+        
+        
+
     
   //   collectionView.register(OpenCasesCollectionViewCell.self, forCellWithReuseIdentifier: "OpenCasesCollectionViewCell")
         

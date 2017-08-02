@@ -17,7 +17,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.navigationItem.title = @"Case files";
+    
     self.navigationItem.hidesBackButton = YES;
     self.delegate = self;
     [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
@@ -30,7 +30,7 @@
                                             [UIFont fontWithName:@"Helvetica" size:18], NSFontAttributeName,
                                             nil] forState:UIControlStateSelected];
     
-    
+
     
 }
 
