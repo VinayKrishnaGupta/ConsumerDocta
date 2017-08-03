@@ -52,6 +52,7 @@
 		2FF438C21F30490F004451FB /* LocationOpenCasesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF438C01F30490F004451FB /* LocationOpenCasesCell.swift */; };
 		2FF438C31F30490F004451FB /* LocationOpenCasesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FF438C11F30490F004451FB /* LocationOpenCasesCell.xib */; };
 		2FF438C51F305355004451FB /* OpenCasesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF438C41F305355004451FB /* OpenCasesCell.swift */; };
+		2FF438C71F31A32A004451FB /* CloseCasesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF438C61F31A32A004451FB /* CloseCasesViewController.swift */; };
 		2FFE00211F1F840C003C3643 /* CreateChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFE00191F1F840C003C3643 /* CreateChannelCell.swift */; };
 		2FFE00221F1F840C003C3643 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFE001A1F1F840C003C3643 /* Channel.swift */; };
 		2FFE00231F1F840C003C3643 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFE001B1F1F840C003C3643 /* LoginViewController.swift */; };
@@ -153,6 +154,7 @@
 		2FF438C01F30490F004451FB /* LocationOpenCasesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationOpenCasesCell.swift; sourceTree = "<group>"; };
 		2FF438C11F30490F004451FB /* LocationOpenCasesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationOpenCasesCell.xib; sourceTree = "<group>"; };
 		2FF438C41F305355004451FB /* OpenCasesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenCasesCell.swift; sourceTree = "<group>"; };
+		2FF438C61F31A32A004451FB /* CloseCasesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloseCasesViewController.swift; sourceTree = "<group>"; };
 		2FFE00191F1F840C003C3643 /* CreateChannelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateChannelCell.swift; sourceTree = "<group>"; };
 		2FFE001A1F1F840C003C3643 /* Channel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 		2FFE001B1F1F840C003C3643 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -369,6 +371,7 @@
 				2FF438BE1F2F34A1004451FB /* LocationOpenCasesCollectionViewCell.swift */,
 				2FF438C01F30490F004451FB /* LocationOpenCasesCell.swift */,
 				2FF438C11F30490F004451FB /* LocationOpenCasesCell.xib */,
+				2FF438C61F31A32A004451FB /* CloseCasesViewController.swift */,
 			);
 			name = CasesHistory;
 			sourceTree = "<group>";
@@ -726,6 +729,7 @@
 				2FFE00271F1F840C003C3643 /* UIImage+Gif.swift in Sources */,
 				2F0311441F29F2E40044B401 /* MainTabBarViewController.swift in Sources */,
 				2FFEFFA81F1A2981003C3643 /* Step2IntroViewController.swift in Sources */,
+				2FF438C71F31A32A004451FB /* CloseCasesViewController.swift in Sources */,
 				2F6385AD1F0F4B4300603FB1 /* Step1YourcaseViewController.m in Sources */,
 				2F87E6631EFBD9EE00E6CD70 /* ViewCaseFileViewController.m in Sources */,
 				2FA8EC301EE9673900F9AB24 /* ViewController.m in Sources */,
