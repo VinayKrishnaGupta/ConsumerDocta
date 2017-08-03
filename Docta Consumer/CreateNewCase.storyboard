@@ -195,6 +195,9 @@
                                 <state key="normal" backgroundImage="backButton">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="backButton:" destination="nRx-ko-Enk" eventType="touchUpInside" id="AJg-kT-rZS"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

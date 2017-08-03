@@ -20,10 +20,13 @@
                         <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VwJ-zc-UWc">
-                                <rect key="frame" x="62" y="436" width="251" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Start Chat"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="VwJ-zc-UWc">
+                                <rect key="frame" x="16" y="463" width="343" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.052306152879999998" green="0.43319803480000002" blue="0.90039592980000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Start Chat">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="StartChatButton:" destination="eKw-Uv-rBS" eventType="touchUpInside" id="xKc-v1-Tdb"/>
                                 </connections>
@@ -117,11 +120,11 @@
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="fle-hQ-Njc">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="fle-hQ-Njc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="barTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.052306152879999998" green="0.43319803480000002" blue="0.90039592980000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </textAttributes>
@@ -141,11 +144,11 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zTE-dO-MNr" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="ChatHomeIcon" id="6Tz-sZ-GZF"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="h13-WV-fBf">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="h13-WV-fBf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="barTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.052306152879999998" green="0.43319803480000002" blue="0.90039592980000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </textAttributes>
@@ -281,7 +284,7 @@
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bluebackground" translatesAutoresizingMaskIntoConstraints="NO" id="tfo-Ta-xp3">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="doctordummyprofile" translatesAutoresizingMaskIntoConstraints="NO" id="tfo-Ta-xp3">
                                                     <rect key="frame" x="7" y="317" width="50" height="50"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                     <userDefinedRuntimeAttributes>
@@ -291,7 +294,7 @@
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bluebackground" translatesAutoresizingMaskIntoConstraints="NO" id="E59-eE-Zsp">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="doctordummyprofilelady" translatesAutoresizingMaskIntoConstraints="NO" id="E59-eE-Zsp">
                                                     <rect key="frame" x="74" y="317" width="50" height="50"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                     <userDefinedRuntimeAttributes>
@@ -301,7 +304,7 @@
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bluebackground" translatesAutoresizingMaskIntoConstraints="NO" id="x2v-l9-UVE">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="doctordummyprofile" translatesAutoresizingMaskIntoConstraints="NO" id="x2v-l9-UVE">
                                                     <rect key="frame" x="142" y="317" width="50" height="50"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                     <userDefinedRuntimeAttributes>
@@ -311,7 +314,7 @@
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bluebackground" translatesAutoresizingMaskIntoConstraints="NO" id="qA8-jM-Gko">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="doctordummyprofilelady" translatesAutoresizingMaskIntoConstraints="NO" id="qA8-jM-Gko">
                                                     <rect key="frame" x="209" y="317" width="50" height="50"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                     <userDefinedRuntimeAttributes>
@@ -358,13 +361,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" rowHeight="70" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="jhl-2Q-xhZ">
-                                <rect key="frame" x="16" y="8" width="343" height="546"/>
+                                <rect key="frame" x="16" y="20" width="343" height="534"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="J3C-cw-xb6" detailTextLabel="MG9-nu-0bY" style="IBUITableViewCellStyleValue1" id="wa5-0Z-Uej">
-                                        <rect key="frame" x="0.0" y="55.5" width="343" height="70"/>
+                                        <rect key="frame" x="0.0" y="56" width="343" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wa5-0Z-Uej" id="Uhj-En-riA">
                                             <rect key="frame" x="0.0" y="0.0" width="310" height="69.5"/>
@@ -386,7 +389,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -478,7 +481,7 @@
                 <tabBarController extendedLayoutIncludesOpaqueBars="YES" automaticallyAdjustsScrollViewInsets="NO" id="lFV-em-c64" customClass="CasesTabbarViewController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="5U7-LP-SMI"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="oUF-hR-qhQ">
+                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" itemPositioning="fill" id="oUF-hR-qhQ">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -499,7 +502,9 @@
         <scene sceneID="S71-fk-vKp">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IoB-Kt-xLd" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Open Cases" id="XyA-Xs-FjD"/>
+                    <tabBarItem key="tabBarItem" title="Open Cases" badgeValue="4" id="XyA-Xs-FjD">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-10"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="dff-cS-Ngb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -526,7 +531,9 @@
         <scene sceneID="saZ-sM-nIT">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7HF-hd-4Mz" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Completed Cases" id="CKA-ng-QsP"/>
+                    <tabBarItem key="tabBarItem" title="Completed Cases" id="CKA-ng-QsP">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-10"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="E84-UX-tdB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -551,6 +558,8 @@
         <image name="SettingIconHome" width="39" height="36"/>
         <image name="bluebackground" width="1773" height="1207"/>
         <image name="casefileIcon" width="40" height="36"/>
+        <image name="doctordummyprofile" width="64" height="64"/>
+        <image name="doctordummyprofilelady" width="64" height="64"/>
         <image name="headache" width="128" height="128"/>
         <image name="homeicon" width="35" height="35"/>
     </resources>

@@ -30,6 +30,9 @@
                                             [UIFont fontWithName:@"Helvetica" size:18], NSFontAttributeName,
                                             nil] forState:UIControlStateSelected];
     
+    
+    [[UITabBarItem appearance] setBadgeColor:[UIColor darkGrayColor]];
+
 
     
 }

@@ -23,6 +23,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *maleButton;
 @property (weak, nonatomic) IBOutlet UIButton *femaleButton;
 @property (weak, nonatomic) IBOutlet UIButton *otherButton;
+- (IBAction)backButton:(UIButton *)sender;
 
 
 
@@ -67,6 +68,9 @@
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
     
     [self.view addGestureRecognizer:tap];
+    self.navigationItem.hidesBackButton = YES;
+    
+    
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -231,4 +235,8 @@
 }
 */
 
+- (IBAction)backButton:(UIButton *)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+    
+}
 @end

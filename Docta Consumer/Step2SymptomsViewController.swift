@@ -28,6 +28,8 @@ class Step2SymptomsViewController: UIViewController, ImagePickerDelegate, UIColl
         self.navigationItem.hidesBackButton = true
         symptomstextfield.delegate = self
         
+        
+        
 //        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(Step2SymptomsViewController.dismissKeyboard))
 //        
 //        view.addGestureRecognizer(tap)
@@ -135,7 +137,11 @@ class Step2SymptomsViewController: UIViewController, ImagePickerDelegate, UIColl
     
 
     
-    
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
+ 
     
     
     
@@ -155,12 +161,6 @@ class Step2SymptomsViewController: UIViewController, ImagePickerDelegate, UIColl
         
         let introVC = Step2IntroViewController(nibName: "Step2IntroViewController", bundle: nil)
         self.present(introVC, animated: true, completion: nil)
-    }
-    
-    func dismissKeyboard() {
-        //Causes the view (or one of its embedded text fields) to resign the first responder status.
-        view.endEditing(true)
-        
     }
     
 

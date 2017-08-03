@@ -14,6 +14,7 @@
 
 @interface Step1YourcaseViewController ()
 - (IBAction)introductionButton:(UIButton *)sender;
+- (IBAction)backButton:(UIButton *)sender;
 - (IBAction)nextButton:(UIButton *)sender;
 @property (weak, nonatomic) IBOutlet UIButton *button1;
 @property (weak, nonatomic) IBOutlet UIButton *button2;
@@ -44,7 +45,7 @@
     
     UIButton *useButton = [UIButton buttonWithType:UIButtonTypeCustom];
     useButton.frame = CGRectMake(0, 0, 100, 35);
-    [useButton setTitle:@"Chat With Us" forState:UIControlStateNormal];
+    [useButton setTitle:@"Sign Up" forState:UIControlStateNormal];
     useButton.backgroundColor = [UIColor colorWithRed:0.0f green:161/255.0f blue:255/255.0f alpha:1];
     useButton.titleLabel.textColor = [UIColor whiteColor];
     useButton.layer.masksToBounds = NO;
@@ -55,7 +56,7 @@
     useButton.titleLabel.font = [UIFont systemFontOfSize:13];
     //    useButton.layer.shadowColor = [UIColor blackColor].CGColor;
     useButton.layer.borderColor = [UIColor whiteColor].CGColor;
-    [useButton addTarget:self action:@selector(ChatStoryboardButton) forControlEvents:UIControlEventTouchUpInside];
+    [useButton addTarget:self action:@selector(SignupButton) forControlEvents:UIControlEventTouchUpInside];
     
     [self.view addSubview:useButton];
     
@@ -109,6 +110,13 @@
     
     
     NSLog(@"Signup button");
+    
+}
+
+-(void)SignupButton {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Auth" bundle:nil];
+    UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"SignupVC"];
+    [self.navigationController pushViewController:vc animated:YES];
     
 }
 
@@ -193,6 +201,12 @@
 - (IBAction)introductionButton:(UIButton *)sender {
     Step1IntroductionViewController *introVC = [[Step1IntroductionViewController alloc] initWithNibName:@"Step1IntroductionViewController" bundle:nil];
     [self presentViewController:introVC animated:YES completion:nil];
+    
+    
+}
+
+- (IBAction)backButton:(UIButton *)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
     
     
 }
