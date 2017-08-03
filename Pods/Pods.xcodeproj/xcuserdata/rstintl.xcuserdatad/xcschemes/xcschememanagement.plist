@@ -94,6 +94,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>nanopb.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -107,7 +112,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>2B80CB28C52FA4CFDAE85DD23BB788D8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>37B66AF5870FA3E1022722ECFA09EB7C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3A806A0A298EE40518AF3A10D563BC65</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -142,16 +157,6 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8A6AD32E76BC028D34944F8D75B03B32</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A20EB375427710BD461F44A6781C282F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>B2542602E50EDF091ADB18B4688DF34F</key>
 		<dict>
 			<key>primary</key>
@@ -167,17 +172,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CAC085AC0450DDFB9FB1914EE966E037</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>CF671F7E57B92905F1CC91D036D6B4A7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>D0581AF7BF4A6DA140D280B19ECC7BFF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DF0C532A0F4812E7B8E7D1988B760E04</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E4DD95323C54A78F879DAB0F1508B8E7</key>
 		<dict>
 			<key>primary</key>
 			<true/>

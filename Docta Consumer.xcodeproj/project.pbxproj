@@ -13,6 +13,9 @@
 		2F0311471F29F82D0044B401 /* HomeTab1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0311461F29F82D0044B401 /* HomeTab1ViewController.swift */; };
 		2F0311491F2A0E220044B401 /* ChatTabBar2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0311481F2A0E220044B401 /* ChatTabBar2ViewController.swift */; };
 		2F03114B1F2C65DC0044B401 /* CasesTabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F03114A1F2C65DC0044B401 /* CasesTabbarViewController.m */; };
+		2F5349A51F333E530061C19A /* underconstructiongif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2F5349A41F333E530061C19A /* underconstructiongif.gif */; };
+		2F5349A91F333EFD0061C19A /* SettingsTab4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5349A81F333EFD0061C19A /* SettingsTab4ViewController.swift */; };
+		2F5349AB1F3343890061C19A /* coomingsoongif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2F5349AA1F3343890061C19A /* coomingsoongif.gif */; };
 		2F5B55721F208D6E000E28A0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2F5B55711F208D6E000E28A0 /* GoogleService-Info.plist */; };
 		2F5B55751F25CE8C000E28A0 /* CustomChatCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5B55731F25CE8C000E28A0 /* CustomChatCollectionViewCell.swift */; };
 		2F5B55761F25CE8C000E28A0 /* CustomChatCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F5B55741F25CE8C000E28A0 /* CustomChatCollectionViewCell.xib */; };
@@ -98,6 +101,9 @@
 		2F0311481F2A0E220044B401 /* ChatTabBar2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatTabBar2ViewController.swift; sourceTree = "<group>"; };
 		2F03114A1F2C65DC0044B401 /* CasesTabbarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CasesTabbarViewController.m; sourceTree = "<group>"; };
 		2F03114C1F2C66270044B401 /* CasesTabbarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CasesTabbarViewController.h; sourceTree = "<group>"; };
+		2F5349A41F333E530061C19A /* underconstructiongif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = underconstructiongif.gif; sourceTree = "<group>"; };
+		2F5349A81F333EFD0061C19A /* SettingsTab4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTab4ViewController.swift; sourceTree = "<group>"; };
+		2F5349AA1F3343890061C19A /* coomingsoongif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = coomingsoongif.gif; sourceTree = "<group>"; };
 		2F5B55711F208D6E000E28A0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2F5B55731F25CE8C000E28A0 /* CustomChatCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomChatCollectionViewCell.swift; sourceTree = "<group>"; };
 		2F5B55741F25CE8C000E28A0 /* CustomChatCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomChatCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -227,6 +233,7 @@
 				2F0311481F2A0E220044B401 /* ChatTabBar2ViewController.swift */,
 				2F03114C1F2C66270044B401 /* CasesTabbarViewController.h */,
 				2F03114A1F2C65DC0044B401 /* CasesTabbarViewController.m */,
+				2F5349A81F333EFD0061C19A /* SettingsTab4ViewController.swift */,
 			);
 			name = MainTabBars;
 			sourceTree = "<group>";
@@ -312,6 +319,8 @@
 			children = (
 				2FF438B11F2EF37E004451FB /* plusgif.gif */,
 				2FFEFF9B1F1A02DE003C3643 /* addimagegif.gif */,
+				2F5349A41F333E530061C19A /* underconstructiongif.gif */,
+				2F5349AA1F3343890061C19A /* coomingsoongif.gif */,
 				2FA8EC291EE9673900F9AB24 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -556,6 +565,8 @@
 				2FF438B21F2EF37E004451FB /* plusgif.gif in Resources */,
 				2F5B55721F208D6E000E28A0 /* GoogleService-Info.plist in Resources */,
 				2F0311421F29EF700044B401 /* Main.storyboard in Resources */,
+				2F5349A51F333E530061C19A /* underconstructiongif.gif in Resources */,
+				2F5349AB1F3343890061C19A /* coomingsoongif.gif in Resources */,
 				2FA8EC641EEAA58500F9AB24 /* SubmitCase.storyboard in Resources */,
 				2FA8EC381EE9673900F9AB24 /* LaunchScreen.storyboard in Resources */,
 				2FA8EC351EE9673900F9AB24 /* Assets.xcassets in Resources */,
@@ -732,6 +743,7 @@
 				2FF438C71F31A32A004451FB /* CloseCasesViewController.swift in Sources */,
 				2F6385AD1F0F4B4300603FB1 /* Step1YourcaseViewController.m in Sources */,
 				2F87E6631EFBD9EE00E6CD70 /* ViewCaseFileViewController.m in Sources */,
+				2F5349A91F333EFD0061C19A /* SettingsTab4ViewController.swift in Sources */,
 				2FA8EC301EE9673900F9AB24 /* ViewController.m in Sources */,
 				2FA8EC2D1EE9673900F9AB24 /* AppDelegate.m in Sources */,
 				2FFE00231F1F840C003C3643 /* LoginViewController.swift in Sources */,

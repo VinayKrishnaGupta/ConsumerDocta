@@ -32,6 +32,8 @@
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
     
     [self.view addGestureRecognizer:tap];
+    
+    self.navigationItem.hidesBackButton = YES;
     // Do any additional setup after loading the view from its nib.
 }
 

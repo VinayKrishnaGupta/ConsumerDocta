@@ -186,11 +186,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SignInViewController.m"
-            timestampString = "522138410.908803"
+            timestampString = "523454184.714821"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
             landmarkName = "-ProceedButtontoMainView"
             landmarkType = "7">
          </BreakpointContent>

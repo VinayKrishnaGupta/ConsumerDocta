@@ -187,7 +187,7 @@ final class ChatViewController: JSQMessagesViewController {
         let when = DispatchTime.now() + 1 // change 2 to desired number of seconds
         DispatchQueue.main.asyncAfter(deadline: when) {
            self.showTypingIndicator = false
-          self.addMessage(withId: "foo", name: "Dr Docta", text: "Hello, I am Dr. Docta, How may I assist you? ")
+          self.addMessage(withId: "foo", name: "Dr Docta", text: "Hi there! What's your name?")
         self.collectionView.reloadData()
         }
     
@@ -212,28 +212,38 @@ final class ChatViewController: JSQMessagesViewController {
             
             
         case 2:
-            self.addMessage(withId: "foo", name: "Dr Docta", text: "Ok, Tell me patient first name")
+            self.addMessage(withId: "foo", name: "Dr Docta", text: "Nice to meet you ! I’m here to help you find a specialist for any medical problem you may have. ")
+            self.addMessage(withId: "foo", name: "Dr Docta", text: "May I ask, What is the medical procedure or concern?")
+            
             
             
             
             break
-        case 4:
-            self.addMessage(withId: "foo", name: "Dr Docta", text: "What is your problem? Please Explain ")
-            break
-        case 6:
-            self.addMessage(withId: "foo", name: "Dr Docta", text: "Thanks for reporting, Your case file 219943 is generated and Doctors will respond back to you ")
-            break
+        case 5:
+            self.addMessage(withId: "foo", name: "Dr Docta", text: "Ok we’ve found 183 Specialist ready to treat a case like yours! To get started we will need to create your Case File by answering a few questions. This will provide your specialist with the insights they need to treat you. ")
+            self.addMessage(withId: "foo", name: "Dr Docta", text: "So how long have you had this problem?")
             
+            break
         case 8:
-            self.addMessage(withId: "foo", name: "Dr Docta", text: "Please upload pictures related to case")
+            self.addMessage(withId: "foo", name: "Dr Docta", text: "I’m sorry to hear that.")
+            self.addMessage(withId: "foo", name: "Dr Docta", text: "What symptoms are you experiencing ?  For example, is it a dull ache or more of a sharp pain? etc. ")
             break
+            
+        case 11:
+            self.addMessage(withId: "foo", name: "Dr Docta", text: "Any Additional information that you would like the Specialist to know?")
+            break
+            
+        case 13:
+            self.addMessage(withId: "foo", name: "Dr Docta", text: "Do you have any images or scans ? Please upload")
+            break
+
         default:
           //  self.addMessage(withId: "foo", name: "Dr Docta", text: "Hi \(name), Please pay the 99$ fee soon to continue treatment")
-            let alert = UIAlertController(title: "Payment Pending", message: "Please pay the 10$ fee soon to continue treatment", preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: "Review Casefile", message: "Your case file is being created", preferredStyle: UIAlertControllerStyle.alert)
             
             // add an action (button)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-            alert.addAction(UIAlertAction(title: "Proceed to Payment", style: UIAlertActionStyle.default, handler: nil))
+            alert.addAction(UIAlertAction(title: "Upload Images", style: UIAlertActionStyle.default, handler: nil))
+            alert.addAction(UIAlertAction(title: "Review Casefile", style: UIAlertActionStyle.default, handler: nil))
             
             // show the alert
             self.present(alert, animated: true, completion: nil)

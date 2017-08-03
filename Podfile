@@ -16,7 +16,7 @@ pod 'Firebase/Auth'
 pod 'Firebase/Database'
 pod 'JSQMessagesViewController'
 
-
+inhibit_all_warnings!
 source 'https://github.com/CocoaPods/Specs.git'
 pod 'FileBrowser', '~> 0.2'
 use_frameworks!
