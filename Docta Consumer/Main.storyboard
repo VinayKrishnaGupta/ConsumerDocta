@@ -459,7 +459,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="ct6-Wp-mor">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.052306152879999998" green="0.43319803480000002" blue="0.90039592980000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </textAttributes>
@@ -579,7 +579,7 @@
         <image name="SettingIconHome" width="32" height="32"/>
         <image name="bluebackground" width="1773" height="1207"/>
         <image name="casefileIcon" width="32" height="32"/>
-        <image name="coomingsoongif.gif" width="400" height="400"/>
+        <image name="coomingsoongif.gif" width="210" height="210"/>
         <image name="doctordummyprofile" width="64" height="64"/>
         <image name="doctordummyprofilelady" width="64" height="64"/>
         <image name="headache" width="128" height="128"/>
