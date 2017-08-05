@@ -25,6 +25,7 @@
 		2F053C2F1F3596AA00A41015 /* Rubik-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F053C241F3596AA00A41015 /* Rubik-MediumItalic.ttf */; };
 		2F053C301F3596AA00A41015 /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F053C251F3596AA00A41015 /* Rubik-Regular.ttf */; };
 		2F053C311F3596AA00A41015 /* SIL Open Font License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2F053C261F3596AA00A41015 /* SIL Open Font License.txt */; };
+		2F053C341F35C9F700A41015 /* ReviewCase.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F053C331F35C9F700A41015 /* ReviewCase.storyboard */; };
 		2F5349A51F333E530061C19A /* underconstructiongif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2F5349A41F333E530061C19A /* underconstructiongif.gif */; };
 		2F5349A91F333EFD0061C19A /* SettingsTab4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5349A81F333EFD0061C19A /* SettingsTab4ViewController.swift */; };
 		2F5349AB1F3343890061C19A /* coomingsoongif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2F5349AA1F3343890061C19A /* coomingsoongif.gif */; };
@@ -125,6 +126,7 @@
 		2F053C241F3596AA00A41015 /* Rubik-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-MediumItalic.ttf"; sourceTree = "<group>"; };
 		2F053C251F3596AA00A41015 /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
 		2F053C261F3596AA00A41015 /* SIL Open Font License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SIL Open Font License.txt"; sourceTree = "<group>"; };
+		2F053C331F35C9F700A41015 /* ReviewCase.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ReviewCase.storyboard; sourceTree = "<group>"; };
 		2F5349A41F333E530061C19A /* underconstructiongif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = underconstructiongif.gif; sourceTree = "<group>"; };
 		2F5349A81F333EFD0061C19A /* SettingsTab4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTab4ViewController.swift; sourceTree = "<group>"; };
 		2F5349AA1F3343890061C19A /* coomingsoongif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = coomingsoongif.gif; sourceTree = "<group>"; };
@@ -280,6 +282,14 @@
 			path = rubik;
 			sourceTree = "<group>";
 		};
+		2F053C321F35C48E00A41015 /* ReviewCaseFile */ = {
+			isa = PBXGroup;
+			children = (
+				2F053C331F35C9F700A41015 /* ReviewCase.storyboard */,
+			);
+			name = ReviewCaseFile;
+			sourceTree = "<group>";
+		};
 		2F6385AA1F0F4A3F00603FB1 /* CreateNewCase */ = {
 			isa = PBXGroup;
 			children = (
@@ -344,6 +354,7 @@
 			children = (
 				2FF438B31F2F03AF004451FB /* CasesHistory */,
 				2F0311451F29F7D60044B401 /* MainTabBars */,
+				2F053C321F35C48E00A41015 /* ReviewCaseFile */,
 				2F6385AA1F0F4A3F00603FB1 /* CreateNewCase */,
 				2F72A2601EF7C36400CEC047 /* CommonFiles */,
 				2FA8EC621EEAA56100F9AB24 /* SubmitCase */,
@@ -612,6 +623,7 @@
 				2F053C2D1F3596AA00A41015 /* Rubik-LightItalic.ttf in Resources */,
 				2FFEFFA91F1A2981003C3643 /* Step2IntroViewController.xib in Resources */,
 				2FFEFFA51F1A1BAE003C3643 /* Step1IntroductionViewController.xib in Resources */,
+				2F053C341F35C9F700A41015 /* ReviewCase.storyboard in Resources */,
 				2F053C291F3596AA00A41015 /* Rubik-Bold.ttf in Resources */,
 				2FF438B21F2EF37E004451FB /* plusgif.gif in Resources */,
 				2F053C281F3596AA00A41015 /* Rubik-BlackItalic.ttf in Resources */,
