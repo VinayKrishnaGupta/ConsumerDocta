@@ -28,7 +28,7 @@ class Step2SymptomsViewController: UIViewController, ImagePickerDelegate, UIColl
         self.navigationItem.hidesBackButton = true
         symptomstextfield.delegate = self
         
-        
+       
         
 //        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(Step2SymptomsViewController.dismissKeyboard))
 //        
@@ -39,6 +39,7 @@ class Step2SymptomsViewController: UIViewController, ImagePickerDelegate, UIColl
 
         // Do any additional setup after loading the view.
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

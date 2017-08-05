@@ -29,6 +29,7 @@ class Step4LocationViewController: UIViewController, UITextFieldDelegate {
         button3.addTarget(self, action: #selector(changebuttonstates), for: UIControlEvents.touchUpInside)
         self.navigationItem.hidesBackButton = true
         button1.backgroundColor = #colorLiteral(red: 0, green: 0.5898008943, blue: 1, alpha: 1)
+        button1.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         button1.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
         
         
@@ -75,33 +76,43 @@ class Step4LocationViewController: UIViewController, UITextFieldDelegate {
         
         if button1.isTouchInside {
             button1.backgroundColor = #colorLiteral(red: 0, green: 0.5898008943, blue: 1, alpha: 1)
+            button1.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+            button2.tintColor = #colorLiteral(red: 0.1745204926, green: 0.5882768631, blue: 0.985314548, alpha: 1)
+            button3.tintColor = #colorLiteral(red: 0.1745204926, green: 0.5882768631, blue: 0.985314548, alpha: 1)
             button2.backgroundColor = UIColor.groupTableViewBackground
             button3.backgroundColor = UIColor.groupTableViewBackground
             button1.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
-            button2.setTitleColor(#colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1), for: .normal)
-            button3.setTitleColor(#colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1), for: .normal)
+            button2.setTitleColor(#colorLiteral(red: 0.05230615288, green: 0.4331980348, blue: 0.9003959298, alpha: 1), for: .normal)
+            button3.setTitleColor(#colorLiteral(red: 0.05230615288, green: 0.4331980348, blue: 0.9003959298, alpha: 1), for: .normal)
+            
             print("button 1 is selected")
             locationLabel.text = button1.titleLabel?.text
             
         }
         if button2.isTouchInside {
             button2.backgroundColor = #colorLiteral(red: 0, green: 0.5898008943, blue: 1, alpha: 1)
+            button2.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+            button1.tintColor = #colorLiteral(red: 0.1745204926, green: 0.5882768631, blue: 0.985314548, alpha: 1)
+            button3.tintColor = #colorLiteral(red: 0.1745204926, green: 0.5882768631, blue: 0.985314548, alpha: 1)
             button1.backgroundColor = UIColor.groupTableViewBackground
             button3.backgroundColor = UIColor.groupTableViewBackground
             locationLabel.text = button2.titleLabel?.text
             button2.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
-            button1.setTitleColor(#colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1), for: .normal)
-            button3.setTitleColor(#colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1), for: .normal)
+            button1.setTitleColor(#colorLiteral(red: 0.05230615288, green: 0.4331980348, blue: 0.9003959298, alpha: 1), for: .normal)
+            button3.setTitleColor(#colorLiteral(red: 0.05230615288, green: 0.4331980348, blue: 0.9003959298, alpha: 1), for: .normal)
             print("button 2 is selected")
         }
         if button3.isTouchInside {
             button3.backgroundColor = #colorLiteral(red: 0, green: 0.5898008943, blue: 1, alpha: 1)
+            button3.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+            button2.tintColor = #colorLiteral(red: 0.1745204926, green: 0.5882768631, blue: 0.985314548, alpha: 1)
+            button1.tintColor = #colorLiteral(red: 0.1745204926, green: 0.5882768631, blue: 0.985314548, alpha: 1)
             button1.backgroundColor = UIColor.groupTableViewBackground
             button2.backgroundColor = UIColor.groupTableViewBackground
             locationLabel.text = button3.titleLabel?.text
             button3.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
-            button2.setTitleColor(#colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1), for: .normal)
-            button1.setTitleColor(#colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1), for: .normal)
+            button2.setTitleColor(#colorLiteral(red: 0.05230615288, green: 0.4331980348, blue: 0.9003959298, alpha: 1), for: .normal)
+            button1.setTitleColor(#colorLiteral(red: 0.05230615288, green: 0.4331980348, blue: 0.9003959298, alpha: 1), for: .normal)
             print("button 3 is selected")
         }
         

@@ -15,6 +15,13 @@ class CloseCasesViewController: UIViewController, UITableViewDataSource, UITable
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
+        
+        
+        let image : UIImage = UIImage.init(named: "DoctaLogo")!
+        let imageview : UIImageView = UIImageView.init(image: image)
+        imageview.frame = CGRect(x: 10, y: 2, width: 100, height: 30)
+        self.navigationController?.navigationBar.addSubview(imageview)
+        
         // Do any additional setup after loading the view.
     }
     
