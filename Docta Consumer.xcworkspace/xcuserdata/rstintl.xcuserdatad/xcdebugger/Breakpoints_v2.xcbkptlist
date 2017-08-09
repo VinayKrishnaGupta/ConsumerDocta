@@ -330,11 +330,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Docta Consumer/Step2SymptomsViewController.swift"
-            timestampString = "523955085.926636"
+            timestampString = "523968198.66616"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "196"
-            endingLineNumber = "196"
+            startingLineNumber = "221"
+            endingLineNumber = "221"
             landmarkName = "dismissKeyboard()"
             landmarkType = "7">
          </BreakpointContent>
@@ -474,11 +474,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Docta Consumer/Step2SymptomsViewController.swift"
-            timestampString = "523955085.926636"
+            timestampString = "523968198.66616"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
             landmarkName = "keyboardWillHide(notification:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -490,11 +490,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Docta Consumer/Step2SymptomsViewController.swift"
-            timestampString = "523955085.926636"
+            timestampString = "523968198.66616"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
             landmarkName = "keyboardWillShow(notification:)"
             landmarkType = "7">
             <Locations>
@@ -506,11 +506,11 @@
                   moduleName = "Docta Consumer"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/rstintl/Desktop/Xcode/DoctaConsumer/Docta%20Consumer/Step2SymptomsViewController.swift"
-                  timestampString = "523955290.713129"
+                  timestampString = "523968200.092483"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "60"
-                  endingLineNumber = "60"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
                   offsetFromSymbolStart = "32">
                </Location>
                <Location
@@ -521,11 +521,11 @@
                   moduleName = "Docta Consumer"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/rstintl/Desktop/Xcode/DoctaConsumer/Docta%20Consumer/Step2SymptomsViewController.swift"
-                  timestampString = "523955290.715011"
+                  timestampString = "523968200.09437"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "60"
-                  endingLineNumber = "60"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
                   offsetFromSymbolStart = "692">
                </Location>
             </Locations>
@@ -538,11 +538,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Docta Consumer/Step2SymptomsViewController.swift"
-            timestampString = "523955085.926636"
+            timestampString = "523968198.66616"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "201"
-            endingLineNumber = "201"
+            startingLineNumber = "226"
+            endingLineNumber = "226"
             landmarkName = "dismissKeyboard()"
             landmarkType = "7">
          </BreakpointContent>
@@ -554,11 +554,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Docta Consumer/Step2SymptomsViewController.swift"
-            timestampString = "523955068.464563"
+            timestampString = "523968198.66616"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
             landmarkName = "gestureRecognizer(_:shouldReceive:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -570,11 +570,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Docta Consumer/Step2SymptomsViewController.swift"
-            timestampString = "523955069.818624"
+            timestampString = "523968198.66616"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
             landmarkName = "gestureRecognizer(_:shouldReceive:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -586,12 +586,44 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Docta Consumer/Step2SymptomsViewController.swift"
-            timestampString = "523955945.624681"
+            timestampString = "523968198.66616"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
             landmarkName = "gestureRecognizer(_:shouldReceive:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Docta Consumer/Step2SymptomsViewController.swift"
+            timestampString = "523968198.66616"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "257"
+            endingLineNumber = "257"
+            landmarkName = "textFieldShouldEndEditing(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Docta Consumer/Step2SymptomsViewController.swift"
+            timestampString = "523968198.66616"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "144"
+            endingLineNumber = "144"
+            landmarkName = "textFieldShouldReturn(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

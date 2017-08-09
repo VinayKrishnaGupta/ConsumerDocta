@@ -17,6 +17,7 @@ class Step2SymptomsViewController: UIViewController, ImagePickerDelegate, UIColl
     let imagepicker = ImagePickerController()
     var imagearray  = [UIImage]()
     
+    @IBOutlet weak var view2: UIView!
     @IBOutlet weak var symptomstextfield: UITextField!
     @IBOutlet weak var collectionViewImages: UICollectionView!
 
@@ -29,6 +30,27 @@ class Step2SymptomsViewController: UIViewController, ImagePickerDelegate, UIColl
         symptomstextfield.delegate = self
         collectionViewImages.tag = 111
         
+        
+        let layer1 = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 8))
+        layer1.backgroundColor = UIColor(red:0.9, green:0.92, blue:0.94, alpha:1)
+        self.view.addSubview(layer1)
+        
+        
+        let layer = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width/4, height: 8))
+        layer.backgroundColor = UIColor(red:0.08, green:0.65, blue:1, alpha:1)
+        
+        let gradient = CAGradientLayer()
+        gradient.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width/4 , height: 8)
+        gradient.colors = [
+            UIColor(red:1, green:1, blue:1, alpha:0.5).cgColor,
+            UIColor(red:0.08, green:0.65, blue:1, alpha:1).cgColor
+        ]
+        gradient.locations = [0, 1]
+        gradient.startPoint = CGPoint.zero
+        gradient.endPoint = CGPoint(x: 1, y: 0)
+        layer.layer.addSublayer(gradient)
+        
+        self.view.addSubview(layer)
 //        NotificationCenter.default.addObserver(self, selector: #selector(Step2SymptomsViewController.keyboardWillShow(notification:)), name: .UIKeyboardWillShow, object: nil)
 //        NotificationCenter.default.addObserver(self, selector: #selector(Step2SymptomsViewController.keyboardWillHide(notification:)), name: .UIKeyboardWillHide, object: nil)
         
@@ -37,6 +59,8 @@ class Step2SymptomsViewController: UIViewController, ImagePickerDelegate, UIColl
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(Step2SymptomsViewController.dismissKeyboard))
         tap.delegate = self
         view.addGestureRecognizer(tap)
+        
+        
        
         
     //    uploadimagesbutton.addTarget(self, action: #selector(selectImagefromGalleryandCamera), for: UIControlEvents.touchUpInside)
@@ -201,7 +225,7 @@ class Step2SymptomsViewController: UIViewController, ImagePickerDelegate, UIColl
        
         
        
-       // symptomstextfield.resignFirstResponder()
+        symptomstextfield.resignFirstResponder()
     }
  
     
