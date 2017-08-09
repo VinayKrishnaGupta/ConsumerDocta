@@ -12,7 +12,7 @@ import Lightbox
 import SDWebImage
 
 
-class Step2SymptomsViewController: UIViewController, ImagePickerDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UITextFieldDelegate {
+class Step2SymptomsViewController: UIViewController, ImagePickerDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UITextFieldDelegate, UIGestureRecognizerDelegate {
    // @IBOutlet weak var uploadimagesbutton: UIButton!
     let imagepicker = ImagePickerController()
     var imagearray  = [UIImage]()
@@ -27,12 +27,16 @@ class Step2SymptomsViewController: UIViewController, ImagePickerDelegate, UIColl
         imagepicker.delegate = self
         self.navigationItem.hidesBackButton = true
         symptomstextfield.delegate = self
+        collectionViewImages.tag = 111
+        
+//        NotificationCenter.default.addObserver(self, selector: #selector(Step2SymptomsViewController.keyboardWillShow(notification:)), name: .UIKeyboardWillShow, object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(Step2SymptomsViewController.keyboardWillHide(notification:)), name: .UIKeyboardWillHide, object: nil)
         
        
         
-//        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(Step2SymptomsViewController.dismissKeyboard))
-//        
-//        view.addGestureRecognizer(tap)
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(Step2SymptomsViewController.dismissKeyboard))
+        tap.delegate = self
+        view.addGestureRecognizer(tap)
        
         
     //    uploadimagesbutton.addTarget(self, action: #selector(selectImagefromGalleryandCamera), for: UIControlEvents.touchUpInside)
@@ -40,6 +44,55 @@ class Step2SymptomsViewController: UIViewController, ImagePickerDelegate, UIColl
         // Do any additional setup after loading the view.
     }
     
+   
+    
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive press: UIPress) -> Bool {
+        let view = gestureRecognizer.view
+        if view?.tag == 111
+        {
+            return false
+        }
+        return true
+    }
+    
+    
+    func keyboardWillShow(notification: NSNotification) {
+        
+        
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            let duration = notification.userInfo![UIKeyboardAnimationDurationUserInfoKey] as! Double
+            // if using constraints
+            // bottomViewBottomSpaceConstraint.constant = keyboardSize.height
+            self.view.frame.origin.y -= keyboardSize.height
+            UIView.animate(withDuration: duration) {
+                self.view.layoutIfNeeded()
+            }
+        }
+        
+        
+        
+        
+        //        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+        //            if self.view.frame.origin.y == 0{
+        //                self.view.frame.origin.y -= keyboardSize.height
+        //            }
+        //        }
+    }
+    
+    
+    
+    
+    func keyboardWillHide(notification: NSNotification) {
+        
+        let duration = notification.userInfo![UIKeyboardAnimationDurationUserInfoKey] as! Double
+        //if using constraint
+        //       bottomViewBottomSpaceConstraint.constant = 0
+        self.view.frame.origin.y = (self.navigationController?.navigationBar.frame.height)!
+        
+        UIView.animate(withDuration: duration) {
+            self.view.layoutIfNeeded()
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -135,12 +188,20 @@ class Step2SymptomsViewController: UIViewController, ImagePickerDelegate, UIColl
     
     
     
-    
+    override func viewWillDisappear(_ animated: Bool) {
+        NotificationCenter.default.removeObserver(self, name: .UIKeyboardWillShow , object: self.view.window)
+        NotificationCenter.default.removeObserver(self, name: .UIKeyboardWillHide , object: self.view.window)
+    }
 
     
     func dismissKeyboard() {
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
-        view.endEditing(true)
+      //  view.endEditing(true)
+        
+       
+        
+       
+       // symptomstextfield.resignFirstResponder()
     }
  
     
@@ -164,6 +225,16 @@ class Step2SymptomsViewController: UIViewController, ImagePickerDelegate, UIColl
         self.present(introVC, animated: true, completion: nil)
     }
     
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        return true
+    }
+    
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        symptomstextfield.resignFirstResponder()
+        
+        return true
+    }
 
     /*
     // MARK: - Navigation

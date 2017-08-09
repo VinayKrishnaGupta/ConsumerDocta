@@ -509,6 +509,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
+                        <outlet property="additionalTextField" destination="zOE-aj-Nk8" id="fA9-7H-jCG"/>
                         <outlet property="treatmenttextView" destination="l8J-iN-o80" id="9Tw-dB-wUF"/>
                         <segue destination="X93-9g-oBu" kind="show" identifier="step4Location" id="B0G-Z5-nd3"/>
                     </connections>

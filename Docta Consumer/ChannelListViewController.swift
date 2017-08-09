@@ -57,7 +57,17 @@ class ChannelListViewController: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     SVProgressHUD.show(withStatus: "Connecting with Dr. Docta")
-    self.perform(#selector(CreateNewChannelMethod), with: self, afterDelay: 1)
+    Auth.auth().signInAnonymously(completion: { (user, error) in
+        if let err:Error = error {
+            print(err.localizedDescription)
+            return
+        }
+        
+       self.perform(#selector(self.CreateNewChannelMethod), with: self, afterDelay: 1)
+    })
+    
+    
+    
     self.navigationItem.hidesBackButton = true
     
     

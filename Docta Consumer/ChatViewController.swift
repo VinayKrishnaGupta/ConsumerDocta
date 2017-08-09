@@ -85,7 +85,19 @@ final class ChatViewController: JSQMessagesViewController {
     
     
     
-    self.senderId = Auth.auth().currentUser?.uid
+    
+    if self.senderId != nil {
+        self.senderId = Auth.auth().currentUser?.uid
+    }
+    else {
+        
+        
+        self.senderId = "Guest User"
+        
+    }
+    
+    
+    
     observeMessages()
     
     // No avatars

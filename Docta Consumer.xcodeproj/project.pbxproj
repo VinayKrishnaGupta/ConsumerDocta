@@ -293,12 +293,12 @@
 		2F6385AA1F0F4A3F00603FB1 /* CreateNewCase */ = {
 			isa = PBXGroup;
 			children = (
+				2F6385AE1F0F4B6400603FB1 /* CreateNewCase.storyboard */,
 				2F6385AB1F0F4B4300603FB1 /* Step1YourcaseViewController.h */,
 				2F6385AC1F0F4B4300603FB1 /* Step1YourcaseViewController.m */,
 				2FFEFFA11F1A1BAE003C3643 /* Step1IntroductionViewController.h */,
 				2FFEFFA21F1A1BAE003C3643 /* Step1IntroductionViewController.m */,
 				2FFEFFA31F1A1BAE003C3643 /* Step1IntroductionViewController.xib */,
-				2F6385AE1F0F4B6400603FB1 /* CreateNewCase.storyboard */,
 				2FAE810F1F1492E3007E937A /* Step2SymptomsViewController.swift */,
 				2FFEFFA61F1A2981003C3643 /* Step2IntroViewController.swift */,
 				2FFEFFA71F1A2981003C3643 /* Step2IntroViewController.xib */,
