@@ -26,6 +26,11 @@
 		2F053C301F3596AA00A41015 /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F053C251F3596AA00A41015 /* Rubik-Regular.ttf */; };
 		2F053C311F3596AA00A41015 /* SIL Open Font License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2F053C261F3596AA00A41015 /* SIL Open Font License.txt */; };
 		2F053C341F35C9F700A41015 /* ReviewCase.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F053C331F35C9F700A41015 /* ReviewCase.storyboard */; };
+		2F053C361F3C372F00A41015 /* Step1ReasonsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F053C351F3C372F00A41015 /* Step1ReasonsTVC.swift */; };
+		2F053C391F3C479000A41015 /* LabelsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F053C381F3C479000A41015 /* LabelsTableViewCell.swift */; };
+		2F053C3B1F3C47A300A41015 /* TextViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F053C3A1F3C47A300A41015 /* TextViewTableViewCell.swift */; };
+		2F053C3D1F3C4CF600A41015 /* collectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F053C3C1F3C4CF600A41015 /* collectionTableViewCell.swift */; };
+		2F053C3F1F3C4E5B00A41015 /* imagesviewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F053C3E1F3C4E5B00A41015 /* imagesviewCollectionViewCell.swift */; };
 		2F5349A51F333E530061C19A /* underconstructiongif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2F5349A41F333E530061C19A /* underconstructiongif.gif */; };
 		2F5349A91F333EFD0061C19A /* SettingsTab4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5349A81F333EFD0061C19A /* SettingsTab4ViewController.swift */; };
 		2F5349AB1F3343890061C19A /* coomingsoongif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2F5349AA1F3343890061C19A /* coomingsoongif.gif */; };
@@ -127,6 +132,11 @@
 		2F053C251F3596AA00A41015 /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
 		2F053C261F3596AA00A41015 /* SIL Open Font License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SIL Open Font License.txt"; sourceTree = "<group>"; };
 		2F053C331F35C9F700A41015 /* ReviewCase.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ReviewCase.storyboard; sourceTree = "<group>"; };
+		2F053C351F3C372F00A41015 /* Step1ReasonsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Step1ReasonsTVC.swift; sourceTree = "<group>"; };
+		2F053C381F3C479000A41015 /* LabelsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelsTableViewCell.swift; sourceTree = "<group>"; };
+		2F053C3A1F3C47A300A41015 /* TextViewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewTableViewCell.swift; sourceTree = "<group>"; };
+		2F053C3C1F3C4CF600A41015 /* collectionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = collectionTableViewCell.swift; sourceTree = "<group>"; };
+		2F053C3E1F3C4E5B00A41015 /* imagesviewCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = imagesviewCollectionViewCell.swift; sourceTree = "<group>"; };
 		2F5349A41F333E530061C19A /* underconstructiongif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = underconstructiongif.gif; sourceTree = "<group>"; };
 		2F5349A81F333EFD0061C19A /* SettingsTab4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTab4ViewController.swift; sourceTree = "<group>"; };
 		2F5349AA1F3343890061C19A /* coomingsoongif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = coomingsoongif.gif; sourceTree = "<group>"; };
@@ -290,10 +300,23 @@
 			name = ReviewCaseFile;
 			sourceTree = "<group>";
 		};
+		2F053C371F3C381900A41015 /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				2F053C381F3C479000A41015 /* LabelsTableViewCell.swift */,
+				2F053C3A1F3C47A300A41015 /* TextViewTableViewCell.swift */,
+				2F053C3C1F3C4CF600A41015 /* collectionTableViewCell.swift */,
+				2F053C3E1F3C4E5B00A41015 /* imagesviewCollectionViewCell.swift */,
+			);
+			name = CustomCells;
+			sourceTree = "<group>";
+		};
 		2F6385AA1F0F4A3F00603FB1 /* CreateNewCase */ = {
 			isa = PBXGroup;
 			children = (
 				2F6385AE1F0F4B6400603FB1 /* CreateNewCase.storyboard */,
+				2F053C351F3C372F00A41015 /* Step1ReasonsTVC.swift */,
+				2F053C371F3C381900A41015 /* CustomCells */,
 				2F6385AB1F0F4B4300603FB1 /* Step1YourcaseViewController.h */,
 				2F6385AC1F0F4B4300603FB1 /* Step1YourcaseViewController.m */,
 				2FFEFFA11F1A1BAE003C3643 /* Step1IntroductionViewController.h */,
@@ -801,11 +824,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FAE81121F14A772007E937A /* BodyPartImagesCollectionViewCell.swift in Sources */,
+				2F053C361F3C372F00A41015 /* Step1ReasonsTVC.swift in Sources */,
 				2FA8EC611EEA997B00F9AB24 /* SignInViewController.m in Sources */,
 				2FFE00251F1F840C003C3643 /* ChatViewController.swift in Sources */,
 				2FFE00221F1F840C003C3643 /* Channel.swift in Sources */,
 				2FFE00271F1F840C003C3643 /* UIImage+Gif.swift in Sources */,
 				2F053C1A1F348F8D00A41015 /* KeyboardLayoutConstraint.swift in Sources */,
+				2F053C3D1F3C4CF600A41015 /* collectionTableViewCell.swift in Sources */,
 				2F0311441F29F2E40044B401 /* MainTabBarViewController.swift in Sources */,
 				2FFEFFA81F1A2981003C3643 /* Step2IntroViewController.swift in Sources */,
 				2FF438C71F31A32A004451FB /* CloseCasesViewController.swift in Sources */,
@@ -825,6 +850,7 @@
 				2FA8EC2A1EE9673900F9AB24 /* main.m in Sources */,
 				2F0311471F29F82D0044B401 /* HomeTab1ViewController.swift in Sources */,
 				2F72A2641EF93B0A00CEC047 /* DoctaManager.m in Sources */,
+				2F053C3B1F3C47A300A41015 /* TextViewTableViewCell.swift in Sources */,
 				2F03114B1F2C65DC0044B401 /* CasesTabbarViewController.m in Sources */,
 				2FFE00211F1F840C003C3643 /* CreateChannelCell.swift in Sources */,
 				2FF438C51F305355004451FB /* OpenCasesCell.swift in Sources */,
@@ -832,9 +858,11 @@
 				2FA8EC761EEFAA2F00F9AB24 /* CreateCaseFileViewController.swift in Sources */,
 				2F72A25F1EF7B58300CEC047 /* APIHandler.m in Sources */,
 				2FAE81101F1492E3007E937A /* Step2SymptomsViewController.swift in Sources */,
+				2F053C3F1F3C4E5B00A41015 /* imagesviewCollectionViewCell.swift in Sources */,
 				2FFEFFA41F1A1BAE003C3643 /* Step1IntroductionViewController.m in Sources */,
 				2FFEFF941F15FA54003C3643 /* Step4LocationViewController.swift in Sources */,
 				2FF438BC1F2F2C78004451FB /* OpenCasesCollectionViewCell.swift in Sources */,
+				2F053C391F3C479000A41015 /* LabelsTableViewCell.swift in Sources */,
 				2FF438B51F2F03D5004451FB /* OpenCaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

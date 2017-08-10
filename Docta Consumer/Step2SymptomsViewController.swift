@@ -17,7 +17,7 @@ class Step2SymptomsViewController: UIViewController, ImagePickerDelegate, UIColl
     let imagepicker = ImagePickerController()
     var imagearray  = [UIImage]()
     
-    @IBOutlet weak var view2: UIView!
+
     @IBOutlet weak var symptomstextfield: UITextField!
     @IBOutlet weak var collectionViewImages: UICollectionView!
 
@@ -56,28 +56,19 @@ class Step2SymptomsViewController: UIViewController, ImagePickerDelegate, UIColl
         
        
         
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(Step2SymptomsViewController.dismissKeyboard))
+        let tap: UIGestureRecognizer = UIGestureRecognizer(target: self, action: #selector(Step2SymptomsViewController.dismissKeyboard))
         tap.delegate = self
-        view.addGestureRecognizer(tap)
+        tap.cancelsTouchesInView = false
         
+        self.view.addGestureRecognizer(tap)
         
        
-        
-    //    uploadimagesbutton.addTarget(self, action: #selector(selectImagefromGalleryandCamera), for: UIControlEvents.touchUpInside)
-
-        // Do any additional setup after loading the view.
+  
     }
+
     
    
-    
-    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive press: UIPress) -> Bool {
-        let view = gestureRecognizer.view
-        if view?.tag == 111
-        {
-            return false
-        }
-        return true
-    }
+
     
     
     func keyboardWillShow(notification: NSNotification) {
@@ -87,7 +78,7 @@ class Step2SymptomsViewController: UIViewController, ImagePickerDelegate, UIColl
             let duration = notification.userInfo![UIKeyboardAnimationDurationUserInfoKey] as! Double
             // if using constraints
             // bottomViewBottomSpaceConstraint.constant = keyboardSize.height
-            self.view.frame.origin.y -= keyboardSize.height
+            self.view.frame.origin.y -= keyboardSize.height/2
             UIView.animate(withDuration: duration) {
                 self.view.layoutIfNeeded()
             }
@@ -221,11 +212,8 @@ class Step2SymptomsViewController: UIViewController, ImagePickerDelegate, UIColl
     func dismissKeyboard() {
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
       //  view.endEditing(true)
+        view.endEditing(true)
         
-       
-        
-       
-        symptomstextfield.resignFirstResponder()
     }
  
     
