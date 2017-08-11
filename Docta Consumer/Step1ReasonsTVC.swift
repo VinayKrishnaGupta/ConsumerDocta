@@ -8,15 +8,18 @@
 
 import UIKit
 
-class Step1ReasonsTVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class Step1ReasonsTVC: UIViewController, UITableViewDataSource, UITableViewDelegate,OpenCameraProtocol {
     @IBOutlet weak var tableView: UITableView!
-    let Questions : Array = ["Why do you need a spcialist","How did this problem start","What are the symptoms?"]
+    let Questions : Array = ["Why do you need a spcialist?","How did this problem start?","What are the symptoms?"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
-        
+        let image : UIImage = UIImage.init(named: "DoctaLogo")!
+        let imageview : UIImageView = UIImageView.init(image: image)
+        imageview.frame = CGRect(x: 10, y: 2, width: 100, height: 30)
+        self.navigationController?.navigationBar.addSubview(imageview)
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(Step1ReasonsTVC.dismissKeyboard))
         
@@ -26,16 +29,26 @@ class Step1ReasonsTVC: UIViewController, UITableViewDataSource, UITableViewDeleg
         // Do any additional setup after loading the view.
     }
     
+    
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int){
+        view.tintColor = UIColor.black
+        let header = view as! UITableViewHeaderFooterView
+        header.textLabel?.textColor = UIColor.black
+        header.textLabel?.text = self.tableView(tableView, titleForHeaderInSection: section)
+        header.textLabel?.font = UIFont(name: "Rubik", size: 16)
+        header.textLabel?.textAlignment = NSTextAlignment.left
+        
+        
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 5
+        return 6
         
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 {
-            return 1
-        }
-        else if section == 3
+        
+        if section == 3
         {
             return 3
         }
@@ -82,11 +95,23 @@ class Step1ReasonsTVC: UIViewController, UITableViewDataSource, UITableViewDeleg
         if indexPath.section == 4 {
             let cell3 = tableView.dequeueReusableCell(withIdentifier: "Cell3", for: indexPath) as! ImageCollectionTableViewCell
             cell3.numberofRows = 3
+            cell3.delegate = self
+            
+            
             
             
             return cell3
         }
+        
+        if indexPath.section == 5 {
+            let footerCell = tableView.dequeueReusableCell(withIdentifier: "CellFooter", for: indexPath) as! NextBackButtonsTableViewCell
+            footerCell.nextButton.addTarget(self, action: #selector(nextButton), for: .touchUpInside)
+            footerCell.backButton.addTarget(self, action: #selector(backButton), for: .touchUpInside)
+            footerCell.infoButton.addTarget(self, action: #selector(InfoButton), for: .touchUpInside)
             
+            
+            return footerCell
+        }
         
         else {
            let cell1 = tableView.dequeueReusableCell(withIdentifier: "Cell1", for: indexPath) as! TextViewTableViewCell
@@ -104,6 +129,28 @@ class Step1ReasonsTVC: UIViewController, UITableViewDataSource, UITableViewDeleg
         
         
         
+    }
+    
+    func nextButton(){
+        print("Button tapped")
+        self.performSegue(withIdentifier: "step2symptoms", sender: nil)
+        
+    }
+    func backButton(){
+        self.navigationController?.dismiss(animated: true, completion: nil)
+        
+    }
+    func InfoButton(){
+        let introVC = Step2IntroViewController(nibName: "Step1IntroductionViewController", bundle: nil)
+        self.present(introVC, animated: true, completion: nil)
+        
+    }
+    
+    
+    func loadNewScreen(controller: UIViewController) {
+        self.present(controller, animated: true) { () -> Void in
+            
+        };
     }
     
     
@@ -124,10 +171,10 @@ class Step1ReasonsTVC: UIViewController, UITableViewDataSource, UITableViewDeleg
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if section == 2 {
-            return 30
+            return 35
         }
         if section == 4 {
-            return 20
+            return 35
         }
         else {
             return 0
@@ -157,6 +204,9 @@ class Step1ReasonsTVC: UIViewController, UITableViewDataSource, UITableViewDeleg
         if indexPath.section == 4 {
             return 100
         }
+        if indexPath.section == 5 {
+            return 70
+        }
             
         
         else {
@@ -165,6 +215,11 @@ class Step1ReasonsTVC: UIViewController, UITableViewDataSource, UITableViewDeleg
         }
     }
     
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       
+        
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

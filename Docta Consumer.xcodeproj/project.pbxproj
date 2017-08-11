@@ -34,6 +34,7 @@
 		2F053C411F3D81C200A41015 /* TitlesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F053C401F3D81C200A41015 /* TitlesTableViewCell.swift */; };
 		2F053C431F3D961500A41015 /* ImageCollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F053C421F3D961500A41015 /* ImageCollectionTableViewCell.swift */; };
 		2F053C451F3D96F400A41015 /* LabelsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F053C441F3D96F400A41015 /* LabelsCollectionViewCell.swift */; };
+		2F053C471F3DCF1400A41015 /* NextBackButtonsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F053C461F3DCF1400A41015 /* NextBackButtonsTableViewCell.swift */; };
 		2F5349A51F333E530061C19A /* underconstructiongif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2F5349A41F333E530061C19A /* underconstructiongif.gif */; };
 		2F5349A91F333EFD0061C19A /* SettingsTab4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5349A81F333EFD0061C19A /* SettingsTab4ViewController.swift */; };
 		2F5349AB1F3343890061C19A /* coomingsoongif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2F5349AA1F3343890061C19A /* coomingsoongif.gif */; };
@@ -143,6 +144,7 @@
 		2F053C401F3D81C200A41015 /* TitlesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitlesTableViewCell.swift; sourceTree = "<group>"; };
 		2F053C421F3D961500A41015 /* ImageCollectionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionTableViewCell.swift; sourceTree = "<group>"; };
 		2F053C441F3D96F400A41015 /* LabelsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelsCollectionViewCell.swift; sourceTree = "<group>"; };
+		2F053C461F3DCF1400A41015 /* NextBackButtonsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextBackButtonsTableViewCell.swift; sourceTree = "<group>"; };
 		2F5349A41F333E530061C19A /* underconstructiongif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = underconstructiongif.gif; sourceTree = "<group>"; };
 		2F5349A81F333EFD0061C19A /* SettingsTab4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTab4ViewController.swift; sourceTree = "<group>"; };
 		2F5349AA1F3343890061C19A /* coomingsoongif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = coomingsoongif.gif; sourceTree = "<group>"; };
@@ -316,6 +318,7 @@
 				2F053C421F3D961500A41015 /* ImageCollectionTableViewCell.swift */,
 				2F053C441F3D96F400A41015 /* LabelsCollectionViewCell.swift */,
 				2F053C3E1F3C4E5B00A41015 /* imagesviewCollectionViewCell.swift */,
+				2F053C461F3DCF1400A41015 /* NextBackButtonsTableViewCell.swift */,
 			);
 			name = CustomCells;
 			sourceTree = "<group>";
@@ -858,6 +861,7 @@
 				2FF438C21F30490F004451FB /* LocationOpenCasesCell.swift in Sources */,
 				2FF438BF1F2F34A1004451FB /* LocationOpenCasesCollectionViewCell.swift in Sources */,
 				2FA8EC6B1EEE788600F9AB24 /* MyCaseFilesViewController.m in Sources */,
+				2F053C471F3DCF1400A41015 /* NextBackButtonsTableViewCell.swift in Sources */,
 				2FA8EC2A1EE9673900F9AB24 /* main.m in Sources */,
 				2F0311471F29F82D0044B401 /* HomeTab1ViewController.swift in Sources */,
 				2F72A2641EF93B0A00CEC047 /* DoctaManager.m in Sources */,

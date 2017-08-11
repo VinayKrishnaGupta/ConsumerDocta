@@ -34,13 +34,19 @@ class collectionTableViewCell: UITableViewCell, UICollectionViewDataSource, UICo
         let cell = colletionViewImages.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! LabelsCollectionViewCell
         cell.titleLabel.text =  listofValues[indexPath.row]
         
+        cell.layer.borderWidth = 1
+      let myColor = UIColor.darkText
+        cell.layer.borderColor = myColor.cgColor
         
         if indexPath.row == selectedindex
         {
-            cell.contentView.backgroundColor = UIColor.lightGray
+            cell.contentView.backgroundColor = UIColor.init(colorLiteralRed: 255/255, green: 206/255, blue: 74/255, alpha: 1)
+            cell.titleLabel.textColor = UIColor.init(colorLiteralRed: 255/255, green: 98/255, blue: 2/255, alpha: 1)
+            
         }
         else {
-            cell.contentView.backgroundColor = UIColor.orange
+            cell.contentView.backgroundColor = UIColor.groupTableViewBackground
+            cell.titleLabel.textColor = UIColor.gray
         }   
         
         
@@ -51,15 +57,18 @@ class collectionTableViewCell: UITableViewCell, UICollectionViewDataSource, UICo
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("Selcted Cell is \(indexPath.row)")
-        let cell : UICollectionViewCell = colletionViewImages.cellForItem(at: indexPath)!
+        let cell : LabelsCollectionViewCell = colletionViewImages.cellForItem(at: indexPath)! as! LabelsCollectionViewCell
         selectedindex = indexPath.row
-        cell.contentView.backgroundColor = UIColor.lightGray
+        cell.contentView.backgroundColor = UIColor.init(colorLiteralRed: 255/255, green: 206/255, blue: 74/255, alpha: 1)
+        cell.titleLabel.textColor = UIColor.init(colorLiteralRed: 255/255, green: 98/255, blue: 2/255, alpha: 1)
+        
         
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        let cell : UICollectionViewCell = colletionViewImages.cellForItem(at: indexPath)!
-        cell.contentView.backgroundColor = UIColor.orange
+        let cell : LabelsCollectionViewCell = colletionViewImages.cellForItem(at: indexPath)! as! LabelsCollectionViewCell
+        cell.contentView.backgroundColor = UIColor.groupTableViewBackground
+        cell.titleLabel.textColor = UIColor.gray
     }
     
     // change background color when user touches cell

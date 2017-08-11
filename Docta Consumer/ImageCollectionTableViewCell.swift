@@ -12,9 +12,25 @@ import Lightbox
 import SDWebImage
 import Metal
 
+
+protocol OpenCameraProtocol : NSObjectProtocol {
+    func loadNewScreen(controller: UIViewController) -> Void;
+}
+
 class ImageCollectionTableViewCell: UITableViewCell, UICollectionViewDataSource,ImagePickerDelegate , UICollectionViewDelegate {
     let imagepicker = ImagePickerController()
     var imagearray  = [UIImage]()
+    
+    weak var delegate: OpenCameraProtocol?
+    
+    @IBAction func OpenCamera(sender: AnyObject)->Void
+    {
+        var pickerVC = UIImagePickerController();
+        if((delegate?.responds(to: "loadNewScreen:")) != nil)
+        {
+            delegate?.loadNewScreen(controller: pickerVC);
+        }
+    }
     
 
     @IBOutlet weak var colletionViewImages: UICollectionView!
@@ -86,9 +102,7 @@ class ImageCollectionTableViewCell: UITableViewCell, UICollectionViewDataSource,
         
      //   present(imagepicker, animated: true, completion: nil)
         
-        let newVC : UIViewController = (UIApplication.shared.keyWindow?.rootViewController)!
-
-        newVC.present(imagepicker, animated: true, completion: nil)
+       self.delegate?.loadNewScreen(controller: imagepicker)
         
 //        UIViewController* activeVC = [UIApplication sharedApplication].keyWindow.rootViewController;
 //        [activeVC presentViewController:'new view controller'
