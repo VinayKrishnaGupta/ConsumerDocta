@@ -10,6 +10,7 @@ import UIKit
 
 class Step1ReasonsTVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
+    let Questions : Array = ["Why do you need a spcialist","How did this problem start","What are the symptoms?"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +27,7 @@ class Step1ReasonsTVC: UIViewController, UITableViewDataSource, UITableViewDeleg
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return 5
         
     }
     
@@ -34,7 +35,7 @@ class Step1ReasonsTVC: UIViewController, UITableViewDataSource, UITableViewDeleg
         if section == 0 {
             return 1
         }
-        else if section == 1
+        else if section == 3
         {
             return 3
         }
@@ -46,21 +47,42 @@ class Step1ReasonsTVC: UIViewController, UITableViewDataSource, UITableViewDeleg
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+       
         
         if indexPath.section == 0 {
+            let cell0 = tableView.dequeueReusableCell(withIdentifier: "Cell0", for: indexPath) as! TitlesTableViewCell
+            cell0.titleLabel1.text = "Step 2: "
+            cell0.titleLabel2.text = "Reason"
+            
+            return cell0
+        }
+        
+        if indexPath.section == 1 {
             let cell2  = tableView.dequeueReusableCell(withIdentifier: "Cell2", for: indexPath) as! LabelsTableViewCell
             cell2.label1.text = "Your injury"
-            cell2.label1detail.text = "Label 2"
-            cell2.label2.text = "Label3"
-            cell2.label2detail.text = "Label4"
-            
-            
+            cell2.label1detail.text = "Back Pain"
+            cell2.label2.text = "Specialist"
+            cell2.label2detail.text = "Orthopedics"
             return cell2
+            
+        }
+        
+        
+        if indexPath.section == 2 {
+            let cell4 = tableView.dequeueReusableCell(withIdentifier: "Cell4", for: indexPath) as! collectionTableViewCell
+            cell4.numberofRows = 4
+            cell4.listofValues = ["DAYS","WEEKS","MONTHS","YEARS"]
+
+            return cell4
+            
         }
        
-        if indexPath.section == 2 {
+        
             
-            let cell3 = tableView.dequeueReusableCell(withIdentifier: "Cell3", for: indexPath) as! collectionTableViewCell
+        if indexPath.section == 4 {
+            let cell3 = tableView.dequeueReusableCell(withIdentifier: "Cell3", for: indexPath) as! ImageCollectionTableViewCell
+            cell3.numberofRows = 3
+            
             
             return cell3
         }
@@ -68,8 +90,8 @@ class Step1ReasonsTVC: UIViewController, UITableViewDataSource, UITableViewDeleg
         
         else {
            let cell1 = tableView.dequeueReusableCell(withIdentifier: "Cell1", for: indexPath) as! TextViewTableViewCell
-            cell1.titleLabel.text = "Title is here"
-            cell1.textview.text = "No Text"
+            cell1.titleLabel.text = Questions[indexPath.row]
+            cell1.textview.text = ""
             
             
             return cell1
@@ -86,14 +108,30 @@ class Step1ReasonsTVC: UIViewController, UITableViewDataSource, UITableViewDeleg
     
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if section == 1 {
-            return "Title 1"
+        if section == 2 {
+            return "How long have you had this problem?"
         }
         
+        if section == 4 {
+            return "Add any image or video that might help"
+        }
         else {
-            return "Title 2"
+            return nil
         }
         
+        
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if section == 2 {
+            return 30
+        }
+        if section == 4 {
+            return 20
+        }
+        else {
+            return 0
+        }
         
     }
     
@@ -105,16 +143,25 @@ class Step1ReasonsTVC: UIViewController, UITableViewDataSource, UITableViewDeleg
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.section == 0 {
-            return 40
+        if indexPath.section == 1 {
+            return 20
         }
-        if indexPath.section < 4{
+        if indexPath.section == 3 {
             return 100
         }
+            
+        if indexPath.section == 2 {
+            return 60
+        }
+        
+        if indexPath.section == 4 {
+            return 100
+        }
+            
         
         else {
             
-            return 50
+            return 30
         }
     }
     

@@ -28,7 +28,8 @@ class HomeTab1ViewController: UIViewController {
         
         let storyboard = UIStoryboard(name: "CreateNewCase", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "CreateCaseNav")
-        self.present(controller, animated: true, completion: nil)
+      //  self.present(controller, animated: true, completion: nil)
+        self.navigationController?.present(controller, animated: true, completion: nil)
         
         
     }
