@@ -14,9 +14,9 @@ class TextViewTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        let myColor = UIColor.darkText
+        let myColor = UIColor.gray
         textview.layer.borderWidth = 0.5
-        textview.layer.cornerRadius = 10
+        textview.layer.cornerRadius = 5
         textview.layer.borderColor = myColor.cgColor
         
         // Initialization code

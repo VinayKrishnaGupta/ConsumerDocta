@@ -26,15 +26,15 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E1S-sI-kCC">
                                 <rect key="frame" x="-4" y="0.0" width="388" height="879"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bA4-2x-i28">
-                                        <rect key="frame" x="23" y="740" width="345" height="1"/>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bA4-2x-i28">
+                                        <rect key="frame" x="20" y="740" width="341" height="1"/>
                                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="i50-wF-Hpd"/>
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8sP-Fn-485">
-                                        <rect key="frame" x="23" y="762" width="80" height="45"/>
+                                        <rect key="frame" x="23" y="762" width="80" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="UCq-z3-dKJ"/>
                                         </constraints>
@@ -45,18 +45,6 @@
                                         <connections>
                                             <action selector="backButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qQ4-QI-Kg7"/>
                                         </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CAA-Hb-bgw">
-                                        <rect key="frame" x="254" y="762" width="114" height="45"/>
-                                        <color key="backgroundColor" red="0.2908574343" green="0.70001286269999996" blue="0.90401160719999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Proceed">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Docta account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6UP-qc-QpI">
                                         <rect key="frame" x="20" y="20" width="343" height="42"/>
@@ -239,6 +227,18 @@
                                         </constraints>
                                         <state key="normal" backgroundImage="questioncircular"/>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CAA-Hb-bgw">
+                                        <rect key="frame" x="266" y="762" width="95" height="40"/>
+                                        <color key="backgroundColor" red="0.2908574343" green="0.70001286269999996" blue="0.90401160719999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Proceed">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="9kI-C9-CO4" firstAttribute="top" secondItem="f7a-DT-MHv" secondAttribute="bottom" constant="19" id="03j-Qo-6Q5"/>
@@ -283,7 +283,7 @@
                                     <constraint firstItem="dpb-e9-XWx" firstAttribute="baseline" secondItem="Zos-qQ-ZWB" secondAttribute="baseline" id="XJE-6C-2NW"/>
                                     <constraint firstItem="tfw-r5-aXi" firstAttribute="trailing" secondItem="LYS-q7-VRn" secondAttribute="trailing" id="Z20-bx-yDQ"/>
                                     <constraint firstItem="tfw-r5-aXi" firstAttribute="top" secondItem="6UP-qc-QpI" secondAttribute="bottom" constant="8" symbolic="YES" id="ZQT-ic-SyN"/>
-                                    <constraint firstItem="bA4-2x-i28" firstAttribute="trailing" secondItem="CAA-Hb-bgw" secondAttribute="trailing" id="acv-9Z-pom"/>
+                                    <constraint firstItem="bA4-2x-i28" firstAttribute="trailing" secondItem="CAA-Hb-bgw" secondAttribute="trailing" constant="19" id="acv-9Z-pom"/>
                                     <constraint firstItem="M59-82-tvF" firstAttribute="baseline" secondItem="LYS-q7-VRn" secondAttribute="firstBaseline" id="cyN-IJ-Ocy"/>
                                     <constraint firstItem="dpb-e9-XWx" firstAttribute="top" secondItem="Zos-qQ-ZWB" secondAttribute="top" id="dBt-xa-asB"/>
                                     <constraint firstItem="aHy-XA-pvz" firstAttribute="trailing" secondItem="a94-qL-cg6" secondAttribute="trailing" id="dHI-ER-X90"/>
@@ -301,7 +301,7 @@
                                     <constraint firstItem="CAA-Hb-bgw" firstAttribute="leading" secondItem="LHn-WH-FgB" secondAttribute="trailing" constant="27" id="nym-GF-2gK"/>
                                     <constraint firstItem="9kI-C9-CO4" firstAttribute="trailing" secondItem="pxZ-OO-e9m" secondAttribute="trailing" id="oxd-pi-gSA"/>
                                     <constraint firstItem="8sP-Fn-485" firstAttribute="bottom" secondItem="CAA-Hb-bgw" secondAttribute="bottom" id="oxx-5Z-zVG"/>
-                                    <constraint firstItem="LHn-WH-FgB" firstAttribute="centerY" secondItem="CAA-Hb-bgw" secondAttribute="centerY" id="pez-yj-gwh"/>
+                                    <constraint firstItem="LHn-WH-FgB" firstAttribute="centerY" secondItem="CAA-Hb-bgw" secondAttribute="centerY" constant="2.5" id="pez-yj-gwh"/>
                                     <constraint firstItem="KGo-Sf-8jh" firstAttribute="top" secondItem="dpb-e9-XWx" secondAttribute="top" id="pgX-Pq-llz"/>
                                     <constraint firstItem="ouR-sF-mVd" firstAttribute="leading" secondItem="Kf6-fm-lmj" secondAttribute="leading" id="q06-pY-3Le"/>
                                     <constraint firstItem="f7a-DT-MHv" firstAttribute="leading" secondItem="9kI-C9-CO4" secondAttribute="leading" id="r4C-OK-Pby"/>
@@ -436,7 +436,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="T8F-0h-OL6" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jde-qi-VVR">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="jde-qi-VVR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

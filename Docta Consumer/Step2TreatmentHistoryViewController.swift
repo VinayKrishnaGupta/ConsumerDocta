@@ -16,10 +16,32 @@ class Step2TreatmentHistoryViewController: UIViewController, UITableViewDataSour
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
+        let layer1 = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 8))
+        layer1.backgroundColor = UIColor(red:0.9, green:0.92, blue:0.94, alpha:1)
+        self.view.addSubview(layer1)
+        
+        
+        let layer = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width*2/3, height: 8))
+        layer.backgroundColor = UIColor(red:0.08, green:0.65, blue:1, alpha:1)
+        
+        let gradient = CAGradientLayer()
+        gradient.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width*2/3 , height: 8)
+        gradient.colors = [
+            UIColor(red:1, green:1, blue:1, alpha:0.5).cgColor,
+            UIColor(red:0.08, green:0.65, blue:1, alpha:1).cgColor
+        ]
+        gradient.locations = [0, 1]
+        gradient.startPoint = CGPoint.zero
+        gradient.endPoint = CGPoint(x: 1, y: 0)
+        layer.layer.addSublayer(gradient)
+        
+        self.view.addSubview(layer)
+        
         let image : UIImage = UIImage.init(named: "DoctaLogo")!
         let imageview : UIImageView = UIImageView.init(image: image)
         imageview.frame = CGRect(x: 10, y: 2, width: 100, height: 30)
         self.navigationController?.navigationBar.addSubview(imageview)
+        
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(Step1ReasonsTVC.dismissKeyboard))
         

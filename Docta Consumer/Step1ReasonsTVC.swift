@@ -10,7 +10,7 @@ import UIKit
 
 class Step1ReasonsTVC: UIViewController, UITableViewDataSource, UITableViewDelegate,OpenCameraProtocol {
     @IBOutlet weak var tableView: UITableView!
-    let Questions : Array = ["Why do you need a spcialist?","How did this problem start?","What are the symptoms?"]
+    let Questions : Array = ["Why do you need a specialist?","How did this problem start?","What are the symptoms?"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,12 +20,35 @@ class Step1ReasonsTVC: UIViewController, UITableViewDataSource, UITableViewDeleg
         let imageview : UIImageView = UIImageView.init(image: image)
         imageview.frame = CGRect(x: 10, y: 2, width: 100, height: 30)
         self.navigationController?.navigationBar.addSubview(imageview)
+        self.navigationItem.hidesBackButton = true
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(Step1ReasonsTVC.dismissKeyboard))
         
         
         self.view.addGestureRecognizer(tap)
         tap.cancelsTouchesInView = false
+        
+        let layer1 = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 8))
+        layer1.backgroundColor = UIColor(red:0.9, green:0.92, blue:0.94, alpha:1)
+        self.view.addSubview(layer1)
+        
+        
+        let layer = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width/3, height: 8))
+        layer.backgroundColor = UIColor(red:0.08, green:0.65, blue:1, alpha:1)
+        
+        let gradient = CAGradientLayer()
+        gradient.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width/3 , height: 8)
+        gradient.colors = [
+            UIColor(red:1, green:1, blue:1, alpha:0.5).cgColor,
+            UIColor(red:0.08, green:0.65, blue:1, alpha:1).cgColor
+        ]
+        gradient.locations = [0, 1]
+        gradient.startPoint = CGPoint.zero
+        gradient.endPoint = CGPoint(x: 1, y: 0)
+        layer.layer.addSublayer(gradient)
+        
+        self.view.addSubview(layer)
+        
         // Do any additional setup after loading the view.
     }
     

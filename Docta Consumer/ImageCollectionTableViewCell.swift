@@ -60,6 +60,8 @@ class ImageCollectionTableViewCell: UITableViewCell, UICollectionViewDataSource,
        
         
         if indexPath.row == 0 {
+            cell.imageViewofCell.image = UIImage(named: "addimage")
+            
             // cell.cellImageView.image = UIImage.init(named: "folderplus")
             
            // cell.imageViewofCell.image = UIImage.sd_animatedGIFNamed("plusgif")
