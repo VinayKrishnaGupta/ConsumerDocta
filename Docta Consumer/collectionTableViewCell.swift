@@ -34,7 +34,7 @@ class collectionTableViewCell: UITableViewCell, UICollectionViewDataSource, UICo
         let cell = colletionViewImages.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! LabelsCollectionViewCell
         cell.titleLabel.text =  listofValues[indexPath.row]
         
-        cell.layer.borderWidth = 1
+        cell.layer.borderWidth = 0.5
       let myColor = UIColor.darkText
         cell.layer.borderColor = myColor.cgColor
         

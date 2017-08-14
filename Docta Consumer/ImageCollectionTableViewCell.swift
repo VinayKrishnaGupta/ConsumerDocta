@@ -61,13 +61,23 @@ class ImageCollectionTableViewCell: UITableViewCell, UICollectionViewDataSource,
         
         if indexPath.row == 0 {
             // cell.cellImageView.image = UIImage.init(named: "folderplus")
-            cell.imageViewofCell.image = UIImage.sd_animatedGIFNamed("plusgif")
+            
+           // cell.imageViewofCell.image = UIImage.sd_animatedGIFNamed("plusgif")
+            
+//            let GIFImage = UIImage.gifWithName("plusgif")
+//            
+//            // Use the UIImage in your UIImageView
+//         //   let imageView = UIImageView(image: jeremyGif)
+//            
+//            let GIFImageview = UIImageView(image: GIFImage)
+//            GIFImageview.frame = CGRect(x: 0, y: 0, width: cell.frame.width, height: cell.frame.height)
+//            cell.imageViewofCell.addSubview(GIFImageview)
         }
         else {
             cell.imageViewofCell.image = imagearray[indexPath.row-1]
             
         }
-
+        
         
         
         

@@ -458,7 +458,7 @@
                   moduleName = "Docta Consumer"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/rstintl/Desktop/Xcode/DoctaConsumer/Docta%20Consumer/Step2SymptomsViewController.swift"
-                  timestampString = "524147388.058849"
+                  timestampString = "524396335.900612"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "77"
@@ -473,7 +473,7 @@
                   moduleName = "Docta Consumer"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/rstintl/Desktop/Xcode/DoctaConsumer/Docta%20Consumer/Step2SymptomsViewController.swift"
-                  timestampString = "524147388.060607"
+                  timestampString = "524396335.902501"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "77"
@@ -528,6 +528,38 @@
             startingLineNumber = "215"
             endingLineNumber = "215"
             landmarkName = "dismissKeyboard()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Docta Consumer/ImageCollectionTableViewCell.swift"
+            timestampString = "524395434.325716"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "collectionView(_:cellForItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Docta Consumer/ImageCollectionTableViewCell.swift"
+            timestampString = "524395816.729142"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

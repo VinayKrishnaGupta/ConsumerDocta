@@ -7,9 +7,16 @@
 //
 
 import UIKit
+import SDWebImage
 
 class imagesviewCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageViewofCell: UIImageView!
    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+       
+        
+    }
+    
     
 }
