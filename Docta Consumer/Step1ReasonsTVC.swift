@@ -160,7 +160,7 @@ class Step1ReasonsTVC: UIViewController, UITableViewDataSource, UITableViewDeleg
         
     }
     func backButton(){
-        self.navigationController?.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
         
     }
     func InfoButton(){

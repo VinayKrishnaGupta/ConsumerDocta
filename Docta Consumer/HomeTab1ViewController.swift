@@ -28,6 +28,30 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate {
         
     clinicNametextfield.delegate = self
     locationTextField.delegate = self
+        
+        clinicNametextfield.rightViewMode = .always
+        let rightView = UIView.init(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+        
+        
+        let imageName = "downarrow.png"
+        let image2 = UIImage(named: imageName)
+        let imageView = UIImageView(image: image2!)
+        imageView.frame = CGRect(x: 0, y: 5, width: 15, height: 15)
+        rightView.addSubview(imageView)
+        
+        clinicNametextfield.rightView = rightView
+        
+        
+        let rightView3 = UIView.init(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+        
+        
+        let imageName3 = "downarrow.png"
+        let image3 = UIImage(named: imageName3)
+        let imageView3 = UIImageView(image: image3!)
+        imageView3.frame = CGRect(x: 0, y: 5, width: 15, height: 15)
+        rightView3.addSubview(imageView3)
+        locationTextField.rightViewMode = .always
+        locationTextField.rightView = rightView3
    
         
         // Do any additional setup after loading the view.
