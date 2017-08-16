@@ -410,12 +410,12 @@
                   moduleName = "Docta Consumer"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/rstintl/Desktop/Xcode/DoctaConsumer/Docta%20Consumer/Step2SymptomsViewController.swift"
-                  timestampString = "524569626.37637"
+                  timestampString = "524579372.419069"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "77"
                   endingLineNumber = "77"
-                  offsetFromSymbolStart = "19">
+                  offsetFromSymbolStart = "32">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -425,12 +425,12 @@
                   moduleName = "Docta Consumer"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/rstintl/Desktop/Xcode/DoctaConsumer/Docta%20Consumer/Step2SymptomsViewController.swift"
-                  timestampString = "524569626.380076"
+                  timestampString = "524579372.420847"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "77"
                   endingLineNumber = "77"
-                  offsetFromSymbolStart = "859">
+                  offsetFromSymbolStart = "692">
                </Location>
             </Locations>
          </BreakpointContent>

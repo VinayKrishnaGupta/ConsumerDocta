@@ -10,7 +10,7 @@ import UIKit
 
 class Step2TreatmentHistoryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate,OpenCameraProtocol {
     @IBOutlet weak var tableView: UITableView!
-    let Questions : Array = ["What treatment have you had? ","Do you have any medical conditions? ","any additional information? "]
+    let Questions : Array = ["What treatment have you had? ","Do you have any medical conditions? ","Any additional information? "]
     
     override func viewDidLoad() {
         super.viewDidLoad()
