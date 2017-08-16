@@ -18,6 +18,8 @@ class collectionTableViewCell: UITableViewCell, UICollectionViewDataSource, UICo
         
         colletionViewImages.dataSource = self
         colletionViewImages.delegate = self
+        
+        
         // Initialization code
     }
     
@@ -34,9 +36,9 @@ class collectionTableViewCell: UITableViewCell, UICollectionViewDataSource, UICo
         let cell = colletionViewImages.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! LabelsCollectionViewCell
         cell.titleLabel.text =  listofValues[indexPath.row]
         
-        cell.layer.borderWidth = 0.5
-      let myColor = UIColor.darkText
-        cell.layer.borderColor = myColor.cgColor
+        cell.layer.borderWidth = 0.25
+      
+        cell.layer.borderColor = UIColor(red:1, green:0.63, blue:0.12, alpha:1).cgColor
         
         if indexPath.row == selectedindex
         {
@@ -79,5 +81,13 @@ class collectionTableViewCell: UITableViewCell, UICollectionViewDataSource, UICo
 
         // Configure the view for the selected state
     }
+    
+    override func layoutSubviews() {
+        colletionViewImages.layer.cornerRadius = 5
+        colletionViewImages.layer.borderColor = UIColor(red:1, green:0.63, blue:0.12, alpha:1).cgColor
+        colletionViewImages.layer.borderWidth = 0.5
+        colletionViewImages.layer.masksToBounds = true
+    }
+    
 
 }

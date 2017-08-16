@@ -221,7 +221,7 @@ class Step1ReasonsTVC: UIViewController, UITableViewDataSource, UITableViewDeleg
         }
             
         if indexPath.section == 2 {
-            return 60
+            return 40
         }
         
         if indexPath.section == 4 {
