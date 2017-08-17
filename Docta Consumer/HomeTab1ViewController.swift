@@ -52,6 +52,7 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate {
         rightView3.addSubview(imageView3)
         locationTextField.rightViewMode = .always
         locationTextField.rightView = rightView3
+     
         
         let button = UIButton.init(type: .custom)
         button.setTitle("Sign Up", for: .normal)
@@ -59,11 +60,15 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate {
         button.layer.cornerRadius = 15
         button.backgroundColor = UIColor(red:0.08, green:0.65, blue:1, alpha:1)
         button.setTitleColor(UIColor.white, for: .normal)
-        button.frame = CGRect(x: 0, y: 0, width: 86, height: 30)
+        button.frame = CGRect(x: 0, y: 0, width: 90, height: 35)
         button.addTarget(self, action: #selector(SignupButton), for: .touchUpInside)
         let barButton = UIBarButtonItem(customView: button)
         
         self.navigationItem.rightBarButtonItem = barButton
+        
+        
+        
+        
         
         
      
@@ -131,6 +136,9 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate {
         
         
     }
+    
+    
+   
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         if textField == clinicNametextfield {
