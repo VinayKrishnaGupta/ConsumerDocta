@@ -144,7 +144,6 @@ class Step2SymptomsViewController: UIViewController, ImagePickerDelegate, UIColl
     
     func wrapperDidPress(_ imagePicker: ImagePickerController, images: [UIImage]) {
         guard images.count > 0 else { return }
-        
         let lightboxImages = images.map {
             return LightboxImage(image: $0)
         }

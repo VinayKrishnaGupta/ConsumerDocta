@@ -74,6 +74,8 @@
     
     
     
+    
+    
     [_button1 addTarget:self action:@selector(howlongradiobutton) forControlEvents:UIControlEventTouchUpInside];
     [_button2 addTarget:self action:@selector(howlongradiobutton) forControlEvents:UIControlEventTouchUpInside];
     [_button3 addTarget:self action:@selector(howlongradiobutton) forControlEvents:UIControlEventTouchUpInside];

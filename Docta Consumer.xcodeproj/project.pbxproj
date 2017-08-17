@@ -52,7 +52,6 @@
 		2F87E6631EFBD9EE00E6CD70 /* ViewCaseFileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F87E6621EFBD9EE00E6CD70 /* ViewCaseFileViewController.m */; };
 		2FA8EC2A1EE9673900F9AB24 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA8EC291EE9673900F9AB24 /* main.m */; };
 		2FA8EC2D1EE9673900F9AB24 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA8EC2C1EE9673900F9AB24 /* AppDelegate.m */; };
-		2FA8EC301EE9673900F9AB24 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA8EC2F1EE9673900F9AB24 /* ViewController.m */; };
 		2FA8EC331EE9673900F9AB24 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FA8EC311EE9673900F9AB24 /* Auth.storyboard */; };
 		2FA8EC351EE9673900F9AB24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FA8EC341EE9673900F9AB24 /* Assets.xcassets */; };
 		2FA8EC381EE9673900F9AB24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FA8EC361EE9673900F9AB24 /* LaunchScreen.storyboard */; };
@@ -170,8 +169,6 @@
 		2FA8EC291EE9673900F9AB24 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2FA8EC2B1EE9673900F9AB24 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2FA8EC2C1EE9673900F9AB24 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		2FA8EC2E1EE9673900F9AB24 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		2FA8EC2F1EE9673900F9AB24 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		2FA8EC321EE9673900F9AB24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Auth.storyboard; sourceTree = "<group>"; };
 		2FA8EC341EE9673900F9AB24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2FA8EC371EE9673900F9AB24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -350,6 +347,7 @@
 		2F72A2601EF7C36400CEC047 /* CommonFiles */ = {
 			isa = PBXGroup;
 			children = (
+				2FA8EC721EEEB10000F9AB24 /* Docta Consumer-Bridging-Header.h */,
 				2FA8EC2B1EE9673900F9AB24 /* AppDelegate.h */,
 				2FA8EC2C1EE9673900F9AB24 /* AppDelegate.m */,
 				2F72A25D1EF7B58300CEC047 /* APIHandler.h */,
@@ -397,11 +395,8 @@
 				2F72A2601EF7C36400CEC047 /* CommonFiles */,
 				2FA8EC621EEAA56100F9AB24 /* SubmitCase */,
 				2FA8EC5B1EEA6FEE00F9AB24 /* Authorization */,
-				2FA8EC2E1EE9673900F9AB24 /* ViewController.h */,
-				2FA8EC2F1EE9673900F9AB24 /* ViewController.m */,
 				2FFE00181F1F83F1003C3643 /* Chat */,
 				2FA8EC281EE9673900F9AB24 /* Supporting Files */,
-				2FA8EC721EEEB10000F9AB24 /* Docta Consumer-Bridging-Header.h */,
 			);
 			path = "Docta Consumer";
 			sourceTree = "<group>";
@@ -854,7 +849,6 @@
 				2F87E6631EFBD9EE00E6CD70 /* ViewCaseFileViewController.m in Sources */,
 				2F5349A91F333EFD0061C19A /* SettingsTab4ViewController.swift in Sources */,
 				2F053C451F3D96F400A41015 /* LabelsCollectionViewCell.swift in Sources */,
-				2FA8EC301EE9673900F9AB24 /* ViewController.m in Sources */,
 				2FA8EC2D1EE9673900F9AB24 /* AppDelegate.m in Sources */,
 				2FFE00231F1F840C003C3643 /* LoginViewController.swift in Sources */,
 				2F5B55751F25CE8C000E28A0 /* CustomChatCollectionViewCell.swift in Sources */,

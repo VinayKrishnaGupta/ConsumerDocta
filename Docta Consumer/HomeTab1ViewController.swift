@@ -52,6 +52,21 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate {
         rightView3.addSubview(imageView3)
         locationTextField.rightViewMode = .always
         locationTextField.rightView = rightView3
+        
+        let button = UIButton.init(type: .custom)
+        button.setTitle("Sign Up", for: .normal)
+        button.titleLabel?.font = UIFont(name: "Rubik", size: 15)
+        button.layer.cornerRadius = 15
+        button.backgroundColor = UIColor(red:0.08, green:0.65, blue:1, alpha:1)
+        button.setTitleColor(UIColor.white, for: .normal)
+        button.frame = CGRect(x: 0, y: 0, width: 86, height: 30)
+        button.addTarget(self, action: #selector(SignupButton), for: .touchUpInside)
+        let barButton = UIBarButtonItem(customView: button)
+        
+        self.navigationItem.rightBarButtonItem = barButton
+        
+        
+     
    
         
         // Do any additional setup after loading the view.
@@ -60,6 +75,24 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         self.setupDropDowns()
+        
+//        let APIsession : APIHandler = APIHandler()
+//        
+//        APIsession.getDatafromAPI("GET", "/options", nil, completionBlock:nil)
+        
+        
+    }
+    
+    func SignupButton() {
+        
+        
+        let storyboard = UIStoryboard(name: "Auth", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "SignupVC")
+        self.navigationController?.pushViewController(controller, animated: true)
+        
+        
+        
+        
     }
     
     func setupDropDowns() {
