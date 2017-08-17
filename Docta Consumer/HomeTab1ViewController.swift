@@ -52,6 +52,7 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate {
         rightView3.addSubview(imageView3)
         locationTextField.rightViewMode = .always
         locationTextField.rightView = rightView3
+        
      
         
         let button = UIButton.init(type: .custom)
