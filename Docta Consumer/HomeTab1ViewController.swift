@@ -15,9 +15,11 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var locationTextField: UITextField!
     let specialistDropdown = DropDown()
-     let Specilistlist = ["Dentist", "Orthopedic", "Neurologist", "Radiologist"]
+    var Specilistlist = Array<NSDictionary>()
+    var SpcialistiesNames = Array<String>()
     let locationdropdown = DropDown()
-    let LocationsList = ["Australia","India", "Singapore", "China","Indonesia","Taiwan", "Japan", "United Kingdom"]
+    var LocationsList = Array<String>()
+    var responseObject : NSDictionary = [:]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,35 +69,29 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate {
         
         self.navigationItem.rightBarButtonItem = barButton
         
-        
-        
-        
-        
-        
-     
-   
-        
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        self.setupDropDowns()
+        
         
         let APIsession : APIHandler = APIHandler()
         APIsession.getDatafromAPI("POST", "/options", nil) { (response, error) in
             if (response != nil) {
                 print(response)
+                let json : NSDictionary = response as! NSDictionary
                 
+                self.responseObject = json.value(forKey: "data") as! NSDictionary
+                self.Specilistlist = self.responseObject.value(forKey: "specialities") as! Array
+                self.SpcialistiesNames = self.responseObject.value(forKeyPath: "specialities.name") as! Array<String>
+                self.LocationsList = self.responseObject.value(forKeyPath: "countries") as! Array<String>
+                self.setupDropDowns()
             }
             if (error != nil) {
                 print("Error is \(String(describing: error))")
             }
-            
-            
         }
-        APIsession.getDatafromAPI("GET", "/options", nil, completionBlock:nil)
-        
         
     }
     
@@ -113,7 +109,9 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate {
     
     func setupDropDowns() {
         specialistDropdown.anchorView = clinicNametextfield
-        specialistDropdown.dataSource = Specilistlist
+        
+        
+        specialistDropdown.dataSource = SpcialistiesNames
         specialistDropdown.direction = .any
         specialistDropdown.textColor = UIColor.white
         specialistDropdown.backgroundColor = UIColor.init(colorLiteralRed: 0.0, green: 166/255, blue: 255/255, alpha: 1)

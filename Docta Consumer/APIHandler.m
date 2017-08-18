@@ -54,7 +54,7 @@ NSDictionary *Dict;
         
         if (!error) {
          //   NSLog(@"Reply JSON for detail: %@", responseObject);
-           completionBlock(responseObject,error);
+            completionBlock(responseObject,Nil);
             
             //  [manager respondsToSelector:@selector(APIResponse:)];
             
@@ -66,7 +66,7 @@ NSDictionary *Dict;
         }
         else {
             NSLog(@"Error");
-            completionBlock(responseObject,error);
+            completionBlock(Nil,error);
             
         }
         
