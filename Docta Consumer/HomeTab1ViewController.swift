@@ -20,6 +20,8 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate {
     let locationdropdown = DropDown()
     var LocationsList = Array<String>()
     var responseObject : NSDictionary = [:]
+    var selectedLocation : String = ""
+    var SelectedSpecialities : String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,7 +79,7 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate {
         
         
         let APIsession : APIHandler = APIHandler()
-        APIsession.getDatafromAPI("POST", "/options", nil) { (response, error) in
+        APIsession.getDatafromAPI("POST", "options", nil) { (response, error) in
             if (response != nil) {
                 print(response)
                 let json : NSDictionary = response as! NSDictionary
@@ -122,7 +124,8 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate {
         specialistDropdown.selectionAction = {
             [unowned self] (index: Int, item: String) in
             self.clinicNametextfield.text = item
-            print("Selected Specialist is \(item) at index \(index)")
+            self.SelectedSpecialities = item
+            print("Selected Specialist is \(self.SelectedSpecialities) at index \(index)")
             
         }
         
@@ -138,7 +141,8 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate {
         locationdropdown.selectionAction = {
             [unowned self] (index: Int, item: String) in
             self.locationTextField.text = item
-            print("Selected Procedure is \(item) at index \(index)")
+            self.selectedLocation = item
+            print("Selected Procedure is \(self.selectedLocation) at index \(index)")
             
             
         }
@@ -199,7 +203,9 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate {
     @IBAction func ProceedButton(_ sender: UIButton) {
         
         let storyboard = UIStoryboard(name: "CreateNewCase", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "Step1VC")
+        let controller :Step1ReasonsTVC  = storyboard.instantiateViewController(withIdentifier: "Step1VC") as! Step1ReasonsTVC
+        controller.SelectedLocationText = selectedLocation
+        controller.SelectedSpecialities = SelectedSpecialities
       //  self.present(controller, animated: true, completion: nil)
       //  self.navigationController?.present(controller, animated: true, completion: nil)
         self.navigationController?.pushViewController(controller, animated: true)

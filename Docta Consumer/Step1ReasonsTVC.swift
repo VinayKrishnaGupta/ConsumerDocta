@@ -11,7 +11,8 @@ import UIKit
 class Step1ReasonsTVC: UIViewController, UITableViewDataSource, UITableViewDelegate,OpenCameraProtocol {
     @IBOutlet weak var tableView: UITableView!
     let Questions : Array = ["Why do you need a specialist?","How did this problem start?","What are the symptoms?"]
-
+    public var SelectedLocationText : String = ""
+    public var SelectedSpecialities : String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
@@ -95,10 +96,10 @@ class Step1ReasonsTVC: UIViewController, UITableViewDataSource, UITableViewDeleg
         
         if indexPath.section == 1 {
             let cell2  = tableView.dequeueReusableCell(withIdentifier: "Cell2", for: indexPath) as! LabelsTableViewCell
-            cell2.label1.text = "Your injury"
-            cell2.label1detail.text = "Back Pain"
-            cell2.label2.text = "Specialist"
-            cell2.label2detail.text = "Orthopedics"
+            cell2.label1.text = "Country:"
+            cell2.label1detail.text = SelectedLocationText
+            cell2.label2.text = "Specialist:"
+            cell2.label2detail.text = SelectedSpecialities
             return cell2
             
         }
@@ -247,6 +248,17 @@ class Step1ReasonsTVC: UIViewController, UITableViewDataSource, UITableViewDeleg
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "step2symptoms" {
+            if let nextViewController = segue.destination as? Step2TreatmentHistoryViewController{
+                nextViewController.SelectedSpecialities2 = self.SelectedSpecialities
+                nextViewController.SelectedLocationText2 = self.SelectedLocationText
+            }
+            
+        }
+
     }
     
 

@@ -10,6 +10,9 @@ import UIKit
 
 class Step2TreatmentHistoryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate,OpenCameraProtocol {
     @IBOutlet weak var tableView: UITableView!
+    public var SelectedLocationText2 : String = ""
+    public var SelectedSpecialities2 : String = ""
+    
     let Questions : Array = ["What treatment have you had? ","Do you have any medical conditions? ","Any additional information? "]
     
     override func viewDidLoad() {
@@ -96,10 +99,10 @@ class Step2TreatmentHistoryViewController: UIViewController, UITableViewDataSour
         
         if indexPath.section == 1 {
             let cell2  = tableView.dequeueReusableCell(withIdentifier: "Cell2", for: indexPath) as! LabelsTableViewCell
-            cell2.label1.text = "Your injury"
-            cell2.label1detail.text = "Back Pain"
+            cell2.label1.text = "Country:"
+            cell2.label1detail.text = self.SelectedLocationText2
             cell2.label2.text = "Specialist"
-            cell2.label2detail.text = "Orthopedics"
+            cell2.label2detail.text = self.SelectedSpecialities2
             return cell2
             
         }
