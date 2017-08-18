@@ -53,8 +53,8 @@ NSDictionary *Dict;
     [[manager dataTaskWithRequest:req completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
         
         if (!error) {
-            NSLog(@"Reply JSON for detail: %@", responseObject);
-           completionBlock(responseObject,nil);
+         //   NSLog(@"Reply JSON for detail: %@", responseObject);
+           completionBlock(responseObject,error);
             
             //  [manager respondsToSelector:@selector(APIResponse:)];
             
@@ -66,7 +66,7 @@ NSDictionary *Dict;
         }
         else {
             NSLog(@"Error");
-            completionBlock(nil,error);
+            completionBlock(responseObject,error);
             
         }
         

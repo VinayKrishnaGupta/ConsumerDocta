@@ -82,9 +82,19 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate {
         super.viewWillAppear(true)
         self.setupDropDowns()
         
-//        let APIsession : APIHandler = APIHandler()
-//        
-//        APIsession.getDatafromAPI("GET", "/options", nil, completionBlock:nil)
+        let APIsession : APIHandler = APIHandler()
+        APIsession.getDatafromAPI("POST", "/options", nil) { (response, error) in
+            if (response != nil) {
+                print(response)
+                
+            }
+            if (error != nil) {
+                print("Error is \(String(describing: error))")
+            }
+            
+            
+        }
+        APIsession.getDatafromAPI("GET", "/options", nil, completionBlock:nil)
         
         
     }
