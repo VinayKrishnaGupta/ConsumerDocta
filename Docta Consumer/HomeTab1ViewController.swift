@@ -8,6 +8,7 @@
 
 import UIKit
 import DropDown
+import SDWebImage
 
 
 class HomeTab1ViewController: UIViewController, UITextFieldDelegate, UICollectionViewDataSource, UICollectionViewDelegate {
@@ -25,6 +26,7 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate, UICollectio
     var SelectedSpecialities : String = ""
     var SelectedSpecialtyDict : NSDictionary = [:]
     var SpecialistListFromServer = Array<NSDictionary>()
+    var SelectedDoctor : NSDictionary = [:]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -198,10 +200,6 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate, UICollectio
         if textField == clinicNametextfield {
             specialistDropdown.hide()
             locationdropdown.hide()
-            if !selectedLocation.isEmpty && !SelectedSpecialities.isEmpty {
-                self.SearchandUpdateSpecialists()
-            }
-            
             
             return false
         }
@@ -209,9 +207,6 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate, UICollectio
         if textField == clinicNametextfield {
             specialistDropdown.hide()
             locationdropdown.hide()
-            if !selectedLocation.isEmpty && !SelectedSpecialities.isEmpty {
-                self.SearchandUpdateSpecialists()
-            }
             return false
             
         }
@@ -247,20 +242,52 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate, UICollectio
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return SpecialistListFromServer.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionViewSpecialists.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! ImageLabelCollectionViewCell
-        cell.cellImageView.image = UIImage.init(named: "doctordummyprofile")
-        cell.titleLabel.text = "Dr. V K Gupta"
-        cell.Button.addTarget(self, action: #selector(CellButtonsClicked(_:)), for: UIControlEvents.touchUpInside)
+        
+        
+        let dict : NSDictionary = SpecialistListFromServer[indexPath.row]
+        if(dict.allKeys.count > 0) {
+            let APIimage:String = dict.value(forKey: "image") as! String
+            let imagestring : String = "https://account.docta.com" + APIimage
+            let imageurl : URL = NSURL(string: imagestring)! as URL
+            cell.cellImageView.sd_setImage(with: URL(string: imagestring), placeholderImage: UIImage(named: "doctordummyprofile"))
+            
+            let firstname : String = dict.value(forKeyPath: "name.first") as! String
+            let lastname : String = dict.value(forKeyPath: "name.last") as! String
+            
+            let doctorName : String = "Dr." + firstname + lastname
+            cell.cellImageView.sd_setImage(with:imageurl)
+            cell.titleLabel.text = doctorName
+            cell.Button.addTarget(self, action: #selector(CellButtonsClicked(_:)), for: UIControlEvents.touchUpInside)
+        }
+        else {
+            
+            
+        }
+        
+        
+        
+        
+        
+        
         
         
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("did select row \(indexPath.row)")
+        if (SpecialistListFromServer.count != 0) {
+            self.SelectedDoctor = self.SpecialistListFromServer[indexPath.row]
+        }
+        else {
+            print("Select All fields first")
+        }
+        
+        
         
     }
     
@@ -289,7 +316,7 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate, UICollectio
                 self.responseObject = json.value(forKey: "data") as! NSDictionary
                 
                 self.SpecialistListFromServer = self.responseObject.value(forKey: "specialists") as! Array<NSDictionary>
-                
+                self.collectionViewSpecialists.reloadData()
             }
             if (error != nil) {
                 print("Error is \(String(describing: error))")
