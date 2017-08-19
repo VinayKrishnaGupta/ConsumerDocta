@@ -10,8 +10,9 @@ import UIKit
 import DropDown
 
 
-class HomeTab1ViewController: UIViewController, UITextFieldDelegate {
+class HomeTab1ViewController: UIViewController, UITextFieldDelegate, UICollectionViewDataSource, UICollectionViewDelegate {
     @IBOutlet weak var clinicNametextfield: UITextField!
+    @IBOutlet weak var collectionViewSpecialists: UICollectionView!
 
     @IBOutlet weak var locationTextField: UITextField!
     let specialistDropdown = DropDown()
@@ -22,6 +23,8 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate {
     var responseObject : NSDictionary = [:]
     var selectedLocation : String = ""
     var SelectedSpecialities : String = ""
+    var SelectedSpecialtyDict : NSDictionary = [:]
+    var SpecialistListFromServer = Array<NSDictionary>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,8 +33,10 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate {
         imageview.frame = CGRect(x: 10, y: 2, width: 100, height: 30)
         self.navigationController?.navigationBar.addSubview(imageview)
         
-    clinicNametextfield.delegate = self
-    locationTextField.delegate = self
+        clinicNametextfield.delegate = self
+        locationTextField.delegate = self
+        collectionViewSpecialists.dataSource = self
+        collectionViewSpecialists.delegate = self
         
         clinicNametextfield.rightViewMode = .always
         let rightView = UIView.init(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
@@ -119,6 +124,8 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate {
         specialistDropdown.backgroundColor = UIColor.init(colorLiteralRed: 0.0, green: 166/255, blue: 255/255, alpha: 1)
         specialistDropdown.selectionBackgroundColor = UIColor.lightGray
         specialistDropdown.cellHeight = 35
+        specialistDropdown.bottomOffset = CGPoint(x: 0, y:30)
+        locationdropdown.bottomOffset = CGPoint(x: 0, y:30)
         
         
         specialistDropdown.selectionAction = {
@@ -126,13 +133,19 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate {
             self.clinicNametextfield.text = item
             self.SelectedSpecialities = item
             print("Selected Specialist is \(self.SelectedSpecialities) at index \(index)")
+            self.SelectedSpecialtyDict = self.Specilistlist[index]
+            
+            if !self.selectedLocation.isEmpty && !self.SelectedSpecialities.isEmpty {
+                self.SearchandUpdateSpecialists()
+            }
+            
             
         }
         
         
         locationdropdown.anchorView = locationTextField
         locationdropdown.dataSource = LocationsList
-        locationdropdown.direction = .any
+        locationdropdown.direction = .bottom
         locationdropdown.textColor = UIColor.white
         locationdropdown.backgroundColor = UIColor.init(colorLiteralRed: 0.0, green: 166/255, blue: 255/255, alpha: 1)
         locationdropdown.selectionBackgroundColor = UIColor.lightGray
@@ -143,7 +156,9 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate {
             self.locationTextField.text = item
             self.selectedLocation = item
             print("Selected Procedure is \(self.selectedLocation) at index \(index)")
-            
+            if !self.selectedLocation.isEmpty && !self.SelectedSpecialities.isEmpty {
+                self.SearchandUpdateSpecialists()
+            }
             
         }
         
@@ -172,11 +187,21 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate {
             return true
         }
     }
+   
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        print("End Editing")
+    }
     
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        
+        
         if textField == clinicNametextfield {
             specialistDropdown.hide()
             locationdropdown.hide()
+            if !selectedLocation.isEmpty && !SelectedSpecialities.isEmpty {
+                self.SearchandUpdateSpecialists()
+            }
+            
             
             return false
         }
@@ -184,6 +209,9 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate {
         if textField == clinicNametextfield {
             specialistDropdown.hide()
             locationdropdown.hide()
+            if !selectedLocation.isEmpty && !SelectedSpecialities.isEmpty {
+                self.SearchandUpdateSpecialists()
+            }
             return false
             
         }
@@ -212,6 +240,70 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate {
         
         
     }
+    
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionViewSpecialists.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! ImageLabelCollectionViewCell
+        cell.cellImageView.image = UIImage.init(named: "doctordummyprofile")
+        cell.titleLabel.text = "Dr. V K Gupta"
+        cell.Button.addTarget(self, action: #selector(CellButtonsClicked(_:)), for: UIControlEvents.touchUpInside)
+        
+        
+        return cell
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("did select row \(indexPath.row)")
+        
+    }
+    
+    func CellButtonsClicked(_ sender:UIButton) {
+        
+        let buttonPosition:CGPoint = sender.convert(.zero, to: self.collectionViewSpecialists)
+        let indexPath:IndexPath = self.collectionViewSpecialists.indexPathForItem(at: buttonPosition)!
+        
+        
+        print("Button clicked \(indexPath.row)")
+        
+    }
+    
+    
+    func SearchandUpdateSpecialists() {
+        let APIsession : APIHandler = APIHandler()
+        
+        var parameters =
+        [ "country": selectedLocation, "speciality": SelectedSpecialtyDict.value(forKey: "_id")]
+        
+        APIsession.getDatafromAPI("POST", "specialists", parameters) { (response, error) in
+            if (response != nil) {
+                print(response)
+                let json : NSDictionary = response as! NSDictionary
+                
+                self.responseObject = json.value(forKey: "data") as! NSDictionary
+                
+                self.SpecialistListFromServer = self.responseObject.value(forKey: "specialists") as! Array<NSDictionary>
+                
+            }
+            if (error != nil) {
+                print("Error is \(String(describing: error))")
+            }
+        }
+        
+
+        
+        
+        
+    }
+    
+
+    
 
     /*
     // MARK: - Navigation
