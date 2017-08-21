@@ -273,6 +273,21 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate, UICollectio
             cell.cellImageView.sd_setImage(with:imageurl)
             cell.titleLabel.text = doctorName
             cell.Button.addTarget(self, action: #selector(CellButtonsClicked(_:)), for: UIControlEvents.touchUpInside)
+            if indexPath == cellselectedindex {
+                cell.layer.borderWidth = 2.0
+                cell.layer.borderColor = UIColor.black.cgColor
+                cell.backgroundColor = UIColor.groupTableViewBackground
+                
+            }
+            else {
+                cell.layer.borderWidth = 0.5
+                cell.layer.borderColor = UIColor.lightGray.cgColor
+                cell.backgroundColor = UIColor.white
+                
+            }
+            
+            
+            
         }
         else {
             
@@ -290,7 +305,8 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate, UICollectio
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("did select row \(indexPath.row)")
- 
+        
+        
         if (SpecialistListFromServer.count != 0) {
             self.SelectedDoctor = self.SpecialistListFromServer[indexPath.row]
             
@@ -306,7 +322,8 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate, UICollectio
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-         
+       
+        
         
     }
     
@@ -352,6 +369,8 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate, UICollectio
             cell?.backgroundColor = UIColor.groupTableViewBackground
             self.cellselectedindex =  self.collectionViewSpecialists.indexPath(for: cell!)!
             self.cellselection = true
+            self.collectionViewSpecialists.reloadData()
+            
         }
         
         
