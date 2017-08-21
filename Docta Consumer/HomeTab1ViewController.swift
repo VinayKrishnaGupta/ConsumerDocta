@@ -28,6 +28,8 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate, UICollectio
     var SelectedSpecialtyDict : NSDictionary = [:]
     var SpecialistListFromServer = Array<NSDictionary>()
     var SelectedDoctor : NSDictionary = [:]
+    var cellselection : Bool = false
+    var cellselectedindex : IndexPath = IndexPath()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -288,8 +290,11 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate, UICollectio
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("did select row \(indexPath.row)")
+ 
         if (SpecialistListFromServer.count != 0) {
             self.SelectedDoctor = self.SpecialistListFromServer[indexPath.row]
+            
+            
             
         }
         else {
@@ -300,13 +305,56 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate, UICollectio
         
     }
     
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+         
+        
+    }
+    
     func CellButtonsClicked(_ sender:UIButton) {
         
         let buttonPosition:CGPoint = sender.convert(.zero, to: self.collectionViewSpecialists)
         let indexPath:IndexPath = self.collectionViewSpecialists.indexPathForItem(at: buttonPosition)!
         let cell = collectionViewSpecialists.cellForItem(at: indexPath)
-        cell?.layer.borderWidth = 2.0
-        cell?.layer.borderColor = UIColor.gray.cgColor
+       
+        
+        if indexPath == cellselectedindex {
+            
+            if cellselection {
+                cell?.layer.borderWidth = 0.5
+                cell?.layer.borderColor = UIColor.lightGray.cgColor
+                cell?.backgroundColor = UIColor.white
+                self.cellselection = false
+            }
+            else {
+                cell?.layer.borderWidth = 2.0
+                cell?.layer.borderColor = UIColor.black.cgColor
+                cell?.backgroundColor = UIColor.groupTableViewBackground
+                self.cellselection = true
+            }
+            
+//            self.cellselectedindex = IndexPath()
+//            self.cellselection = false
+            
+        }
+        else {
+            
+            
+            if (cellselection) {
+                let cell2 = self.collectionViewSpecialists.cellForItem(at: cellselectedindex)
+                cell2?.layer.borderWidth = 0.5
+                cell2?.layer.borderColor = UIColor.lightGray.cgColor
+                cell2?.backgroundColor = UIColor.white
+            }
+            
+            
+            cell?.layer.borderWidth = 2.0
+            cell?.layer.borderColor = UIColor.black.cgColor
+            cell?.backgroundColor = UIColor.groupTableViewBackground
+            self.cellselectedindex =  self.collectionViewSpecialists.indexPath(for: cell!)!
+            self.cellselection = true
+        }
+        
+        
         
         print("Button clicked \(indexPath.row)")
         

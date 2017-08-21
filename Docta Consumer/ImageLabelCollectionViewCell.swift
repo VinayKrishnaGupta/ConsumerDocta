@@ -13,4 +13,17 @@ class ImageLabelCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var Button: UIButton!
     @IBOutlet weak var cellImageView: UIImageView!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        
+    }
+    
+    override func layoutSubviews() {
+        self.layer.cornerRadius = 10
+        self.layer.masksToBounds = true
+        self.layer.borderWidth = 0.5
+        self.layer.borderColor = UIColor.lightGray.cgColor
+    }
+    
 }
