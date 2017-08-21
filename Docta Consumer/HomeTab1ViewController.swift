@@ -9,6 +9,7 @@
 import UIKit
 import DropDown
 import SDWebImage
+import SVProgressHUD
 
 
 class HomeTab1ViewController: UIViewController, UITextFieldDelegate, UICollectionViewDataSource, UICollectionViewDelegate {
@@ -99,6 +100,8 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate, UICollectio
             }
             if (error != nil) {
                 print("Error is \(String(describing: error))")
+                SVProgressHUD.showError(withStatus: "Error! Please check you internet connection")
+                SVProgressHUD.dismiss(withDelay: 3)
             }
         }
         
@@ -139,6 +142,10 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate, UICollectio
             
             if !self.selectedLocation.isEmpty && !self.SelectedSpecialities.isEmpty {
                 self.SearchandUpdateSpecialists()
+                SVProgressHUD.show()
+            }
+            else {
+                
             }
             
             
@@ -159,6 +166,7 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate, UICollectio
             self.selectedLocation = item
             print("Selected Procedure is \(self.selectedLocation) at index \(index)")
             if !self.selectedLocation.isEmpty && !self.SelectedSpecialities.isEmpty {
+                SVProgressHUD.show()
                 self.SearchandUpdateSpecialists()
             }
             
@@ -282,6 +290,7 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate, UICollectio
         print("did select row \(indexPath.row)")
         if (SpecialistListFromServer.count != 0) {
             self.SelectedDoctor = self.SpecialistListFromServer[indexPath.row]
+            
         }
         else {
             print("Select All fields first")
@@ -295,7 +304,9 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate, UICollectio
         
         let buttonPosition:CGPoint = sender.convert(.zero, to: self.collectionViewSpecialists)
         let indexPath:IndexPath = self.collectionViewSpecialists.indexPathForItem(at: buttonPosition)!
-        
+        let cell = collectionViewSpecialists.cellForItem(at: indexPath)
+        cell?.layer.borderWidth = 2.0
+        cell?.layer.borderColor = UIColor.gray.cgColor
         
         print("Button clicked \(indexPath.row)")
         
@@ -311,15 +322,29 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate, UICollectio
         APIsession.getDatafromAPI("POST", "specialists", parameters) { (response, error) in
             if (response != nil) {
                 print(response)
+                SVProgressHUD.dismiss()
                 let json : NSDictionary = response as! NSDictionary
                 
                 self.responseObject = json.value(forKey: "data") as! NSDictionary
                 
                 self.SpecialistListFromServer = self.responseObject.value(forKey: "specialists") as! Array<NSDictionary>
-                self.collectionViewSpecialists.reloadData()
+                if self.SpecialistListFromServer.count > 0 {
+                    self.collectionViewSpecialists.reloadData()
+                }
+                else {
+                    
+                    
+                    SVProgressHUD.showError(withStatus: "There are no specialists matched to you.")
+                    SVProgressHUD.dismiss(withDelay: 2)
+                    self.collectionViewSpecialists.reloadData()
+                }
+                
             }
             if (error != nil) {
                 print("Error is \(String(describing: error))")
+                SVProgressHUD.showError(withStatus: "Error!, Please check you internet connection")
+                SVProgressHUD.dismiss(withDelay: 2)
+                
             }
         }
         
