@@ -33,6 +33,7 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate, UICollectio
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        SVProgressHUD.show()
         let image : UIImage = UIImage.init(named: "DoctaLogo")!
         let imageview : UIImageView = UIImageView.init(image: image)
         imageview.frame = CGRect(x: 10, y: 2, width: 100, height: 30)
@@ -99,6 +100,7 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate, UICollectio
                 self.SpcialistiesNames = self.responseObject.value(forKeyPath: "specialities.name") as! Array<String>
                 self.LocationsList = self.responseObject.value(forKeyPath: "countries") as! Array<String>
                 self.setupDropDowns()
+                SVProgressHUD.dismiss()
             }
             if (error != nil) {
                 print("Error is \(String(describing: error))")
