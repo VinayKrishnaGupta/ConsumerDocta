@@ -38,6 +38,7 @@
 		2F053C491F4187B000A41015 /* Step2TreatmentHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F053C481F4187B000A41015 /* Step2TreatmentHistoryViewController.swift */; };
 		2F053C4D1F47FD0B00A41015 /* ImageLabelCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F053C4C1F47FD0B00A41015 /* ImageLabelCollectionViewCell.swift */; };
 		2F053C551F4D86FF00A41015 /* DoctorsInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F053C541F4D86FF00A41015 /* DoctorsInfoViewController.swift */; };
+		2F135DB11F4DA7B9006B9905 /* DoctorsIntroTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F135DB01F4DA7B9006B9905 /* DoctorsIntroTableViewCell.swift */; };
 		2F5349A51F333E530061C19A /* underconstructiongif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2F5349A41F333E530061C19A /* underconstructiongif.gif */; };
 		2F5349A91F333EFD0061C19A /* SettingsTab4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5349A81F333EFD0061C19A /* SettingsTab4ViewController.swift */; };
 		2F5349AB1F3343890061C19A /* coomingsoongif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2F5349AA1F3343890061C19A /* coomingsoongif.gif */; };
@@ -150,6 +151,7 @@
 		2F053C481F4187B000A41015 /* Step2TreatmentHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Step2TreatmentHistoryViewController.swift; sourceTree = "<group>"; };
 		2F053C4C1F47FD0B00A41015 /* ImageLabelCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLabelCollectionViewCell.swift; sourceTree = "<group>"; };
 		2F053C541F4D86FF00A41015 /* DoctorsInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorsInfoViewController.swift; sourceTree = "<group>"; };
+		2F135DB01F4DA7B9006B9905 /* DoctorsIntroTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorsIntroTableViewCell.swift; sourceTree = "<group>"; };
 		2F5349A41F333E530061C19A /* underconstructiongif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = underconstructiongif.gif; sourceTree = "<group>"; };
 		2F5349A81F333EFD0061C19A /* SettingsTab4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTab4ViewController.swift; sourceTree = "<group>"; };
 		2F5349AA1F3343890061C19A /* coomingsoongif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = coomingsoongif.gif; sourceTree = "<group>"; };
@@ -332,6 +334,7 @@
 			isa = PBXGroup;
 			children = (
 				2F053C541F4D86FF00A41015 /* DoctorsInfoViewController.swift */,
+				2F135DB01F4DA7B9006B9905 /* DoctorsIntroTableViewCell.swift */,
 			);
 			name = DoctorsProfile;
 			sourceTree = "<group>";
@@ -854,6 +857,7 @@
 				2FFE00251F1F840C003C3643 /* ChatViewController.swift in Sources */,
 				2FFE00221F1F840C003C3643 /* Channel.swift in Sources */,
 				2FFE00271F1F840C003C3643 /* UIImage+Gif.swift in Sources */,
+				2F135DB11F4DA7B9006B9905 /* DoctorsIntroTableViewCell.swift in Sources */,
 				2F053C1A1F348F8D00A41015 /* KeyboardLayoutConstraint.swift in Sources */,
 				2F053C3D1F3C4CF600A41015 /* collectionTableViewCell.swift in Sources */,
 				2F0311441F29F2E40044B401 /* MainTabBarViewController.swift in Sources */,

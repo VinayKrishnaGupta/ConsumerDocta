@@ -39,6 +39,8 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate, UICollectio
         imageview.frame = CGRect(x: 10, y: 2, width: 100, height: 30)
         self.navigationController?.navigationBar.addSubview(imageview)
         
+        
+        
         clinicNametextfield.delegate = self
         locationTextField.delegate = self
         collectionViewSpecialists.dataSource = self
