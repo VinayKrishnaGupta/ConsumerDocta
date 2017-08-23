@@ -425,11 +425,11 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate, UICollectio
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "doctorsProfile" {
             if let nextViewController = segue.destination as? DoctorsInfoViewController{
-                nextViewController.SpecialistID = SelectedDoctor.value(forKey: "_id")
+                nextViewController.SpecialistID = SelectedDoctor.value(forKey: "_id") as! String
             }
             
         }
-        
+    }
 
 
     

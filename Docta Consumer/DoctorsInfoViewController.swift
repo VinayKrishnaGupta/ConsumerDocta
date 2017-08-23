@@ -12,17 +12,24 @@ class DoctorsInfoViewController: UIViewController, UITableViewDataSource, UITabl
 
     @IBOutlet weak var TableView: UITableView!
     public var SpecialistID : String = ""
+    var responseObject : NSDictionary = [:]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        TableView.dataSource = self
+        TableView.delegate = self
+        TableView.estimatedRowHeight = 50
+        
+        
         let APIsession : APIHandler = APIHandler()
         print("Doctor ID is \(SpecialistID)")
         
-        APIsession.getDatafromAPI("GET", "options", nil) { (response, error) in
+        APIsession.getDatafromAPI("GET", "specialist/\(SpecialistID)", nil) { (response, error) in
             if (response != nil) {
-                print(response)
+                print(response as Any)
                 let json : NSDictionary = response as! NSDictionary
-                
-               
+                self.responseObject = json.value(forKey: "data") as! NSDictionary
+               self.TableView.reloadData()
                
             }
             if (error != nil) {
@@ -47,6 +54,34 @@ class DoctorsInfoViewController: UIViewController, UITableViewDataSource, UITabl
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = TableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        
+        
+        if responseObject.allKeys.count > 0 {
+            if indexPath.row == 0 {
+                let firstname : String = responseObject.value(forKeyPath: "name.first") as! String
+                let lastname : String = responseObject.value(forKeyPath: "name.last") as! String
+                
+                let doctorName : String = "Dr. " + firstname + " " + lastname
+                cell.textLabel?.text = "Name: " + doctorName
+                
+            }
+            
+            if indexPath.row == 1 {
+                let address: String = responseObject.value(forKey: "address") as! String
+                cell.textLabel?.text = "Address: " + address
+            }
+            
+            if indexPath.row == 2 {
+                let email : String = responseObject.value(forKey: "email") as! String
+                cell.textLabel?.text = "Email: " + email
+            }
+            if indexPath.row == 3 {
+                let qualifications : String = responseObject.value(forKey: "qualifications") as! String
+                cell.textLabel?.text = "Qualification: " + qualifications
+                
+            }
+
+        }
         
         
         
