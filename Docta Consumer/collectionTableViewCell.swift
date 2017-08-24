@@ -8,7 +8,7 @@
 
 import UIKit
 
-class collectionTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegate {
+class collectionTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
     @IBOutlet weak var colletionViewImages: UICollectionView!
     var selectedindex : Int = -1
     var numberofRows : Int = 1
@@ -20,8 +20,11 @@ class collectionTableViewCell: UITableViewCell, UICollectionViewDataSource, UICo
         colletionViewImages.delegate = self
         
         
+        
         // Initialization code
     }
+    
+    
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -30,6 +33,14 @@ class collectionTableViewCell: UITableViewCell, UICollectionViewDataSource, UICo
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return numberofRows
     }
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        return CGSize(width: self.colletionViewImages.frame.width/4, height: 40)
+    }
+
+    
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
@@ -37,6 +48,7 @@ class collectionTableViewCell: UITableViewCell, UICollectionViewDataSource, UICo
         cell.titleLabel.text =  listofValues[indexPath.row]
         
         cell.layer.borderWidth = 0.25
+       
       
         cell.layer.borderColor = UIColor(red:1, green:0.63, blue:0.12, alpha:1).cgColor
         
@@ -87,6 +99,8 @@ class collectionTableViewCell: UITableViewCell, UICollectionViewDataSource, UICo
         colletionViewImages.layer.borderColor = UIColor(red:1, green:0.63, blue:0.12, alpha:1).cgColor
         colletionViewImages.layer.borderWidth = 0.5
         colletionViewImages.layer.masksToBounds = true
+        colletionViewImages.collectionViewLayout.invalidateLayout()
+        
     }
     
 

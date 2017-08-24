@@ -23,5 +23,12 @@ class DoctorsIntroTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    override func layoutSubviews() {
+        imageviewdoctor.layer.cornerRadius = 40
+        imageviewdoctor.layer.masksToBounds = true
+        imageviewdoctor.layer.borderWidth = 2
+        imageviewdoctor.layer.borderColor = UIColor(red:0.08, green:0.65, blue:1, alpha:1).cgColor
+    }
 
 }

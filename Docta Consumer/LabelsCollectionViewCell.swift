@@ -11,4 +11,8 @@ import UIKit
 class LabelsCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     
+    override func layoutSubviews() {
+        
+    }
+    
 }

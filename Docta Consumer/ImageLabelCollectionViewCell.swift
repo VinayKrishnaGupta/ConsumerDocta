@@ -12,6 +12,7 @@ class ImageLabelCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var Button: UIButton!
     @IBOutlet weak var cellImageView: UIImageView!
+    @IBOutlet weak var detailLabelCity: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

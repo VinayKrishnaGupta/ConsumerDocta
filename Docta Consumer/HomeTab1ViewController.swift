@@ -267,15 +267,17 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate, UICollectio
         if(dict.allKeys.count > 0) {
             let APIimage:String = dict.value(forKey: "image") as! String
             let imagestring : String = "https://account.docta.com" + APIimage
-            let imageurl : URL = NSURL(string: imagestring)! as URL
             cell.cellImageView.sd_setImage(with: URL(string: imagestring), placeholderImage: UIImage(named: "doctordummyprofile"))
             
             let firstname : String = dict.value(forKeyPath: "name.first") as! String
             let lastname : String = dict.value(forKeyPath: "name.last") as! String
             
             let doctorName : String = "Dr." + firstname + lastname
-            cell.cellImageView.sd_setImage(with:imageurl)
             cell.titleLabel.text = doctorName
+            let cityName : String = dict.value(forKey: "city") as! String
+            cell.detailLabelCity.text = cityName
+            
+            
             cell.Button.addTarget(self, action: #selector(CellButtonsClicked(_:)), for: UIControlEvents.touchUpInside)
             if indexPath == cellselectedindex {
                 cell.layer.borderWidth = 2.0
