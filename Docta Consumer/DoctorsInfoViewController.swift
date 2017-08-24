@@ -216,7 +216,7 @@ class DoctorsInfoViewController: UIViewController, UITableViewDataSource, UITabl
             return "Contact Info"
         }
         if section == 2 {
-            return "Qualification/Memberships"
+            return "Qualifications/Memberships"
         }
         if section == 3 {
             return "Awards/Publications"
