@@ -142,6 +142,7 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate, UICollectio
         specialistDropdown.selectionAction = {
             [unowned self] (index: Int, item: String) in
             self.clinicNametextfield.text = item
+            ReviewCasefileManager.sharedInstance.SpecialistyName = item
             self.SelectedSpecialities = item
             print("Selected Specialist is \(self.SelectedSpecialities) at index \(index)")
             self.SelectedSpecialtyDict = self.Specilistlist[index]
@@ -169,6 +170,7 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate, UICollectio
         locationdropdown.selectionAction = {
             [unowned self] (index: Int, item: String) in
             self.locationTextField.text = item
+            ReviewCasefileManager.sharedInstance.CountryName = item
             self.selectedLocation = item
             print("Selected Procedure is \(self.selectedLocation) at index \(index)")
             if !self.selectedLocation.isEmpty && !self.SelectedSpecialities.isEmpty {
@@ -338,6 +340,7 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate, UICollectio
         let buttonPosition:CGPoint = sender.convert(.zero, to: self.collectionViewSpecialists)
         let indexPath:IndexPath = self.collectionViewSpecialists.indexPathForItem(at: buttonPosition)!
         let cell = collectionViewSpecialists.cellForItem(at: indexPath)
+        ReviewCasefileManager.sharedInstance.SelectedSpecialist = SpecialistListFromServer[indexPath.row]
        
         
         if indexPath == cellselectedindex {

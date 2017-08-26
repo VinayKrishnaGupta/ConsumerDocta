@@ -1099,7 +1099,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell0" rowHeight="30" id="PNl-AC-zA8" customClass="TitlesTableViewCell" customModule="Docta_Consumer" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="55.5" width="343" height="30"/>
+                                        <rect key="frame" x="0.0" y="56" width="343" height="30"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PNl-AC-zA8" id="KYj-42-uTf">
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
@@ -1127,7 +1127,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell2" rowHeight="20" id="GSd-hP-kmX" customClass="LabelsTableViewCell" customModule="Docta_Consumer" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="85.5" width="343" height="20"/>
+                                        <rect key="frame" x="0.0" y="86" width="343" height="20"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GSd-hP-kmX" id="fDO-Qr-nec">
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="20"/>

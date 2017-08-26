@@ -53,6 +53,11 @@ class Step2TreatmentHistoryViewController: UIViewController, UITableViewDataSour
         tap.cancelsTouchesInView = false
         self.navigationItem.hidesBackButton = true
         
+        print("How long is \(ReviewCasefileManager.sharedInstance.HowLong)")
+        print("Question 1 is \(ReviewCasefileManager.sharedInstance.Q1WhyneedSpecialist)")
+        print("Question 2 is \(ReviewCasefileManager.sharedInstance.Q2HowProblemStart)")
+        print("Questions 3 is \(ReviewCasefileManager.sharedInstance.Q3Symptoms)")
+        
         // Do any additional setup after loading the view.
     }
     

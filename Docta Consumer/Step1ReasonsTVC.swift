@@ -13,6 +13,7 @@ class Step1ReasonsTVC: UIViewController, UITableViewDataSource, UITableViewDeleg
     let Questions : Array = ["Why do you need a specialist?","How did this problem start?","What are the symptoms?"]
     public var SelectedLocationText : String = ""
     public var SelectedSpecialities : String = ""
+    let HowlongList = ["DAYS","WEEKS","MONTHS","YEARS"]
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
@@ -22,6 +23,7 @@ class Step1ReasonsTVC: UIViewController, UITableViewDataSource, UITableViewDeleg
         imageview.frame = CGRect(x: 10, y: 2, width: 100, height: 30)
         self.navigationController?.navigationBar.addSubview(imageview)
         self.navigationItem.hidesBackButton = true
+        print("VKG Testing \(ReviewCasefileManager.sharedInstance.SelectedSpecialist)")
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(Step1ReasonsTVC.dismissKeyboard))
         
@@ -108,7 +110,7 @@ class Step1ReasonsTVC: UIViewController, UITableViewDataSource, UITableViewDeleg
         if indexPath.section == 2 {
             let cell4 = tableView.dequeueReusableCell(withIdentifier: "Cell4", for: indexPath) as! collectionTableViewCell
             cell4.numberofRows = 4
-            cell4.listofValues = ["DAYS","WEEKS","MONTHS","YEARS"]
+            cell4.listofValues = HowlongList
 
             return cell4
             
@@ -138,9 +140,21 @@ class Step1ReasonsTVC: UIViewController, UITableViewDataSource, UITableViewDeleg
         }
         
         else {
+            
            let cell1 = tableView.dequeueReusableCell(withIdentifier: "Cell1", for: indexPath) as! TextViewTableViewCell
             cell1.titleLabel.text = Questions[indexPath.row]
-            cell1.textview.text = ""
+            switch indexPath.row {
+            case 0:
+                cell1.textview.text = ReviewCasefileManager.sharedInstance.Q1WhyneedSpecialist
+            case 1:
+                cell1.textview.text = ReviewCasefileManager.sharedInstance.Q2HowProblemStart
+            case 2:
+                cell1.textview.text = ReviewCasefileManager.sharedInstance.Q3Symptoms
+            default:
+                break
+            }
+            
+            
             
             
             return cell1
@@ -157,6 +171,8 @@ class Step1ReasonsTVC: UIViewController, UITableViewDataSource, UITableViewDeleg
     
     func nextButton(){
         print("Button tapped")
+       
+        
         self.performSegue(withIdentifier: "step2symptoms", sender: nil)
         
     }
@@ -240,8 +256,43 @@ class Step1ReasonsTVC: UIViewController, UITableViewDataSource, UITableViewDeleg
     }
     
     
+    
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        
        
+        
+    }
+    
+    func savedValuesinTextFields(CellIndex : IndexPath){
+        let indexpath1 = IndexPath(row: 0, section: 3)
+        let indexpath2 = IndexPath(row: 1, section: 3)
+        let indexpath3 = IndexPath(row: 2, section: 3)
+        if CellIndex == indexpath1 {
+            let cell1 = self.tableView.cellForRow(at: indexpath1) as? TextViewTableViewCell
+            ReviewCasefileManager.sharedInstance.Q1WhyneedSpecialist = (cell1?.textview.text)!
+        }
+        if CellIndex == indexpath2 {
+            let cell2 = tableView.cellForRow(at: indexpath2) as? TextViewTableViewCell
+            ReviewCasefileManager.sharedInstance.Q2HowProblemStart = (cell2?.textview.text)!
+        }
+        if CellIndex == indexpath3 {
+            let cell3 = tableView.cellForRow(at: indexpath3) as! TextViewTableViewCell
+            ReviewCasefileManager.sharedInstance.Q3Symptoms = cell3.textview.text
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
     }
     

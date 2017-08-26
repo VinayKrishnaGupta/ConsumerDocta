@@ -81,6 +81,8 @@
 		2FF438C31F30490F004451FB /* LocationOpenCasesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FF438C11F30490F004451FB /* LocationOpenCasesCell.xib */; };
 		2FF438C51F305355004451FB /* OpenCasesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF438C41F305355004451FB /* OpenCasesCell.swift */; };
 		2FF438C71F31A32A004451FB /* CloseCasesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF438C61F31A32A004451FB /* CloseCasesViewController.swift */; };
+		2FFCFB2A1F50008400DE1346 /* ReviewCasefileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFCFB291F50008400DE1346 /* ReviewCasefileManager.swift */; };
+		2FFCFB2C1F5005A700DE1346 /* ReviewCaseFileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFCFB2B1F5005A700DE1346 /* ReviewCaseFileViewController.swift */; };
 		2FFE00211F1F840C003C3643 /* CreateChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFE00191F1F840C003C3643 /* CreateChannelCell.swift */; };
 		2FFE00221F1F840C003C3643 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFE001A1F1F840C003C3643 /* Channel.swift */; };
 		2FFE00231F1F840C003C3643 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFE001B1F1F840C003C3643 /* LoginViewController.swift */; };
@@ -210,6 +212,8 @@
 		2FF438C11F30490F004451FB /* LocationOpenCasesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationOpenCasesCell.xib; sourceTree = "<group>"; };
 		2FF438C41F305355004451FB /* OpenCasesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenCasesCell.swift; sourceTree = "<group>"; };
 		2FF438C61F31A32A004451FB /* CloseCasesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloseCasesViewController.swift; sourceTree = "<group>"; };
+		2FFCFB291F50008400DE1346 /* ReviewCasefileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewCasefileManager.swift; sourceTree = "<group>"; };
+		2FFCFB2B1F5005A700DE1346 /* ReviewCaseFileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewCaseFileViewController.swift; sourceTree = "<group>"; };
 		2FFE00191F1F840C003C3643 /* CreateChannelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateChannelCell.swift; sourceTree = "<group>"; };
 		2FFE001A1F1F840C003C3643 /* Channel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 		2FFE001B1F1F840C003C3643 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -310,6 +314,8 @@
 			isa = PBXGroup;
 			children = (
 				2F053C331F35C9F700A41015 /* ReviewCase.storyboard */,
+				2FFCFB291F50008400DE1346 /* ReviewCasefileManager.swift */,
+				2FFCFB2B1F5005A700DE1346 /* ReviewCaseFileViewController.swift */,
 			);
 			name = ReviewCaseFile;
 			sourceTree = "<group>";
@@ -888,6 +894,7 @@
 				2FFE00211F1F840C003C3643 /* CreateChannelCell.swift in Sources */,
 				2FF438C51F305355004451FB /* OpenCasesCell.swift in Sources */,
 				2FAE81141F14DCE1007E937A /* Step3TreatmentHistoryViewController.swift in Sources */,
+				2FFCFB2C1F5005A700DE1346 /* ReviewCaseFileViewController.swift in Sources */,
 				2FA8EC761EEFAA2F00F9AB24 /* CreateCaseFileViewController.swift in Sources */,
 				2F72A25F1EF7B58300CEC047 /* APIHandler.m in Sources */,
 				2FAE81101F1492E3007E937A /* Step2SymptomsViewController.swift in Sources */,
@@ -896,6 +903,7 @@
 				2FFEFFA41F1A1BAE003C3643 /* Step1IntroductionViewController.m in Sources */,
 				2FFEFF941F15FA54003C3643 /* Step4LocationViewController.swift in Sources */,
 				2FF438BC1F2F2C78004451FB /* OpenCasesCollectionViewCell.swift in Sources */,
+				2FFCFB2A1F50008400DE1346 /* ReviewCasefileManager.swift in Sources */,
 				2F053C391F3C479000A41015 /* LabelsTableViewCell.swift in Sources */,
 				2FF438B51F2F03D5004451FB /* OpenCaseViewController.swift in Sources */,
 			);
@@ -1068,6 +1076,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "Docta Consumer/Docta Consumer-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1092,6 +1101,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Docta Consumer/Docta Consumer-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -75,7 +75,7 @@ class collectionTableViewCell: UITableViewCell, UICollectionViewDataSource, UICo
         selectedindex = indexPath.row
         cell.contentView.backgroundColor = UIColor.init(colorLiteralRed: 255/255, green: 206/255, blue: 74/255, alpha: 1)
         cell.titleLabel.textColor = UIColor.init(colorLiteralRed: 255/255, green: 98/255, blue: 2/255, alpha: 1)
-        
+        ReviewCasefileManager.sharedInstance.HowLong = cell.titleLabel.text!
         
     }
     
