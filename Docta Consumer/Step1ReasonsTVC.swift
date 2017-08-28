@@ -23,7 +23,7 @@ class Step1ReasonsTVC: UIViewController, UITableViewDataSource, UITableViewDeleg
         imageview.frame = CGRect(x: 10, y: 2, width: 100, height: 30)
         self.navigationController?.navigationBar.addSubview(imageview)
         self.navigationItem.hidesBackButton = true
-        print("VKG Testing \(ReviewCasefileManager.sharedInstance.SelectedSpecialist)")
+        
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(Step1ReasonsTVC.dismissKeyboard))
         
@@ -145,11 +145,35 @@ class Step1ReasonsTVC: UIViewController, UITableViewDataSource, UITableViewDeleg
             cell1.titleLabel.text = Questions[indexPath.row]
             switch indexPath.row {
             case 0:
-                cell1.textview.text = ReviewCasefileManager.sharedInstance.Q1WhyneedSpecialist
+                if ReviewCasefileManager.sharedInstance.Q1WhyneedSpecialist != "" {
+                    cell1.textview.text = ReviewCasefileManager.sharedInstance.Q1WhyneedSpecialist
+                    ReviewCasefileManager.sharedInstance.Q1WhyneedSpecialist = cell1.textview.text
+                }
+                else {
+                    ReviewCasefileManager.sharedInstance.Q1WhyneedSpecialist = cell1.textview.text
+                }
+                
+                
             case 1:
-                cell1.textview.text = ReviewCasefileManager.sharedInstance.Q2HowProblemStart
+                if ReviewCasefileManager.sharedInstance.Q2HowProblemStart != "" {
+                    cell1.textview.text = ReviewCasefileManager.sharedInstance.Q2HowProblemStart
+                    ReviewCasefileManager.sharedInstance.Q2HowProblemStart = cell1.textview.text
+                }
+                else {
+                    ReviewCasefileManager.sharedInstance.Q2HowProblemStart = cell1.textview.text
+                }
+                
+                
             case 2:
-                cell1.textview.text = ReviewCasefileManager.sharedInstance.Q3Symptoms
+                if ReviewCasefileManager.sharedInstance.Q3Symptoms != "" {
+                    cell1.textview.text = ReviewCasefileManager.sharedInstance.Q3Symptoms
+                    ReviewCasefileManager.sharedInstance.Q3Symptoms = cell1.textview.text
+                }
+                else {
+                    ReviewCasefileManager.sharedInstance.Q3Symptoms = cell1.textview.text
+                }
+                
+                
             default:
                 break
             }
@@ -265,36 +289,7 @@ class Step1ReasonsTVC: UIViewController, UITableViewDataSource, UITableViewDeleg
         
     }
     
-    func savedValuesinTextFields(CellIndex : IndexPath){
-        let indexpath1 = IndexPath(row: 0, section: 3)
-        let indexpath2 = IndexPath(row: 1, section: 3)
-        let indexpath3 = IndexPath(row: 2, section: 3)
-        if CellIndex == indexpath1 {
-            let cell1 = self.tableView.cellForRow(at: indexpath1) as? TextViewTableViewCell
-            ReviewCasefileManager.sharedInstance.Q1WhyneedSpecialist = (cell1?.textview.text)!
-        }
-        if CellIndex == indexpath2 {
-            let cell2 = tableView.cellForRow(at: indexpath2) as? TextViewTableViewCell
-            ReviewCasefileManager.sharedInstance.Q2HowProblemStart = (cell2?.textview.text)!
-        }
-        if CellIndex == indexpath3 {
-            let cell3 = tableView.cellForRow(at: indexpath3) as! TextViewTableViewCell
-            ReviewCasefileManager.sharedInstance.Q3Symptoms = cell3.textview.text
-        }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    }
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -302,10 +297,22 @@ class Step1ReasonsTVC: UIViewController, UITableViewDataSource, UITableViewDeleg
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+         let cell1 = tableView.cellForRow(at: IndexPath.init(row: 0, section: 3)) as! TextViewTableViewCell
+            ReviewCasefileManager.sharedInstance.Q1WhyneedSpecialist = cell1.textview.text
+         let cell2 = tableView.cellForRow(at: IndexPath.init(row: 1, section: 3)) as! TextViewTableViewCell
+            ReviewCasefileManager.sharedInstance.Q2HowProblemStart = cell2.textview.text
+         let cell3 = tableView.cellForRow(at: IndexPath.init(row: 2, section: 3)) as! TextViewTableViewCell
+            ReviewCasefileManager.sharedInstance.Q3Symptoms = cell3.textview.text
+        
+        
+        
         if segue.identifier == "step2symptoms" {
             if let nextViewController = segue.destination as? Step2TreatmentHistoryViewController{
                 nextViewController.SelectedSpecialities2 = self.SelectedSpecialities
                 nextViewController.SelectedLocationText2 = self.SelectedLocationText
+               
+                
+                
             }
             
         }

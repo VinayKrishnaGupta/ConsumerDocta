@@ -49,6 +49,8 @@
     _maleButton.backgroundColor = [UIColor colorWithRed:255.0f/255.0f green:206.0f/255.0f blue:74.0f/255.0f alpha:1];
     [_maleButton setTitleColor:[UIColor colorWithRed:255.0f/255.0f green:98.0f/255.0f blue:2.0f/255.0f alpha:1] forState:UIControlStateNormal];
     
+   
+   
 
   //  [[APIHandler sharedInstance] GetDatafromAPI:@"POST" :loginCredentials];
  //   NSLog(@"Response is %@",  [[APIHandler sharedInstance] GetDatafromAPI:@"POST" :loginCredentials]);
