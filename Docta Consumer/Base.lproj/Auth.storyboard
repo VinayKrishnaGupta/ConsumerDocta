@@ -464,7 +464,7 @@
             <objects>
                 <navigationController storyboardIdentifier="AuthVCNAv" automaticallyAdjustsScrollViewInsets="NO" id="T8F-0h-OL6" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="jde-qi-VVR">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="jde-qi-VVR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.05070330948" green="0.430316329" blue="0.90040510890000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

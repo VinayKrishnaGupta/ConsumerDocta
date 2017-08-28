@@ -30,6 +30,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *patientNametextField;
 @property (weak, nonatomic) IBOutlet UITextField *patientAgeTextfield;
 @property (weak, nonatomic) IBOutlet UITextField *NationalityTextfield;
+@property (weak,nonatomic) NSString *SelectedUserType;
 
 
 
@@ -53,6 +54,7 @@
    //Default Colours for Buttons
     _patientButton.backgroundColor = [UIColor colorWithRed:255.0f/255.0f green:206.0f/255.0f blue:74.0f/255.0f alpha:1];
     [_patientButton setTitleColor:[UIColor colorWithRed:255.0f/255.0f green:98.0f/255.0f blue:2.0f/255.0f alpha:1] forState:UIControlStateNormal];
+    _SelectedUserType = _patientButton.titleLabel.text;
     
     _maleButton.backgroundColor = [UIColor colorWithRed:255.0f/255.0f green:206.0f/255.0f blue:74.0f/255.0f alpha:1];
     [_maleButton setTitleColor:[UIColor colorWithRed:255.0f/255.0f green:98.0f/255.0f blue:2.0f/255.0f alpha:1] forState:UIControlStateNormal];
@@ -79,6 +81,8 @@
     
     [self.view addGestureRecognizer:tap];
     self.navigationItem.hidesBackButton = YES;
+    _firstName.delegate = self;
+    _patientNametextField.delegate = self;
     
     
     // Do any additional setup after loading the view from its nib.
@@ -164,6 +168,7 @@
 
 -(void)changeButtonStates {
     if (_refererbutton.touchInside) {
+        _SelectedUserType = _refererbutton.titleLabel.text;
         _refererbutton.backgroundColor = [UIColor colorWithRed:255.0f/255.0f green:206.0f/255.0f blue:74.0f/255.0f alpha:1];
         [_refererbutton setTitleColor:[UIColor colorWithRed:255.0f/255.0f green:98.0f/255.0f blue:2.0f/255.0f alpha:1] forState:UIControlStateNormal];
         _carerButton.backgroundColor = [UIColor groupTableViewBackgroundColor];
@@ -173,6 +178,7 @@
         
     }
     else if (_carerButton.touchInside) {
+        _SelectedUserType = _carerButton.titleLabel.text;
         _carerButton.backgroundColor = [UIColor colorWithRed:255.0f/255.0f green:206.0f/255.0f blue:74.0f/255.0f alpha:1];
         [_carerButton setTitleColor:[UIColor colorWithRed:255.0f/255.0f green:98.0f/255.0f blue:2.0f/255.0f alpha:1] forState:UIControlStateNormal];
         _refererbutton.backgroundColor = [UIColor groupTableViewBackgroundColor];
@@ -182,6 +188,8 @@
         
     }
     else if (_patientButton.touchInside) {
+        
+        _SelectedUserType = _patientButton.titleLabel.text;
         _patientButton.backgroundColor = [UIColor colorWithRed:255.0f/255.0f green:206.0f/255.0f blue:74.0f/255.0f alpha:1];
         [_patientButton setTitleColor:[UIColor colorWithRed:255.0f/255.0f green:98.0f/255.0f blue:2.0f/255.0f alpha:1] forState:UIControlStateNormal];
         _carerButton.backgroundColor = [UIColor groupTableViewBackgroundColor];
@@ -224,6 +232,7 @@
         [_femaleButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
         _maleButton.backgroundColor = [UIColor groupTableViewBackgroundColor];
         [_maleButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+        
     }
     
     
@@ -231,6 +240,17 @@
     
     
     
+}
+
+-(BOOL)textFieldShouldEndEditing:(UITextField *)textField {
+    if (textField == _firstName) {
+        if ([_SelectedUserType isEqualToString:@"PATIENT"]) {
+            _patientNametextField.text = _firstName.text;
+        }
+        
+        
+    }
+    return YES;
 }
 
 

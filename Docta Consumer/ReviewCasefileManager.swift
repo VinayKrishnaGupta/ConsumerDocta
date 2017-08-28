@@ -35,12 +35,6 @@ class ReviewCasefileManager: NSObject {
     var ImageArrayReportsAndReferral = Array<UIImage>()
     
     
-    
-    
-    
-    
-    
-    
     static let sharedInstance:ReviewCasefileManager = {
         let instance = ReviewCasefileManager ()
         return instance
