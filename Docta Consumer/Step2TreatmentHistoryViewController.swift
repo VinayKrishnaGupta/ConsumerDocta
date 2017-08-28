@@ -204,6 +204,7 @@ class Step2TreatmentHistoryViewController: UIViewController, UITableViewDataSour
     func backButton(){
         self.navigationController?.popViewController(animated: true)
         
+        
     }
     func InfoButton(){
         let introVC = Step2IntroViewController(nibName: "Step1IntroductionViewController", bundle: nil)

@@ -105,7 +105,7 @@
                                         <rect key="frame" x="20" y="152" width="343" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LYS-q7-VRn">
                                         <rect key="frame" x="254" y="99" width="109" height="42"/>
@@ -134,13 +134,13 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ctw-ms-VRq">
                                         <rect key="frame" x="20" y="256" width="343" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f7a-DT-MHv">
                                         <rect key="frame" x="20" y="308" width="343" height="29"/>
@@ -149,7 +149,7 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9kI-C9-CO4">
                                         <rect key="frame" x="20" y="356" width="343" height="29"/>
@@ -158,7 +158,7 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="phonePad"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dpb-e9-XWx">
                                         <rect key="frame" x="130" y="499" width="124" height="43"/>
@@ -184,7 +184,7 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pxZ-OO-e9m">
                                         <rect key="frame" x="206" y="428" width="157" height="27"/>
@@ -243,7 +243,7 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LHn-WH-FgB">
                                         <rect key="frame" x="194" y="768" width="33" height="33"/>
@@ -260,7 +260,7 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -355,16 +355,19 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="900"/>
                     <connections>
-                        <outlet property="LastName" destination="a94-qL-cg6" id="XPv-Wx-CDd"/>
+                        <outlet property="NationalityTextfield" destination="Wc1-IZ-Vgi" id="1e3-dx-9Us"/>
                         <outlet property="SignINButton" destination="pxZ-OO-e9m" id="Cwg-IN-Xsi"/>
                         <outlet property="carerButton" destination="M59-82-tvF" id="hed-4X-kCX"/>
-                        <outlet property="emailtextfield" destination="Ctw-ms-VRq" id="gFp-Ey-USh"/>
+                        <outlet property="confirmPasswordtextfield" destination="f7a-DT-MHv" id="3RO-Or-j7M"/>
+                        <outlet property="emailtextfield" destination="a94-qL-cg6" id="zcW-gJ-cJv"/>
                         <outlet property="femaleButton" destination="dpb-e9-XWx" id="4SQ-5h-pYr"/>
                         <outlet property="firstName" destination="aHy-XA-pvz" id="Clt-QG-5xX"/>
                         <outlet property="maleButton" destination="KGo-Sf-8jh" id="7qs-75-Cw3"/>
                         <outlet property="otherButton" destination="Zos-qQ-ZWB" id="yR1-fs-DpO"/>
-                        <outlet property="passwordTextField" destination="f7a-DT-MHv" id="iIM-t5-9Uw"/>
+                        <outlet property="passwordTextField" destination="Ctw-ms-VRq" id="0mq-Fo-DO3"/>
+                        <outlet property="patientAgeTextfield" destination="wAH-Ww-T60" id="Twh-7b-SAy"/>
                         <outlet property="patientButton" destination="LYS-q7-VRn" id="uRu-wg-vm2"/>
+                        <outlet property="patientNametextField" destination="aPh-xo-EoM" id="Ixn-2q-FAf"/>
                         <outlet property="proceedButton" destination="CAA-Hb-bgw" id="bGx-PZ-fzz"/>
                         <outlet property="refererbutton" destination="439-RD-srq" id="Dih-p0-llP"/>
                         <segue destination="Gg9-Et-SGY" kind="show" identifier="signInVC" id="6JD-QX-O0i"/>

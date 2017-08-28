@@ -13,9 +13,11 @@
 @property (weak, nonatomic) IBOutlet UIButton *proceedButton;
 @property (weak, nonatomic) IBOutlet UIButton *SignINButton;
 @property (weak, nonatomic) IBOutlet UITextField *firstName;
-@property (weak, nonatomic) IBOutlet UITextField *LastName;
+
 @property (weak, nonatomic) IBOutlet UITextField *emailtextfield;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
+@property (weak, nonatomic) IBOutlet UITextField *confirmPasswordtextfield;
+
 @property (weak, nonatomic) IBOutlet UIButton *refererbutton;
 @property (weak, nonatomic) IBOutlet UIButton *carerButton;
 @property (weak, nonatomic) IBOutlet UIButton *patientButton;
@@ -24,6 +26,12 @@
 @property (weak, nonatomic) IBOutlet UIButton *femaleButton;
 @property (weak, nonatomic) IBOutlet UIButton *otherButton;
 - (IBAction)backButton:(UIButton *)sender;
+
+@property (weak, nonatomic) IBOutlet UITextField *patientNametextField;
+@property (weak, nonatomic) IBOutlet UITextField *patientAgeTextfield;
+@property (weak, nonatomic) IBOutlet UITextField *NationalityTextfield;
+
+
 
 
 
@@ -238,7 +246,7 @@
 */
 
 - (IBAction)backButton:(UIButton *)sender {
-    [self.navigationController popViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
     
 }
 @end
