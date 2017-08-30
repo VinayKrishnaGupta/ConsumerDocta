@@ -16,10 +16,22 @@ class ReviewCasefileManager: NSObject {
     var SelectedSpecialist = NSDictionary()
     
 //Patient profile : Step 4
-    var PatientName = String()
-    var PatientAge = Int()
-    var PatientGender = String()
-    var PatientNationality = String()
+    var S41TypeofUser = String()
+    var S42FirstName = String()
+    var S43LastName = String()
+    var S44Email = String()
+    var S45Password = String()
+    var S46ConfirmPassword = String()
+    var S47PhoneNumber = String()
+    
+    
+    
+    var S48PatientGender = String()
+    var S49PatientName = String()
+    var S50PatientAge = Int()
+    var S51PatientNationality = String()
+    
+    
     
 //Step2: Symptoms : Step 2
     var HowLong = String()

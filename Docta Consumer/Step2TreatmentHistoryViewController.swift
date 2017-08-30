@@ -141,11 +141,12 @@ class Step2TreatmentHistoryViewController: UIViewController, UITableViewDataSour
             
             switch indexPath.row {
             case 0:
-                if ReviewCasefileManager.sharedInstance.Q4TreatmentHistory != "" {
-                    cell1.textview.text = ReviewCasefileManager.sharedInstance.Q4TreatmentHistory
+                if ReviewCasefileManager.sharedInstance.Q4TreatmentHistory.isEmpty {
+                    
                     ReviewCasefileManager.sharedInstance.Q4TreatmentHistory = cell1.textview.text
                 }
                 else {
+                    cell1.textview.text = ReviewCasefileManager.sharedInstance.Q4TreatmentHistory
                     ReviewCasefileManager.sharedInstance.Q4TreatmentHistory = cell1.textview.text
                 }
                 
@@ -191,10 +192,10 @@ class Step2TreatmentHistoryViewController: UIViewController, UITableViewDataSour
         ReviewCasefileManager.sharedInstance.Q6AddtionalInformation = cell3.textview.text
         
         
-        
-        let storyboard1 = UIStoryboard(name: "ReviewCase", bundle: nil)
-        let controller1 = storyboard1.instantiateViewController(withIdentifier: "ReviewCaseVC")
-        self.navigationController?.pushViewController(controller1, animated: false)
+//        
+//        let storyboard1 = UIStoryboard(name: "ReviewCase", bundle: nil)
+//        let controller1 = storyboard1.instantiateViewController(withIdentifier: "ReviewCaseVC")
+//        self.navigationController?.pushViewController(controller1, animated: false)
         
         let storyboard = UIStoryboard(name: "Auth", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "AuthVCNAv")
