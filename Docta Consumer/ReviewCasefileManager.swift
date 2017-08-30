@@ -14,6 +14,7 @@ class ReviewCasefileManager: NSObject {
     var CountryName = String()
     var SpecialistyName = String()
     var SelectedSpecialist = NSDictionary()
+    var SpecialityIDSelected = String()
     
 //Patient profile : Step 4
     var S41TypeofUser = String()

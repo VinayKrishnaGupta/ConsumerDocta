@@ -195,7 +195,18 @@ class Step1ReasonsTVC: UIViewController, UITableViewDataSource, UITableViewDeleg
     
     func nextButton(){
         print("Button tapped")
+        let cell1 = tableView.cellForRow(at: IndexPath.init(row: 0, section: 3)) as! TextViewTableViewCell
+        ReviewCasefileManager.sharedInstance.Q1WhyneedSpecialist = cell1.textview.text
+        let cell2 = tableView.cellForRow(at: IndexPath.init(row: 1, section: 3)) as! TextViewTableViewCell
+        ReviewCasefileManager.sharedInstance.Q2HowProblemStart = cell2.textview.text
+        let cell3 = tableView.cellForRow(at: IndexPath.init(row: 2, section: 3)) as! TextViewTableViewCell
+        ReviewCasefileManager.sharedInstance.Q3Symptoms = cell3.textview.text
+        
+        let ImageCell = tableView.cellForRow(at: IndexPath.init(row: 0, section: 4)) as! ImageCollectionTableViewCell
+            ReviewCasefileManager.sharedInstance.ImageArrayBodyparts = ImageCell.imagearray
        
+        
+        
         
         self.performSegue(withIdentifier: "step2symptoms", sender: nil)
         
@@ -297,12 +308,7 @@ class Step1ReasonsTVC: UIViewController, UITableViewDataSource, UITableViewDeleg
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-         let cell1 = tableView.cellForRow(at: IndexPath.init(row: 0, section: 3)) as! TextViewTableViewCell
-            ReviewCasefileManager.sharedInstance.Q1WhyneedSpecialist = cell1.textview.text
-         let cell2 = tableView.cellForRow(at: IndexPath.init(row: 1, section: 3)) as! TextViewTableViewCell
-            ReviewCasefileManager.sharedInstance.Q2HowProblemStart = cell2.textview.text
-         let cell3 = tableView.cellForRow(at: IndexPath.init(row: 2, section: 3)) as! TextViewTableViewCell
-            ReviewCasefileManager.sharedInstance.Q3Symptoms = cell3.textview.text
+       
         
         
         

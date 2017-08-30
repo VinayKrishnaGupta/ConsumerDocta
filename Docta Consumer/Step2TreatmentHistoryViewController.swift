@@ -191,6 +191,9 @@ class Step2TreatmentHistoryViewController: UIViewController, UITableViewDataSour
         let cell3 = tableView.cellForRow(at: IndexPath.init(row: 2, section: 2)) as! TextViewTableViewCell
         ReviewCasefileManager.sharedInstance.Q6AddtionalInformation = cell3.textview.text
         
+        let ImageCell = tableView.cellForRow(at: IndexPath.init(row: 0, section: 3)) as! ImageCollectionTableViewCell
+        ReviewCasefileManager.sharedInstance.ImageArrayReportsAndReferral = ImageCell.imagearray
+        
         
 //        
 //        let storyboard1 = UIStoryboard(name: "ReviewCase", bundle: nil)

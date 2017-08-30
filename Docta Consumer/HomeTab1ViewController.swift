@@ -392,7 +392,8 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate, UICollectio
     func SearchandUpdateSpecialists() {
         let APIsession : APIHandler = APIHandler()
         
-        var parameters =
+        ReviewCasefileManager.sharedInstance.SpecialityIDSelected = SelectedSpecialtyDict.value(forKey: "_id") as! String
+        let parameters =
         [ "country": selectedLocation, "speciality": SelectedSpecialtyDict.value(forKey: "_id")]
         
         APIsession.getDatafromAPI("POST", "specialists", parameters) { (response, error) in

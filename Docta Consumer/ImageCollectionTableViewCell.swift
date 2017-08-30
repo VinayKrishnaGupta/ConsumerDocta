@@ -19,7 +19,7 @@ protocol OpenCameraProtocol : NSObjectProtocol {
 
 class ImageCollectionTableViewCell: UITableViewCell, UICollectionViewDataSource,ImagePickerDelegate , UICollectionViewDelegate {
     let imagepicker = ImagePickerController()
-    var imagearray  = [UIImage]()
+    public var imagearray  = [UIImage]()
     
     weak var delegate: OpenCameraProtocol?
     
