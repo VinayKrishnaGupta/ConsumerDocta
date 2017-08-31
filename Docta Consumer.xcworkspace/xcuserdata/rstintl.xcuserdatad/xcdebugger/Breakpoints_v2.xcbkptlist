@@ -438,28 +438,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Docta Consumer/Step2TreatmentHistoryViewController.swift"
-            timestampString = "525698215.714469"
+            timestampString = "525848515.257245"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "287"
-            endingLineNumber = "287"
+            startingLineNumber = "290"
+            endingLineNumber = "290"
             landmarkName = "didReceiveMemoryWarning()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Docta Consumer/ReviewCaseFileViewController.swift"
-            timestampString = "525787151.654642"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "230"
-            endingLineNumber = "230"
-            landmarkName = "createCaseFile()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

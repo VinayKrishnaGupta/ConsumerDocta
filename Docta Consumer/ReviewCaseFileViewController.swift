@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class ReviewCaseFileViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var TableView: UITableView!
@@ -188,6 +189,7 @@ class ReviewCaseFileViewController: UIViewController, UITableViewDataSource, UIT
     }
     
     func nextButton(){
+        SVProgressHUD.show(withStatus: "Submitting your details, Please wait")
         self.createCaseFile()
         
     }
@@ -201,7 +203,37 @@ class ReviewCaseFileViewController: UIViewController, UITableViewDataSource, UIT
         
     }
     
+    
+    
+    
     func createCaseFile() {
+        
+        var BodyPartsImages = Array<Any>()
+        var ReportsandReferalImages = Array<Any>()
+        for var i in (0..<ReviewCasefileManager.sharedInstance.ImageArrayBodyparts.count) {
+            let image : UIImage = ReviewCasefileManager.sharedInstance.ImageArrayBodyparts[i]
+           
+            let imageData : NSData = UIImagePNGRepresentation(image)! as NSData
+            let strBase64 = imageData.base64EncodedString(options: .lineLength64Characters)
+            BodyPartsImages.append(strBase64)
+         
+        }
+        for var j in (0..<ReviewCasefileManager.sharedInstance.ImageArrayReportsAndReferral.count) {
+            let image1 : UIImage = ReviewCasefileManager.sharedInstance.ImageArrayReportsAndReferral[j]
+            
+            let imageData1 : NSData = UIImagePNGRepresentation(image1)! as NSData
+            let str1Base64 = imageData1.base64EncodedString(options: .lineLength64Characters)
+            ReportsandReferalImages.append(str1Base64)
+            
+        }
+        
+        
+        
+        
+     
+        
+        
+        
         let SharedPreferences = ReviewCasefileManager.sharedInstance
         let parameter = [
           "user_type": SharedPreferences.S41TypeofUser ,
@@ -223,10 +255,33 @@ class ReviewCaseFileViewController: UIViewController, UITableViewDataSource, UIT
           "patient_name": SharedPreferences.S49PatientName,
           "patient_gender": SharedPreferences.S48PatientGender,
           "additional_information": SharedPreferences.Q6AddtionalInformation,
-          "body_files": SharedPreferences.ImageArrayBodyparts,
-          "report_files": SharedPreferences.ImageArrayReportsAndReferral,
+          "body_files": BodyPartsImages,
+          "report_files": ReportsandReferalImages,
           "speciality": SharedPreferences.SpecialityIDSelected]
     
+        
+        let SendingBody = [
+            "success" : "true",
+            "case_data": parameter
+        ] as [String : Any]
+        
+        let APIsession : APIHandler = APIHandler()
+        APIsession.getDatafromAPI("POST", "casefile/create", SendingBody) { (response, error) in
+            if (response != nil) {
+                print(response)
+                SVProgressHUD.dismiss()
+                SVProgressHUD.show(withStatus: "Your Case file has been created")
+                SVProgressHUD.dismiss(withDelay: 2)
+            }
+            if (error != nil) {
+                print("Error is \(String(describing: error))")
+                SVProgressHUD.showError(withStatus: "Error in creating casefile")
+                SVProgressHUD.dismiss(withDelay: 2)
+                
+            }
+        }
+        
+
         
         
         
