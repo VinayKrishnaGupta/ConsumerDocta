@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *firstName;
 @property (weak, nonatomic) IBOutlet UITextField *lastNametextfield;
 @property (weak, nonatomic) NSString *TypeofUser;
+- (IBAction)IntroViewButton:(UIButton *)sender;
 
 @property (weak, nonatomic) IBOutlet UITextField *emailtextfield;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
@@ -297,5 +298,7 @@
 - (IBAction)backButton:(UIButton *)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
     
+}
+- (IBAction)IntroViewButton:(UIButton *)sender {
 }
 @end

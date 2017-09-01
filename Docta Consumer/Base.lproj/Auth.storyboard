@@ -202,7 +202,11 @@
                                             <constraint firstAttribute="width" constant="33" id="1vh-Ol-PWz"/>
                                             <constraint firstAttribute="height" constant="33" id="QLj-8S-3Wj"/>
                                         </constraints>
+                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" backgroundImage="questioncircular"/>
+                                        <connections>
+                                            <action selector="IntroViewButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V5q-tF-POr"/>
+                                        </connections>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Nationality" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wc1-IZ-Vgi">
                                         <rect key="frame" x="131" y="655" width="228" height="30"/>
