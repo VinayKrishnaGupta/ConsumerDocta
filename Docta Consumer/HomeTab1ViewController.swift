@@ -12,10 +12,8 @@ import SDWebImage
 import SVProgressHUD
 
 
-class HomeTab1ViewController: UIViewController, UITextFieldDelegate, UICollectionViewDataSource, UICollectionViewDelegate {
+class HomeTab1ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var clinicNametextfield: UITextField!
-    @IBOutlet weak var collectionViewSpecialists: UICollectionView!
-
     @IBOutlet weak var locationTextField: UITextField!
     let specialistDropdown = DropDown()
     var Specilistlist = Array<NSDictionary>()
@@ -43,8 +41,7 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate, UICollectio
         
         clinicNametextfield.delegate = self
         locationTextField.delegate = self
-        collectionViewSpecialists.dataSource = self
-        collectionViewSpecialists.delegate = self
+      
         
         clinicNametextfield.rightViewMode = .always
         let rightView = UIView.init(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
@@ -131,12 +128,14 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate, UICollectio
         
         specialistDropdown.dataSource = SpcialistiesNames
         specialistDropdown.direction = .any
-        specialistDropdown.textColor = UIColor.white
-        specialistDropdown.backgroundColor = UIColor.init(colorLiteralRed: 0.0, green: 166/255, blue: 255/255, alpha: 1)
+        specialistDropdown.textColor = UIColor.darkGray
+       // specialistDropdown.backgroundColor = UIColor.init(colorLiteralRed: 0.0, green: 166/255, blue: 255/255, alpha: 1)
+        specialistDropdown.backgroundColor = UIColor.groupTableViewBackground
         specialistDropdown.selectionBackgroundColor = UIColor.lightGray
         specialistDropdown.cellHeight = 35
         specialistDropdown.bottomOffset = CGPoint(x: 0, y:30)
         locationdropdown.bottomOffset = CGPoint(x: 0, y:30)
+        clinicNametextfield.leftView = UIView()
         
         
         specialistDropdown.selectionAction = {
@@ -162,8 +161,9 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate, UICollectio
         locationdropdown.anchorView = locationTextField
         locationdropdown.dataSource = LocationsList
         locationdropdown.direction = .bottom
-        locationdropdown.textColor = UIColor.white
-        locationdropdown.backgroundColor = UIColor.init(colorLiteralRed: 0.0, green: 166/255, blue: 255/255, alpha: 1)
+        locationdropdown.textColor = UIColor.darkGray
+       // locationdropdown.backgroundColor = UIColor.init(colorLiteralRed: 0.0, green: 166/255, blue: 255/255, alpha: 1)
+        locationdropdown.backgroundColor = UIColor.groupTableViewBackground
         locationdropdown.selectionBackgroundColor = UIColor.lightGray
         locationdropdown.cellHeight = 35
         
@@ -241,153 +241,156 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate, UICollectio
     
     @IBAction func ProceedButton(_ sender: UIButton) {
         
-        let storyboard = UIStoryboard(name: "CreateNewCase", bundle: nil)
-        let controller :Step1ReasonsTVC  = storyboard.instantiateViewController(withIdentifier: "Step1VC") as! Step1ReasonsTVC
-        controller.SelectedLocationText = selectedLocation
-        controller.SelectedSpecialities = SelectedSpecialities
-      //  self.present(controller, animated: true, completion: nil)
-      //  self.navigationController?.present(controller, animated: true, completion: nil)
-        self.navigationController?.pushViewController(controller, animated: true)
+        self.performSegue(withIdentifier: "ShowSpecialist", sender: self)
         
         
+        
+        
+//        let storyboard = UIStoryboard(name: "CreateNewCase", bundle: nil)
+//        let controller :Step1ReasonsTVC  = storyboard.instantiateViewController(withIdentifier: "Step1VC") as! Step1ReasonsTVC
+//        controller.SelectedLocationText = selectedLocation
+//        controller.SelectedSpecialities = SelectedSpecialities
+//        self.navigationController?.pushViewController(controller, animated: true)
+//        
+//        
     }
     
     
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return SpecialistListFromServer.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionViewSpecialists.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! ImageLabelCollectionViewCell
-        
-        
-        let dict : NSDictionary = SpecialistListFromServer[indexPath.row]
-        if(dict.allKeys.count > 0) {
-            let APIimage:String = dict.value(forKey: "image") as! String
-            let imagestring : String = "https://account.docta.com" + APIimage
-            cell.cellImageView.sd_setImage(with: URL(string: imagestring), placeholderImage: UIImage(named: "doctordummyprofile"))
-            
-            let firstname : String = dict.value(forKeyPath: "name.first") as! String
-            let lastname : String = dict.value(forKeyPath: "name.last") as! String
-            
-            let doctorName : String = "Dr." + firstname + lastname
-            cell.titleLabel.text = doctorName
-            let cityName : String = dict.value(forKey: "city") as! String
-            cell.detailLabelCity.text = cityName
-            
-            
-            cell.Button.addTarget(self, action: #selector(CellButtonsClicked(_:)), for: UIControlEvents.touchUpInside)
-            if indexPath == cellselectedindex {
-                cell.layer.borderWidth = 2.0
-                cell.layer.borderColor = UIColor.black.cgColor
-                cell.backgroundColor = UIColor.groupTableViewBackground
-                
-            }
-            else {
-                cell.layer.borderWidth = 0.5
-                cell.layer.borderColor = UIColor.lightGray.cgColor
-                cell.backgroundColor = UIColor.white
-                
-            }
-            
-            
-            
-        }
-        else {
-            
-            
-        }
-        
-        
-        
-        
-        
-        
-        
-        
-        return cell
-    }
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("did select row \(indexPath.row)")
-        
-        
-        if (SpecialistListFromServer.count != 0) {
-            self.SelectedDoctor = self.SpecialistListFromServer[indexPath.row]
-            self.performSegue(withIdentifier: "doctorsProfile", sender: self)
-            
-            
-        }
-        else {
-            print("Select All fields first")
-        }
-        
-        
-        
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-       
-        
-        
-    }
-    
-    func CellButtonsClicked(_ sender:UIButton) {
-        
-        let buttonPosition:CGPoint = sender.convert(.zero, to: self.collectionViewSpecialists)
-        let indexPath:IndexPath = self.collectionViewSpecialists.indexPathForItem(at: buttonPosition)!
-        let cell = collectionViewSpecialists.cellForItem(at: indexPath)
-        ReviewCasefileManager.sharedInstance.SelectedSpecialist = SpecialistListFromServer[indexPath.row]
-       
-        
-        if indexPath == cellselectedindex {
-            
-            if cellselection {
-                cell?.layer.borderWidth = 0.5
-                cell?.layer.borderColor = UIColor.lightGray.cgColor
-                cell?.backgroundColor = UIColor.white
-                self.cellselection = false
-            }
-            else {
-                cell?.layer.borderWidth = 2.0
-                cell?.layer.borderColor = UIColor.black.cgColor
-                cell?.backgroundColor = UIColor.groupTableViewBackground
-                self.cellselection = true
-            }
-            
-//            self.cellselectedindex = IndexPath()
-//            self.cellselection = false
-            
-        }
-        else {
-            
-            
-            if (cellselection) {
-                let cell2 = self.collectionViewSpecialists.cellForItem(at: cellselectedindex)
-                cell2?.layer.borderWidth = 0.5
-                cell2?.layer.borderColor = UIColor.lightGray.cgColor
-                cell2?.backgroundColor = UIColor.white
-            }
-            
-            
-            cell?.layer.borderWidth = 2.0
-            cell?.layer.borderColor = UIColor.black.cgColor
-            cell?.backgroundColor = UIColor.groupTableViewBackground
-            self.cellselectedindex =  self.collectionViewSpecialists.indexPath(for: cell!)!
-            self.cellselection = true
-            self.collectionViewSpecialists.reloadData()
-            
-        }
-        
-        
-        
-        print("Button clicked \(indexPath.row)")
-        
-    }
-    
+//    func numberOfSections(in collectionView: UICollectionView) -> Int {
+//        return 1
+//    }
+//    
+//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        return SpecialistListFromServer.count
+//    }
+//    
+//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        let cell = collectionViewSpecialists.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! ImageLabelCollectionViewCell
+//        
+//        
+//        let dict : NSDictionary = SpecialistListFromServer[indexPath.row]
+//        if(dict.allKeys.count > 0) {
+//            let APIimage:String = dict.value(forKey: "image") as! String
+//            let imagestring : String = "https://account.docta.com" + APIimage
+//            cell.cellImageView.sd_setImage(with: URL(string: imagestring), placeholderImage: UIImage(named: "doctordummyprofile"))
+//            
+//            let firstname : String = dict.value(forKeyPath: "name.first") as! String
+//            let lastname : String = dict.value(forKeyPath: "name.last") as! String
+//            
+//            let doctorName : String = "Dr." + firstname + lastname
+//            cell.titleLabel.text = doctorName
+//            let cityName : String = dict.value(forKey: "city") as! String
+//            cell.detailLabelCity.text = cityName
+//            
+//            
+//            cell.Button.addTarget(self, action: #selector(CellButtonsClicked(_:)), for: UIControlEvents.touchUpInside)
+//            if indexPath == cellselectedindex {
+//                cell.layer.borderWidth = 2.0
+//                cell.layer.borderColor = UIColor.black.cgColor
+//                cell.backgroundColor = UIColor.groupTableViewBackground
+//                
+//            }
+//            else {
+//                cell.layer.borderWidth = 0.5
+//                cell.layer.borderColor = UIColor.lightGray.cgColor
+//                cell.backgroundColor = UIColor.white
+//                
+//            }
+//            
+//            
+//            
+//        }
+//        else {
+//            
+//            
+//        }
+//        
+//        
+//        
+//        
+//        
+//        
+//        
+//        
+//        return cell
+//    }
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        print("did select row \(indexPath.row)")
+//        
+//        
+//        if (SpecialistListFromServer.count != 0) {
+//            self.SelectedDoctor = self.SpecialistListFromServer[indexPath.row]
+//            self.performSegue(withIdentifier: "doctorsProfile", sender: self)
+//            
+//            
+//        }
+//        else {
+//            print("Select All fields first")
+//        }
+//        
+//        
+//        
+//    }
+//    
+//    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+//       
+//        
+//        
+//    }
+//    
+//    func CellButtonsClicked(_ sender:UIButton) {
+//        
+//        let buttonPosition:CGPoint = sender.convert(.zero, to: self.collectionViewSpecialists)
+//        let indexPath:IndexPath = self.collectionViewSpecialists.indexPathForItem(at: buttonPosition)!
+//        let cell = collectionViewSpecialists.cellForItem(at: indexPath)
+//        ReviewCasefileManager.sharedInstance.SelectedSpecialist = SpecialistListFromServer[indexPath.row]
+//       
+//        
+//        if indexPath == cellselectedindex {
+//            
+//            if cellselection {
+//                cell?.layer.borderWidth = 0.5
+//                cell?.layer.borderColor = UIColor.lightGray.cgColor
+//                cell?.backgroundColor = UIColor.white
+//                self.cellselection = false
+//            }
+//            else {
+//                cell?.layer.borderWidth = 2.0
+//                cell?.layer.borderColor = UIColor.black.cgColor
+//                cell?.backgroundColor = UIColor.groupTableViewBackground
+//                self.cellselection = true
+//            }
+//            
+////            self.cellselectedindex = IndexPath()
+////            self.cellselection = false
+//            
+//        }
+//        else {
+//            
+//            
+//            if (cellselection) {
+//                let cell2 = self.collectionViewSpecialists.cellForItem(at: cellselectedindex)
+//                cell2?.layer.borderWidth = 0.5
+//                cell2?.layer.borderColor = UIColor.lightGray.cgColor
+//                cell2?.backgroundColor = UIColor.white
+//            }
+//            
+//            
+//            cell?.layer.borderWidth = 2.0
+//            cell?.layer.borderColor = UIColor.black.cgColor
+//            cell?.backgroundColor = UIColor.groupTableViewBackground
+//            self.cellselectedindex =  self.collectionViewSpecialists.indexPath(for: cell!)!
+//            self.cellselection = true
+//            self.collectionViewSpecialists.reloadData()
+//            
+//        }
+//        
+//        
+//        
+//        print("Button clicked \(indexPath.row)")
+//        
+//    }
+//    
     
     func SearchandUpdateSpecialists() {
         let APIsession : APIHandler = APIHandler()
@@ -406,14 +409,14 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate, UICollectio
                 
                 self.SpecialistListFromServer = self.responseObject.value(forKey: "specialists") as! Array<NSDictionary>
                 if self.SpecialistListFromServer.count > 0 {
-                    self.collectionViewSpecialists.reloadData()
+                  //  self.collectionViewSpecialists.reloadData()
                 }
                 else {
                     
                     
                     SVProgressHUD.showError(withStatus: "There are no specialists matched to you.")
                     SVProgressHUD.dismiss(withDelay: 2)
-                    self.collectionViewSpecialists.reloadData()
+                  //  self.collectionViewSpecialists.reloadData()
                 }
                 
             }
@@ -431,9 +434,12 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate, UICollectio
         
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "doctorsProfile" {
-            if let nextViewController = segue.destination as? DoctorsInfoViewController{
-                nextViewController.SpecialistID = SelectedDoctor.value(forKey: "_id") as! String
+        if segue.identifier == "ShowSpecialist" {
+            if let nextViewController = segue.destination as? UITabBarController{
+                let destinationVc = nextViewController.viewControllers?[0] as? SpecialistsListViewController
+                    destinationVc?.DoctorslistFiltered = self.SpecialistListFromServer
+                  //  destinationVc?.SpecialistID = SelectedDoctor.value(forKey: "_id") as! String
+                
             }
             
         }

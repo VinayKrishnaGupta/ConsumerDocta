@@ -20,7 +20,17 @@ class DoctorsIntroTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+        let view = UIView()
+        view.backgroundColor = UIColor.red
+        self.selectedBackgroundView = view
+        if selected {
+            self.contentView.backgroundColor = UIColor(red:0.08, green:0.65, blue:1, alpha:1)
+        }
+        else {
+            self.contentView.backgroundColor = UIColor.groupTableViewBackground
+        }
 
+        
         // Configure the view for the selected state
     }
     
@@ -29,6 +39,9 @@ class DoctorsIntroTableViewCell: UITableViewCell {
         imageviewdoctor.layer.masksToBounds = true
         imageviewdoctor.layer.borderWidth = 2
         imageviewdoctor.layer.borderColor = UIColor(red:0.08, green:0.65, blue:1, alpha:1).cgColor
+        
+       
+      
     }
 
 }

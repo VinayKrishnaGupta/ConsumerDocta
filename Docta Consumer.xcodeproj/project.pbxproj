@@ -74,6 +74,8 @@
 		2FAE81161F14DEC1007E937A /* FileBrowser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FAE81151F14DEC1007E937A /* FileBrowser.framework */; };
 		2FC7C5031F5945C5002AB65B /* Step4IntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7C5011F5945C5002AB65B /* Step4IntroViewController.m */; };
 		2FC7C5041F5945C5002AB65B /* Step4IntroViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5021F5945C5002AB65B /* Step4IntroViewController.xib */; };
+		2FE8BAAD1F66710B00448466 /* SpecialistsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE8BAAC1F66710B00448466 /* SpecialistsListViewController.swift */; };
+		2FE8BAB01F66871100448466 /* SpecialitsTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FE8BAAF1F66871100448466 /* SpecialitsTabBarViewController.m */; };
 		2FF438B21F2EF37E004451FB /* plusgif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2FF438B11F2EF37E004451FB /* plusgif.gif */; };
 		2FF438B51F2F03D5004451FB /* OpenCaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF438B41F2F03D5004451FB /* OpenCaseViewController.swift */; };
 		2FF438BC1F2F2C78004451FB /* OpenCasesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF438BA1F2F2C78004451FB /* OpenCasesCollectionViewCell.swift */; };
@@ -208,6 +210,9 @@
 		2FC7C5001F5945C5002AB65B /* Step4IntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Step4IntroViewController.h; sourceTree = "<group>"; };
 		2FC7C5011F5945C5002AB65B /* Step4IntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Step4IntroViewController.m; sourceTree = "<group>"; };
 		2FC7C5021F5945C5002AB65B /* Step4IntroViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Step4IntroViewController.xib; sourceTree = "<group>"; };
+		2FE8BAAC1F66710B00448466 /* SpecialistsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecialistsListViewController.swift; sourceTree = "<group>"; };
+		2FE8BAAE1F66871100448466 /* SpecialitsTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecialitsTabBarViewController.h; sourceTree = "<group>"; };
+		2FE8BAAF1F66871100448466 /* SpecialitsTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpecialitsTabBarViewController.m; sourceTree = "<group>"; };
 		2FF438B11F2EF37E004451FB /* plusgif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = plusgif.gif; sourceTree = "<group>"; };
 		2FF438B41F2F03D5004451FB /* OpenCaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenCaseViewController.swift; sourceTree = "<group>"; };
 		2FF438BA1F2F2C78004451FB /* OpenCasesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenCasesCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -345,7 +350,10 @@
 			isa = PBXGroup;
 			children = (
 				2F053C541F4D86FF00A41015 /* DoctorsInfoViewController.swift */,
+				2FE8BAAE1F66871100448466 /* SpecialitsTabBarViewController.h */,
+				2FE8BAAF1F66871100448466 /* SpecialitsTabBarViewController.m */,
 				2F135DB01F4DA7B9006B9905 /* DoctorsIntroTableViewCell.swift */,
+				2FE8BAAC1F66710B00448466 /* SpecialistsListViewController.swift */,
 			);
 			name = DoctorsProfile;
 			sourceTree = "<group>";
@@ -886,6 +894,7 @@
 				2FA8EC2D1EE9673900F9AB24 /* AppDelegate.m in Sources */,
 				2FFE00231F1F840C003C3643 /* LoginViewController.swift in Sources */,
 				2F5B55751F25CE8C000E28A0 /* CustomChatCollectionViewCell.swift in Sources */,
+				2FE8BAAD1F66710B00448466 /* SpecialistsListViewController.swift in Sources */,
 				2FFE00241F1F840C003C3643 /* ChannelListViewController.swift in Sources */,
 				2F0311491F2A0E220044B401 /* ChatTabBar2ViewController.swift in Sources */,
 				2F053C4D1F47FD0B00A41015 /* ImageLabelCollectionViewCell.swift in Sources */,
@@ -912,6 +921,7 @@
 				2F053C3F1F3C4E5B00A41015 /* imagesviewCollectionViewCell.swift in Sources */,
 				2FFEFFA41F1A1BAE003C3643 /* Step1IntroductionViewController.m in Sources */,
 				2FFEFF941F15FA54003C3643 /* Step4LocationViewController.swift in Sources */,
+				2FE8BAB01F66871100448466 /* SpecialitsTabBarViewController.m in Sources */,
 				2FF438BC1F2F2C78004451FB /* OpenCasesCollectionViewCell.swift in Sources */,
 				2FFCFB2A1F50008400DE1346 /* ReviewCasefileManager.swift in Sources */,
 				2F053C391F3C479000A41015 /* LabelsTableViewCell.swift in Sources */,

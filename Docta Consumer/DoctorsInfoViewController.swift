@@ -42,11 +42,18 @@ class DoctorsInfoViewController: UIViewController, UITableViewDataSource, UITabl
         
        
         
+        
+        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        self.SpecialistID = ReviewCasefileManager.sharedInstance.SelectedSpecialistID
         let APIsession : APIHandler = APIHandler()
         print("Doctor ID is \(SpecialistID)")
         TableView.tableFooterView = UIView()
         TableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 0.01))
-
+        
         
         APIsession.getDatafromAPI("GET", "specialist/\(SpecialistID)", nil) { (response, error) in
             if (response != nil) {
@@ -55,22 +62,23 @@ class DoctorsInfoViewController: UIViewController, UITableViewDataSource, UITabl
                 self.responseObject = json.value(forKey: "data") as! NSDictionary
                 SVProgressHUD.dismiss()
                 self.TableView.isHidden = false
-               self.TableView.reloadData()
-               
+                self.TableView.reloadData()
+                
             }
             if (error != nil) {
                 SVProgressHUD.dismiss()
                 print("Error is \(String(describing: error))")
-               
+                
             }
         }
-
         
         
+        
 
-        // Do any additional setup after loading the view.
+        
     }
-
+    
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 0 {
             return 100

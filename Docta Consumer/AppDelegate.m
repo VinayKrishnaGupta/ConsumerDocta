@@ -31,6 +31,15 @@
     
     [[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];
     [FIRApp configure];
+    UIImage *whiteBackground = [[UIImage imageNamed:@"bluebackgroud"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, -2, 0, 2) ];
+    
+    
+    [[UITabBar appearance] setClipsToBounds:YES];
+    [[UITabBar appearance] setSelectionIndicatorImage:whiteBackground];
+    [[UITabBar appearance] setItemWidth:self.window.frame.size.width/2];
+   
+    
+    
     return YES;
 }
 
