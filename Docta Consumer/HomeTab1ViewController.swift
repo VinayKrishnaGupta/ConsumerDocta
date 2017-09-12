@@ -135,7 +135,7 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate {
         specialistDropdown.cellHeight = 35
         specialistDropdown.bottomOffset = CGPoint(x: 0, y:30)
         locationdropdown.bottomOffset = CGPoint(x: 0, y:30)
-        clinicNametextfield.leftView = UIView()
+        
         
         
         specialistDropdown.selectionAction = {
@@ -445,6 +445,13 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate {
         }
     }
 
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        
+        SVProgressHUD.dismiss()
+        
+        
+    }
 
     
 
