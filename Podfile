@@ -15,6 +15,8 @@ pod 'Firebase/Storage'
 pod 'Firebase/Auth'
 pod 'Firebase/Database'
 pod 'JSQMessagesViewController'
+pod 'SideMenuController'
+
 
 inhibit_all_warnings!
 source 'https://github.com/CocoaPods/Specs.git'

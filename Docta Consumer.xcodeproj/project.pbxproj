@@ -76,6 +76,7 @@
 		2FC7C5041F5945C5002AB65B /* Step4IntroViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5021F5945C5002AB65B /* Step4IntroViewController.xib */; };
 		2FE8BAAD1F66710B00448466 /* SpecialistsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE8BAAC1F66710B00448466 /* SpecialistsListViewController.swift */; };
 		2FE8BAB01F66871100448466 /* SpecialitsTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FE8BAAF1F66871100448466 /* SpecialitsTabBarViewController.m */; };
+		2FE8BAB21F69112400448466 /* CustomSideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE8BAB11F69112400448466 /* CustomSideMenuController.swift */; };
 		2FF438B21F2EF37E004451FB /* plusgif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2FF438B11F2EF37E004451FB /* plusgif.gif */; };
 		2FF438B51F2F03D5004451FB /* OpenCaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF438B41F2F03D5004451FB /* OpenCaseViewController.swift */; };
 		2FF438BC1F2F2C78004451FB /* OpenCasesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF438BA1F2F2C78004451FB /* OpenCasesCollectionViewCell.swift */; };
@@ -213,6 +214,7 @@
 		2FE8BAAC1F66710B00448466 /* SpecialistsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecialistsListViewController.swift; sourceTree = "<group>"; };
 		2FE8BAAE1F66871100448466 /* SpecialitsTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecialitsTabBarViewController.h; sourceTree = "<group>"; };
 		2FE8BAAF1F66871100448466 /* SpecialitsTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpecialitsTabBarViewController.m; sourceTree = "<group>"; };
+		2FE8BAB11F69112400448466 /* CustomSideMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSideMenuController.swift; sourceTree = "<group>"; };
 		2FF438B11F2EF37E004451FB /* plusgif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = plusgif.gif; sourceTree = "<group>"; };
 		2FF438B41F2F03D5004451FB /* OpenCaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenCaseViewController.swift; sourceTree = "<group>"; };
 		2FF438BA1F2F2C78004451FB /* OpenCasesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenCasesCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -292,6 +294,7 @@
 			children = (
 				2F053C531F4D86D300A41015 /* DoctorsProfile */,
 				2F0311411F29EF6F0044B401 /* Main.storyboard */,
+				2FE8BAB11F69112400448466 /* CustomSideMenuController.swift */,
 				2F0311431F29F2E30044B401 /* MainTabBarViewController.swift */,
 				2F0311461F29F82D0044B401 /* HomeTab1ViewController.swift */,
 				2F0311481F2A0E220044B401 /* ChatTabBar2ViewController.swift */,
@@ -737,13 +740,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Docta ConsumerTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		2F8517086AE70ECD12E55ACB /* [CP] Check Pods Manifest.lock */ = {
@@ -752,13 +758,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Docta ConsumerUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		4F531711BFC5B157FD99EFB2 /* [CP] Embed Pods Frameworks */ = {
@@ -767,9 +776,44 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Docta Consumer/Pods-Docta Consumer-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/DLRadioButton/DLRadioButton.framework",
+				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
+				"${BUILT_PRODUCTS_DIR}/FileBrowser/FileBrowser.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Hue/Hue.framework",
+				"${BUILT_PRODUCTS_DIR}/ImagePicker/ImagePicker.framework",
+				"${BUILT_PRODUCTS_DIR}/JSQMessagesViewController/JSQMessagesViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/JSQSystemSoundPlayer/JSQSystemSoundPlayer.framework",
+				"${BUILT_PRODUCTS_DIR}/Lightbox/Lightbox.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SideMenuController/SideMenuController.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLRadioButton.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FileBrowser.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hue.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImagePicker.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQMessagesViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQSystemSoundPlayer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lightbox.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenuController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -782,13 +826,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Docta Consumer-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		6954029C049973F5E44D9A1B /* [CP] Embed Pods Frameworks */ = {
@@ -909,6 +956,7 @@
 				2F053C3B1F3C47A300A41015 /* TextViewTableViewCell.swift in Sources */,
 				2F053C431F3D961500A41015 /* ImageCollectionTableViewCell.swift in Sources */,
 				2F03114B1F2C65DC0044B401 /* CasesTabbarViewController.m in Sources */,
+				2FE8BAB21F69112400448466 /* CustomSideMenuController.swift in Sources */,
 				2FFE00211F1F840C003C3643 /* CreateChannelCell.swift in Sources */,
 				2FF438C51F305355004451FB /* OpenCasesCell.swift in Sources */,
 				2FAE81141F14DCE1007E937A /* Step3TreatmentHistoryViewController.swift in Sources */,

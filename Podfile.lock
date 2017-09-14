@@ -79,6 +79,7 @@ PODS:
   - SDWebImage (3.8.2):
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
+  - SideMenuController (0.2.4)
   - SVProgressHUD (2.1.2)
 
 DEPENDENCIES:
@@ -94,6 +95,7 @@ DEPENDENCIES:
   - JSQMessagesViewController
   - Lightbox
   - SDWebImage (~> 3.8)
+  - SideMenuController
   - SVProgressHUD
 
 SPEC CHECKSUMS:
@@ -119,8 +121,9 @@ SPEC CHECKSUMS:
   Lightbox: 13f55a0a840f7945dc5ac87931564e7fe569fca9
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
+  SideMenuController: b463d2b3aa58e2afe57f57a07938fa9a647894ca
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
 
-PODFILE CHECKSUM: 7a257759efa329914a9db77e5238e4b5aa204681
+PODFILE CHECKSUM: 73b1b3235c77874df51de5496fe4d960ea2d1787
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.3.1

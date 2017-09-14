@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="a7i-wj-i4e">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -395,6 +395,55 @@
             </objects>
             <point key="canvasLocation" x="-838" y="81"/>
         </scene>
+        <!--Custom Side Menu Controller-->
+        <scene sceneID="VQG-eK-wha">
+            <objects>
+                <viewController id="rAF-ix-Ffu" customClass="CustomSideMenuController" customModule="Docta_Consumer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Xxh-9Y-wiw"/>
+                        <viewControllerLayoutGuide type="bottom" id="wpu-xY-fcX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AU3-FD-suj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="a7i-wj-i4e" kind="custom" customClass="CenterContainmentSegue" customModule="SideMenuController" id="c1u-4E-ALN"/>
+                        <segue destination="9bl-Qz-gR5" kind="custom" customClass="SideContainmentSegue" customModule="SideMenuController" id="OaG-0R-Jhc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dha-WO-uTC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-58" y="-790"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="4QW-sc-axc">
+            <objects>
+                <viewController id="9bl-Qz-gR5" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="968-LO-wnE"/>
+                        <viewControllerLayoutGuide type="bottom" id="AqX-Eo-0wZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RNl-OZ-KpE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Side Bar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PZh-sk-TKh">
+                                <rect key="frame" x="39" y="323" width="274" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nw6-TT-3Vi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1090.4000000000001" y="-1406.4467766116943"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Lgv-QG-gR4">
             <objects>
@@ -419,7 +468,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uEe-St-GTS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="572" y="-250.52473763118442"/>
+            <point key="canvasLocation" x="902" y="-251"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="d1j-HV-rD4">
