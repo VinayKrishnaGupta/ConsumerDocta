@@ -51,6 +51,7 @@
 		2F6F93DD1EEFCB7D00037532 /* Lightbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F6F93DC1EEFCB7D00037532 /* Lightbox.framework */; };
 		2F72A25F1EF7B58300CEC047 /* APIHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F72A25E1EF7B58300CEC047 /* APIHandler.m */; };
 		2F72A2641EF93B0A00CEC047 /* DoctaManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F72A2631EF93B0A00CEC047 /* DoctaManager.m */; };
+		2F804BBF1F6FB0AD00D140C7 /* PatientProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F804BBE1F6FB0AD00D140C7 /* PatientProfileViewController.m */; };
 		2F87E6601EFA679700E6CD70 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F87E65F1EFA679700E6CD70 /* Alamofire.framework */; };
 		2F87E6631EFBD9EE00E6CD70 /* ViewCaseFileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F87E6621EFBD9EE00E6CD70 /* ViewCaseFileViewController.m */; };
 		2FA8EC2A1EE9673900F9AB24 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA8EC291EE9673900F9AB24 /* main.m */; };
@@ -175,6 +176,8 @@
 		2F72A2611EF7C3F200CEC047 /* SharedValues.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharedValues.pch; sourceTree = "<group>"; };
 		2F72A2621EF93B0A00CEC047 /* DoctaManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoctaManager.h; sourceTree = "<group>"; };
 		2F72A2631EF93B0A00CEC047 /* DoctaManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoctaManager.m; sourceTree = "<group>"; };
+		2F804BBD1F6FB0AD00D140C7 /* PatientProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatientProfileViewController.h; sourceTree = "<group>"; };
+		2F804BBE1F6FB0AD00D140C7 /* PatientProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatientProfileViewController.m; sourceTree = "<group>"; };
 		2F87E65F1EFA679700E6CD70 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../Library/Developer/Xcode/DerivedData/Docta_Consumer-fzeqzrpmkwrzkzexuhyxdnkslmth/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
 		2F87E6611EFBD9EE00E6CD70 /* ViewCaseFileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewCaseFileViewController.h; sourceTree = "<group>"; };
 		2F87E6621EFBD9EE00E6CD70 /* ViewCaseFileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewCaseFileViewController.m; sourceTree = "<group>"; };
@@ -478,6 +481,8 @@
 			isa = PBXGroup;
 			children = (
 				2FA8EC311EE9673900F9AB24 /* Auth.storyboard */,
+				2F804BBD1F6FB0AD00D140C7 /* PatientProfileViewController.h */,
+				2F804BBE1F6FB0AD00D140C7 /* PatientProfileViewController.m */,
 				2FA8EC5C1EEA702B00F9AB24 /* SignUpViewController.h */,
 				2FA8EC5D1EEA702B00F9AB24 /* SignUpViewController.m */,
 				2FA8EC5F1EEA997B00F9AB24 /* SignInViewController.h */,
@@ -942,6 +947,7 @@
 				2FFE00231F1F840C003C3643 /* LoginViewController.swift in Sources */,
 				2F5B55751F25CE8C000E28A0 /* CustomChatCollectionViewCell.swift in Sources */,
 				2FE8BAAD1F66710B00448466 /* SpecialistsListViewController.swift in Sources */,
+				2F804BBF1F6FB0AD00D140C7 /* PatientProfileViewController.m in Sources */,
 				2FFE00241F1F840C003C3643 /* ChannelListViewController.swift in Sources */,
 				2F0311491F2A0E220044B401 /* ChatTabBar2ViewController.swift in Sources */,
 				2F053C4D1F47FD0B00A41015 /* ImageLabelCollectionViewCell.swift in Sources */,

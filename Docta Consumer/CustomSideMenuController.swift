@@ -12,11 +12,12 @@ import SideMenuController
 class CustomSideMenuController: SideMenuController {
     required init?(coder aDecoder: NSCoder) {
         SideMenuController.preferences.drawing.menuButtonImage = UIImage(named: "menu")
-        SideMenuController.preferences.drawing.sidePanelPosition = .overCenterPanelRight
+        SideMenuController.preferences.drawing.sidePanelPosition = .underCenterPanelRight
         SideMenuController.preferences.drawing.sidePanelWidth = 250
         SideMenuController.preferences.drawing.centerPanelShadow = true
         SideMenuController.preferences.animating.statusBarBehaviour = .fadeAnimation
         SideMenuController.preferences.animating.transitionAnimator = FadeAnimator.self
+
         super.init(coder: aDecoder)
     }
 

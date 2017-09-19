@@ -10,6 +10,7 @@ import UIKit
 import DropDown
 import SDWebImage
 import SVProgressHUD
+import SideMenuController
 
 
 class HomeTab1ViewController: UIViewController, UITextFieldDelegate {
@@ -68,7 +69,7 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate {
         locationTextField.rightView = rightView3
         
      
-        
+        // Signup Button
         let button = UIButton.init(type: .custom)
         button.setTitle("Sign Up", for: .normal)
         button.titleLabel?.font = UIFont(name: "Rubik", size: 15)
@@ -78,8 +79,10 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate {
         button.frame = CGRect(x: 0, y: 0, width: 90, height: 35)
         button.addTarget(self, action: #selector(SignupButton), for: .touchUpInside)
         let barButton = UIBarButtonItem(customView: button)
-        
-        self.navigationItem.rightBarButtonItem = barButton
+//        
+//        let emptybutton = UIBarButtonItem.init(title: "Menu", style: UIBarButtonItemStyle.done, target: self, action: #selector(revealSideBarfromButton))
+        let menuButton = UIBarButtonItem.init(image: UIImage.init(named: "menu"), style: UIBarButtonItemStyle.done, target: self, action: #selector(revealSideBarfromButton))
+        self.navigationItem.rightBarButtonItems = [menuButton, barButton]
         
         // Do any additional setup after loading the view.
     }
@@ -107,6 +110,13 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate {
                 SVProgressHUD.dismiss(withDelay: 3)
             }
         }
+        
+    }
+    
+    func revealSideBarfromButton() {
+        
+        sideMenuController?.toggle()
+        
         
     }
     
@@ -241,8 +251,17 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func ProceedButton(_ sender: UIButton) {
         
+        if SpecialistListFromServer.count > 0 {
+            self.performSegue(withIdentifier: "ShowSpecialist", sender: self)
+        }
+        else {
+            SVProgressHUD.showInfo(withStatus: "All Fields Are Mandetory")
+            SVProgressHUD.dismiss(withDelay: 1)
+            
+            
+        }
         
-        self.performSegue(withIdentifier: "ShowSpecialist", sender: self)
+    }
         
         
         
@@ -253,8 +272,7 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate {
 //        controller.SelectedSpecialities = SelectedSpecialities
 //        self.navigationController?.pushViewController(controller, animated: true)
 //        
-//        
-    }
+//
     
     
 //    func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -410,6 +428,8 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate {
                 
                 self.SpecialistListFromServer = self.responseObject.value(forKey: "specialists") as! Array<NSDictionary>
                 if self.SpecialistListFromServer.count > 0 {
+                    SVProgressHUD.dismiss()
+                    
                   //  self.collectionViewSpecialists.reloadData()
                 }
                 else {

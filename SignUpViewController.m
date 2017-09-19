@@ -56,16 +56,15 @@
     [_patientButton addTarget:self action:@selector(changeButtonStates) forControlEvents:UIControlEventTouchUpInside];
     
     
-    [_maleButton addTarget:self action:@selector(SelectGenderButton) forControlEvents:UIControlEventTouchUpInside];
-    [_femaleButton addTarget:self action:@selector(SelectGenderButton) forControlEvents:UIControlEventTouchUpInside];
-    [_otherButton addTarget:self action:@selector(SelectGenderButton) forControlEvents:UIControlEventTouchUpInside];
+  
+    
+    
    //Default Colours for Buttons
     _patientButton.backgroundColor = [UIColor colorWithRed:255.0f/255.0f green:206.0f/255.0f blue:74.0f/255.0f alpha:1];
     [_patientButton setTitleColor:[UIColor colorWithRed:255.0f/255.0f green:98.0f/255.0f blue:2.0f/255.0f alpha:1] forState:UIControlStateNormal];
     _SelectedUserType = _patientButton.titleLabel.text;
     
-    _maleButton.backgroundColor = [UIColor colorWithRed:255.0f/255.0f green:206.0f/255.0f blue:74.0f/255.0f alpha:1];
-    [_maleButton setTitleColor:[UIColor colorWithRed:255.0f/255.0f green:98.0f/255.0f blue:2.0f/255.0f alpha:1] forState:UIControlStateNormal];
+    
    
     
     

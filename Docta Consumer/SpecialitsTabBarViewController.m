@@ -62,6 +62,7 @@
     tabFrame.size.height = tabSize;
     
     tabFrame.origin.y = self.view.frame.origin.y + self.navigationController.navigationBar.frame.size.height + 20;
+    tabFrame.size.width = self.view.frame.size.width;
     
     self.tabBar.frame = tabFrame;
     self.tabBar.backgroundColor = [UIColor colorWithRed:0 green:166/255 blue:255/255 alpha:1];

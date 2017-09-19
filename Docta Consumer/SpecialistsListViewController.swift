@@ -18,12 +18,34 @@ class SpecialistsListViewController: UIViewController, UITableViewDataSource, UI
         super.viewDidLoad()
         TableView.dataSource = self
         TableView.delegate = self
-     SVProgressHUD.dismiss()
-        
+        SVProgressHUD.dismiss(withDelay: 2)
+        let button = UIButton.init(type: .custom)
+        button.setTitle("Sign Up", for: .normal)
+        button.titleLabel?.font = UIFont(name: "Rubik", size: 15)
+        button.layer.cornerRadius = 15
+        button.backgroundColor = UIColor(red:0.08, green:0.65, blue:1, alpha:1)
+        button.setTitleColor(UIColor.white, for: .normal)
+        button.frame = CGRect(x: 0, y: 0, width: 90, height: 35)
+        button.addTarget(self, action: #selector(SignupButton), for: .touchUpInside)
+        let barButton = UIBarButtonItem(customView: button)
+        self.navigationItem.rightBarButtonItem = barButton
         
 
         // Do any additional setup after loading the view.
     }
+    
+    func SignupButton() {
+        
+        
+        let storyboard = UIStoryboard(name: "Auth", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "SignupVC")
+        self.navigationController?.pushViewController(controller, animated: true)
+        
+        
+        
+        
+    }
+
     
     func numberOfSections(in tableView: UITableView) -> Int {
         
@@ -108,6 +130,18 @@ class SpecialistsListViewController: UIViewController, UITableViewDataSource, UI
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func nextButton(_ sender: UIButton) {
+        
+        
+                let storyboard = UIStoryboard(name: "CreateNewCase", bundle: nil)
+                let controller :Step1ReasonsTVC  = storyboard.instantiateViewController(withIdentifier: "Step1VC") as! Step1ReasonsTVC
+                controller.SelectedLocationText = ReviewCasefileManager.sharedInstance.CountryName
+                controller.SelectedSpecialities = ReviewCasefileManager.sharedInstance.SpecialistyName
+                self.navigationController?.pushViewController(controller, animated: true)
+                
+
+        
+    }
 
     /*
     // MARK: - Navigation

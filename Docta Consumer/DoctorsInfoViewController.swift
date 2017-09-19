@@ -28,22 +28,29 @@ class DoctorsInfoViewController: UIViewController, UITableViewDataSource, UITabl
         TableView.layoutIfNeeded()
         
         let button = UIButton.init(type: .custom)
-        button.setTitle("Close", for: .normal)
+        button.setTitle("Sign Up", for: .normal)
         button.titleLabel?.font = UIFont(name: "Rubik", size: 15)
         button.layer.cornerRadius = 15
         button.backgroundColor = UIColor(red:0.08, green:0.65, blue:1, alpha:1)
         button.setTitleColor(UIColor.white, for: .normal)
         button.frame = CGRect(x: 0, y: 0, width: 90, height: 35)
-        button.addTarget(self, action: #selector(BackButtononTop), for: .touchUpInside)
+        button.addTarget(self, action: #selector(SignupButton), for: .touchUpInside)
         let barButton = UIBarButtonItem(customView: button)
-        
         self.navigationItem.rightBarButtonItem = barButton
-        self.navigationItem.hidesBackButton = true
-        
-       
-        
         
         // Do any additional setup after loading the view.
+    }
+    
+    func SignupButton() {
+        
+        
+        let storyboard = UIStoryboard(name: "Auth", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "SignupVC")
+        self.navigationController?.pushViewController(controller, animated: true)
+        
+        
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -72,7 +79,7 @@ class DoctorsInfoViewController: UIViewController, UITableViewDataSource, UITabl
             }
         }
         
-        
+        SVProgressHUD.dismiss()
         
 
         
@@ -258,6 +265,8 @@ class DoctorsInfoViewController: UIViewController, UITableViewDataSource, UITabl
         
         
     }
+    
+    
   
     
     

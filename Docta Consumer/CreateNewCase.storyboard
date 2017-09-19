@@ -612,7 +612,7 @@
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no"/>
                                                 </textView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MPI-1u-Jhd">
-                                                    <rect key="frame" x="8" y="4" width="326" height="22"/>
+                                                    <rect key="frame" x="7" y="4" width="326" height="22"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
                                                     <nil key="textColor"/>
@@ -669,7 +669,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CellFooter" rowHeight="70" id="vhC-eo-OGO" customClass="NextBackButtonsTableViewCell" customModule="Docta_Consumer" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="326" width="343" height="70"/>
+                                        <rect key="frame" x="0.0" y="325.5" width="343" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vhC-eo-OGO" id="Evy-yE-LKc">
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="70"/>
@@ -1067,7 +1067,7 @@
             <objects>
                 <navigationController storyboardIdentifier="CreateCaseNav" automaticallyAdjustsScrollViewInsets="NO" id="Vbp-YB-cc0" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="njG-bB-JrG">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="njG-bB-JrG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
