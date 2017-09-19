@@ -82,7 +82,8 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate {
 //        
 //        let emptybutton = UIBarButtonItem.init(title: "Menu", style: UIBarButtonItemStyle.done, target: self, action: #selector(revealSideBarfromButton))
         let menuButton = UIBarButtonItem.init(image: UIImage.init(named: "menu"), style: UIBarButtonItemStyle.done, target: self, action: #selector(revealSideBarfromButton))
-        self.navigationItem.rightBarButtonItems = [menuButton, barButton]
+        let homeButton = UIBarButtonItem.init(image: UIImage.init(named: "home"), style: UIBarButtonItemStyle.done, target: self, action: #selector(GotoHomeButton))
+        self.navigationItem.rightBarButtonItems = [menuButton, barButton, homeButton]
         
         // Do any additional setup after loading the view.
     }
@@ -117,6 +118,15 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate {
         
         sideMenuController?.toggle()
         
+        
+    }
+    
+    func GotoHomeButton() {
+        
+        //casesTabbar
+        let storyboard = UIStoryboard(name: "SubmitCase", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "casesTabbar")
+        self.navigationController?.pushViewController(controller, animated: true)
         
     }
     

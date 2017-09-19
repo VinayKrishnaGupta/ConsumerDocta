@@ -8,25 +8,29 @@
 
 import UIKit
 
-class OpenCaseViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class OpenCaseViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
     @IBOutlet weak var collectionView: UICollectionView!
-
+    @IBOutlet weak var PageControl: UIPageControl!
+    var screenSize = CGRect()
 
     override func viewDidLoad() {
         super.viewDidLoad()
     collectionView.delegate = self
     collectionView.dataSource = self
+    PageControl.hidesForSinglePage = true
+    PageControl.numberOfPages = 4
         
         
     let image : UIImage = UIImage.init(named: "DoctaLogo")!
     let imageview : UIImageView = UIImageView.init(image: image)
     imageview.frame = CGRect(x: 10, y: 2, width: 100, height: 30)
     self.navigationController?.navigationBar.addSubview(imageview)
+    PageControl.currentPage = 0
+    screenSize = UIScreen.main.bounds
     
         
         
-
-    
+        
   //   collectionView.register(OpenCasesCollectionViewCell.self, forCellWithReuseIdentifier: "OpenCasesCollectionViewCell")
         
         //self.collectionView.register("OpenCasesCollectionViewCell", forCellWithReuseIdentifier: "Cell")
@@ -35,7 +39,30 @@ class OpenCaseViewController: UIViewController, UICollectionViewDataSource, UICo
   
         // Do any additional setup after loading the view.
     }
-
+    
+    func goToCreateCaseFile() {
+        
+        
+        
+    }
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: self.view.frame.width*4/5, height: self.view.frame.height*3/5)
+        
+    }
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 10
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 5, left: self.view.frame.width/10, bottom: 5, right: self.view.frame.width/10)
+    }
+    
+   
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -44,11 +71,11 @@ class OpenCaseViewController: UIViewController, UICollectionViewDataSource, UICo
     
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
+        return 4
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -63,6 +90,16 @@ class OpenCaseViewController: UIViewController, UICollectionViewDataSource, UICo
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
     }
+    
+//    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+//        self.PageControl.currentPage = indexPath.section
+//        
+//        
+//    }
+    func scrollViewDidEndDecelerating(_ scrollView:UIScrollView) {
+        PageControl.currentPage = Int(scrollView.contentOffset.x) / Int(scrollView.frame.width)
+    }
+    
     
     
 

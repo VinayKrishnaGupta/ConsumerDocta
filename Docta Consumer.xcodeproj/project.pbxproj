@@ -301,8 +301,6 @@
 				2F0311431F29F2E30044B401 /* MainTabBarViewController.swift */,
 				2F0311461F29F82D0044B401 /* HomeTab1ViewController.swift */,
 				2F0311481F2A0E220044B401 /* ChatTabBar2ViewController.swift */,
-				2F03114C1F2C66270044B401 /* CasesTabbarViewController.h */,
-				2F03114A1F2C65DC0044B401 /* CasesTabbarViewController.m */,
 				2F5349A81F333EFD0061C19A /* SettingsTab4ViewController.swift */,
 			);
 			name = MainTabBars;
@@ -495,7 +493,6 @@
 		2FA8EC621EEAA56100F9AB24 /* SubmitCase */ = {
 			isa = PBXGroup;
 			children = (
-				2FA8EC631EEAA58500F9AB24 /* SubmitCase.storyboard */,
 				2FA8EC691EEE788600F9AB24 /* MyCaseFilesViewController.h */,
 				2FA8EC6A1EEE788600F9AB24 /* MyCaseFilesViewController.m */,
 				2F87E6611EFBD9EE00E6CD70 /* ViewCaseFileViewController.h */,
@@ -508,6 +505,9 @@
 		2FF438B31F2F03AF004451FB /* CasesHistory */ = {
 			isa = PBXGroup;
 			children = (
+				2FA8EC631EEAA58500F9AB24 /* SubmitCase.storyboard */,
+				2F03114C1F2C66270044B401 /* CasesTabbarViewController.h */,
+				2F03114A1F2C65DC0044B401 /* CasesTabbarViewController.m */,
 				2FF438B41F2F03D5004451FB /* OpenCaseViewController.swift */,
 				2FF438C41F305355004451FB /* OpenCasesCell.swift */,
 				2FF438BA1F2F2C78004451FB /* OpenCasesCollectionViewCell.swift */,

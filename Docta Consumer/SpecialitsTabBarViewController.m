@@ -35,8 +35,12 @@
     
     [[UITabBarItem appearance] setBadgeColor:[UIColor darkGrayColor]];
    
-    
-    
+    UIImage *whiteBackground = [[UIImage imageNamed:@"bluebackgroud"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0) ];
+    [[UITabBar appearance] setClipsToBounds:YES];
+    [[UITabBar appearance] setSelectionIndicatorImage:whiteBackground];
+    [[UITabBar appearance] setItemWidth:self.view.frame.size.width/2];
+    [[UITabBar appearance] setItemPositioning:UITabBarItemPositioningAutomatic];
+
     
     
     

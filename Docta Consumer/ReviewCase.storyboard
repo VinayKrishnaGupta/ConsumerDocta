@@ -33,7 +33,7 @@
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell2" textLabel="kMy-X6-Ttz" rowHeight="70" style="IBUITableViewCellStyleDefault" id="jWE-cp-Lcw" customClass="NextBackButtonsTableViewCell" customModule="Docta_Consumer" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="56" width="343" height="70"/>
+                                        <rect key="frame" x="0.0" y="55.5" width="343" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jWE-cp-Lcw" id="jUI-dM-WXB">
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="69.5"/>
@@ -50,7 +50,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell3" textLabel="e5z-AH-DgP" style="IBUITableViewCellStyleDefault" id="UC6-qH-dhJ">
-                                        <rect key="frame" x="0.0" y="126" width="343" height="40"/>
+                                        <rect key="frame" x="0.0" y="125.5" width="343" height="40"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UC6-qH-dhJ" id="uHI-Kg-GZP">
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="39.5"/>
@@ -67,19 +67,19 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CellFooter" rowHeight="70" id="nYU-1T-BKm" customClass="NextBackButtonsTableViewCell" customModule="Docta_Consumer" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="166" width="343" height="70"/>
+                                        <rect key="frame" x="0.0" y="165.5" width="343" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nYU-1T-BKm" id="Kx8-RG-Y8v">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="69"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="69.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="meh-U6-Kty">
-                                                    <rect key="frame" x="184" y="18" width="31" height="30"/>
+                                                    <rect key="frame" x="182" y="18" width="28" height="28"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" backgroundImage="questioncircular"/>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="31v-am-baY">
-                                                    <rect key="frame" x="235" y="14" width="95" height="39"/>
+                                                    <rect key="frame" x="234" y="13" width="94" height="38"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.2908574343" green="0.70001286269999996" blue="0.90401160719999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="15"/>
@@ -93,12 +93,12 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </button>
                                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HCB-IJ-NCh">
-                                                    <rect key="frame" x="-1" y="4" width="335" height="2"/>
+                                                    <rect key="frame" x="-2" y="4" width="335" height="0.0"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 </view>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="EZc-Kf-hgO">
-                                                    <rect key="frame" x="11" y="17" width="80" height="39"/>
+                                                    <rect key="frame" x="7" y="13" width="81" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
                                                     <inset key="titleEdgeInsets" minX="7" minY="0.0" maxX="0.0" maxY="0.0"/>

@@ -33,10 +33,39 @@
     
     [[UITabBarItem appearance] setBadgeColor:[UIColor darkGrayColor]];
     
+    
+//    let button = UIButton.init(type: .custom)
+//    button.setTitle("Create Case File", for: .normal)
+//    button.titleLabel?.font = UIFont(name: "Rubik", size: 15)
+//    button.layer.cornerRadius = 15
+//    button.backgroundColor = UIColor(red:0.08, green:0.65, blue:1, alpha:1)
+//    button.setTitleColor(UIColor.white, for: .normal)
+//    button.frame = CGRect(x: 0, y: 0, width: 150, height: 45)
+//    button.addTarget(self, action: #selector(goToCreateCaseFile), for: .touchUpInside)
+//    let barButton = UIBarButtonItem(customView: button)
+//    self.navigationItem.rightBarButtonItem = barButton
+    
+    UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 120, 40)];
+    [button setTitle:@"Create Casefile" forState:UIControlStateNormal];
+    button.backgroundColor = [UIColor colorWithRed:0.08 green:0.65 blue:1 alpha:1];
+    button.layer.cornerRadius = 15;
+    button.titleLabel.font = [UIFont fontWithName:@"Rubik" size:15];
+    [button addTarget:self action:@selector(GotoCreateCaseFile) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *RightButton = [[UIBarButtonItem alloc]initWithCustomView:button];
+    self.navigationItem.rightBarButtonItem = RightButton;
+    
 
 
     
 }
+-(void)GotoCreateCaseFile {
+    NSLog(@"Create Case file button clicked");
+    [self.navigationController popViewControllerAnimated:YES];
+    
+    
+    
+}
+
 
 - (void)viewWillLayoutSubviews
 {
