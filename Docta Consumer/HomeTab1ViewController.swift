@@ -425,6 +425,7 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate {
         let APIsession : APIHandler = APIHandler()
         
         ReviewCasefileManager.sharedInstance.SpecialityIDSelected = SelectedSpecialtyDict.value(forKey: "_id") as! String
+        ReviewCasefileManager.sharedInstance.SelectedSpecialityDescription = SelectedSpecialtyDict.value(forKey: "description") as! String
         let parameters =
         [ "country": selectedLocation, "speciality": SelectedSpecialtyDict.value(forKey: "_id")]
         

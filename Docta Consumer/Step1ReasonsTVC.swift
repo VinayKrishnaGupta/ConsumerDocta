@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class Step1ReasonsTVC: UIViewController, UITableViewDataSource, UITableViewDelegate,OpenCameraProtocol {
     @IBOutlet weak var tableView: UITableView!
     let Questions : Array = ["Why do you need a specialist?","How did this problem start?","What are the symptoms?"]
@@ -216,6 +217,8 @@ class Step1ReasonsTVC: UIViewController, UITableViewDataSource, UITableViewDeleg
         
     }
     func InfoButton(){
+        
+       // let introVC0 = Bundle.main.loadNibNamed("Step1IntroductionViewController", owner: nil, options: nil)
         let introVC = Step2IntroViewController(nibName: "Step1IntroductionViewController", bundle: nil)
         self.present(introVC, animated: true, completion: nil)
         

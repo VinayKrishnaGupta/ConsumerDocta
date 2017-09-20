@@ -11,7 +11,10 @@ import UIKit
 class ReviewCasefileManager: NSObject {
 
     
+//General
+    
     var SelectedSpecialistID = String()
+    var SelectedSpecialityDescription = String()
 //from Step 1
     var CountryName = String()
     var SpecialistyName = String()

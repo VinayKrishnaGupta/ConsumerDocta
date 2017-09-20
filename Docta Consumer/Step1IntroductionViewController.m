@@ -7,9 +7,13 @@
 //
 
 #import "Step1IntroductionViewController.h"
+#import "Docta_Consumer-Swift.h"
+
 
 @interface Step1IntroductionViewController ()
 - (IBAction)cancelButton:(UIButton *)sender;
+@property (weak, nonatomic) IBOutlet UILabel *TitleLabelSpeciality;
+@property (weak, nonatomic) IBOutlet UITextView *detailTextViewSpeciality;
 
 
 @end
@@ -21,8 +25,21 @@
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
     
     [self.view addGestureRecognizer:tap];
+    
+    
+    
     // Do any additional setup after loading the view from its nib.
 }
+
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:YES];
+    NSLog(@"Details of Speciality are %@ and %@",ReviewCasefileManager.sharedInstance.SpecialistyName,ReviewCasefileManager.sharedInstance.SelectedSpecialityDescription);
+    
+    self.TitleLabelSpeciality.text = ReviewCasefileManager.sharedInstance.SpecialistyName;
+    self.detailTextViewSpeciality.text = ReviewCasefileManager.sharedInstance.SelectedSpecialityDescription;
+    
+}
+
 
 -(void)dismissKeyboard
 {

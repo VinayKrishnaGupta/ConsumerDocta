@@ -9,11 +9,20 @@
 import UIKit
 
 class Step2IntroViewController: UIViewController {
+    @IBOutlet weak var titleLabelSpeciality: UILabel!
+    @IBOutlet weak var detailTextViewSpeciality: UITextView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.titleLabelSpeciality.text = ReviewCasefileManager.sharedInstance.SpecialistyName
+        self.detailTextViewSpeciality.text = ReviewCasefileManager.sharedInstance.SelectedSpecialityDescription
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
