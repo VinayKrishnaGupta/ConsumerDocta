@@ -13,6 +13,8 @@ import SVProgressHUD
 class SpecialistsListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var TableView: UITableView!
     public var DoctorslistFiltered = Array<NSDictionary>()
+    @IBOutlet weak var specialityNameLabel: UILabel!
+    @IBOutlet weak var countryNameLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -140,6 +142,13 @@ class SpecialistsListViewController: UIViewController, UITableViewDataSource, UI
                 self.navigationController?.pushViewController(controller, animated: true)
                 
 
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        specialityNameLabel.text = ReviewCasefileManager.sharedInstance.SpecialistyName
+        countryNameLabel.text = ReviewCasefileManager.sharedInstance.CountryName
+        
         
     }
 

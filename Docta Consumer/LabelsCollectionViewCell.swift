@@ -12,6 +12,9 @@ class LabelsCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     
     override func layoutSubviews() {
+        self.layoutIfNeeded()
+        self.autoresizesSubviews = true
+        
         
     }
     

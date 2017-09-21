@@ -15,6 +15,8 @@ class DoctorsInfoViewController: UIViewController, UITableViewDataSource, UITabl
     public var SpecialistID : String = ""
     var responseObject : NSDictionary = [:]
     
+    @IBOutlet weak var CountryNameLabel: UILabel!
+    @IBOutlet weak var specialityNameLabel: UILabel!
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -54,6 +56,10 @@ class DoctorsInfoViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        specialityNameLabel.text = ReviewCasefileManager.sharedInstance.SpecialistyName
+        CountryNameLabel.text = ReviewCasefileManager.sharedInstance.CountryName
+        
+        
         
         self.SpecialistID = ReviewCasefileManager.sharedInstance.SelectedSpecialistID
         let APIsession : APIHandler = APIHandler()

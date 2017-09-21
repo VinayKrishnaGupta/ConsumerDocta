@@ -39,6 +39,10 @@ class collectionTableViewCell: UITableViewCell, UICollectionViewDataSource, UICo
         
         return CGSize(width: self.colletionViewImages.frame.width/4, height: 40)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsetsMake(0, 0, 0, 0)
+    }
 
     
     
@@ -68,6 +72,8 @@ class collectionTableViewCell: UITableViewCell, UICollectionViewDataSource, UICo
         
         return cell
     }
+    
+    
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("Selcted Cell is \(indexPath.row)")

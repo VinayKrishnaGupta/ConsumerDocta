@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 
 class Step1ReasonsTVC: UIViewController, UITableViewDataSource, UITableViewDelegate,OpenCameraProtocol {
@@ -195,6 +196,8 @@ class Step1ReasonsTVC: UIViewController, UITableViewDataSource, UITableViewDeleg
     }
     
     func nextButton(){
+       
+        
         print("Button tapped")
         let cell1 = tableView.cellForRow(at: IndexPath.init(row: 0, section: 3)) as! TextViewTableViewCell
         ReviewCasefileManager.sharedInstance.Q1WhyneedSpecialist = cell1.textview.text
@@ -206,10 +209,21 @@ class Step1ReasonsTVC: UIViewController, UITableViewDataSource, UITableViewDeleg
         let ImageCell = tableView.cellForRow(at: IndexPath.init(row: 0, section: 4)) as! ImageCollectionTableViewCell
             ReviewCasefileManager.sharedInstance.ImageArrayBodyparts = ImageCell.imagearray
        
+        if cell1.textview.text.isEmpty || cell2.textview.text.isEmpty || cell3.textview.text.isEmpty || ReviewCasefileManager.sharedInstance.HowLong.isEmpty {
+            SVProgressHUD.showInfo(withStatus: "All Fields are Mandetory")
+            SVProgressHUD.dismiss(withDelay: 1)
+
+            
+            
+        }
+        else {
+            
+            self.performSegue(withIdentifier: "step2symptoms", sender: nil)
+        }
         
         
         
-        self.performSegue(withIdentifier: "step2symptoms", sender: nil)
+        
         
     }
     func backButton(){
