@@ -194,15 +194,14 @@ class Step2TreatmentHistoryViewController: UIViewController, UITableViewDataSour
         let ImageCell = tableView.cellForRow(at: IndexPath.init(row: 0, section: 3)) as! ImageCollectionTableViewCell
         ReviewCasefileManager.sharedInstance.ImageArrayReportsAndReferral = ImageCell.imagearray
         
+        self.performSegue(withIdentifier: "patientProfile", sender: self)
         
 //        
 //        let storyboard1 = UIStoryboard(name: "ReviewCase", bundle: nil)
 //        let controller1 = storyboard1.instantiateViewController(withIdentifier: "ReviewCaseVC")
 //        self.navigationController?.pushViewController(controller1, animated: false)
         
-        let storyboard = UIStoryboard(name: "Auth", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "AuthVCNAv")
-        self.present(controller, animated: false, completion: nil)
+        
 
     }
     func backButton(){

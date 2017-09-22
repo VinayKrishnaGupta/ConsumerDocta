@@ -177,8 +177,8 @@
 		2F72A2611EF7C3F200CEC047 /* SharedValues.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharedValues.pch; sourceTree = "<group>"; };
 		2F72A2621EF93B0A00CEC047 /* DoctaManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoctaManager.h; sourceTree = "<group>"; };
 		2F72A2631EF93B0A00CEC047 /* DoctaManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoctaManager.m; sourceTree = "<group>"; };
-		2F804BBD1F6FB0AD00D140C7 /* PatientProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatientProfileViewController.h; sourceTree = "<group>"; };
-		2F804BBE1F6FB0AD00D140C7 /* PatientProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatientProfileViewController.m; sourceTree = "<group>"; };
+		2F804BBD1F6FB0AD00D140C7 /* PatientProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PatientProfileViewController.h; path = ../PatientProfileViewController.h; sourceTree = "<group>"; };
+		2F804BBE1F6FB0AD00D140C7 /* PatientProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PatientProfileViewController.m; path = ../PatientProfileViewController.m; sourceTree = "<group>"; };
 		2F804BC31F7234F500D140C7 /* SideBarVCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBarVCViewController.swift; sourceTree = "<group>"; };
 		2F87E65F1EFA679700E6CD70 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../Library/Developer/Xcode/DerivedData/Docta_Consumer-fzeqzrpmkwrzkzexuhyxdnkslmth/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
 		2F87E6611EFBD9EE00E6CD70 /* ViewCaseFileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewCaseFileViewController.h; sourceTree = "<group>"; };
@@ -371,6 +371,8 @@
 				2F6385AE1F0F4B6400603FB1 /* CreateNewCase.storyboard */,
 				2F053C351F3C372F00A41015 /* Step1ReasonsTVC.swift */,
 				2F053C481F4187B000A41015 /* Step2TreatmentHistoryViewController.swift */,
+				2F804BBD1F6FB0AD00D140C7 /* PatientProfileViewController.h */,
+				2F804BBE1F6FB0AD00D140C7 /* PatientProfileViewController.m */,
 				2F053C371F3C381900A41015 /* CustomCells */,
 				2F6385AB1F0F4B4300603FB1 /* Step1YourcaseViewController.h */,
 				2F6385AC1F0F4B4300603FB1 /* Step1YourcaseViewController.m */,
@@ -482,8 +484,6 @@
 			isa = PBXGroup;
 			children = (
 				2FA8EC311EE9673900F9AB24 /* Auth.storyboard */,
-				2F804BBD1F6FB0AD00D140C7 /* PatientProfileViewController.h */,
-				2F804BBE1F6FB0AD00D140C7 /* PatientProfileViewController.m */,
 				2FA8EC5C1EEA702B00F9AB24 /* SignUpViewController.h */,
 				2FA8EC5D1EEA702B00F9AB24 /* SignUpViewController.m */,
 				2FA8EC5F1EEA997B00F9AB24 /* SignInViewController.h */,

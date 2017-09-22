@@ -20,7 +20,7 @@ class SpecialistsListViewController: UIViewController, UITableViewDataSource, UI
         super.viewDidLoad()
         TableView.dataSource = self
         TableView.delegate = self
-        SVProgressHUD.dismiss(withDelay: 2)
+        SVProgressHUD.dismiss(withDelay: 1)
         let button = UIButton.init(type: .custom)
         button.setTitle("Sign Up", for: .normal)
         button.titleLabel?.font = UIFont(name: "Rubik", size: 15)

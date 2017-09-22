@@ -169,7 +169,7 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate {
         
         specialistDropdown.selectionAction = {
             [unowned self] (index: Int, item: String) in
-            self.clinicNametextfield.text = item
+            self.clinicNametextfield.text = "  " + item
             ReviewCasefileManager.sharedInstance.SpecialistyName = item
             self.SelectedSpecialities = item
             print("Selected Specialist is \(self.SelectedSpecialities) at index \(index)")
@@ -198,7 +198,7 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate {
         
         locationdropdown.selectionAction = {
             [unowned self] (index: Int, item: String) in
-            self.locationTextField.text = item
+            self.locationTextField.text = "  " + item
             ReviewCasefileManager.sharedInstance.CountryName = item
             self.selectedLocation = item
             print("Selected Procedure is \(self.selectedLocation) at index \(index)")

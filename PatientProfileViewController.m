@@ -34,6 +34,7 @@
     [_otherButton addTarget:self action:@selector(SelectGenderButton) forControlEvents:UIControlEventTouchUpInside];
     _maleButton.backgroundColor = [UIColor colorWithRed:255.0f/255.0f green:206.0f/255.0f blue:74.0f/255.0f alpha:1];
     [_maleButton setTitleColor:[UIColor colorWithRed:255.0f/255.0f green:98.0f/255.0f blue:2.0f/255.0f alpha:1] forState:UIControlStateNormal];
+    self.Gender = @"male";
     
     // Do any additional setup after loading the view.
 }
@@ -96,10 +97,16 @@
     
     
     
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"ReviewCase" bundle:nil];
-    ReviewCaseFileViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"ReviewCaseVC"];
-    [[self navigationController] pushViewController:vc animated:YES];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Auth" bundle:nil];
+    ReviewCaseFileViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"AuthVCNAv"];
+    [self presentViewController:vc animated:YES completion:nil];
+
     
+    
+//    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"ReviewCase" bundle:nil];
+//    ReviewCaseFileViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"ReviewCaseVC"];
+//    [[self navigationController] pushViewController:vc animated:YES];
+//    
     
     //        let storyboard1 = UIStoryboard(name: "ReviewCase", bundle: nil)
     //        let controller1 = storyboard1.instantiateViewController(withIdentifier: "ReviewCaseVC")
@@ -128,7 +135,9 @@
 }
 
 - (IBAction)proceedButton:(UIButton *)sender {
-    [self performSegueWithIdentifier:@"SignupVC" sender:self];
+    
+    
+    [self ProceedButton];
     
     
     

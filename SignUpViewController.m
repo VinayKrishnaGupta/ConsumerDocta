@@ -121,10 +121,10 @@
     ReviewCasefileManager.sharedInstance.S45Password = self.passwordTextField.text;
     ReviewCasefileManager.sharedInstance.S46ConfirmPassword = self.confirmPasswordtextfield.text;
     ReviewCasefileManager.sharedInstance.S47PhoneNumber = self.phoneNumbertextfield.text;
-    ReviewCasefileManager.sharedInstance.S48PatientGender = self.Gender;
-    ReviewCasefileManager.sharedInstance.S49PatientName = self.patientNametextField.text;
-    ReviewCasefileManager.sharedInstance.S50PatientAge = [self.patientAgeTextfield.text integerValue];
-    ReviewCasefileManager.sharedInstance.S51PatientNationality = self.NationalityTextfield.text;
+//    ReviewCasefileManager.sharedInstance.S48PatientGender = self.Gender;
+//    ReviewCasefileManager.sharedInstance.S49PatientName = self.patientNametextField.text;
+//    ReviewCasefileManager.sharedInstance.S50PatientAge = [self.patientAgeTextfield.text integerValue];
+//    ReviewCasefileManager.sharedInstance.S51PatientNationality = self.NationalityTextfield.text;
     
     
     

@@ -38,14 +38,14 @@ class ReviewCaseFileViewController: UIViewController, UITableViewDataSource, UIT
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return 5
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
             return 4
         }
-        if section == 1 {
+        if section == 3 {
             return 6
         }
         else {
@@ -94,7 +94,23 @@ class ReviewCaseFileViewController: UIViewController, UITableViewDataSource, UIT
             }
             return cell2
         }
+        
+        if indexPath.section == 1 {
+            let imagecell = tableView.dequeueReusableCell(withIdentifier: "ImagesCell", for: indexPath) as! ImageCollectionTableViewCell
+            imagecell.imagearray = ReviewCasefileManager.sharedInstance.ImageArrayBodyparts
+            return imagecell
+        }
+        
         if indexPath.section == 2 {
+            let imagecell2 = tableView.dequeueReusableCell(withIdentifier: "ImagesCellreferal", for: indexPath) as! ImageCollectionTableViewCell
+            imagecell2.imagearray = ReviewCasefileManager.sharedInstance.ImageArrayReportsAndReferral
+            return imagecell2
+        }
+        
+        
+        
+        
+        if indexPath.section == 4 {
           
             let footerCell = tableView.dequeueReusableCell(withIdentifier: "CellFooter", for: indexPath) as! NextBackButtonsTableViewCell
             footerCell.nextButton.addTarget(self, action: #selector(nextButton), for: .touchUpInside)
@@ -105,10 +121,14 @@ class ReviewCaseFileViewController: UIViewController, UITableViewDataSource, UIT
             
             return footerCell
         }
+            
+         
+            
+            
         else {
             
             let cell3 = TableView.dequeueReusableCell(withIdentifier: "Cell3", for: indexPath)
-            if indexPath.section == 1 {
+            if indexPath.section == 3 {
                 
                 switch indexPath.row {
                 case 0:
@@ -160,16 +180,30 @@ class ReviewCaseFileViewController: UIViewController, UITableViewDataSource, UIT
             return "Patient Profile"
         }
         if section == 1 {
+            return "Symptoms images"
+        }
+        
+        if section == 3 {
             return "Case file"
         }
+        if section == 2 {
+            return "Reports and Referrals"
+        }
+            
         else {
             return nil
         }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.section == 2 {
+        if indexPath.section == 4 {
             return 70
+        }
+        if indexPath.section == 1 {
+            return 100
+        }
+        if indexPath.section == 2 {
+            return 100
         }
         else {
             return UITableViewAutomaticDimension
@@ -181,6 +215,10 @@ class ReviewCaseFileViewController: UIViewController, UITableViewDataSource, UIT
         case 0:
             return 20
         case 1:
+            return 30
+        case 2:
+            return 30
+        case 3:
             return 30
         default:
             return 0
