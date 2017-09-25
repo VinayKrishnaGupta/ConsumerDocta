@@ -97,12 +97,16 @@ class ReviewCaseFileViewController: UIViewController, UITableViewDataSource, UIT
         
         if indexPath.section == 1 {
             let imagecell = tableView.dequeueReusableCell(withIdentifier: "ImagesCell", for: indexPath) as! ImageCollectionTableViewCell
+            imagecell.HideCameraButton = true
             imagecell.imagearray = ReviewCasefileManager.sharedInstance.ImageArrayBodyparts
+            
             return imagecell
         }
         
         if indexPath.section == 2 {
             let imagecell2 = tableView.dequeueReusableCell(withIdentifier: "ImagesCellreferal", for: indexPath) as! ImageCollectionTableViewCell
+            imagecell2.HideCameraButton = true
+           
             imagecell2.imagearray = ReviewCasefileManager.sharedInstance.ImageArrayReportsAndReferral
             return imagecell2
         }

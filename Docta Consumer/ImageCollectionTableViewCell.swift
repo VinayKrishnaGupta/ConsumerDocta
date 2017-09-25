@@ -20,6 +20,7 @@ protocol OpenCameraProtocol : NSObjectProtocol {
 class ImageCollectionTableViewCell: UITableViewCell, UICollectionViewDataSource,ImagePickerDelegate , UICollectionViewDelegate {
     let imagepicker = ImagePickerController()
     public var imagearray  = [UIImage]()
+    public var HideCameraButton : Bool? = false
     
     weak var delegate: OpenCameraProtocol?
     
@@ -51,7 +52,14 @@ class ImageCollectionTableViewCell: UITableViewCell, UICollectionViewDataSource,
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return imagearray.count+1
+        
+        if HideCameraButton! {
+            return imagearray.count
+        }
+        else {
+            return imagearray.count+1
+        }
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -59,26 +67,34 @@ class ImageCollectionTableViewCell: UITableViewCell, UICollectionViewDataSource,
         let cell = colletionViewImages.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! imagesviewCollectionViewCell
        
         
-        if indexPath.row == 0 {
-            cell.imageViewofCell.image = UIImage(named: "addimage")
+        if HideCameraButton! {
+            cell.imageViewofCell.image = self.imagearray[indexPath.row]
             
-            // cell.cellImageView.image = UIImage.init(named: "folderplus")
-            
-           // cell.imageViewofCell.image = UIImage.sd_animatedGIFNamed("plusgif")
-            
-//            let GIFImage = UIImage.gifWithName("plusgif")
-//            
-//            // Use the UIImage in your UIImageView
-//         //   let imageView = UIImageView(image: jeremyGif)
-//            
-//            let GIFImageview = UIImageView(image: GIFImage)
-//            GIFImageview.frame = CGRect(x: 0, y: 0, width: cell.frame.width, height: cell.frame.height)
-//            cell.imageViewofCell.addSubview(GIFImageview)
         }
         else {
-            cell.imageViewofCell.image = imagearray[indexPath.row-1]
-            
+            if indexPath.row == 0 {
+                cell.imageViewofCell.image = UIImage(named: "addimage")
+                
+                // cell.cellImageView.image = UIImage.init(named: "folderplus")
+                
+                // cell.imageViewofCell.image = UIImage.sd_animatedGIFNamed("plusgif")
+                
+                //            let GIFImage = UIImage.gifWithName("plusgif")
+                //
+                //            // Use the UIImage in your UIImageView
+                //         //   let imageView = UIImageView(image: jeremyGif)
+                //
+                //            let GIFImageview = UIImageView(image: GIFImage)
+                //            GIFImageview.frame = CGRect(x: 0, y: 0, width: cell.frame.width, height: cell.frame.height)
+                //            cell.imageViewofCell.addSubview(GIFImageview)
+            }
+            else {
+                cell.imageViewofCell.image = imagearray[indexPath.row-1]
+                
+            }
+
         }
+        
         
         
         
@@ -147,6 +163,8 @@ class ImageCollectionTableViewCell: UITableViewCell, UICollectionViewDataSource,
         colletionViewImages.reloadData()
         imagePicker.dismiss(animated: true, completion: nil)
     }
+    
+    
 
     
     

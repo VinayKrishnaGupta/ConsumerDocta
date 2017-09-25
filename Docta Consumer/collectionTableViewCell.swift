@@ -12,12 +12,13 @@ class collectionTableViewCell: UITableViewCell, UICollectionViewDataSource, UICo
     @IBOutlet weak var colletionViewImages: UICollectionView!
     var selectedindex : Int = -1
     var numberofRows : Int = 1
-    var listofValues : Array = ["1","2","3"]
+    var listofValues : Array = ["DAYS","WEEKS","MONTHS","YEARS"]
     override func awakeFromNib() {
         super.awakeFromNib()
         
         colletionViewImages.dataSource = self
         colletionViewImages.delegate = self
+        colletionViewImages.layoutIfNeeded()
         
         
         
@@ -31,13 +32,13 @@ class collectionTableViewCell: UITableViewCell, UICollectionViewDataSource, UICo
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return numberofRows
+        return listofValues.count
     }
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return CGSize(width: self.colletionViewImages.frame.width/4, height: 40)
+        return CGSize(width: self.colletionViewImages.frame.size.width/4, height: 40)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
@@ -51,11 +52,11 @@ class collectionTableViewCell: UITableViewCell, UICollectionViewDataSource, UICo
         let cell = colletionViewImages.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! LabelsCollectionViewCell
         cell.titleLabel.text =  listofValues[indexPath.row]
         
-        cell.layer.borderWidth = 0.25
-       
-      
-        cell.layer.borderColor = UIColor(red:1, green:0.63, blue:0.12, alpha:1).cgColor
-        
+//        cell.layer.borderWidth = 0.25
+//       
+//      
+//        cell.layer.borderColor = UIColor(red:1, green:0.63, blue:0.12, alpha:1).cgColor
+//        
         if indexPath.row == selectedindex
         {
             cell.contentView.backgroundColor = UIColor.init(colorLiteralRed: 255/255, green: 206/255, blue: 74/255, alpha: 1)
@@ -82,7 +83,7 @@ class collectionTableViewCell: UITableViewCell, UICollectionViewDataSource, UICo
         cell.contentView.backgroundColor = UIColor.init(colorLiteralRed: 255/255, green: 206/255, blue: 74/255, alpha: 1)
         cell.titleLabel.textColor = UIColor.init(colorLiteralRed: 255/255, green: 98/255, blue: 2/255, alpha: 1)
         ReviewCasefileManager.sharedInstance.HowLong = cell.titleLabel.text!
-        
+       
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
@@ -90,6 +91,8 @@ class collectionTableViewCell: UITableViewCell, UICollectionViewDataSource, UICo
         cell.contentView.backgroundColor = UIColor.groupTableViewBackground
         cell.titleLabel.textColor = UIColor.gray
     }
+    
+
     
     // change background color when user touches cell
         
@@ -100,14 +103,14 @@ class collectionTableViewCell: UITableViewCell, UICollectionViewDataSource, UICo
         // Configure the view for the selected state
     }
     
-    override func layoutSubviews() {
-        colletionViewImages.layer.cornerRadius = 5
-        colletionViewImages.layer.borderColor = UIColor(red:1, green:0.63, blue:0.12, alpha:1).cgColor
-        colletionViewImages.layer.borderWidth = 0.5
-        colletionViewImages.layer.masksToBounds = true
-        colletionViewImages.collectionViewLayout.invalidateLayout()
-        
-    }
+//    override func layoutSubviews() {
+//        colletionViewImages.layer.cornerRadius = 5
+//        colletionViewImages.layer.borderColor = UIColor(red:1, green:0.63, blue:0.12, alpha:1).cgColor
+//        colletionViewImages.layer.borderWidth = 0.5
+//        colletionViewImages.layer.masksToBounds = true
+//      //  colletionViewImages.collectionViewLayout.invalidateLayout()
+//        
+//    }
     
 
 }

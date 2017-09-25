@@ -98,9 +98,9 @@
     
     
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Auth" bundle:nil];
-    ReviewCaseFileViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"AuthVCNAv"];
-    [self presentViewController:vc animated:YES completion:nil];
-
+    ReviewCaseFileViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"SignupVC"];
+  //  [self presentViewController:vc animated:YES completion:nil];
+    [[self navigationController] pushViewController:vc animated:YES];
     
     
 //    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"ReviewCase" bundle:nil];

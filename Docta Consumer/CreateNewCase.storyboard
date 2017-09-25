@@ -1181,7 +1181,7 @@
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XYL-ji-aYT">
                                                     <rect key="frame" x="8" y="0.0" width="320" height="40"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="vf4-iJ-6oP">
                                                         <size key="itemSize" width="80" height="40"/>
                                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -1191,7 +1191,7 @@
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="aet-0h-PDe" customClass="LabelsCollectionViewCell" customModule="Docta_Consumer" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="0.0" width="80" height="40"/>
-                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="40"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
@@ -1205,6 +1205,8 @@
                                                                     </label>
                                                                 </subviews>
                                                             </view>
+                                                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                            <size key="customSize" width="80" height="40"/>
                                                             <connections>
                                                                 <outlet property="titleLabel" destination="e8F-Mi-iRV" id="Lez-4v-gNb"/>
                                                             </connections>

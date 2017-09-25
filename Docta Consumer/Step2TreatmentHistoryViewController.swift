@@ -16,6 +16,7 @@ class Step2TreatmentHistoryViewController: UIViewController, UITableViewDataSour
     let Questions : Array = ["What treatment have you had? ","Do you have any medical conditions? ","Any additional information? "]
     
     override func viewDidLoad() {
+        print("How long list is \(ReviewCasefileManager.sharedInstance.HowLong)")
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self

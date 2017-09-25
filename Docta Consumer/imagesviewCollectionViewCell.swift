@@ -17,6 +17,10 @@ class imagesviewCollectionViewCell: UICollectionViewCell {
        
         
     }
-    
+    override func layoutSubviews() {
+        self.layer.cornerRadius = 5
+        self.layer.masksToBounds = true
+        
+    }
     
 }
