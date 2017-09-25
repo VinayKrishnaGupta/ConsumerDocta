@@ -53,6 +53,7 @@
 		2F72A2641EF93B0A00CEC047 /* DoctaManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F72A2631EF93B0A00CEC047 /* DoctaManager.m */; };
 		2F804BBF1F6FB0AD00D140C7 /* PatientProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F804BBE1F6FB0AD00D140C7 /* PatientProfileViewController.m */; };
 		2F804BC41F7234F500D140C7 /* SideBarVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F804BC31F7234F500D140C7 /* SideBarVCViewController.swift */; };
+		2F804BC61F78E59B00D140C7 /* PatientProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F804BC51F78E59B00D140C7 /* PatientProfileTableViewCell.swift */; };
 		2F87E6601EFA679700E6CD70 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F87E65F1EFA679700E6CD70 /* Alamofire.framework */; };
 		2F87E6631EFBD9EE00E6CD70 /* ViewCaseFileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F87E6621EFBD9EE00E6CD70 /* ViewCaseFileViewController.m */; };
 		2FA8EC2A1EE9673900F9AB24 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA8EC291EE9673900F9AB24 /* main.m */; };
@@ -180,6 +181,7 @@
 		2F804BBD1F6FB0AD00D140C7 /* PatientProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PatientProfileViewController.h; path = ../PatientProfileViewController.h; sourceTree = "<group>"; };
 		2F804BBE1F6FB0AD00D140C7 /* PatientProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PatientProfileViewController.m; path = ../PatientProfileViewController.m; sourceTree = "<group>"; };
 		2F804BC31F7234F500D140C7 /* SideBarVCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBarVCViewController.swift; sourceTree = "<group>"; };
+		2F804BC51F78E59B00D140C7 /* PatientProfileTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientProfileTableViewCell.swift; sourceTree = "<group>"; };
 		2F87E65F1EFA679700E6CD70 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../Library/Developer/Xcode/DerivedData/Docta_Consumer-fzeqzrpmkwrzkzexuhyxdnkslmth/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
 		2F87E6611EFBD9EE00E6CD70 /* ViewCaseFileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewCaseFileViewController.h; sourceTree = "<group>"; };
 		2F87E6621EFBD9EE00E6CD70 /* ViewCaseFileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewCaseFileViewController.m; sourceTree = "<group>"; };
@@ -331,6 +333,7 @@
 			isa = PBXGroup;
 			children = (
 				2F053C331F35C9F700A41015 /* ReviewCase.storyboard */,
+				2F804BC51F78E59B00D140C7 /* PatientProfileTableViewCell.swift */,
 				2FFCFB291F50008400DE1346 /* ReviewCasefileManager.swift */,
 				2FFCFB2B1F5005A700DE1346 /* ReviewCaseFileViewController.swift */,
 			);
@@ -969,6 +972,7 @@
 				2FFE00211F1F840C003C3643 /* CreateChannelCell.swift in Sources */,
 				2FF438C51F305355004451FB /* OpenCasesCell.swift in Sources */,
 				2FAE81141F14DCE1007E937A /* Step3TreatmentHistoryViewController.swift in Sources */,
+				2F804BC61F78E59B00D140C7 /* PatientProfileTableViewCell.swift in Sources */,
 				2FFCFB2C1F5005A700DE1346 /* ReviewCaseFileViewController.swift in Sources */,
 				2FA8EC761EEFAA2F00F9AB24 /* CreateCaseFileViewController.swift in Sources */,
 				2F72A25F1EF7B58300CEC047 /* APIHandler.m in Sources */,

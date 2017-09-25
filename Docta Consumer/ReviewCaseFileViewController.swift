@@ -29,7 +29,7 @@ class ReviewCaseFileViewController: UIViewController, UITableViewDataSource, UIT
         print("Question 4 is \(ReviewCasefileManager.sharedInstance.Q4TreatmentHistory)")
         print("Question 5 is \(ReviewCasefileManager.sharedInstance.Q5MedicalConditions)")
         print("Questions 6 is \(ReviewCasefileManager.sharedInstance.Q6AddtionalInformation)")
-        self.navigationItem.title = "Review Your Case File"
+        self.navigationItem.title = "Review"
         self.navigationItem.hidesBackButton = true
 
         
@@ -38,14 +38,14 @@ class ReviewCaseFileViewController: UIViewController, UITableViewDataSource, UIT
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 5
+        return 6
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
-            return 4
+            return 1
         }
-        if section == 3 {
+        if section == 4 {
             return 6
         }
         else {
@@ -76,26 +76,30 @@ class ReviewCaseFileViewController: UIViewController, UITableViewDataSource, UIT
         if indexPath.section == 0 {
            
             let cell2 = TableView.dequeueReusableCell(withIdentifier: "Cell2", for: indexPath)
-            switch indexPath.row {
-            case 0:
+           
                 cell2.textLabel?.attributedText = makeAttributedString(title: "Patient Name ", subtitle: ReviewCasefileManager.sharedInstance.S49PatientName)
-            case 1:
-                cell2.textLabel?.attributedText = makeAttributedString(title: "Patient Age ", subtitle: String(ReviewCasefileManager.sharedInstance.S50PatientAge))
-                
-            case 2:
-                cell2.textLabel?.attributedText = makeAttributedString(title: "Patient Gender ", subtitle: ReviewCasefileManager.sharedInstance.S48PatientGender)
-                
-            case 3:
-                cell2.textLabel?.attributedText = makeAttributedString(title: "Patient Nationality ", subtitle: ReviewCasefileManager.sharedInstance.S51PatientNationality)
-                
-                
-            default:
-                break
-            }
-            return cell2
+                return cell2
         }
         
+        //PatientProfile
         if indexPath.section == 1 {
+            let patientprofileCell = tableView.dequeueReusableCell(withIdentifier: "PatientProfile", for: indexPath) as! PatientProfileTableViewCell
+            
+            
+            patientprofileCell.patientAge.text = String(ReviewCasefileManager.sharedInstance.S50PatientAge)
+            patientprofileCell.patientGender.text = ReviewCasefileManager.sharedInstance.S48PatientGender
+            patientprofileCell.PAtientNationality.text = ReviewCasefileManager.sharedInstance.S51PatientNationality
+            patientprofileCell.GenderLabel.text = "Gender"
+            patientprofileCell.AgeLabel.text = "Age"
+            patientprofileCell.NationalityLabel.text = "Nationality"
+            
+            
+            
+            return patientprofileCell
+        }
+        
+        
+        if indexPath.section == 2 {
             let imagecell = tableView.dequeueReusableCell(withIdentifier: "ImagesCell", for: indexPath) as! ImageCollectionTableViewCell
             imagecell.HideCameraButton = true
             imagecell.imagearray = ReviewCasefileManager.sharedInstance.ImageArrayBodyparts
@@ -103,7 +107,7 @@ class ReviewCaseFileViewController: UIViewController, UITableViewDataSource, UIT
             return imagecell
         }
         
-        if indexPath.section == 2 {
+        if indexPath.section == 3 {
             let imagecell2 = tableView.dequeueReusableCell(withIdentifier: "ImagesCellreferal", for: indexPath) as! ImageCollectionTableViewCell
             imagecell2.HideCameraButton = true
            
@@ -114,7 +118,7 @@ class ReviewCaseFileViewController: UIViewController, UITableViewDataSource, UIT
         
         
         
-        if indexPath.section == 4 {
+        if indexPath.section == 5 {
           
             let footerCell = tableView.dequeueReusableCell(withIdentifier: "CellFooter", for: indexPath) as! NextBackButtonsTableViewCell
             footerCell.nextButton.addTarget(self, action: #selector(nextButton), for: .touchUpInside)
@@ -132,7 +136,7 @@ class ReviewCaseFileViewController: UIViewController, UITableViewDataSource, UIT
         else {
             
             let cell3 = TableView.dequeueReusableCell(withIdentifier: "Cell3", for: indexPath)
-            if indexPath.section == 3 {
+            if indexPath.section == 4 {
                 
                 switch indexPath.row {
                 case 0:
@@ -183,14 +187,14 @@ class ReviewCaseFileViewController: UIViewController, UITableViewDataSource, UIT
         if section == 0 {
             return "Patient Profile"
         }
-        if section == 1 {
+        if section == 2 {
             return "Symptoms images"
         }
         
-        if section == 3 {
+        if section == 4 {
             return "Case file"
         }
-        if section == 2 {
+        if section == 3 {
             return "Reports and Referrals"
         }
             
@@ -200,14 +204,17 @@ class ReviewCaseFileViewController: UIViewController, UITableViewDataSource, UIT
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.section == 4 {
+        if indexPath.section == 5 {
             return 70
-        }
-        if indexPath.section == 1 {
-            return 100
         }
         if indexPath.section == 2 {
             return 100
+        }
+        if indexPath.section == 3 {
+            return 100
+        }
+        if indexPath.section == 1 {
+            return 70
         }
         else {
             return UITableViewAutomaticDimension
@@ -218,12 +225,14 @@ class ReviewCaseFileViewController: UIViewController, UITableViewDataSource, UIT
         switch section {
         case 0:
             return 20
-        case 1:
-            return 30
         case 2:
             return 30
         case 3:
             return 30
+        case 4:
+            return 30
+        case 1:
+            return -10
         default:
             return 0
         }
