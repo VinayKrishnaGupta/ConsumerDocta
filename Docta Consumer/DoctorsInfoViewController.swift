@@ -14,6 +14,7 @@ class DoctorsInfoViewController: UIViewController, UITableViewDataSource, UITabl
     @IBOutlet weak var TableView: UITableView!
     public var SpecialistID : String = ""
     var responseObject : NSDictionary = [:]
+    let codedLabel:UILabel = UILabel()
     
     @IBOutlet weak var CountryNameLabel: UILabel!
     @IBOutlet weak var specialityNameLabel: UILabel!
@@ -78,8 +79,25 @@ class DoctorsInfoViewController: UIViewController, UITableViewDataSource, UITabl
                 self.TableView.reloadData()
                 
             }
-            if (error != nil) {
+            else {
                 SVProgressHUD.dismiss()
+               
+                
+                    codedLabel.frame = CGRect(x: 100, y: 100, width: self.view.frame.height/2, height: self.view.frame.height/2)
+                    codedLabel.textAlignment = .center
+                    codedLabel.text = "You have not selected any specilist"
+                    codedLabel.numberOfLines=2
+                    codedLabel.layer.cornerRadius = 20
+                    codedLabel.textColor=UIColor.white
+                    codedLabel.font=UIFont.systemFont(ofSize: 18)
+                    codedLabel.backgroundColor=UIColor(red:0.08, green:0.65, blue:1, alpha:1)
+                    self.view.addSubview(codedLabel)
+                    codedLabel.translatesAutoresizingMaskIntoConstraints = false
+                    codedLabel.heightAnchor.constraint(equalToConstant: self.view.frame.height/2).isActive = true
+                    codedLabel.widthAnchor.constraint(equalToConstant: self.view.frame.height/2).isActive = true
+                    codedLabel.centerXAnchor.constraint(equalTo: codedLabel.superview!.centerXAnchor).isActive = true
+                    codedLabel.centerYAnchor.constraint(equalTo: codedLabel.superview!.centerYAnchor).isActive = true
+                
                 print("Error is \(String(describing: error))")
                 
             }
