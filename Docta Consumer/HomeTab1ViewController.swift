@@ -39,6 +39,19 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate {
         self.navigationController?.navigationBar.addSubview(imageview)
         
         
+        //background Image
+        
+        
+        
+        UIGraphicsBeginImageContext(self.view.frame.size)
+        UIImage(named: "homescreenbackground")?.draw(in: self.view.bounds)
+        let backgroundimage: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        self.view.backgroundColor = UIColor(patternImage: backgroundimage)
+        
+        
+        
+        
         
         clinicNametextfield.delegate = self
         locationTextField.delegate = self

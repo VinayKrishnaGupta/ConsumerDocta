@@ -22,7 +22,8 @@ class DoctorsInfoViewController: UIViewController, UITableViewDataSource, UITabl
         
         super.viewDidLoad()
         SVProgressHUD.show()
-        TableView.isHidden = true
+        SVProgressHUD.setForegroundColor(UIColor(red:0.08, green:0.65, blue:1, alpha:1))
+       
         TableView.dataSource = self
         TableView.delegate = self
         TableView.estimatedRowHeight = 100
@@ -57,6 +58,9 @@ class DoctorsInfoViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        SVProgressHUD.show()
+        TableView.isHidden = true
+        self.codedLabel.isHidden = true
         specialityNameLabel.text = ReviewCasefileManager.sharedInstance.SpecialistyName
         CountryNameLabel.text = ReviewCasefileManager.sharedInstance.CountryName
         
@@ -74,36 +78,38 @@ class DoctorsInfoViewController: UIViewController, UITableViewDataSource, UITabl
                 print(response as Any)
                 let json : NSDictionary = response as! NSDictionary
                 self.responseObject = json.value(forKey: "data") as! NSDictionary
-                SVProgressHUD.dismiss()
+                
+                self.codedLabel.isHidden = true
                 self.TableView.isHidden = false
                 self.TableView.reloadData()
+                SVProgressHUD.dismiss()
                 
             }
             else {
                 SVProgressHUD.dismiss()
-               
+               self.codedLabel.isHidden = false
                 
-                    codedLabel.frame = CGRect(x: 100, y: 100, width: self.view.frame.height/2, height: self.view.frame.height/2)
-                    codedLabel.textAlignment = .center
-                    codedLabel.text = "You have not selected any specilist"
-                    codedLabel.numberOfLines=2
-                    codedLabel.layer.cornerRadius = 20
-                    codedLabel.textColor=UIColor.white
-                    codedLabel.font=UIFont.systemFont(ofSize: 18)
-                    codedLabel.backgroundColor=UIColor(red:0.08, green:0.65, blue:1, alpha:1)
-                    self.view.addSubview(codedLabel)
-                    codedLabel.translatesAutoresizingMaskIntoConstraints = false
-                    codedLabel.heightAnchor.constraint(equalToConstant: self.view.frame.height/2).isActive = true
-                    codedLabel.widthAnchor.constraint(equalToConstant: self.view.frame.height/2).isActive = true
-                    codedLabel.centerXAnchor.constraint(equalTo: codedLabel.superview!.centerXAnchor).isActive = true
-                    codedLabel.centerYAnchor.constraint(equalTo: codedLabel.superview!.centerYAnchor).isActive = true
+                self.codedLabel.frame = CGRect(x: 100, y: 100, width: self.view.frame.height/2, height: self.view.frame.height/2)
+                    self.codedLabel.textAlignment = .center
+                    self.codedLabel.text = "You have not selected any specilist"
+                    self.codedLabel.numberOfLines=2
+                    self.codedLabel.layer.cornerRadius = 20
+                    self.codedLabel.textColor=UIColor.white
+                    self.codedLabel.font=UIFont.systemFont(ofSize: 18)
+                    self.codedLabel.backgroundColor=UIColor(red:0.08, green:0.65, blue:1, alpha:1)
+                    self.view.addSubview(self.codedLabel)
+                    self.codedLabel.translatesAutoresizingMaskIntoConstraints = false
+                    self.codedLabel.heightAnchor.constraint(equalToConstant: self.view.frame.height/2).isActive = true
+                    self.codedLabel.widthAnchor.constraint(equalToConstant: self.view.frame.height/2).isActive = true
+                    self.codedLabel.centerXAnchor.constraint(equalTo: self.codedLabel.superview!.centerXAnchor).isActive = true
+                    self.codedLabel.centerYAnchor.constraint(equalTo: self.codedLabel.superview!.centerYAnchor).isActive = true
                 
                 print("Error is \(String(describing: error))")
                 
             }
         }
         
-        SVProgressHUD.dismiss()
+        
         
 
         
@@ -297,6 +303,10 @@ class DoctorsInfoViewController: UIViewController, UITableViewDataSource, UITabl
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    @IBAction func backButton(_ sender: UIButton) {
+     self.navigationController?.popViewController(animated: true)
+        
     }
     
 

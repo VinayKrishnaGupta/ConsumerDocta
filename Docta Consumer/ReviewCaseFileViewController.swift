@@ -309,20 +309,22 @@ class ReviewCaseFileViewController: UIViewController, UITableViewDataSource, UIT
           "body_files": BodyPartsImages,
           "report_files": ReportsandReferalImages,
           "speciality": SharedPreferences.SpecialityIDSelected]
+        
     
         
         let SendingBody = [
-            "success" : "true",
+            
             "case_data": parameter
         ] as [String : Any]
         
         let APIsession : APIHandler = APIHandler()
-        APIsession.getDatafromAPI("POST", "casefile/create", SendingBody) { (response, error) in
+        APIsession.getDatafromAPI("POST", "create", SendingBody) { (response, error) in
             if (response != nil) {
                 print(response)
                 SVProgressHUD.dismiss()
                 SVProgressHUD.show(withStatus: "Your Case file has been created")
                 SVProgressHUD.dismiss(withDelay: 2)
+                self.navigationController?.popToRootViewController(animated: true)
             }
             if (error != nil) {
                 print("Error is \(String(describing: error))")

@@ -99,6 +99,8 @@ class SpecialistsListViewController: UIViewController, UITableViewDataSource, UI
         let cell = tableView.cellForRow(at: indexPath)
         cell?.contentView.backgroundColor = UIColor(red:0.08, green:0.65, blue:1, alpha:1)
         cell?.backgroundColor = UIColor(red:0.08, green:0.65, blue:1, alpha:1)
+        ReviewCasefileManager.sharedInstance.SelectedSpecialist = self.DoctorslistFiltered[indexPath.section]
+        
         
     }
     
@@ -152,6 +154,11 @@ class SpecialistsListViewController: UIViewController, UITableViewDataSource, UI
         
     }
 
+    @IBAction func backButton(_ sender: UIButton) {
+    self.navigationController?.popViewController(animated: true)
+        
+    }
+    
     /*
     // MARK: - Navigation
 
