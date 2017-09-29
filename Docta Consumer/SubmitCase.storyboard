@@ -278,7 +278,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="doctordummyprofile" translatesAutoresizingMaskIntoConstraints="NO" id="lft-De-6LU">
-                                                    <rect key="frame" x="8" y="337" width="60" height="53"/>
+                                                    <rect key="frame" x="8" y="336" width="60" height="53"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -322,6 +322,10 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="backgroundImageView" destination="JTX-9p-s5l" id="AcK-bv-xWR"/>
+                                            <outlet property="titleLabel" destination="o8U-FG-OcH" id="Zo0-ua-9OK"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>

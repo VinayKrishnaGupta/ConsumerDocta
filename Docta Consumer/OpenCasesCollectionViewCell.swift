@@ -18,7 +18,7 @@ class OpenCasesCollectionViewCell: UICollectionViewCell, UICollectionViewDataSou
         locationCollectionView.dataSource = self
         locationCollectionView.delegate = self
         locationCollectionView.register(LocationOpenCasesCell.self, forCellWithReuseIdentifier: "LocationOpenCasesCell")
-        
+       
         
         // Initialization code
     }

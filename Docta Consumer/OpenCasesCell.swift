@@ -9,5 +9,19 @@
 import UIKit
 
 class OpenCasesCell: UICollectionViewCell {
+    @IBOutlet weak var backgroundImageView: UIImageView!
     
+    @IBOutlet weak var titleLabel: UILabel!
+   override func awakeFromNib() {
+    
+//        backgroundImageView.tintColor = UIColor(red:0.08, green:0.65, blue:1, alpha:1)
+//    backgroundImageView.image = UIImage.init(named: "casefileBackground")
+//        
+//        
+    }
+
+
+
 }
+
+
