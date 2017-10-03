@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class OpenCaseViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
     @IBOutlet weak var collectionView: UICollectionView!
@@ -31,16 +32,47 @@ class OpenCaseViewController: UIViewController, UICollectionViewDataSource, UICo
         
         
         
-  //   collectionView.register(OpenCasesCollectionViewCell.self, forCellWithReuseIdentifier: "OpenCasesCollectionViewCell")
+        let SignupBarButton = UIBarButtonItem.init(image: UIImage.init(named: "useraccount"), style: UIBarButtonItemStyle.done, target: self, action: #selector(SignupButton))
         
-        //self.collectionView.register("OpenCasesCollectionViewCell", forCellWithReuseIdentifier: "Cell")
-       // collectionView.register(OpenCasesCollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
+        let menuButton = UIBarButtonItem.init(image: UIImage.init(named: "menu"), style: UIBarButtonItemStyle.done, target: self, action: #selector(revealSideBarfromButton))
         
-  
+        let homeButton = UIBarButtonItem.init(image: UIImage.init(named: "createcasefile"), style: UIBarButtonItemStyle.done, target: self, action: #selector(GotoHomeButton))
+        let notificationbutton = UIBarButtonItem.init(image: UIImage.init(named: "notification"), style: UIBarButtonItemStyle.done, target: self, action: #selector(notificationButton))
+        
+        
+        self.navigationItem.rightBarButtonItems = [menuButton, SignupBarButton,notificationbutton, homeButton]
+        
         // Do any additional setup after loading the view.
     }
     
-    func goToCreateCaseFile() {
+    
+    func revealSideBarfromButton() {
+        
+        sideMenuController?.toggle()
+        
+        
+    }
+    
+    func notificationButton() {
+        SVProgressHUD.showInfo(withStatus: "Coming Soon...")
+        SVProgressHUD.dismiss(withDelay: 2)
+        
+    }
+    
+    func GotoHomeButton() {
+        
+        //createcasefile
+        self.navigationController?.popViewController(animated: false)
+        
+    }
+    
+    func SignupButton() {
+        
+        
+        let storyboard = UIStoryboard(name: "Auth", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "SignupVC")
+        self.navigationController?.pushViewController(controller, animated: true)
+        
         
         
         

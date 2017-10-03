@@ -12,7 +12,15 @@ class OpenCasesCell: UICollectionViewCell {
     @IBOutlet weak var backgroundImageView: UIImageView!
     
     @IBOutlet weak var titleLabel: UILabel!
-   override func awakeFromNib() {
+    @IBOutlet weak var profileImageView: UIImageView!
+    override func awakeFromNib() {
+        
+        profileImageView.layer.cornerRadius = 35
+        profileImageView.layer.masksToBounds = true
+        profileImageView.layer.borderWidth = 2
+        profileImageView.layer.borderColor = UIColor(red:0.08, green:0.65, blue:1, alpha:1).cgColor
+        
+        
     
 //        backgroundImageView.tintColor = UIColor(red:0.08, green:0.65, blue:1, alpha:1)
 //    backgroundImageView.image = UIImage.init(named: "casefileBackground")

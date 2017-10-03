@@ -7,6 +7,7 @@
 //
 
 #import "SpecialitsTabBarViewController.h"
+#import "Docta_Consumer-Swift.h"
 
 @interface SpecialitsTabBarViewController ()
 
@@ -42,12 +43,52 @@
     [[UITabBar appearance] setItemPositioning:UITabBarItemPositioningAutomatic];
 
     
+   
+    UIBarButtonItem *createButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"createcasefile"] style:UIBarButtonItemStyleDone target:self action:@selector(GotoCreateCaseFile)];
+    UIBarButtonItem *MenuButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu"] style:UIBarButtonItemStyleDone target:self action:@selector(MenuButtonmethod)];
+    UIBarButtonItem *SignupButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"useraccount"] style:UIBarButtonItemStyleDone target:self action:@selector(SignupButtonmethod)];
+    UIBarButtonItem *NotificationButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"notification"] style:UIBarButtonItemStyleDone target:self action:@selector(NotificationButtonMethod)];
+    
+    
+    
+    
+    
+    
+    self.navigationItem.rightBarButtonItems = @[MenuButton, SignupButton, NotificationButton, createButton];
+    
+    
+}
+-(void)GotoCreateCaseFile {
+    NSLog(@"Create Case file button clicked");
+    [self.navigationController popViewControllerAnimated:YES];
+    
+}
+
+- (void)SignupButtonmethod {
+    UIStoryboard *storybard = [UIStoryboard storyboardWithName:@"Auth" bundle:nil];
+    UIViewController *vc = [storybard instantiateViewControllerWithIdentifier:@"SignupVC"];
+    [self.navigationController pushViewController:vc animated:YES];
+    
+}
+
+- (void)MenuButtonmethod {
+    
+   
+    // [SideVC.sideMenuController toggle];
+    [self.sideMenuController toggle];
+    //  [self sideVC.sideMenuController.toggle];
+    //sideMenuController?.toggle()
+    
+}
+
+-(void)NotificationButtonMethod {
     
     
 }
 
 - (void)viewWillLayoutSubviews
 {
+    
     [super viewWillLayoutSubviews];
     
     [self.tabBar invalidateIntrinsicContentSize];
@@ -62,16 +103,15 @@
     }
     
     CGRect tabFrame = self.tabBar.frame;
-    
+    UINavigationBar.appearance.translucent = YES;
     tabFrame.size.height = tabSize;
     
-    tabFrame.origin.y = self.view.frame.origin.y + self.navigationController.navigationBar.frame.size.height + 20;
+    tabFrame.origin.y = self.view.frame.origin.y + self.navigationController.navigationBar.frame.size.height + 20 ;
     tabFrame.size.width = self.view.frame.size.width;
     
     self.tabBar.frame = tabFrame;
     self.tabBar.backgroundColor = [UIColor colorWithRed:0 green:166/255 blue:255/255 alpha:1];
     self.tabBar.tintColor = [UIColor whiteColor];
-    
     
     // Set the translucent property to NO then back to YES to
     // force the UITabBar to reblur, otherwise part of the

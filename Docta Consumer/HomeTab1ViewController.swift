@@ -94,43 +94,29 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate {
         let barButton = UIBarButtonItem(customView: button)
 //        
 //        let emptybutton = UIBarButtonItem.init(title: "Menu", style: UIBarButtonItemStyle.done, target: self, action: #selector(revealSideBarfromButton))
-        let menuButton = UIBarButtonItem.init(image: UIImage.init(named: "menu"), style: UIBarButtonItemStyle.done, target: self, action: #selector(revealSideBarfromButton))
+        
+//        let menuButton = UIButton.init(type: .custom)
+//        menuButton.setImage(UIImage.init(named: "home"), for: UIControlState.normal)
+//        menuButton.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+//        menuButton.addTarget(self, action: #selector(SignupButton), for: .touchUpInside)
+//        let menuBarButton = UIBarButtonItem(customView: menuButton)
+//        menuBarButton.imageInsets = UIEdgeInsetsMake(10, 10, 10, 10)
+        
+        let SignupBarButton = UIBarButtonItem.init(image: UIImage.init(named: "useraccount"), style: UIBarButtonItemStyle.done, target: self, action: #selector(SignupButton))
+        
+       let menuButton = UIBarButtonItem.init(image: UIImage.init(named: "menu"), style: UIBarButtonItemStyle.done, target: self, action: #selector(revealSideBarfromButton))
+        
         let homeButton = UIBarButtonItem.init(image: UIImage.init(named: "home"), style: UIBarButtonItemStyle.done, target: self, action: #selector(GotoHomeButton))
         let notificationbutton = UIBarButtonItem.init(image: UIImage.init(named: "notification"), style: UIBarButtonItemStyle.done, target: self, action: #selector(notificationButton))
        
         
-        self.navigationItem.rightBarButtonItems = [menuButton, barButton,notificationbutton, homeButton]
+        self.navigationItem.rightBarButtonItems = [menuButton, SignupBarButton,notificationbutton, homeButton]
         
         // Do any additional setup after loading the view.
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        
-        
-        let APIsession : APIHandler = APIHandler()
-        APIsession.getDatafromAPI("POST", "options", nil) { (response, error) in
-            if (response != nil) {
-                print(response)
-                let json : NSDictionary = response as! NSDictionary
-                
-                self.responseObject = json.value(forKey: "data") as! NSDictionary
-                self.Specilistlist = self.responseObject.value(forKey: "specialities") as! Array
-                self.SpcialistiesNames = self.responseObject.value(forKeyPath: "specialities.name") as! Array<String>
-                self.LocationsList = self.responseObject.value(forKeyPath: "countries") as! Array<String>
-                self.setupDropDowns()
-                SVProgressHUD.dismiss()
-            }
-            if (error != nil) {
-                print("Error is \(String(describing: error))")
-                SVProgressHUD.showError(withStatus: "Error! Please check you internet connection")
-                SVProgressHUD.dismiss(withDelay: 3)
-            }
-        }
-        
-    }
     
-    func revealSideBarfromButton() {
+   public func revealSideBarfromButton() {
         
         sideMenuController?.toggle()
         
@@ -163,6 +149,34 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate {
         
         
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        
+        let APIsession : APIHandler = APIHandler()
+        APIsession.getDatafromAPI("POST", "options", nil) { (response, error) in
+            if (response != nil) {
+                print(response)
+                let json : NSDictionary = response as! NSDictionary
+                
+                self.responseObject = json.value(forKey: "data") as! NSDictionary
+                self.Specilistlist = self.responseObject.value(forKey: "specialities") as! Array
+                self.SpcialistiesNames = self.responseObject.value(forKeyPath: "specialities.name") as! Array<String>
+                self.LocationsList = self.responseObject.value(forKeyPath: "countries") as! Array<String>
+                self.setupDropDowns()
+                SVProgressHUD.dismiss()
+            }
+            if (error != nil) {
+                print("Error is \(String(describing: error))")
+                SVProgressHUD.showError(withStatus: "Error! Please check you internet connection")
+                SVProgressHUD.dismiss(withDelay: 3)
+            }
+        }
+        
+    }
+    
+   
     
     func setupDropDowns() {
         specialistDropdown.anchorView = clinicNametextfield
