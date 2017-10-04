@@ -158,7 +158,7 @@
         <!--Specialist-->
         <scene sceneID="gId-y3-fTf">
             <objects>
-                <viewController extendedLayoutIncludesOpaqueBars="YES" id="kJj-kZ-5cb" customClass="SpecialistsListViewController" customModule="Docta_Consumer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController extendedLayoutIncludesOpaqueBars="YES" automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="kJj-kZ-5cb" customClass="SpecialistsListViewController" customModule="Docta_Consumer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7sx-Yz-nyR"/>
                         <viewControllerLayoutGuide type="bottom" id="sWr-yf-saq"/>

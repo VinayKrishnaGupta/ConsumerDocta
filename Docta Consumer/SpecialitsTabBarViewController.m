@@ -101,17 +101,20 @@
     {
         tabSize = 32.0;
     }
-    
-    CGRect tabFrame = self.tabBar.frame;
+    CGRect tabFrame = CGRectNull;
+    tabFrame = self.tabBar.frame;
     UINavigationBar.appearance.translucent = YES;
     tabFrame.size.height = tabSize;
     
-    tabFrame.origin.y = self.view.frame.origin.y + self.navigationController.navigationBar.frame.size.height + 20 ;
+    int navsize = self.navigationController.navigationBar.frame.size.height;
+  //  int vieworigin = self.view.frame.origin.y;
+    tabFrame.origin.y =  navsize + 20 ;
     tabFrame.size.width = self.view.frame.size.width;
     
     self.tabBar.frame = tabFrame;
     self.tabBar.backgroundColor = [UIColor colorWithRed:0 green:166/255 blue:255/255 alpha:1];
     self.tabBar.tintColor = [UIColor whiteColor];
+    
     
     // Set the translucent property to NO then back to YES to
     // force the UITabBar to reblur, otherwise part of the
