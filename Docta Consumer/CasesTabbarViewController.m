@@ -8,6 +8,7 @@
 
 #import "CasesTabbarViewController.h"
 #import "Docta_Consumer-Swift.h"
+#import "APIHandler.h"
 
 
 @interface CasesTabbarViewController ()
@@ -100,6 +101,25 @@
 
 -(void)NotificationButtonMethod {
     
+    
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    [[APIHandler sharedInstance]GetDatafromAPI:@"POST" :@"casefilelist" :nil  completionBlock:^(id dict, NSError *error)
+     
+     {
+         
+         NSLog(@"Response Dict in signin is %@  and Error is %@",dict,error );
+         if ([dict isKindOfClass:[NSDictionary class]]) {
+             
+         }
+         else {
+             NSLog(@"Error is Login");
+             
+         }
+         
+     }];
+
     
 }
 

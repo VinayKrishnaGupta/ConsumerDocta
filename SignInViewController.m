@@ -75,7 +75,7 @@
              
              [SVProgressHUD showSuccessWithStatus:@"Logged In Successfully"];
              [SVProgressHUD dismissWithDelay:1];
-             [self dismissViewControllerAnimated:YES completion:nil];
+             [self.navigationController popToRootViewControllerAnimated:YES];
              
              
              
@@ -91,9 +91,9 @@
              // [self presentViewController:vc animated:YES completion:nil];
          }
          else {
-             [SVProgressHUD showSuccessWithStatus:@"Logged In Successfully"];
+             [SVProgressHUD showSuccessWithStatus:@"Logged In Failed"];
              [SVProgressHUD dismissWithDelay:1];
-             [self dismissViewControllerAnimated:YES completion:nil];
+             
              
 //             UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Auth" bundle:nil];
 //             Step1YourcaseViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"SignupVC"];
