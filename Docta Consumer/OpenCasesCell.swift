@@ -13,6 +13,10 @@ class OpenCasesCell: UICollectionViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var specialistLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
+    
+    
     override func awakeFromNib() {
         
         profileImageView.layer.cornerRadius = 35

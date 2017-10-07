@@ -22,7 +22,7 @@ class DoctorsInfoViewController: UIViewController, UITableViewDataSource, UITabl
         
         super.viewDidLoad()
         SVProgressHUD.show()
-        SVProgressHUD.setForegroundColor(UIColor(red:0.08, green:0.65, blue:1, alpha:1))
+      
        
         TableView.dataSource = self
         TableView.delegate = self

@@ -8,18 +8,21 @@
 
 import UIKit
 import SVProgressHUD
+import SDWebImage
 
 class OpenCaseViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var PageControl: UIPageControl!
+    let codedLabel:UILabel = UILabel()
     var screenSize = CGRect()
+    public var OpenCasesList = Array<NSDictionary>()
 
     override func viewDidLoad() {
         super.viewDidLoad()
     collectionView.delegate = self
     collectionView.dataSource = self
-    PageControl.hidesForSinglePage = true
-    PageControl.numberOfPages = 4
+    SVProgressHUD.show()
+        
         
         
     let image : UIImage = UIImage.init(named: "DoctaLogo")!
@@ -77,6 +80,42 @@ class OpenCaseViewController: UIViewController, UICollectionViewDataSource, UICo
         
         
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+      //  PageControl.hidesForSinglePage = true
+        PageControl.numberOfPages = OpenCasesList.count
+        self.collectionView.reloadData()
+        print("Open Case file in VC is \(OpenCasesList)")
+        
+    }
+    public func ReloadData() {
+        print("Open Case file in VC is \(OpenCasesList)")
+        
+        if OpenCasesList.count < 1 {
+        self.codedLabel.isHidden = false
+            self.codedLabel.frame = CGRect(x: 100, y: 100, width: self.view.frame.height/2, height: self.view.frame.height/2)
+            self.codedLabel.textAlignment = .center
+            self.codedLabel.text = "You don't have any casefile yet, Please create one."
+            self.codedLabel.numberOfLines=2
+            self.codedLabel.layer.cornerRadius = 20
+            self.codedLabel.textColor=UIColor.white
+            self.codedLabel.font=UIFont.systemFont(ofSize: 18)
+          //  self.codedLabel.backgroundColor=UIColor(red:0.08, green:0.65, blue:1, alpha:1)
+            self.view.addSubview(self.codedLabel)
+            self.codedLabel.translatesAutoresizingMaskIntoConstraints = false
+            self.codedLabel.heightAnchor.constraint(equalToConstant: self.view.frame.height/2).isActive = true
+            self.codedLabel.widthAnchor.constraint(equalToConstant: self.view.frame.height/2).isActive = true
+            self.codedLabel.centerXAnchor.constraint(equalTo: self.codedLabel.superview!.centerXAnchor).isActive = true
+            self.codedLabel.centerYAnchor.constraint(equalTo: self.codedLabel.superview!.centerYAnchor).isActive = true
+            
+        }
+        else {
+            self.codedLabel.isHidden = true
+        }
+        
+        SVProgressHUD.dismiss()
+    }
+    
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -103,7 +142,7 @@ class OpenCaseViewController: UIViewController, UICollectionViewDataSource, UICo
     
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 4
+        return OpenCasesList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -114,6 +153,28 @@ class OpenCaseViewController: UIViewController, UICollectionViewDataSource, UICo
     
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OpenCell", for: indexPath) as! OpenCasesCell
             cell.backgroundColor = UIColor.white
+        let dict : NSDictionary = OpenCasesList[indexPath.section]
+        let Specialistity : String = dict.value(forKeyPath: "speciality.name") as! String
+        let doctortitle : String = dict.value(forKeyPath: "specialist.title") as! String
+        let doctorfirstname : String = dict.value(forKeyPath: "specialist.name.first") as! String
+        let doctorLastname : String = dict.value(forKeyPath: "specialist.name.last") as! String
+        
+        
+        let specialistName: String = doctortitle + " " + doctorfirstname + " " + doctorLastname
+        
+        let Cityname : String = dict.value(forKeyPath: "specialist.city") as! String
+        let Countryname : String = dict.value(forKeyPath: "specialist.country") as! String
+        cell.titleLabel.text = Specialistity
+        cell.specialistLabel.text = specialistName
+        cell.locationLabel.text = Cityname + ", " + Countryname
+        
+        
+        let APIimage:String = dict.value(forKeyPath: "specialist.image") as! String
+        let imagestring : String = "https://account.docta.com" + APIimage
+        cell.profileImageView.sd_setImage(with: URL(string: imagestring), placeholderImage: UIImage(named: "doctordummyprofile"))
+        
+       
+            
         
             return cell
      

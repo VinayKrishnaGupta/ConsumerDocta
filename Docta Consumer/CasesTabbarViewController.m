@@ -58,7 +58,7 @@
 //    self.navigationItem.rightBarButtonItem = RightButton;
     
     //let SignupBarButton = UIBarButtonItem.init(image: UIImage.init(named: "useraccount"), style: UIBarButtonItemStyle.done, target: self, action: #selector(SignupButton))
-    UIBarButtonItem *createButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"home"] style:UIBarButtonItemStyleDone target:self action:@selector(GotoCreateCaseFile)];
+    UIBarButtonItem *createButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"createcasefile"] style:UIBarButtonItemStyleDone target:self action:@selector(GotoCreateCaseFile)];
     UIBarButtonItem *MenuButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu"] style:UIBarButtonItemStyleDone target:self action:@selector(MenuButtonmethod)];
     UIBarButtonItem *SignupButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"useraccount"] style:UIBarButtonItemStyleDone target:self action:@selector(SignupButtonmethod)];
     UIBarButtonItem *NotificationButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"notification"] style:UIBarButtonItemStyleDone target:self action:@selector(NotificationButtonMethod)];
@@ -74,10 +74,11 @@
 }
 -(void)GotoCreateCaseFile {
     
+    [self.navigationController popToRootViewControllerAnimated:NO];
   
-    UIStoryboard *storybard = [UIStoryboard storyboardWithName:@"SubmitCase" bundle:nil];
-    UIViewController *vc = [storybard instantiateViewControllerWithIdentifier:@"casesTabbar"];
-    [self.navigationController pushViewController:vc animated:YES];
+//    UIStoryboard *storybard = [UIStoryboard storyboardWithName:@"SubmitCase" bundle:nil];
+//    UIViewController *vc = [storybard instantiateViewControllerWithIdentifier:@"casesTabbar"];
+//    [self.navigationController pushViewController:vc animated:YES];
    
  
 }
@@ -109,13 +110,56 @@
      
      {
          
-         NSLog(@"Response Dict in signin is %@  and Error is %@",dict,error );
+        // NSLog(@"Response Dict in signin is %@  and Error is %@",dict,error );
          if ([dict isKindOfClass:[NSDictionary class]]) {
+         
+             NSMutableArray *allCaseFiles = [dict valueForKey:@"data"];
+        
+             
+             NSLog(@"All Casefiles are %@",allCaseFiles);
+             NSMutableArray *openCasefiles = [[NSMutableArray alloc]init];
+             NSMutableArray *closeCasefiles = [[NSMutableArray alloc]init];
+             
+             for (NSDictionary* item in allCaseFiles) {
+                 BOOL Isoopen = [item valueForKey:@"isOpen"];
+                 if (Isoopen) {
+                     [openCasefiles addObject:item];
+                     NSLog(@"Open Case File is %@",openCasefiles);
+                     OpenCaseViewController *openVC = [[self viewControllers] objectAtIndex:0];
+                     openVC.OpenCasesList = openCasefiles;
+                     [openVC viewWillAppear:YES];
+                     [openVC ReloadData];
+                     
+                     
+                     
+                 }
+                 else {
+                     [closeCasefiles addObject:item];
+                     NSLog(@"Closed Case File is %@",closeCasefiles);
+                     CloseCasesViewController *closeVC = [[self viewControllers] objectAtIndex:1];
+                     closeVC.ClosedCaseList = closeCasefiles;
+                     [closeVC ReloadData];
+                     
+                     
+                     
+                 }
+                 
+                 
+                 
+             }
+                 
+         
+             
+             
+             
              
          }
          else {
              NSLog(@"Error is Login");
-             
+             OpenCaseViewController *openVC = [[self viewControllers] objectAtIndex:0];
+             [openVC ReloadData];
+             CloseCasesViewController *closedVC = [[self viewControllers] objectAtIndex:1];
+             [closedVC ReloadData];
          }
          
      }];
