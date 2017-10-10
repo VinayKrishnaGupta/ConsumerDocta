@@ -11,7 +11,7 @@ import SVProgressHUD
 
 class SideBarVCViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var TableView: UITableView!
-    let MenuItems = ["Home","About Us","My Profile", "Contact Us","Privacy Policy"]
+    let MenuItems = ["Home","About Us","My Profile", "Contact Us","Privacy Policy","Sign Out"]
     override func viewDidLoad() {
         super.viewDidLoad()
     TableView.dataSource = self
@@ -36,8 +36,23 @@ class SideBarVCViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        SVProgressHUD.show(withStatus: "Coming Soon...")
-        SVProgressHUD.dismiss(withDelay: 2)
+        if indexPath.section == 5 {
+            let domain = Bundle.main.bundleIdentifier!
+            UserDefaults.standard.removePersistentDomain(forName: domain)
+            UserDefaults.standard.synchronize()
+            
+            SVProgressHUD.showSuccess(withStatus: "You have been successfully signed out")
+            SVProgressHUD.dismiss(withDelay: 2)
+            
+            
+            
+        }
+        else {
+            SVProgressHUD.show(withStatus: "Coming Soon...")
+            SVProgressHUD.dismiss(withDelay: 2)
+        }
+        
+       
         
         
     }

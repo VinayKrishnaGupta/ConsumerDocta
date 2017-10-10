@@ -22,13 +22,13 @@ class ReviewCaseFileViewController: UIViewController, UITableViewDataSource, UIT
         TableView.layoutIfNeeded()
         TableView.tableFooterView = UIView()
         TableView.tableHeaderView = UIView()
-        print("How long is \(ReviewCasefileManager.sharedInstance.HowLong)")
-        print("Question 1 is \(ReviewCasefileManager.sharedInstance.Q1WhyneedSpecialist)")
-        print("Question 2 is \(ReviewCasefileManager.sharedInstance.Q2HowProblemStart)")
-        print("Questions 3 is \(ReviewCasefileManager.sharedInstance.Q3Symptoms)")
-        print("Question 4 is \(ReviewCasefileManager.sharedInstance.Q4TreatmentHistory)")
-        print("Question 5 is \(ReviewCasefileManager.sharedInstance.Q5MedicalConditions)")
-        print("Questions 6 is \(ReviewCasefileManager.sharedInstance.Q6AddtionalInformation)")
+//        print("How long is \(ReviewCasefileManager.sharedInstance.HowLong)")
+//        print("Question 1 is \(ReviewCasefileManager.sharedInstance.Q1WhyneedSpecialist)")
+//        print("Question 2 is \(ReviewCasefileManager.sharedInstance.Q2HowProblemStart)")
+//        print("Questions 3 is \(ReviewCasefileManager.sharedInstance.Q3Symptoms)")
+//        print("Question 4 is \(ReviewCasefileManager.sharedInstance.Q4TreatmentHistory)")
+//        print("Question 5 is \(ReviewCasefileManager.sharedInstance.Q5MedicalConditions)")
+//        print("Questions 6 is \(ReviewCasefileManager.sharedInstance.Q6AddtionalInformation)")
         self.navigationItem.title = "Review"
         self.navigationItem.hidesBackButton = true
 
