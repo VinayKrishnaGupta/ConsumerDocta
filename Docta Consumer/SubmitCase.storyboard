@@ -346,17 +346,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" rowHeight="70" sectionHeaderHeight="5" sectionFooterHeight="5" translatesAutoresizingMaskIntoConstraints="NO" id="656-ms-sO2">
-                                <rect key="frame" x="0.0" y="142" width="375" height="525"/>
+                                <rect key="frame" x="16" y="142" width="343" height="499"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <inset key="separatorInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="uLO-3j-p89" detailTextLabel="6U3-kh-Xm9" style="IBUITableViewCellStyleSubtitle" id="yqO-Aj-QXT">
-                                        <rect key="frame" x="0.0" y="55.5" width="375" height="70"/>
+                                        <rect key="frame" x="0.0" y="55.5" width="343" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yqO-Aj-QXT" id="37z-PA-94T">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="69.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="310" height="69.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uLO-3j-p89">
@@ -418,7 +418,7 @@
             </objects>
             <point key="canvasLocation" x="3108" y="1281"/>
         </scene>
-        <!--Open Cases-->
+        <!--Online Report-->
         <scene sceneID="b8z-qb-sGx">
             <objects>
                 <viewController extendedLayoutIncludesOpaqueBars="YES" id="WMX-RV-kVx" sceneMemberID="viewController">
@@ -429,9 +429,9 @@
                     <view key="view" contentMode="scaleToFill" id="Rpu-NV-93u">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.052306152879999998" green="0.43319803480000002" blue="0.90039592980000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Open Cases" id="Opj-2d-33Y">
+                    <tabBarItem key="tabBarItem" title="Online Report" id="Opj-2d-33Y">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-5"/>
                     </tabBarItem>
                     <navigationItem key="navigationItem" id="OTE-5J-sm2"/>
@@ -440,7 +440,7 @@
             </objects>
             <point key="canvasLocation" x="7652" y="892"/>
         </scene>
-        <!--Completed Cases-->
+        <!--Case Information-->
         <scene sceneID="39H-94-IYZ">
             <objects>
                 <viewController extendedLayoutIncludesOpaqueBars="YES" id="Zx0-on-R1U" sceneMemberID="viewController">
@@ -451,9 +451,9 @@
                     <view key="view" contentMode="scaleToFill" id="USL-xO-IIC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.05070330948" green="0.430316329" blue="0.90040510890000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Completed Cases" id="6sO-FM-gNt">
+                    <tabBarItem key="tabBarItem" title="Case Information" id="6sO-FM-gNt">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-5"/>
                     </tabBarItem>
                     <navigationItem key="navigationItem" id="Ffe-Ax-76a"/>
@@ -492,6 +492,6 @@
         <image name="dummyimage" width="75" height="75"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="QyD-WQ-FcB"/>
+        <segue reference="0Le-uv-MTf"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -182,6 +182,7 @@ class OpenCaseViewController: UIViewController, UICollectionViewDataSource, UICo
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+        self.performSegue(withIdentifier: "caseDetailfromopen", sender: nil)
     
         
     }

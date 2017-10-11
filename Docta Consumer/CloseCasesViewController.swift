@@ -36,7 +36,7 @@ class CloseCasesViewController: UIViewController, UITableViewDataSource, UITable
     }
     override func viewWillAppear(_ animated: Bool) {
         
-        
+        self.tableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -97,6 +97,13 @@ class CloseCasesViewController: UIViewController, UITableViewDataSource, UITable
         }
         
         SVProgressHUD.dismiss()
+    }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        self.performSegue(withIdentifier: "casedetailfromclosed", sender: nil)
+        
     }
     
     

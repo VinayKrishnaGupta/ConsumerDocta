@@ -121,7 +121,9 @@
              NSMutableArray *closeCasefiles = [[NSMutableArray alloc]init];
              
              for (NSDictionary* item in allCaseFiles) {
-                 BOOL Isoopen = [item valueForKey:@"isOpen"];
+                 BOOL Isoopen = [[item objectForKey:@"isOpen"] boolValue];
+                 NSLog(@"Bool value is %d and Dictioanry is %@",Isoopen,[item valueForKey:@"isOpen"]);
+                 
                  if (Isoopen) {
                      [openCasefiles addObject:item];
                      NSLog(@"Open Case File is %@",openCasefiles);
@@ -250,6 +252,9 @@
 //    self.tabBar.translucent = NO;
 //    self.tabBar.translucent = YES;
 }
+
+
+
 
 /*
 #pragma mark - Navigation

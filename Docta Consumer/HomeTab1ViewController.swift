@@ -132,9 +132,25 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate {
     func GotoHomeButton() {
         
         //casesTabbar
-        let storyboard = UIStoryboard(name: "SubmitCase", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "casesTabbar")
-        self.navigationController?.pushViewController(controller, animated: true)
+        let token  = (UserDefaults.standard.object(forKey: "AccessToken"))
+        if token != nil {
+            let storyboard = UIStoryboard(name: "SubmitCase", bundle: nil)
+            let controller = storyboard.instantiateViewController(withIdentifier: "casesTabbar")
+            self.navigationController?.pushViewController(controller, animated: true)
+            
+            
+        }
+        else {
+            let storyboard = UIStoryboard(name: "Auth", bundle: nil)
+            let controller = storyboard.instantiateViewController(withIdentifier: "SignupVC")
+            self.navigationController?.pushViewController(controller, animated: true)
+            
+            
+        }
+        
+        
+        
+        
         
     }
     
