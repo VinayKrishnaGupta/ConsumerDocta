@@ -127,16 +127,26 @@
 //    ReviewCasefileManager.sharedInstance.S51PatientNationality = self.NationalityTextfield.text;
     
     
+    if ([ReviewCasefileManager.sharedInstance.AuthRedirection isEqualToString:@"Casefilelist"]) {
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"SubmitCase" bundle:nil];
+        UITabBarController *vc = [storyboard instantiateViewControllerWithIdentifier:@"casesTabbar"];
+        [self.navigationController pushViewController:vc animated:YES];
+        ReviewCasefileManager.sharedInstance.AuthRedirection = @"";
+    }
+    else if ([ReviewCasefileManager.sharedInstance.AuthRedirection isEqualToString:@"ReviewCase"]){
+        
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"ReviewCase" bundle:nil];
+        ReviewCaseFileViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"ReviewCaseVC"];
+        [[self navigationController] pushViewController:vc animated:YES];
+        ReviewCasefileManager.sharedInstance.AuthRedirection = @"";
+        
+    }
     
-         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"ReviewCase" bundle:nil];
-         ReviewCaseFileViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"ReviewCaseVC"];
-         [[self navigationController] pushViewController:vc animated:YES];
-    
-    
-    //        let storyboard1 = UIStoryboard(name: "ReviewCase", bundle: nil)
-    //        let controller1 = storyboard1.instantiateViewController(withIdentifier: "ReviewCaseVC")
-    //        self.navigationController?.pushViewController(controller1, animated: false)
-    
+    else {
+        
+        [self.navigationController popViewControllerAnimated:YES];
+      
+    }
     
     
     

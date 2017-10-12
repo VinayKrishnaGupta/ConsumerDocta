@@ -109,11 +109,20 @@
     ReviewCasefileManager.sharedInstance.S51PatientNationality = self.NationalityTextfield.text;
     
     
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:@"AccessToken"] != nil) {
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"ReviewCase" bundle:nil];
+        ReviewCaseFileViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"ReviewCaseVC"];
+        [[self navigationController] pushViewController:vc animated:YES];
+    }
     
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Auth" bundle:nil];
-    ReviewCaseFileViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"SignupVC"];
-  //  [self presentViewController:vc animated:YES completion:nil];
-    [[self navigationController] pushViewController:vc animated:YES];
+    else {
+        ReviewCasefileManager.sharedInstance.AuthRedirection = @"ReviewCase";
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Auth" bundle:nil];
+        ReviewCaseFileViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"SignupVC"];
+        [[self navigationController] pushViewController:vc animated:YES];
+        
+    }
+    
     
     
 //    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"ReviewCase" bundle:nil];

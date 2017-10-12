@@ -11,6 +11,7 @@
 #import "APIHandler.h"
 #import "Step1YourcaseViewController.h"
 #import <SVProgressHUD/SVProgressHUD.h>
+#import "Docta_Consumer-Swift.h"
 
 @interface SignInViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *ProceedButton;
@@ -75,7 +76,38 @@
              
              [SVProgressHUD showSuccessWithStatus:@"Logged In Successfully"];
              [SVProgressHUD dismissWithDelay:1];
-             [self.navigationController popToRootViewControllerAnimated:YES];
+
+             
+             if ([ReviewCasefileManager.sharedInstance.AuthRedirection isEqualToString:@"Casefilelist"]) {
+                 UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"SubmitCase" bundle:nil];
+                 UITabBarController *vc = [storyboard instantiateViewControllerWithIdentifier:@"casesTabbar"];
+                 [self.navigationController pushViewController:vc animated:YES];
+                 ReviewCasefileManager.sharedInstance.AuthRedirection = @"";
+             }
+             else if ([ReviewCasefileManager.sharedInstance.AuthRedirection isEqualToString:@"ReviewCase"]){
+                 
+                 UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"ReviewCase" bundle:nil];
+                 ReviewCaseFileViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"ReviewCaseVC"];
+                 [[self navigationController] pushViewController:vc animated:YES];
+                 ReviewCasefileManager.sharedInstance.AuthRedirection = @"";
+                 
+             }
+                 
+             else {
+                 
+                              [self.navigationController popViewControllerAnimated:YES];
+                              [self.navigationController popViewControllerAnimated:YES];
+             }
+             
+             
+             
+             
+             
+             
+             
+//             let storyboard = UIStoryboard(name: "SubmitCase", bundle: nil)
+//             let controller = storyboard.instantiateViewController(withIdentifier: "casesTabbar")
+//             self.navigationController?.pushViewController(controller, animated: true)
              
              
              

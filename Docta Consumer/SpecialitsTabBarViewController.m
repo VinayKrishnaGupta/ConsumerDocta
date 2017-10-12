@@ -103,7 +103,7 @@
     }
     CGRect tabFrame = CGRectNull;
     tabFrame = self.tabBar.frame;
-    UINavigationBar.appearance.translucent = YES;
+   // UINavigationBar.appearance.translucent = YES;
     tabFrame.size.height = tabSize;
     
     int navsize = self.navigationController.navigationBar.frame.size.height;

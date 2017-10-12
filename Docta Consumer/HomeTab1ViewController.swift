@@ -141,6 +141,7 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate {
             
         }
         else {
+            ReviewCasefileManager.sharedInstance.AuthRedirection = "Casefilelist"
             let storyboard = UIStoryboard(name: "Auth", bundle: nil)
             let controller = storyboard.instantiateViewController(withIdentifier: "SignupVC")
             self.navigationController?.pushViewController(controller, animated: true)
@@ -477,7 +478,10 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate {
         let APIsession : APIHandler = APIHandler()
         
         ReviewCasefileManager.sharedInstance.SpecialityIDSelected = SelectedSpecialtyDict.value(forKey: "_id") as! String
-        ReviewCasefileManager.sharedInstance.SelectedSpecialityDescription = SelectedSpecialtyDict.value(forKey: "description") as! String
+        if SelectedSpecialtyDict.value(forKey: "description") != nil {
+             ReviewCasefileManager.sharedInstance.SelectedSpecialityDescription = SelectedSpecialtyDict.value(forKey: "description") as! String
+        }
+        
         let parameters =
         [ "country": selectedLocation, "speciality": SelectedSpecialtyDict.value(forKey: "_id")]
         

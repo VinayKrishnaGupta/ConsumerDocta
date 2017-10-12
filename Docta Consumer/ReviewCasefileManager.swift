@@ -15,6 +15,8 @@ class ReviewCasefileManager: NSObject {
     
     var SelectedSpecialistID = String()
     var SelectedSpecialityDescription = String()
+    var AuthRedirection = String()
+    
 //from Step 1
     var CountryName = String()
     var SpecialistyName = String()
@@ -51,6 +53,8 @@ class ReviewCasefileManager: NSObject {
     var Q5MedicalConditions = String()
     var Q6AddtionalInformation = String()
     var ImageArrayReportsAndReferral = Array<UIImage>()
+    
+    
     
     
     static let sharedInstance:ReviewCasefileManager = {
