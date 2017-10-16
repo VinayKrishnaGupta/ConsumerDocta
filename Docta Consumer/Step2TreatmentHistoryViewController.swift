@@ -257,10 +257,10 @@ class Step2TreatmentHistoryViewController: UIViewController, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 1 {
-            return 20
+            return 30
         }
         if indexPath.section == 2 {
-            return 100
+            return 110
         }
         
         if indexPath.section == 3 {

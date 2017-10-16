@@ -44,6 +44,7 @@
 		2F5349A51F333E530061C19A /* underconstructiongif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2F5349A41F333E530061C19A /* underconstructiongif.gif */; };
 		2F5349A91F333EFD0061C19A /* SettingsTab4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5349A81F333EFD0061C19A /* SettingsTab4ViewController.swift */; };
 		2F5349AB1F3343890061C19A /* coomingsoongif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2F5349AA1F3343890061C19A /* coomingsoongif.gif */; };
+		2F541D341F8F81F2007E2AF1 /* CaseInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F541D331F8F81F2007E2AF1 /* CaseInformationViewController.swift */; };
 		2F5B55721F208D6E000E28A0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2F5B55711F208D6E000E28A0 /* GoogleService-Info.plist */; };
 		2F5B55751F25CE8C000E28A0 /* CustomChatCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5B55731F25CE8C000E28A0 /* CustomChatCollectionViewCell.swift */; };
 		2F5B55761F25CE8C000E28A0 /* CustomChatCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F5B55741F25CE8C000E28A0 /* CustomChatCollectionViewCell.xib */; };
@@ -170,6 +171,7 @@
 		2F5349A41F333E530061C19A /* underconstructiongif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = underconstructiongif.gif; sourceTree = "<group>"; };
 		2F5349A81F333EFD0061C19A /* SettingsTab4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTab4ViewController.swift; sourceTree = "<group>"; };
 		2F5349AA1F3343890061C19A /* coomingsoongif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = coomingsoongif.gif; sourceTree = "<group>"; };
+		2F541D331F8F81F2007E2AF1 /* CaseInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseInformationViewController.swift; sourceTree = "<group>"; };
 		2F5B55711F208D6E000E28A0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2F5B55731F25CE8C000E28A0 /* CustomChatCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomChatCollectionViewCell.swift; sourceTree = "<group>"; };
 		2F5B55741F25CE8C000E28A0 /* CustomChatCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomChatCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -530,6 +532,7 @@
 				2F091E581F8CD1BA0053E642 /* CasefileDetailsTabbarViewController.h */,
 				2F091E591F8CD1BA0053E642 /* CasefileDetailsTabbarViewController.m */,
 				2F091E5B1F8CE6880053E642 /* OnlineReportsViewController.swift */,
+				2F541D331F8F81F2007E2AF1 /* CaseInformationViewController.swift */,
 			);
 			name = CasesHistory;
 			sourceTree = "<group>";
@@ -942,6 +945,7 @@
 				2F053C411F3D81C200A41015 /* TitlesTableViewCell.swift in Sources */,
 				2FAE81121F14A772007E937A /* BodyPartImagesCollectionViewCell.swift in Sources */,
 				2F053C361F3C372F00A41015 /* Step1ReasonsTVC.swift in Sources */,
+				2F541D341F8F81F2007E2AF1 /* CaseInformationViewController.swift in Sources */,
 				2FA8EC611EEA997B00F9AB24 /* SignInViewController.m in Sources */,
 				2FFE00251F1F840C003C3643 /* ChatViewController.swift in Sources */,
 				2FFE00221F1F840C003C3643 /* Channel.swift in Sources */,

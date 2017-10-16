@@ -84,13 +84,14 @@ class OpenCaseViewController: UIViewController, UICollectionViewDataSource, UICo
     override func viewWillAppear(_ animated: Bool) {
       //  PageControl.hidesForSinglePage = true
         PageControl.numberOfPages = OpenCasesList.count
-        self.collectionView.reloadData()
+      
         print("Open Case file in VC is \(OpenCasesList)")
+        self.ReloadData()
         
     }
     public func ReloadData() {
         print("Open Case file in VC is \(OpenCasesList)")
-        
+          self.collectionView.reloadData()
         if OpenCasesList.count < 1 {
         self.codedLabel.isHidden = false
             self.codedLabel.frame = CGRect(x: 100, y: 100, width: self.view.frame.height/2, height: self.view.frame.height/2)
@@ -182,6 +183,8 @@ class OpenCaseViewController: UIViewController, UICollectionViewDataSource, UICo
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+        
+        ReviewCasefileManager.sharedInstance.CasefileSelected = OpenCasesList[indexPath.section]
         self.performSegue(withIdentifier: "caseDetailfromopen", sender: nil)
     
         

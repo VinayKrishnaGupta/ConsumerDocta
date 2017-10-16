@@ -129,7 +129,7 @@
                      NSLog(@"Open Case File is %@",openCasefiles);
                      OpenCaseViewController *openVC = [[self viewControllers] objectAtIndex:0];
                      openVC.OpenCasesList = openCasefiles;
-                     [openVC viewWillAppear:YES];
+                   //  [openVC viewWillAppear:YES];
                      [openVC ReloadData];
                      
                      

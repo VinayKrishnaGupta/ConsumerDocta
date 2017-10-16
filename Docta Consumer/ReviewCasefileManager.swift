@@ -16,6 +16,7 @@ class ReviewCasefileManager: NSObject {
     var SelectedSpecialistID = String()
     var SelectedSpecialityDescription = String()
     var AuthRedirection = String()
+    var CasefileSelected = NSDictionary()
     
 //from Step 1
     var CountryName = String()
