@@ -45,6 +45,7 @@
 		2F5349A91F333EFD0061C19A /* SettingsTab4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5349A81F333EFD0061C19A /* SettingsTab4ViewController.swift */; };
 		2F5349AB1F3343890061C19A /* coomingsoongif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2F5349AA1F3343890061C19A /* coomingsoongif.gif */; };
 		2F541D341F8F81F2007E2AF1 /* CaseInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F541D331F8F81F2007E2AF1 /* CaseInformationViewController.swift */; };
+		2F541D701F94C134007E2AF1 /* OpenCaseInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F541D6F1F94C134007E2AF1 /* OpenCaseInformationViewController.swift */; };
 		2F5B55721F208D6E000E28A0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2F5B55711F208D6E000E28A0 /* GoogleService-Info.plist */; };
 		2F5B55751F25CE8C000E28A0 /* CustomChatCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5B55731F25CE8C000E28A0 /* CustomChatCollectionViewCell.swift */; };
 		2F5B55761F25CE8C000E28A0 /* CustomChatCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F5B55741F25CE8C000E28A0 /* CustomChatCollectionViewCell.xib */; };
@@ -172,6 +173,7 @@
 		2F5349A81F333EFD0061C19A /* SettingsTab4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTab4ViewController.swift; sourceTree = "<group>"; };
 		2F5349AA1F3343890061C19A /* coomingsoongif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = coomingsoongif.gif; sourceTree = "<group>"; };
 		2F541D331F8F81F2007E2AF1 /* CaseInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseInformationViewController.swift; sourceTree = "<group>"; };
+		2F541D6F1F94C134007E2AF1 /* OpenCaseInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenCaseInformationViewController.swift; sourceTree = "<group>"; };
 		2F5B55711F208D6E000E28A0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2F5B55731F25CE8C000E28A0 /* CustomChatCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomChatCollectionViewCell.swift; sourceTree = "<group>"; };
 		2F5B55741F25CE8C000E28A0 /* CustomChatCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomChatCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -532,6 +534,7 @@
 				2F091E581F8CD1BA0053E642 /* CasefileDetailsTabbarViewController.h */,
 				2F091E591F8CD1BA0053E642 /* CasefileDetailsTabbarViewController.m */,
 				2F091E5B1F8CE6880053E642 /* OnlineReportsViewController.swift */,
+				2F541D6F1F94C134007E2AF1 /* OpenCaseInformationViewController.swift */,
 				2F541D331F8F81F2007E2AF1 /* CaseInformationViewController.swift */,
 			);
 			name = CasesHistory;
@@ -958,6 +961,7 @@
 				2FF438C71F31A32A004451FB /* CloseCasesViewController.swift in Sources */,
 				2F6385AD1F0F4B4300603FB1 /* Step1YourcaseViewController.m in Sources */,
 				2F87E6631EFBD9EE00E6CD70 /* ViewCaseFileViewController.m in Sources */,
+				2F541D701F94C134007E2AF1 /* OpenCaseInformationViewController.swift in Sources */,
 				2F053C551F4D86FF00A41015 /* DoctorsInfoViewController.swift in Sources */,
 				2F5349A91F333EFD0061C19A /* SettingsTab4ViewController.swift in Sources */,
 				2F053C451F3D96F400A41015 /* LabelsCollectionViewCell.swift in Sources */,

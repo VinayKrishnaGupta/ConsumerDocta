@@ -101,7 +101,7 @@ class CloseCasesViewController: UIViewController, UITableViewDataSource, UITable
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        ReviewCasefileManager.sharedInstance.CasefileSelected = ClosedCaseList[indexPath.section]
         self.performSegue(withIdentifier: "casedetailfromclosed", sender: nil)
         
     }
