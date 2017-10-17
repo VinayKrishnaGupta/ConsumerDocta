@@ -11,7 +11,11 @@ import AVFoundation
 import AVKit
 
 class OnlineReportsViewController: UIViewController {
-
+    @IBOutlet weak var nextStepsLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
+    let Videocontroller = AVPlayerViewController()
+    var VideoFile = String()
     override func viewDidLoad() {
         super.viewDidLoad()
          self.playvideo()
@@ -19,20 +23,46 @@ class OnlineReportsViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-       
+        
+        
+        let caseID:String = ReviewCasefileManager.sharedInstance.CasefileSelected.value(forKeyPath: "_id") as! String
+        let APIsession : APIHandler = APIHandler()
+        APIsession.getDatafromAPI("POST", "casefile/\(caseID)", nil) { (response, error) in
+            if (response != nil) {
+                print(response as Any)
+                let json : NSDictionary = response as! NSDictionary
+                let reportDesription : String = json.value(forKeyPath: "data.report.content") as! String
+               self.VideoFile = json.value(forKeyPath: "data.videoFile") as! String
+                let nextSteps: String = json.value(forKeyPath: "data.next_steps") as! String
+                self.nextStepsLabel.text = nextSteps
+                self.descriptionLabel.text = reportDesription
+                
+                
+                
+            }
+            else {
+                print(error as Any)
+                
+            }
+        }
     }
     
     func playvideo() {
         
+        
         let videoURL:URL = URL(string: "https://archive.org/download/ksnn_compilation_master_the_internet/ksnn_compilation_master_the_internet_512kb.mp4")!
+       //  let videoURL:URL = URL(string: "https://")!
         let player = AVPlayer.init(url: videoURL)
-        let controller = AVPlayerViewController()
-        controller.player = player
-        self.addChildViewController(controller)
+       // let controller = AVPlayerViewController()
+        Videocontroller.player = player
+        Videocontroller.showsPlaybackControls = true
+       
+        self.addChildViewController(Videocontroller)
        // let screenSize = UIScreen.main.bounds.size
-        let videoFrame = CGRect(x: 0, y: 10, width: self.view.frame.size.width, height:self.view.frame.size.height/2)
-        controller.view.frame = videoFrame
-        self.view.addSubview(controller.view)
+        let videoFrame = CGRect(x: 0, y: 70, width: self.view.frame.size.width, height:self.view.frame.size.height/2)
+        
+        Videocontroller.view.frame = videoFrame
+        self.view.addSubview(Videocontroller.view)
         player.play()
         
         
@@ -46,10 +76,17 @@ class OnlineReportsViewController: UIViewController {
 //        }
         
     }
+    
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        Videocontroller.player?.pause()
     }
     
 
