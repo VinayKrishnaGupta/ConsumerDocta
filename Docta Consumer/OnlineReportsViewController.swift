@@ -32,9 +32,9 @@ class OnlineReportsViewController: UIViewController {
                 print(response as Any)
                 let json : NSDictionary = response as! NSDictionary
                 let reportDesription : String = json.value(forKeyPath: "data.report.content") as! String
-               self.VideoFile = json.value(forKeyPath: "data.videoFile") as! String
-                let nextSteps: String = json.value(forKeyPath: "data.next_steps") as! String
-                self.nextStepsLabel.text = nextSteps
+              // self.VideoFile = json.value(forKeyPath: "data.videoFile") as! String
+               // let nextSteps: String = json.value(forKeyPath: "data.next_steps") as! String
+             //   self.nextStepsLabel.text = nextSteps
                 self.descriptionLabel.text = reportDesription
                 
                 
@@ -52,9 +52,17 @@ class OnlineReportsViewController: UIViewController {
         
         let videoURL:URL = URL(string: "https://archive.org/download/ksnn_compilation_master_the_internet/ksnn_compilation_master_the_internet_512kb.mp4")!
        //  let videoURL:URL = URL(string: "https://")!
+         let token  = (UserDefaults.standard.object(forKey: "AccessToken"))
+        let headers = ["Authorization":"Bearer \(token)","accept":"application/json","Content-Type":"application/json" ]
+        
+        
         let player = AVPlayer.init(url: videoURL)
+        let player2 = AVURLAsset.init(url: videoURL, options: ["AVURLAssetHTTPHeaderFieldsKey":headers])
+        let playeritem = AVPlayerItem.init(asset: player2)
+        
        // let controller = AVPlayerViewController()
-        Videocontroller.player = player
+        Videocontroller.player?.replaceCurrentItem(with: playeritem)
+       // Videocontroller.player = player
         Videocontroller.showsPlaybackControls = true
        
         self.addChildViewController(Videocontroller)
