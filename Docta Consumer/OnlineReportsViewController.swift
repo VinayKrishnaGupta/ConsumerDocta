@@ -9,16 +9,19 @@
 import UIKit
 import AVFoundation
 import AVKit
+import CoreMedia
 
 class OnlineReportsViewController: UIViewController {
     @IBOutlet weak var nextStepsLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var videoView: UIView!
     
+    @IBOutlet weak var webview: UIWebView!
     let Videocontroller = AVPlayerViewController()
     var VideoFile = String()
     override func viewDidLoad() {
         super.viewDidLoad()
-         self.playvideo()
+        // self.playvideo()
         // Do any additional setup after loading the view.
     }
     
@@ -31,12 +34,18 @@ class OnlineReportsViewController: UIViewController {
             if (response != nil) {
                 print(response as Any)
                 let json : NSDictionary = response as! NSDictionary
-                let reportDesription : String = json.value(forKeyPath: "data.report.content") as! String
-              // self.VideoFile = json.value(forKeyPath: "data.videoFile") as! String
-               // let nextSteps: String = json.value(forKeyPath: "data.next_steps") as! String
-             //   self.nextStepsLabel.text = nextSteps
-                self.descriptionLabel.text = reportDesription
                 
+                if json.value(forKeyPath: "data.report") != nil {
+                    
+                    let reportDesription = json.value(forKeyPath: "data.report.content")
+                    self.VideoFile = json.value(forKeyPath: "data.report.videoFile") as! String
+                     let nextSteps: String = json.value(forKeyPath: "data.report.next_steps") as! String
+                       self.nextStepsLabel.text = nextSteps
+                 //   self.descriptionLabel.text = reportDesription
+                //    self.descriptionLabel.text = reportDesription  
+                    self.playvideo()
+                }
+               
                 
                 
             }
@@ -50,28 +59,48 @@ class OnlineReportsViewController: UIViewController {
     func playvideo() {
         
         
-        let videoURL:URL = URL(string: "https://archive.org/download/ksnn_compilation_master_the_internet/ksnn_compilation_master_the_internet_512kb.mp4")!
-       //  let videoURL:URL = URL(string: "https://")!
-         let token  = (UserDefaults.standard.object(forKey: "AccessToken"))
-        let headers = ["Authorization":"Bearer \(token)","accept":"application/json","Content-Type":"application/json" ]
+       // let videoURL:URL = URL(string: "https://archive.org/download/ksnn_compilation_master_the_internet/ksnn_compilation_master_the_internet_512kb.mp4")!
+         let caseID:String = ReviewCasefileManager.sharedInstance.CasefileSelected.value(forKeyPath: "_id") as! String
+         let videoURL:URL = URL(string: "https://account.docta.com/api/case/video/" + caseID)!
+        let token : String  = (UserDefaults.standard.object(forKey: "AccessToken")) as! String
         
-        
+        let headers = ["Authorization":"Bearer \(token)","Accept":"application/json","Content-Type":"application/json" ]
+
+
         let player = AVPlayer.init(url: videoURL)
-        let player2 = AVURLAsset.init(url: videoURL, options: ["AVURLAssetHTTPHeaderFieldsKey":headers])
-        let playeritem = AVPlayerItem.init(asset: player2)
+        let player2 : AVURLAsset = AVURLAsset.init(url: videoURL, options: ["AVURLAssetHTTPHeaderFieldsKey":headers])
+        let playeritem : AVPlayerItem = AVPlayerItem.init(asset: player2)
+        player.replaceCurrentItem(with: playeritem)
         
-       // let controller = AVPlayerViewController()
-        Videocontroller.player?.replaceCurrentItem(with: playeritem)
-       // Videocontroller.player = player
-        Videocontroller.showsPlaybackControls = true
-       
-        self.addChildViewController(Videocontroller)
-       // let screenSize = UIScreen.main.bounds.size
-        let videoFrame = CGRect(x: 0, y: 70, width: self.view.frame.size.width, height:self.view.frame.size.height/2)
         
-        Videocontroller.view.frame = videoFrame
-        self.view.addSubview(Videocontroller.view)
+        Videocontroller.player = player
         player.play()
+        print("Current Item is \(player.currentItem)")
+        Videocontroller.player?.play()
+        Videocontroller.showsPlaybackControls = true
+        Videocontroller.view = videoView
+     //   self.videoView.addSubview(Videocontroller.view)
+     //   Videocontroller.view.frame = videoView.frame
+        
+       // let screenSize = UIScreen.main.bounds.size
+//       let videoFrame = CGRect(x: 0, y: 70, width: self.view.frame.size.width, height:self.view.frame.size.height*0.4)
+//
+        Videocontroller.view.frame = videoView.frame
+       self.view.addSubview(Videocontroller.view)
+
+//
+//        var request =  URLRequest(url:videoURL)
+//
+//        let TokenString = "Bearer" + " " + token
+//        request.addValue(TokenString, forHTTPHeaderField: "Authorization")
+//        request.addValue("application/json", forHTTPHeaderField: "Accept")
+//        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+//
+//        webview.loadRequest(request)
+//        webview.allowsInlineMediaPlayback = true
+       
+        
+    //    player.play()
         
         
 //        let videoURL = URL(string: "https://www.youtube.com/watch?v=uKuO3jbD7LY")
