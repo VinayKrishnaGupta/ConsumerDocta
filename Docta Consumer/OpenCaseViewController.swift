@@ -22,7 +22,7 @@ class OpenCaseViewController: UIViewController, UICollectionViewDataSource, UICo
     collectionView.delegate = self
     collectionView.dataSource = self
     SVProgressHUD.show()
-        
+    
         
         
     let image : UIImage = UIImage.init(named: "DoctaLogo")!
@@ -84,9 +84,9 @@ class OpenCaseViewController: UIViewController, UICollectionViewDataSource, UICo
     override func viewWillAppear(_ animated: Bool) {
       //  PageControl.hidesForSinglePage = true
         PageControl.numberOfPages = OpenCasesList.count
-      
+        self.codedLabel.isHidden = true
         print("Open Case file in VC is \(OpenCasesList)")
-        self.ReloadData()
+        
         
     }
     public func ReloadData() {

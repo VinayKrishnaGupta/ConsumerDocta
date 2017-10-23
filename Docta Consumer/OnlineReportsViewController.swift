@@ -16,6 +16,8 @@ class OnlineReportsViewController: UIViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var videoView: UIView!
     
+    @IBOutlet weak var DescriptionTextView: UITextView!
+    @IBOutlet weak var nextStepTextview: UITextView!
     @IBOutlet weak var webview: UIWebView!
     let Videocontroller = AVPlayerViewController()
     var VideoFile = String()
@@ -36,18 +38,29 @@ class OnlineReportsViewController: UIViewController {
                 let json : NSDictionary = response as! NSDictionary
                 
                 if json.value(forKeyPath: "data.report") != nil {
-                    
-                    let reportDesription = json.value(forKeyPath: "data.report.content")
+                  //  var reportDesription = NSMutableAttributedString()
+                    var reportDesription : String = json.value(forKeyPath: "data.report.content") as! String
                     self.VideoFile = json.value(forKeyPath: "data.report.videoFile") as! String
                      let nextSteps: String = json.value(forKeyPath: "data.report.next_steps") as! String
-                       self.nextStepsLabel.text = nextSteps
-                 //   self.descriptionLabel.text = reportDesription
+                       self.nextStepTextview.text = nextSteps
+                 
+                 
+
+                    let str : String = reportDesription.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
+                   self.DescriptionTextView.text = str
+                    
+                    
+//                    let attributed = try NSAttributedString(data: reportDesription.data(using: .unicode)!, options: [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType], documentAttributes: nil)
+//                    self.DescriptionTextView.text = attributed.string
+                    
+                    
+                    
+                    //   self.descriptionLabel.text = reportDesription
                 //    self.descriptionLabel.text = reportDesription  
                     self.playvideo()
+                
+                
                 }
-               
-                
-                
             }
             else {
                 print(error as Any)
@@ -59,7 +72,7 @@ class OnlineReportsViewController: UIViewController {
     func playvideo() {
         
         
-       // let videoURL:URL = URL(string: "https://archive.org/download/ksnn_compilation_master_the_internet/ksnn_compilation_master_the_internet_512kb.mp4")!
+      //  let videoURL:URL = URL(string: "https://archive.org/download/ksnn_compilation_master_the_internet/ksnn_compilation_master_the_internet_512kb.mp4")!
          let caseID:String = ReviewCasefileManager.sharedInstance.CasefileSelected.value(forKeyPath: "_id") as! String
          let videoURL:URL = URL(string: "https://account.docta.com/api/case/video/" + caseID)!
         let token : String  = (UserDefaults.standard.object(forKey: "AccessToken")) as! String
@@ -126,7 +139,10 @@ class OnlineReportsViewController: UIViewController {
         Videocontroller.player?.pause()
     }
     
-
+    @IBAction func PlayVideo(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "showAVplayer", sender: self)
+    }
+    
     /*
     // MARK: - Navigation
 

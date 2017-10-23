@@ -56,7 +56,7 @@
     //    self.navigationItem.rightBarButtonItem = RightButton;
     
     //let SignupBarButton = UIBarButtonItem.init(image: UIImage.init(named: "useraccount"), style: UIBarButtonItemStyle.done, target: self, action: #selector(SignupButton))
-    UIBarButtonItem *createButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"createcasefile"] style:UIBarButtonItemStyleDone target:self action:@selector(GotoCreateCaseFile)];
+    UIBarButtonItem *createButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"backarrow"] style:UIBarButtonItemStyleDone target:self action:@selector(GotoCreateCaseFile)];
     UIBarButtonItem *MenuButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu"] style:UIBarButtonItemStyleDone target:self action:@selector(MenuButtonmethod)];
     UIBarButtonItem *SignupButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"useraccount"] style:UIBarButtonItemStyleDone target:self action:@selector(SignupButtonmethod)];
     UIBarButtonItem *NotificationButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"notification"] style:UIBarButtonItemStyleDone target:self action:@selector(NotificationButtonMethod)];
@@ -72,7 +72,7 @@
 }
 -(void)GotoCreateCaseFile {
     
-    [self.navigationController popToRootViewControllerAnimated:NO];
+    [self.navigationController popViewControllerAnimated:YES];
     
     //    UIStoryboard *storybard = [UIStoryboard storyboardWithName:@"SubmitCase" bundle:nil];
     //    UIViewController *vc = [storybard instantiateViewControllerWithIdentifier:@"casesTabbar"];
