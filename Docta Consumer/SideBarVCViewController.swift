@@ -49,6 +49,10 @@ class SideBarVCViewController: UIViewController, UITableViewDataSource, UITableV
             self.performSegue(withIdentifier: "aboutus", sender: nil)
             
         }
+        if indexPath.section == 3 {
+            self.performSegue(withIdentifier: "contactus", sender: nil)
+            
+        }
         else {
             SVProgressHUD.show(withStatus: "Coming Soon...")
             SVProgressHUD.dismiss(withDelay: 2)
