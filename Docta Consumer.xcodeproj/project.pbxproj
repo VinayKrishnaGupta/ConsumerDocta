@@ -47,6 +47,10 @@
 		2F541D341F8F81F2007E2AF1 /* CaseInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F541D331F8F81F2007E2AF1 /* CaseInformationViewController.swift */; };
 		2F541D701F94C134007E2AF1 /* OpenCaseInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F541D6F1F94C134007E2AF1 /* OpenCaseInformationViewController.swift */; };
 		2F541D721F9E0616007E2AF1 /* AVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F541D711F9E0616007E2AF1 /* AVViewController.swift */; };
+		2F541D751F9F1A61007E2AF1 /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F541D741F9F1A61007E2AF1 /* AboutUsViewController.swift */; };
+		2F541D771F9F1A8B007E2AF1 /* ForSpecialistsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F541D761F9F1A8B007E2AF1 /* ForSpecialistsViewController.swift */; };
+		2F541D791F9F1A9D007E2AF1 /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F541D781F9F1A9D007E2AF1 /* ContactUsViewController.swift */; };
+		2F541D7B1F9F1AAF007E2AF1 /* PrivacyPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F541D7A1F9F1AAF007E2AF1 /* PrivacyPolicyViewController.swift */; };
 		2F5B55721F208D6E000E28A0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2F5B55711F208D6E000E28A0 /* GoogleService-Info.plist */; };
 		2F5B55751F25CE8C000E28A0 /* CustomChatCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5B55731F25CE8C000E28A0 /* CustomChatCollectionViewCell.swift */; };
 		2F5B55761F25CE8C000E28A0 /* CustomChatCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F5B55741F25CE8C000E28A0 /* CustomChatCollectionViewCell.xib */; };
@@ -176,6 +180,10 @@
 		2F541D331F8F81F2007E2AF1 /* CaseInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseInformationViewController.swift; sourceTree = "<group>"; };
 		2F541D6F1F94C134007E2AF1 /* OpenCaseInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenCaseInformationViewController.swift; sourceTree = "<group>"; };
 		2F541D711F9E0616007E2AF1 /* AVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVViewController.swift; sourceTree = "<group>"; };
+		2F541D741F9F1A61007E2AF1 /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
+		2F541D761F9F1A8B007E2AF1 /* ForSpecialistsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForSpecialistsViewController.swift; sourceTree = "<group>"; };
+		2F541D781F9F1A9D007E2AF1 /* ContactUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
+		2F541D7A1F9F1AAF007E2AF1 /* PrivacyPolicyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyViewController.swift; sourceTree = "<group>"; };
 		2F5B55711F208D6E000E28A0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2F5B55731F25CE8C000E28A0 /* CustomChatCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomChatCollectionViewCell.swift; sourceTree = "<group>"; };
 		2F5B55741F25CE8C000E28A0 /* CustomChatCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomChatCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -312,8 +320,7 @@
 			children = (
 				2F053C531F4D86D300A41015 /* DoctorsProfile */,
 				2F0311411F29EF6F0044B401 /* Main.storyboard */,
-				2FE8BAB11F69112400448466 /* CustomSideMenuController.swift */,
-				2F804BC31F7234F500D140C7 /* SideBarVCViewController.swift */,
+				2F541D731F9F1A30007E2AF1 /* Side Bar */,
 				2F0311431F29F2E30044B401 /* MainTabBarViewController.swift */,
 				2F0311461F29F82D0044B401 /* HomeTab1ViewController.swift */,
 				2F0311481F2A0E220044B401 /* ChatTabBar2ViewController.swift */,
@@ -377,6 +384,19 @@
 				2FE8BAAC1F66710B00448466 /* SpecialistsListViewController.swift */,
 			);
 			name = DoctorsProfile;
+			sourceTree = "<group>";
+		};
+		2F541D731F9F1A30007E2AF1 /* Side Bar */ = {
+			isa = PBXGroup;
+			children = (
+				2FE8BAB11F69112400448466 /* CustomSideMenuController.swift */,
+				2F804BC31F7234F500D140C7 /* SideBarVCViewController.swift */,
+				2F541D741F9F1A61007E2AF1 /* AboutUsViewController.swift */,
+				2F541D761F9F1A8B007E2AF1 /* ForSpecialistsViewController.swift */,
+				2F541D781F9F1A9D007E2AF1 /* ContactUsViewController.swift */,
+				2F541D7A1F9F1AAF007E2AF1 /* PrivacyPolicyViewController.swift */,
+			);
+			name = "Side Bar";
 			sourceTree = "<group>";
 		};
 		2F6385AA1F0F4A3F00603FB1 /* CreateNewCase */ = {
@@ -956,9 +976,11 @@
 				2F053C411F3D81C200A41015 /* TitlesTableViewCell.swift in Sources */,
 				2FAE81121F14A772007E937A /* BodyPartImagesCollectionViewCell.swift in Sources */,
 				2F053C361F3C372F00A41015 /* Step1ReasonsTVC.swift in Sources */,
+				2F541D771F9F1A8B007E2AF1 /* ForSpecialistsViewController.swift in Sources */,
 				2F541D341F8F81F2007E2AF1 /* CaseInformationViewController.swift in Sources */,
 				2FA8EC611EEA997B00F9AB24 /* SignInViewController.m in Sources */,
 				2FFE00251F1F840C003C3643 /* ChatViewController.swift in Sources */,
+				2F541D791F9F1A9D007E2AF1 /* ContactUsViewController.swift in Sources */,
 				2FFE00221F1F840C003C3643 /* Channel.swift in Sources */,
 				2FFE00271F1F840C003C3643 /* UIImage+Gif.swift in Sources */,
 				2F135DB11F4DA7B9006B9905 /* DoctorsIntroTableViewCell.swift in Sources */,
@@ -996,9 +1018,11 @@
 				2FE8BAB21F69112400448466 /* CustomSideMenuController.swift in Sources */,
 				2FFE00211F1F840C003C3643 /* CreateChannelCell.swift in Sources */,
 				2FF438C51F305355004451FB /* OpenCasesCell.swift in Sources */,
+				2F541D7B1F9F1AAF007E2AF1 /* PrivacyPolicyViewController.swift in Sources */,
 				2FAE81141F14DCE1007E937A /* Step3TreatmentHistoryViewController.swift in Sources */,
 				2F804BC61F78E59B00D140C7 /* PatientProfileTableViewCell.swift in Sources */,
 				2FFCFB2C1F5005A700DE1346 /* ReviewCaseFileViewController.swift in Sources */,
+				2F541D751F9F1A61007E2AF1 /* AboutUsViewController.swift in Sources */,
 				2FA8EC761EEFAA2F00F9AB24 /* CreateCaseFileViewController.swift in Sources */,
 				2F72A25F1EF7B58300CEC047 /* APIHandler.m in Sources */,
 				2FAE81101F1492E3007E937A /* Step2SymptomsViewController.swift in Sources */,
