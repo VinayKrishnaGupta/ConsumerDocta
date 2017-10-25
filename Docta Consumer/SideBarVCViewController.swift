@@ -11,7 +11,7 @@ import SVProgressHUD
 
 class SideBarVCViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var TableView: UITableView!
-    let MenuItems = ["Home","About Us","My Cases", "Contact Us","For Specialists","Sign Out"]
+    let MenuItems = ["Home","About Us", "Contact Us","Privacy Policy","Sign Out"]
     override func viewDidLoad() {
         super.viewDidLoad()
     TableView.dataSource = self
@@ -36,22 +36,35 @@ class SideBarVCViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.section == 5 {
-            let domain = Bundle.main.bundleIdentifier!
-            UserDefaults.standard.removePersistentDomain(forName: domain)
-            UserDefaults.standard.synchronize()
+        
+        
+        if indexPath.section == 0 {
             
-            SVProgressHUD.showSuccess(withStatus: "You have been successfully signed out")
-            SVProgressHUD.dismiss(withDelay: 2)
+           sideMenuController?.performSegue(withIdentifier: "Home", sender: nil)
         }
             
         if indexPath.section == 1 {
             self.performSegue(withIdentifier: "aboutus", sender: nil)
             
         }
-        if indexPath.section == 3 {
+        
+        
+        if indexPath.section == 2 {
             self.performSegue(withIdentifier: "contactus", sender: nil)
             
+        }
+        if indexPath.section == 3 {
+            self.performSegue(withIdentifier: "privacypolicy", sender: nil)
+            
+        }
+            
+        if indexPath.section == 4 {
+            let domain = Bundle.main.bundleIdentifier!
+            UserDefaults.standard.removePersistentDomain(forName: domain)
+            UserDefaults.standard.synchronize()
+            
+            SVProgressHUD.showSuccess(withStatus: "You have been successfully signed out")
+            SVProgressHUD.dismiss(withDelay: 2)
         }
         else {
             SVProgressHUD.show(withStatus: "Coming Soon...")

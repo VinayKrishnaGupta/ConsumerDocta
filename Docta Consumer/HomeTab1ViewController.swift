@@ -129,7 +129,7 @@ class HomeTab1ViewController: UIViewController, UITextFieldDelegate {
         
     }
     
-    func GotoHomeButton() {
+    public func GotoHomeButton() {
         
         //casesTabbar
         let token  = (UserDefaults.standard.object(forKey: "AccessToken"))
