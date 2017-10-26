@@ -160,6 +160,7 @@
     
     NSDictionary *Signupcredentials = @{@"user_type":self.TypeofUser,@"user_firstname":self.firstName.text,@"user_lastname":self.lastNametextfield.text, @"user_email": _emailtextfield.text,@"user_phone":self.phoneNumbertextfield.text, @"user_password":_passwordTextField.text,};
     
+    
    //  NSDictionary *Signupcredentials = @{@"user_email": _emailtextfield.text, @"user_password":_passwordTextField.text,};
     
     
