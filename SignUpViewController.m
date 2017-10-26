@@ -10,6 +10,7 @@
 #import "APIHandler.h"
 #import "MyCaseFilesViewController.h"
 #import "Docta_Consumer-Swift.h"
+#import <SVProgressHUD/SVProgressHUD.h>
 
 
 @interface SignUpViewController ()
@@ -143,8 +144,8 @@
     }
     
     else {
-        
-        [self.navigationController popViewControllerAnimated:YES];
+        [self SignupAPI];
+      //  [self.navigationController popViewControllerAnimated:YES];
       
     }
     
@@ -152,6 +153,44 @@
     
     
 }
+
+
+
+-(void)SignupAPI {
+    
+    NSDictionary *Signupcredentials = @{@"user_type":self.TypeofUser,@"user_firstname":self.firstName.text,@"user_lastname":self.lastNametextfield.text, @"user_email": _emailtextfield.text,@"user_phone":self.phoneNumbertextfield.text, @"user_password":_passwordTextField.text,};
+    
+   //  NSDictionary *Signupcredentials = @{@"user_email": _emailtextfield.text, @"user_password":_passwordTextField.text,};
+    
+    
+//    "user_type": "referrer",
+//    "user_firstname": "John",
+//    "user_lastname": "Doe",
+//    "user_email": "asdfsssffss@docta.com",
+//    "user_phone": "1100000000",
+//    "user_password": "aaaaaaaa",
+    
+    
+    [[APIHandler sharedInstance]GetDatafromAPI:@"POST" :@"register" :Signupcredentials  completionBlock:^(id dict, NSError *error)
+     
+     {
+         
+         NSLog(@"Response Dict in signin is %@  and Error is %@",dict,error );
+         if ([dict isKindOfClass:[NSDictionary class]]) {
+             [self LogininBackground];
+         }
+         else {
+             NSLog(@"Error is Login");
+             
+         }
+         
+     }];
+    
+    
+    
+    
+}
+
 
 - (void)LogininBackground {
     NSDictionary *logincredentials = @{@"email": _emailtextfield.text,@"password":_passwordTextField.text};
@@ -170,18 +209,73 @@
              [[NSUserDefaults standardUserDefaults] setObject:token forKey:@"AccessToken"];
              [[NSUserDefaults standardUserDefaults]synchronize];
              
-             UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"SubmitCase" bundle:nil];
-             MyCaseFilesViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"MyCaseFiles"];
-             [[self navigationController] pushViewController:vc animated:YES];
+             //             UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"SubmitCase" bundle:nil];
+             //             MyCaseFilesViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"MyCaseFiles"];
+             //             [[self navigationController] pushViewController:vc animated:YES];
+             
+             [SVProgressHUD showSuccessWithStatus:@"Logged In Successfully"];
+             [SVProgressHUD dismissWithDelay:1];
+             
+             
+             if ([ReviewCasefileManager.sharedInstance.AuthRedirection isEqualToString:@"Casefilelist"]) {
+                 UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"SubmitCase" bundle:nil];
+                 UITabBarController *vc = [storyboard instantiateViewControllerWithIdentifier:@"casesTabbar"];
+                 [self.navigationController pushViewController:vc animated:YES];
+                 ReviewCasefileManager.sharedInstance.AuthRedirection = @"";
+             }
+             else if ([ReviewCasefileManager.sharedInstance.AuthRedirection isEqualToString:@"ReviewCase"]){
+                 
+                 UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"ReviewCase" bundle:nil];
+                 ReviewCaseFileViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"ReviewCaseVC"];
+                 [[self navigationController] pushViewController:vc animated:YES];
+                 ReviewCasefileManager.sharedInstance.AuthRedirection = @"";
+                 
+             }
+             
+             else {
+                 
+                 [self.navigationController popViewControllerAnimated:YES];
+                 [self.navigationController popViewControllerAnimated:YES];
+             }
+             
+             
+             
+             
+             
+             
+             
+             //             let storyboard = UIStoryboard(name: "SubmitCase", bundle: nil)
+             //             let controller = storyboard.instantiateViewController(withIdentifier: "casesTabbar")
+             //             self.navigationController?.pushViewController(controller, animated: true)
+             
+             
+             
+             
+             
+             //             UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"CreateNewCase" bundle:nil];
+             //             Step1YourcaseViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"step1yourcase"];
+             //             [[self navigationController] pushViewController:vc animated:YES];
+             
+             
+             
+             
              // [self presentViewController:vc animated:YES completion:nil];
          }
          else {
+             [SVProgressHUD showSuccessWithStatus:@"Logged In Failed"];
+             [SVProgressHUD dismissWithDelay:1];
+             
+             
+             //             UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Auth" bundle:nil];
+             //             Step1YourcaseViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"SignupVC"];
+             //             [[self navigationController] pushViewController:vc animated:YES];
+             
+             
              NSLog(@"Error is Login");
              
          }
          
      }];
-    
     
 
     
@@ -310,4 +404,10 @@
 }
 - (IBAction)IntroViewButton:(UIButton *)sender {
 }
+-(void)viewWillDisappear:(BOOL)animated {
+    ReviewCasefileManager.sharedInstance.AuthRedirection = @"";
+    
+}
+
+
 @end
