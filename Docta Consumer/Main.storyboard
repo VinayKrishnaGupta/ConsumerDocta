@@ -72,11 +72,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7dW-Kk-lVM">
-                                <rect key="frame" x="0.0" y="259" width="375" height="305"/>
+                                <rect key="frame" x="0.0" y="259" width="375" height="302"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="  🔍 Please Select a Country" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2ea-y9-fR2">
-                                        <rect key="frame" x="21" y="159" width="336" height="39"/>
+                                        <rect key="frame" x="21" y="156" width="336" height="39"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -93,14 +93,14 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Where are you looking for a specialist?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wf5-8V-6ox">
-                                        <rect key="frame" x="21" y="125" width="336" height="20"/>
+                                        <rect key="frame" x="21" y="123" width="336" height="19"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hu8-ts-2Kq">
-                                        <rect key="frame" x="129" y="238" width="118" height="47"/>
+                                        <rect key="frame" x="129" y="235" width="118" height="47"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.17452049259999999" green="0.58827686310000005" blue="0.98531454799999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="17"/>
@@ -117,7 +117,7 @@
                                         </connections>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="  🔍 Please Select a Speciality" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Sd-fV-dUd">
-                                        <rect key="frame" x="21" y="58" width="336" height="39"/>
+                                        <rect key="frame" x="21" y="57" width="336" height="38"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -134,7 +134,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What type of Specialist do you need?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Czw-6j-PkQ">
-                                        <rect key="frame" x="21" y="29" width="336" height="20"/>
+                                        <rect key="frame" x="21" y="29" width="336" height="19"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -171,11 +171,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x0m-5S-TSz">
-                                <rect key="frame" x="0.0" y="61" width="375" height="536"/>
+                                <rect key="frame" x="0.0" y="61" width="375" height="535"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" indicatorStyle="white" dataMode="prototypes" style="grouped" separatorStyle="none" allowsSelectionDuringEditing="YES" rowHeight="100" sectionHeaderHeight="5" sectionFooterHeight="5" translatesAutoresizingMaskIntoConstraints="NO" id="lLZ-hx-PXO">
-                                        <rect key="frame" x="11" y="26" width="360" height="428"/>
+                                        <rect key="frame" x="11" y="25" width="360" height="428"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
@@ -235,7 +235,7 @@
                                         </prototypes>
                                     </tableView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="nNQ-gZ-djh">
-                                        <rect key="frame" x="128" y="462" width="118" height="50"/>
+                                        <rect key="frame" x="128" y="461" width="118" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.17452049259999999" green="0.58827686310000005" blue="0.98531454799999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="17"/>
@@ -263,28 +263,28 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Back Pain" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SIe-Ha-I75">
-                                <rect key="frame" x="51" y="3" width="308" height="24"/>
+                                <rect key="frame" x="51" y="2" width="308" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Open" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kqr-zI-sFM">
-                                <rect key="frame" x="51" y="28" width="42" height="19"/>
+                                <rect key="frame" x="51" y="27" width="42" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="15"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="|" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MPZ-HZ-M7l">
-                                <rect key="frame" x="94" y="28" width="6" height="19"/>
+                                <rect key="frame" x="94" y="27" width="6" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Australia" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Azh-SI-VlL">
-                                <rect key="frame" x="105" y="28" width="254" height="19"/>
+                                <rect key="frame" x="105" y="27" width="254" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="15"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -336,15 +336,15 @@
                         <viewControllerLayoutGuide type="bottom" id="ukT-MI-cqS"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="LXE-sH-VX5">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jP9-B9-Cci">
-                                <rect key="frame" x="0.0" y="91" width="375" height="512"/>
+                                <rect key="frame" x="0.0" y="99" width="375" height="555"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" dataMode="prototypes" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="50" sectionHeaderHeight="10" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="MYT-Qe-uIS">
-                                        <rect key="frame" x="1" y="16" width="368" height="485"/>
+                                        <rect key="frame" x="1" y="17" width="368" height="526"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <color key="tintColor" red="0.23234868049999999" green="0.65077167749999998" blue="0.98528128859999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -457,7 +457,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OqB-Pl-hLg">
-                                <rect key="frame" x="6" y="4" width="25" height="23"/>
+                                <rect key="frame" x="6" y="2" width="25" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="backarrow"/>
                                 <connections>
@@ -472,21 +472,21 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Australia" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DSt-ff-9BD">
-                                <rect key="frame" x="105" y="30" width="254" height="17"/>
+                                <rect key="frame" x="105" y="33" width="254" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="15"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Open" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s50-5W-NnO">
-                                <rect key="frame" x="51" y="30" width="42" height="17"/>
+                                <rect key="frame" x="51" y="33" width="42" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="15"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="|" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SIh-FU-PxC">
-                                <rect key="frame" x="94" y="30" width="6" height="17"/>
+                                <rect key="frame" x="94" y="33" width="6" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -677,7 +677,7 @@ Our reporting technology also makes our  Tele-Specialists as time efficient as p
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Contact Us" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nra-S3-JhV">
-                                <rect key="frame" x="16" y="24" width="343" height="59"/>
+                                <rect key="frame" x="16" y="24" width="343" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="21"/>
@@ -685,7 +685,7 @@ Our reporting technology also makes our  Tele-Specialists as time efficient as p
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Tel : +61404770669" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M98-rY-W3k">
-                                <rect key="frame" x="16" y="91" width="343" height="41"/>
+                                <rect key="frame" x="16" y="90" width="343" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -706,7 +706,7 @@ Email: info@docta.com</string>
                                 <dataDetectorType key="dataDetectorTypes" link="YES" address="YES"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rJg-HX-dKN">
-                                <rect key="frame" x="16" y="161" width="343" height="99"/>
+                                <rect key="frame" x="16" y="161" width="343" height="98"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <string key="text">Australian Office: 
@@ -757,7 +757,7 @@ Email: info@docta.com</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8h7-sN-rPG">
-                                <rect key="frame" x="16" y="62" width="343" height="530"/>
+                                <rect key="frame" x="16" y="61" width="343" height="528"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <attributedString key="attributedText">
@@ -859,7 +859,7 @@ Email: info@docta.com</string>
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content"> any Docta software or web based application and Docta Pty Ltd (ACN 166 293 947) and all of its related entities. This Privacy Policy applies to and should be read in conjunction with the Terms of Use &amp; Service (collectively, the ‘Agreement’), which are available on </mutableString>
+                                        <string key="content"> any Docta software or web based application and Docta Pty Ltd (ACN 166 293 947) and all of its related entities. This Privacy Policy applies to and should be read in conjunction with the Terms of Use &amp; Service (collectively, the ‘Agreement’), which are available on </string>
                                         <attributes>
                                             <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="16" name="Times-Roman"/>
@@ -1287,7 +1287,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">	1.	Information about you. This might include your name, email address, first name, surname and address, and may also include photographs that you provide to us, your username or any other information required list and register you or your business on Docta;</mutableString>
+                                        <string key="content">	1.	Information about you. This might include your name, email address, first name, surname and address, and may also include photographs that you provide to us, your username or any other information required list and register you or your business on Docta;</string>
                                         <attributes>
                                             <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="16" name="Times-Roman"/>
@@ -1326,8 +1326,8 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">
-	2.	Information about your health. This includes information about your medical history, about medical conditions you may have, about medical and alternative treatments, therapies and medications that you are undertaking or have undertaken, information about when and where you have sought medical advice, records of exercise you have undertaken or any other information required to track your current, future and past health and wellbeing;</mutableString>
+                                        <string key="content">
+	2.	Information about your health. This includes information about your medical history, about medical conditions you may have, about medical and alternative treatments, therapies and medications that you are undertaking or have undertaken, information about when and where you have sought medical advice, records of exercise you have undertaken or any other information required to track your current, future and past health and wellbeing;</string>
                                         <attributes>
                                             <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="16" name="Times-Roman"/>
@@ -1366,8 +1366,8 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">
-	3.	Information about your financial transactions. If you use our Services for financial transactions, we collect information about the transaction. This includes your payment information, such as your bank account details, credit or debit card number and other card information, and other account and authentication information, as well as billing, shipping and contact details.</mutableString>
+                                        <string key="content">
+	3.	Information about your financial transactions. If you use our Services for financial transactions, we collect information about the transaction. This includes your payment information, such as your bank account details, credit or debit card number and other card information, and other account and authentication information, as well as billing, shipping and contact details.</string>
                                         <attributes>
                                             <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="16" name="Times-Roman"/>
@@ -1406,8 +1406,8 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">
-	4.	Information gathered from computers, phones, or other devices where you install or access our services, or from other services or devices you connect to Docta. This includes recorded or logged health information about you, such as information about steps taken, calories consumed, quality and quantity of sleep, body measurements, weight, blood pressure, heart and respiratory rate, and other health and wellness statistics.</mutableString>
+                                        <string key="content">
+	4.	Information gathered from computers, phones, or other devices where you install or access our services, or from other services or devices you connect to Docta. This includes recorded or logged health information about you, such as information about steps taken, calories consumed, quality and quantity of sleep, body measurements, weight, blood pressure, heart and respiratory rate, and other health and wellness statistics.</string>
                                         <attributes>
                                             <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="16" name="Times-Roman"/>
@@ -1510,7 +1510,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">	1.	information collected by our server, including the internet protocol (IP) address used to connect your computer to the Internet, operating system and platform, the average time you spend on Docta, pages visited, information searched for, average access time, and websites you have visited previously, as well as other relevant statistics;</mutableString>
+                                        <string key="content">	1.	information collected by our server, including the internet protocol (IP) address used to connect your computer to the Internet, operating system and platform, the average time you spend on Docta, pages visited, information searched for, average access time, and websites you have visited previously, as well as other relevant statistics;</string>
                                         <attributes>
                                             <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="16" name="Times-Roman"/>
@@ -1589,8 +1589,8 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">
-	3.	information from or about the computers, phones, or other devices where you install or access our services. We may associate the information we collect from your different devices, which helps us provide consistent services across your devices. This might include:</mutableString>
+                                        <string key="content">
+	3.	information from or about the computers, phones, or other devices where you install or access our services. We may associate the information we collect from your different devices, which helps us provide consistent services across your devices. This might include:</string>
                                         <attributes>
                                             <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="16" name="Times-Roman"/>
@@ -1813,7 +1813,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">	3.	Information from third parties. We receive information about you and your activities from third-parties, such as information provided to us by your doctor about your health, information provided to us by other product or services providers, or information from other users about your experiences or interactions with them.</mutableString>
+                                        <string key="content">	3.	Information from third parties. We receive information about you and your activities from third-parties, such as information provided to us by your doctor about your health, information provided to us by other product or services providers, or information from other users about your experiences or interactions with them.</string>
                                         <attributes>
                                             <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="16" name="Times-Roman"/>
@@ -1937,7 +1937,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">	1.	deliver products or services to you, to collect payments, make payments and to manage your account, to market to you directly, as well as provide you with information about our products and services, and to notify you of changes to our products and services;</mutableString>
+                                        <string key="content">	1.	deliver products or services to you, to collect payments, make payments and to manage your account, to market to you directly, as well as provide you with information about our products and services, and to notify you of changes to our products and services;</string>
                                         <attributes>
                                             <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="16" name="Times-Roman"/>
@@ -1976,8 +1976,8 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">
-	2.	contact you about new products, projects or services. If you wish not to receive such communications, you can unsubscribe by sending an email to info@docta.com. You can also unsubscribe from any mailing list by clicking on the unsubscribe link that can be found in all communication emails that are sent;</mutableString>
+                                        <string key="content">
+	2.	contact you about new products, projects or services. If you wish not to receive such communications, you can unsubscribe by sending an email to info@docta.com. You can also unsubscribe from any mailing list by clicking on the unsubscribe link that can be found in all communication emails that are sent;</string>
                                         <attributes>
                                             <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="16" name="Times-Roman"/>
@@ -2176,8 +2176,8 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">
-	7.	comply with the law, legal process, litigation, and/or requests from public and governmental authorities within or outside your country of residence. We may also disclose information about you if we determine that for purposes of national security, law enforcement, or other issues of public importance, disclosure is necessary or appropriate.</mutableString>
+                                        <string key="content">
+	7.	comply with the law, legal process, litigation, and/or requests from public and governmental authorities within or outside your country of residence. We may also disclose information about you if we determine that for purposes of national security, law enforcement, or other issues of public importance, disclosure is necessary or appropriate.</string>
                                         <attributes>
                                             <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="16" name="Times-Roman"/>
@@ -2500,8 +2500,8 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">
-	4.	We may from time to time supply the owners or operators of third party websites from which it is possible to link to We with information relating to the number of users accessing Docta from such third party websites. You will not personally be identifiable from this information.</mutableString>
+                                        <string key="content">
+	4.	We may from time to time supply the owners or operators of third party websites from which it is possible to link to We with information relating to the number of users accessing Docta from such third party websites. You will not personally be identifiable from this information.</string>
                                         <attributes>
                                             <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="16" name="Times-Roman"/>
@@ -2540,8 +2540,8 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">
-	5.	In delivering our products or collecting and using your personal information, we may be required to disclose some of your personal information to third party organisations, including external service providers; our legal, accounting, financial or other professional advisors; and regulatory or government authorities as required by law.</mutableString>
+                                        <string key="content">
+	5.	In delivering our products or collecting and using your personal information, we may be required to disclose some of your personal information to third party organisations, including external service providers; our legal, accounting, financial or other professional advisors; and regulatory or government authorities as required by law.</string>
                                         <attributes>
                                             <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="16" name="Times-Roman"/>
@@ -3090,7 +3090,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">	1.	You have the right to access personal information held by us about you, subject to the restrictions provided by law. We endeavour to keep information about you as accurate as possible. If you are concerned about our use of your personal information or if you would like to review or change the information you have supplied to us, please email info@docta.com.</mutableString>
+                                        <string key="content">	1.	You have the right to access personal information held by us about you, subject to the restrictions provided by law. We endeavour to keep information about you as accurate as possible. If you are concerned about our use of your personal information or if you would like to review or change the information you have supplied to us, please email info@docta.com.</string>
                                         <attributes>
                                             <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="16" name="Times-Roman"/>
@@ -3319,7 +3319,7 @@ Cg
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Privacy Policy" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GQP-8B-MJG">
-                                <rect key="frame" x="16" y="8" width="343" height="46"/>
+                                <rect key="frame" x="16" y="5" width="343" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -3541,7 +3541,7 @@ Cg
         <image name="underconstructiongif.gif" width="232" height="232"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="svs-7c-zpc"/>
-        <segue reference="0FM-xp-ZzI"/>
+        <segue reference="c1u-4E-ALN"/>
+        <segue reference="nXV-Q0-JaK"/>
     </inferredMetricsTieBreakers>
 </document>
